@@ -1,0 +1,33 @@
+.node--type-ago-faq-set.accordion-container-width {
+  position: relative;
+  max-width: $wide-screen;
+  margin: 0 auto;
+  padding: 0 ms(2);
+  @include clearfix;
+  @include breakpoint($medium-screen) {
+    padding: 0 ms(2);
+  }
+  @include breakpoint ($wide-screen) {
+    padding: 0 ms(-1);
+  }
+}
+
+.node--type-ago-faq-set.accordion-full-width {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 ms(2);
+  @include clearfix;
+  @include breakpoint($medium-screen) {
+    padding: 0 ms(2);
+  }
+  @include breakpoint ($wide-screen) {
+    padding: 0 ms(-1);
+  }
+}
+
+.accordion-full-width-seamless {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}

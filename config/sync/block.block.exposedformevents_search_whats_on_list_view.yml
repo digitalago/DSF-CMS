@@ -1,0 +1,29 @@
+uuid: 20029c6e-1bd4-4263-8cf8-937386b1eba4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events_search
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: exposedformevents_search_whats_on_list_view
+theme: de_theme
+region: sidebar_first
+weight: -18
+provider: null
+plugin: 'views_exposed_filter_block:events_search-whats_on_list_view'
+settings:
+  id: 'views_exposed_filter_block:events_search-whats_on_list_view'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /events/calendar
+    negate: false
+    context_mapping: {  }

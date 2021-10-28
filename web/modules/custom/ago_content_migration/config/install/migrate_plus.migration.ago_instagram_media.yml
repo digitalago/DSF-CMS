@@ -1,0 +1,38 @@
+id: ago_instagram_media
+label: AGO Instagram Media
+migration_group: ago
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: media
+  bundle: ago_instagram
+  constants:
+    bundle: instagram
+destination:
+  plugin: entity:media
+  default_bundle: instagram
+process:
+  bundle: 'constants/bundle'
+  name: name
+  uri: uri
+  uuid: uuid
+  langcode: langcode
+  filemime: filemime
+  field_media_instagram: 'field_instagram_url/0/uri'
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+  status: status
+  created: created
+  changed: changed
+migration_dependencies:
+  required:
+    - user
+    - file
+  optional: {  }
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

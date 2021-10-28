@@ -1,0 +1,25 @@
+uuid: 03ed41d7-81db-432a-91c1-e5332120096c
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.free_crop_region
+  module:
+    - crop
+name: hero_slider
+label: 'Hero Slider'
+effects:
+  9787f787-f2f7-4ec1-accc-1583b651e6c8:
+    uuid: 9787f787-f2f7-4ec1-accc-1583b651e6c8
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: free_crop_region
+  69486154-b220-4695-8b5a-43e5f96f18b7:
+    uuid: 69486154-b220-4695-8b5a-43e5f96f18b7
+    id: image_scale
+    weight: 2
+    data:
+      width: 1920
+      height: 600
+      upscale: false

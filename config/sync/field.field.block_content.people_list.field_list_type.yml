@@ -1,0 +1,21 @@
+uuid: 6c6c7d75-5bf1-4567-97d4-853bb42e63b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.people_list
+    - field.storage.block_content.field_list_type
+  module:
+    - options
+id: block_content.people_list.field_list_type
+field_name: field_list_type
+entity_type: block_content
+bundle: people_list
+label: 'List Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

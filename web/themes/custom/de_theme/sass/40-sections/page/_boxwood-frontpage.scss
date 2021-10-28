@@ -1,0 +1,110 @@
+/* sections/page/_front-page.scss */
+// contains specific styles to front page
+
+//VIEW THE COLLECTION button on the frontpage
+#block-viewthecollection {
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  a {
+    @include btn;
+    @include btn-black;
+    margin: 0;
+    @include arrow-right;
+    // line-height: 0.8;
+    font-size: ms(2);
+    @include breakpoint ($standard-screen) {
+      font-size: ms(3);
+    }
+  }
+}
+
+#block-welcometotheboxwoodproject {
+  @include divider-line;
+  // margin-bottom: ms(1);
+  padding: ms(1) 0;
+  // @include breakpoint ($weird-screen) {
+  //   margin-bottom: ms(5);
+  // }
+}
+
+.block-views-blockfrontpage-featured-link-block-front-featured-links {
+  @include clearfix;
+  .view-content {
+    margin: ms(3) 0;
+    display: block;
+    position: relative;
+    overflow: auto;
+    @include breakpoint ($weird-screen) {
+      margin: ms(6) 0;
+    }
+    .views-row {
+      @include float-span(12);
+      margin-right: 0;
+      @include breakpoint (340px) {
+        @include float-span(6);
+      }
+      @media all and (max-width: 767px) {
+        margin-bottom: ms(2);
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+      @include breakpoint ($weird-screen) {
+        @include float-span(3);
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .views-field-info {
+        width: 100%;
+        padding-left: 3px;
+        height: 30px;
+        display: block;
+        @include breakpoint (340px) {
+          height: 65px;
+          width: 70%;
+        }
+        @include breakpoint ($narrow-screen) {
+          width: 100%;
+        }
+        @include breakpoint ($weird-screen) {
+          height: 80px;
+        }
+        @include breakpoint ($standard-screen) {
+          width: 70%;
+        }
+        h3 {
+          line-height: ms();
+          font-weight: $bold;
+          @include breakpoint (max-width $weird-screen) {
+            margin-bottom: ms(-4);
+          }
+        }
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: ms(-1);
+          font-family: $font-set-2;
+          font-weight: $ultra-bold;
+          @include breakpoint (400px) {
+            font-size: ms();
+          }
+          @include breakpoint ($narrow-screen) {
+            font-size: ms(-1);
+          }
+          &:hover, &:active, &:focus {
+            text-decoration: underline;
+          }
+        }
+      }
+      .views-field-field-main-image {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

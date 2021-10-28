@@ -1,0 +1,30 @@
+uuid: d489a307-328a-4cc0-9c4c-4c2faaf0d6eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - de_theme
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: de_theme_branding
+theme: de_theme
+region: branding
+weight: -33
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility:
+  request_path:
+    id: request_path
+    pages: '/gallery/*'
+    negate: true
+    context_mapping: {  }

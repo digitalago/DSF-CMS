@@ -1,0 +1,8 @@
+uuid: d0e7a7fe-018b-4e48-a489-ce48e1217805
+langcode: en
+status: true
+dependencies: {  }
+name: 'Object Type'
+vid: object_type
+description: 'Type of the object used as a facet.'
+weight: 0

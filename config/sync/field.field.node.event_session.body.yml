@@ -1,0 +1,23 @@
+uuid: 86119ad8-15fe-4161-b582-9515ecc6a24f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.event_session
+  module:
+    - text
+id: node.event_session.body
+field_name: body
+entity_type: node
+bundle: event_session
+label: Notes
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

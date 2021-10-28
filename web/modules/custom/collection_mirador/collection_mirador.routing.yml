@@ -1,0 +1,14 @@
+collection_mirador.ind_formatter_controller:
+  path: '/node/{nid}/mirador'
+  defaults:
+    _controller: '\Drupal\collection_mirador\Controller\MiradorFormatterController::viewInd'
+    _title: 'Deep Zoom Tool'
+  requirements:
+    _permission: 'access content'
+collection_mirador.compare_formatter_controller:
+  path: '/mirador/compare'
+  defaults:
+    _controller: '\Drupal\collection_mirador\Controller\MiradorFormatterController::viewCompare'
+    _title: 'Compare Objects'
+  requirements:
+    _permission: 'access content'

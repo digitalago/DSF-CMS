@@ -1,0 +1,29 @@
+uuid: 128d216e-023d-4b57-84d3-fc0c5bfeff85
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero_thin_mobile
+    - image.style.hero_thin_wide
+  theme:
+    - de_theme
+id: hero_slide_thin
+label: 'Hero Slide Thin'
+image_style_mappings:
+  -
+    breakpoint_id: de_theme.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_thin_wide
+  -
+    breakpoint_id: de_theme.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_thin_mobile
+  -
+    breakpoint_id: de_theme.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_thin_mobile
+breakpoint_group: de_theme
+fallback_image_style: hero_thin_mobile

@@ -1,0 +1,10 @@
+uuid: 9aa7e59f-582e-4a06-9127-641121dc73ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.info_grid
+label: 'Info Grid'
+targetEntityType: block_content
+cache: true

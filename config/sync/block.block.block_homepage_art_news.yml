@@ -1,0 +1,31 @@
+uuid: 5a106fa7-8f8b-4dc1-a930-2fb87c6a4c75
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a1a9c257-6117-4043-88a8-2bb21f192ebb'
+  module:
+    - block_content
+    - system
+  theme:
+    - de_theme
+id: block_homepage_art_news
+theme: de_theme
+region: dags_top
+weight: -36
+provider: null
+plugin: 'block_content:a1a9c257-6117-4043-88a8-2bb21f192ebb'
+settings:
+  id: 'block_content:a1a9c257-6117-4043-88a8-2bb21f192ebb'
+  label: 'Art News'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

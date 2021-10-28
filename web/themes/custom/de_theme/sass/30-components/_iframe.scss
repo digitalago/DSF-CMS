@@ -1,0 +1,22 @@
+//Styling for iframe
+
+figure.youtube-container {
+  margin: ms(1) 0 0 0;
+  iframe#youtube-field-player {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    @include breakpoint ($narrow-screen) {
+      min-height: 400px;
+    }
+    @include breakpoint ($medium-screen) {
+      min-height: 600px;
+    }
+    @include breakpoint ($standard-screen) {
+      min-height: 650px;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,10 @@
+@mixin headline-type{
+  font-size: ms(1);
+  line-height: ms(1);
+  @include breakpoint($narrow-screen) {
+    font-size: ms(3);
+  }
+  b,strong{
+    font-weight: $bold;
+  }
+}

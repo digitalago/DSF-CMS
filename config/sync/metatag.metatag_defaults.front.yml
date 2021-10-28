@@ -1,0 +1,19 @@
+uuid: 8e8202e4-00c0-4ba7-bf07-9a910dab3961
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  shortlink: '[site:url]'
+  geo_position: '43.6536066,-79.3925123'
+  title: 'Home | [site:name]'
+  icbm: '43.6536066,-79.3925123'
+  content_language: en-CA
+  canonical_url: '[site:url]'
+  geo_placename: 'Art Gallery of Ontario'
+  description: 'With a collection of more than 90000 works of art, the Art Gallery of Ontario is among the most distinguished art museums in North America.'
+  abstract: 'With a collection of more than 90000 works of art, the Art Gallery of Ontario is among the most distinguished art museums in North America.'
+  og_type: website

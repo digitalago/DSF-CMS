@@ -1,0 +1,23 @@
+uuid: 287cf673-42af-41b0-8a53-cdede9f7eaf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_accessible
+    - node.type.event
+id: node.event.field_accessible
+field_name: field_accessible
+entity_type: node
+bundle: event
+label: 'Accessible Event'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

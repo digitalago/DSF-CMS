@@ -1,0 +1,29 @@
+uuid: 200261cc-ace9-4070-8822-0ef5241b1dee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_institution
+    - node.type.object
+    - taxonomy.vocabulary.institution_organization
+id: node.object.field_institution
+field_name: field_institution
+entity_type: node
+bundle: object
+label: Institution/Owner
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      institution_organization: institution_organization
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: 9009379c-2810-405e-9130-174febad4178
+langcode: en
+status: true
+dependencies: {  }
+name: Audience
+vid: audience
+description: 'List of audience types.'
+weight: 0

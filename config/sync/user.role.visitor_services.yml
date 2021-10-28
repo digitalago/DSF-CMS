@@ -1,0 +1,28 @@
+uuid: f7fd6ab5-4608-4403-869a-93936e4ebffd
+langcode: en
+status: true
+dependencies: {  }
+id: visitor_services
+label: 'Visitor Services Access'
+weight: 10
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access media overview'
+  - 'access site in maintenance mode'
+  - 'access tour'
+  - 'create faq content'
+  - 'create location content'
+  - 'create media'
+  - 'delete own faq content'
+  - 'delete own location content'
+  - 'edit any faq content'
+  - 'edit any location content'
+  - 'edit own faq content'
+  - 'edit own location content'
+  - 'link to any page'
+  - 'schedule publishing of nodes'
+  - 'update any media'
+  - 'view faq revisions'
+  - 'view location revisions'
+  - 'view scheduled content'

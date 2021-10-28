@@ -1,0 +1,8 @@
+uuid: 0b0d69e3-47a1-4bf9-af6f-82439dbe9474
+langcode: en
+status: true
+dependencies: {  }
+name: 'Subject Area'
+vid: subject_area
+description: ''
+weight: 0

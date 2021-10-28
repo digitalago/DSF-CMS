@@ -1,0 +1,23 @@
+uuid: 8b460573-864c-4193-b2a3-03abe39f8f94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_slide_descrip
+    - node.type.slider_container
+id: node.slider_container.field_display_slide_descrip
+field_name: field_display_slide_descrip
+entity_type: node
+bundle: slider_container
+label: 'Hide Slide Descriptions'
+description: 'Check to hide individual slide descriptions'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

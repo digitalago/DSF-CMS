@@ -1,0 +1,10 @@
+uuid: 9b541903-4af9-4055-b13b-ac18502dd6e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_only_large
+label: 'Image Only: Large'
+targetEntityType: media
+cache: true

@@ -1,0 +1,96 @@
+uuid: 984abc90-7c6f-4e99-bd51-b183c002ecde
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - core.entity_form_mode.block_content.entity_reference
+    - entity_browser.browser.image_browser
+    - field.field.block_content.card.body
+    - field.field.block_content.card.field_image
+    - field.field.block_content.card.field_link
+    - field.field.block_content.card.field_page_to_appear_view
+    - field.field.block_content.card.field_title_display
+    - field.field.block_content.card.field_view_mode
+    - field.field.block_content.card.field_weight
+  module:
+    - entity_browser
+    - link
+    - text
+    - weight
+id: block_content.card.entity_reference
+targetEntityType: block_content
+bundle: card
+mode: entity_reference
+content:
+  body:
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_image:
+    type: entity_browser_entity_reference
+    weight: 2
+    settings:
+      entity_browser: image_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: card_image
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    region: content
+  field_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_page_to_appear_view:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title_display:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_view_mode:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_weight:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: weight_selector
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

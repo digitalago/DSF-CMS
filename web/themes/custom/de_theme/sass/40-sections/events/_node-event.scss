@@ -1,0 +1,35 @@
+/* sections/events/_node-events.scss */
+// contains node specific styles to news
+.node--type-event.node--view-mode-full {
+  .field--name-field-member-price,
+  .field--name-field-price,
+  .field--name-field-student-price,
+  .field--name-field-member-price,
+  .field--name-field-public-price,
+  .field--name-field-student-price {
+    .field__label {
+      width: 170px;
+      clear: both;
+      font-size: 1.125em;
+      font-family: $font-set-2;
+      font-weight: $bold;
+      text-transform: none;
+      margin-bottom: 0;
+      top: 0px;
+      float: left;
+    }
+
+    .field__item {
+      font-size: 1.125em;
+      font-family: $font-set-2;
+      font-weight: $bold;
+      text-transform: normal;
+      top: 0px;
+    }
+  }
+}
+
+.node-event{
+
+}
+

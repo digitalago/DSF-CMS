@@ -1,0 +1,51 @@
+uuid: 089eae40-e3bf-4856-bdca-3fe48c288b87
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'download media'
+  - 'dropzone upload files'
+  - 'never autoplay videos'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view terms in associated_artists'
+  - 'view terms in audience'
+  - 'view terms in basic_page_category'
+  - 'view terms in blog_category'
+  - 'view terms in blog_tags'
+  - 'view terms in course_type'
+  - 'view terms in day_of_the_week'
+  - 'view terms in event_category'
+  - 'view terms in exhibition_type'
+  - 'view terms in featured_filters'
+  - 'view terms in featured_filters_courses'
+  - 'view terms in global_collection'
+  - 'view terms in image_tags'
+  - 'view terms in institution_organization'
+  - 'view terms in marketing_flag'
+  - 'view terms in media_category'
+  - 'view terms in object_category'
+  - 'view terms in object_name'
+  - 'view terms in object_type'
+  - 'view terms in person_type'
+  - 'view terms in previous_owner'
+  - 'view terms in slider_category'
+  - 'view terms in subject'
+  - 'view terms in subject_area'
+  - 'view terms in tags'
+  - 'view terms in ticketing_options'
+  - 'view terms in time_period'
+  - 'view terms in year'

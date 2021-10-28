@@ -1,0 +1,39 @@
+uuid: 5e3a0a5f-6510-4cf2-890d-802e2200cc59
+langcode: en
+status: true
+dependencies: {  }
+id: host_event_access
+label: 'Host Event Access'
+weight: 16
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access contextual links'
+  - 'access media overview'
+  - 'access site in maintenance mode'
+  - 'create media'
+  - 'create person content'
+  - 'create slider_container content'
+  - 'create slider_item content'
+  - 'delete any slider_item content'
+  - 'delete media'
+  - 'delete own person content'
+  - 'delete own slider_container content'
+  - 'delete own slider_item content'
+  - 'delete slider_container revisions'
+  - 'edit any faq content'
+  - 'edit any person content'
+  - 'edit any slider_container content'
+  - 'edit any slider_item content'
+  - 'edit own person content'
+  - 'edit own slider_container content'
+  - 'edit own slider_item content'
+  - 'link to any page'
+  - 'revert person revisions'
+  - 'revert slider_container revisions'
+  - 'revert slider_item revisions'
+  - 'update media'
+  - 'use text format basic_html'
+  - 'view person revisions'
+  - 'view slider_container revisions'
+  - 'view slider_item revisions'

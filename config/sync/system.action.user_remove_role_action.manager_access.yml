@@ -1,0 +1,14 @@
+uuid: a4e07dbb-ec2a-4c10-83c9-a5fb77e50fdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.manager_access
+  module:
+    - user
+id: user_remove_role_action.manager_access
+label: 'Remove the Manager Access role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: manager_access

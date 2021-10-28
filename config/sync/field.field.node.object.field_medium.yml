@@ -1,0 +1,19 @@
+uuid: ee076b4d-011f-4749-b88f-fb3c887195da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_medium
+    - node.type.object
+id: node.object.field_medium
+field_name: field_medium
+entity_type: node
+bundle: object
+label: Medium
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

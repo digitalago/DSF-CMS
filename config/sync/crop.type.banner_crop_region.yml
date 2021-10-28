@@ -1,0 +1,12 @@
+uuid: ef24ced3-97fe-4e2a-8943-a85edac9e16d
+langcode: en
+status: true
+dependencies: {  }
+id: banner_crop_region
+label: 'Banner Crop Region'
+description: ''
+aspect_ratio: '32:12'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

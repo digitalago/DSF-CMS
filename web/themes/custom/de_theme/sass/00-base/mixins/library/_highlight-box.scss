@@ -1,0 +1,22 @@
+@mixin highlight-box{
+  margin-bottom: ms(1);
+  position: relative;
+  padding: ms() ms(3);
+  background-color: white;
+  border-radius: 2px;
+  color: shade($neutral-grey,45%);
+  // color: black;
+  text-transform: uppercase;
+  font-size: ms();
+  line-height: ms(2);
+  @include z-depth-1;
+  @include breakpoint($narrow-screen) {
+    padding: ms(1) ms(8);
+    font-size: ms(1);
+  }
+  p,li{
+   &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

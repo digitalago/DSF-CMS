@@ -1,0 +1,29 @@
+uuid: fa383ef1-a7b5-4e59-a635-6f6defe7743c
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.blog_category
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: blog_category
+theme: de_theme
+region: sidebar_first
+weight: -14
+provider: null
+plugin: 'facet_block:blog_category'
+settings:
+  id: 'facet_block:blog_category'
+  label: Category
+  provider: facets
+  label_display: '0'
+  block_id: blog_category
+visibility:
+  request_path:
+    id: request_path
+    pages: /agoinsider/results
+    negate: false
+    context_mapping: {  }

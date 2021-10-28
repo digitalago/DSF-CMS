@@ -1,0 +1,21 @@
+uuid: dceeea0d-a844-4a27-ba2d-c9925f122ee5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_background_colour
+  module:
+    - options
+id: block_content.basic.field_background_colour
+field_name: field_background_colour
+entity_type: block_content
+bundle: basic
+label: 'Background Colour'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

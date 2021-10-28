@@ -1,0 +1,97 @@
+//visit page styles
+
+.visit-address{
+  padding: 20px 0 10px 0;
+  @include nimbus-bold-reg;
+  p{
+    line-height: ms(2);
+    }
+}
+
+//admission chart
+#block-admissionpricesdetails{
+  @include grid-span(12);
+  @include breakpoint($wide-screen) {
+@include grid-span(10);
+  }
+  
+}
+
+.admission-group{
+@include nimbus-bold-reg;
+text-transform: uppercase;
+padding-top:10px;
+margin-bottom: 0;
+}
+
+.admission-title{
+@include nimbus-reg;
+padding-right: 40px;
+display: inline-block;  
+}
+
+.admission-price{
+  @include nimbus-bold-reg; 
+  padding-right: 40px;
+  display: inline-block;
+}
+ 
+
+.admission-chart-btn{
+  @include breakpoint($standard-screen) {
+  display: inline-block;
+  left: 80px;
+}
+  display: block;
+  left: 0;
+  top: 0;
+  position: relative;
+}
+
+//block swap 
+#dags-sidebar{
+  #block-groupvisits{
+    display: none;
+    @include breakpoint($standard-screen) {
+      display: block;
+    }
+  }
+}
+
+#block-visitadmissionpricesimage{
+  display: none;
+  @include breakpoint($standard-screen) {
+      display: block;
+  }
+}
+
+#block-groupvisits-2 {
+  display: block;
+  @include clearfix;
+  @include breakpoint($standard-screen) {
+  display: none;
+  }
+
+  
+}
+
+#block-admissionpricesinfoblock{
+  display: none;
+  @include breakpoint($standard-screen) {
+    display: block;
+  }
+}
+
+#block-admissionprices {
+  display: block;
+  @include breakpoint($standard-screen) {
+    display: none;
+  }
+}
+
+.members-mobile{
+  display: block;
+  @include breakpoint($standard-screen) {
+    display: none;
+  }
+}

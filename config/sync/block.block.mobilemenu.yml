@@ -1,0 +1,26 @@
+uuid: 60934a5c-59f9-4965-a674-58895f869293
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu
+    - system
+  theme:
+    - de_theme
+id: mobilemenu
+theme: de_theme
+region: footer
+weight: 0
+provider: null
+plugin: mobile_menu
+settings:
+  id: mobile_menu
+  label: 'Mobile menu'
+  provider: menu
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /ago
+    negate: true
+    context_mapping: {  }

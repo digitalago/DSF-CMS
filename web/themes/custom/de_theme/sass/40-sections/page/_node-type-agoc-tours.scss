@@ -1,0 +1,18 @@
+/* AGOC Tours styling */
+
+.node--type-agoc-tours {
+    padding-bottom: ms(3);
+    @include grid-span(12);
+    h1 {
+      text-transform: uppercase;
+    }
+    .tours-left{
+      @include grid-span(7, 1);
+    }
+    .tours-right{
+      @include grid-span(5, 8);
+    }
+    .tours-full{
+      @include grid-span(12, 1);
+    }
+}

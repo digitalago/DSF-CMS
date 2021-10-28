@@ -1,0 +1,23 @@
+uuid: 7b947cd4-b82a-4c56-8fe8-7a670e371598
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autoplay
+    - node.type.slider_container
+id: node.slider_container.field_autoplay
+field_name: field_autoplay
+entity_type: node
+bundle: slider_container
+label: Autoplay
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

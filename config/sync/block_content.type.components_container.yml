@@ -1,0 +1,8 @@
+uuid: f0a4117e-a5ac-44e0-b9fc-8a43254ecde1
+langcode: en
+status: true
+dependencies: {  }
+id: components_container
+label: 'Components Container'
+revision: 0
+description: ''

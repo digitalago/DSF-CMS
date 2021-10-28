@@ -1,0 +1,23 @@
+uuid: 08f417a2-7a2c-4c7f-86b0-6e4f44be36d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_free
+    - node.type.event
+id: node.event.field_free
+field_name: field_free
+entity_type: node
+bundle: event
+label: Free
+description: 'Check if the event is free and does not require a ticketing link.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

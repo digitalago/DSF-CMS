@@ -1,0 +1,23 @@
+uuid: a66e9f1e-879c-4af8-9a59-56c22a6fd374
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_external_link
+    - node.type.publication
+  module:
+    - link
+id: node.publication.field_external_link
+field_name: field_external_link
+entity_type: node
+bundle: publication
+label: 'External Link'
+description: 'Links to read online or read an excerpt. Use the link text to define what the user is going to see (ie: "read excerpt", "read chapter one", "read online", etc.)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

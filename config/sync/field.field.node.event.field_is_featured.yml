@@ -1,0 +1,23 @@
+uuid: c404557d-c73a-4252-8599-7037e92d4e92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_featured
+    - node.type.event
+id: node.event.field_is_featured
+field_name: field_is_featured
+entity_type: node
+bundle: event
+label: 'Feature this Item'
+description: 'Make this show as a featured item.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

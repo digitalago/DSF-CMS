@@ -1,0 +1,29 @@
+uuid: cda0a2a7-b8d9-4c43-92e3-852b1127cd70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_associated_artists
+    - node.type.publication
+    - taxonomy.vocabulary.associated_artists
+id: node.publication.field_associated_artists
+field_name: field_associated_artists
+entity_type: node
+bundle: publication
+label: 'Associated Artists'
+description: 'Standard format: FirstName LastName'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      associated_artists: associated_artists
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,7 @@
+collection_import.form:
+  title: 'Import Administration'
+  description: 'Manage Import settings for your site'
+  parent: system.admin_content
+  route_name: collection_import.form
+  weight: 100
+  menu_name: system

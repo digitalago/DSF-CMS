@@ -1,0 +1,110 @@
+// /* sections/_node-type-publication.scss */
+// anything publication related that doe not live in a section should go here
+
+.node--type-publication {
+
+  article.node--type-publication {
+    padding-top: 2em;
+  }
+
+  h1.field--name-title {
+    display: block;
+    padding-top: .5em;
+
+    @include breakpoint(640px) {
+      padding-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  h2 {
+    margin: ms(-1) 0 ms(-2) 0;
+  }
+
+  .region--content-prefix {
+    padding-bottom: 0;
+  }
+
+  .field--name-field-publication-date {
+    font-size: 1.42383em !important;
+     display:block;
+     clear: both;
+     padding-bottom: 20px;
+     text-transform: uppercase;
+     padding: 1em 0 1em 0;
+
+     .datetime {
+      font-size: 1.26562em;
+      font-family: $font-set-2;
+      font-weight: $normal;
+     }
+  }
+
+  .field--name-field-blurb {
+    font-weight: $bold;
+    font-size: ms(1);
+    line-height: ms(1);
+    font-family: $font-set-2;
+    letter-spacing: 1px;
+    margin-top: ms(-2);
+    @include breakpoint ($weird-screen) {
+      line-height: ms(2);
+      font-size: ms(2);
+      margin-top: 0;
+    }
+  }
+
+  .field--name-field-author {
+    color: $red;
+    font-size: ms();
+    font-weight: $bold;
+    font-family: $font-set-2;
+    text-transform: uppercase;
+    line-height: ms(1);
+    margin: ms(2) 0;
+  }
+
+  .field--name-field-preview-overview-image {
+    display: block;
+    margin: ms(1) 0;
+  }
+
+  .field--name-field-external-link,
+  .field--name-field-retail-link {
+    padding: 1em 0;
+
+    a {
+      @include btn-white;
+      font-size: 1.26562em;
+      padding: 5px 15px 5px 15px;
+    }
+  }
+
+  .field__item {
+    font-size: 1em;
+    font-family: $font-set-2;
+    line-height: 1.6em;
+    font-weight: $normal;
+  }
+
+  blockquote {
+    @include float-span(12);
+    @include breakpoint ($narrow-screen) {
+      @include float-span(4);
+    }
+  }
+
+  h2 {
+    font-size: 1.125em;
+    line-height: 1.6em;
+    margin: 0;
+    padding: 1em 0;
+    font-weight: $bold;
+    font-family: $font-set-2;
+    text-transform: uppercase;
+  }
+
+  a {
+    margin-bottom: 1em;
+  }
+}

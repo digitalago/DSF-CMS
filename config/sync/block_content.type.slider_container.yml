@@ -1,0 +1,8 @@
+uuid: fa985f65-8585-40cb-9aa1-d0d29dafbf1e
+langcode: en
+status: true
+dependencies: {  }
+id: slider_container
+label: 'Slider Container'
+revision: 0
+description: ''

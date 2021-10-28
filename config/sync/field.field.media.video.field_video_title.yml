@@ -1,0 +1,19 @@
+uuid: af4683bf-2f48-4f30-b7d1-a55bbd56338f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_video_title
+    - media.type.video
+id: media.video.field_video_title
+field_name: field_video_title
+entity_type: media
+bundle: video
+label: 'Video Title'
+description: 'The Video''s title on Youtube or Vimeo the Media Name is the Administrative title.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

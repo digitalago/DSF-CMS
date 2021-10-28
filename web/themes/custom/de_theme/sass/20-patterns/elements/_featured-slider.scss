@@ -1,0 +1,84 @@
+/* homepage slider styles  */
+.node--type-slider-container {
+ // @include grid-span(12);
+
+
+.slider-left{
+  @include grid-span(12,1);
+  @include breakpoint ($narrow-screen){
+  @include grid-span(6,1);
+  }
+  @include breakpoint ($medium-screen){
+  @include grid-span(8,1);
+  }
+}
+
+.slider-right{
+  @include grid-span(12,1);
+  @include breakpoint ($narrow-screen){
+  @include grid-span(6,7);
+  }
+  @include breakpoint ($medium-screen){
+  @include grid-span(4,9);
+  padding: 20px;
+  }
+
+  .field--name-field-category-slider{
+    @include category-label;
+    font-size: ms(2);
+    padding: 5px 0px 5px 0px;  
+    @include breakpoint ($narrow-screen){
+    font-size: ms(3);
+    padding: 0px 0px 5px 0px;  
+    }
+  }
+
+  h1{
+    max-width: 94%;
+    font-size: ms(7);
+    margin-bottom: 10px;
+    @include breakpoint ($narrow-screen){
+    max-width: 100%;
+    font-size: ms(9);
+    }
+    @include breakpoint ($medium-screen){
+    max-width: 100%;  
+    font-size: ms(11);
+    }
+    text-transform: uppercase;
+  }
+  .slide-date-time-description{
+    @include nimbus-reg;
+    color: $almostblack;
+    font-size: ms(2);
+    margin: 3px 0;
+    @include breakpoint ($narrow-screen){
+    font-size: ms(3);
+    margin: ms(-5) 0;
+    }
+    display: block;
+    
+  }
+  .slide-description {
+   display: none;
+   @include breakpoint ($narrow-screen){
+   @include nimbus-reg;
+   display: block;
+   color: $almostblack;
+   }
+  }
+  .slide-cta{
+    display: none;
+    @include breakpoint ($narrow-screen){
+    display: block;
+    margin: ms(-5) 0;
+    a {
+      display: inline-block;
+      @include btn-black;
+      @include btn-big;
+    }  
+  }
+  }
+}
+
+}

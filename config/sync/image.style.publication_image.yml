@@ -1,0 +1,17 @@
+uuid: 9a9326b2-085c-4b49-8909-6dc9e97fdb9e
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: publication_image
+label: 'Publication image'
+effects:
+  4bf272e9-cef1-4cf4-a207-bca9297e2ca9:
+    uuid: 4bf272e9-cef1-4cf4-a207-bca9297e2ca9
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 750
+      height: 750
+      crop_type: focal_point

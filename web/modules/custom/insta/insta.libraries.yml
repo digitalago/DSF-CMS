@@ -1,0 +1,19 @@
+handlebars:
+  version: VERSION
+  license:
+    name: MIT
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.runtime.min.js: {}
+instashow:
+  version: VERSION
+  license:
+    name: MIT
+  js:
+    /libraries/instashow/jquery.instashow.min.js: {}
+  css:
+    theme:
+      /libraries/instashow/jquery.instashow.min.css: {}
+  dependencies:
+    - insta/handlebars
+    - core/jquery
+    - core/jquery.once

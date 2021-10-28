@@ -1,0 +1,31 @@
+uuid: c54af5bd-b125-4211-8379-18d3e371d6a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.whats_on
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: views_block__whats_on_ppl_featured
+theme: de_theme
+region: content
+weight: -17
+provider: null
+plugin: 'views_block:whats_on-ppl_featured'
+settings:
+  id: 'views_block:whats_on-ppl_featured'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  exposed: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /programs
+    negate: false
+    context_mapping: {  }

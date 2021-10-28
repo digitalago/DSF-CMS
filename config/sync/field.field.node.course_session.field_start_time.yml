@@ -1,0 +1,21 @@
+uuid: ae81ba73-c1b6-4ef0-91c8-7f4701ae8be6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start_time
+    - node.type.course_session
+  module:
+    - options
+id: node.course_session.field_start_time
+field_name: field_start_time
+entity_type: node
+bundle: course_session
+label: 'Start Time'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

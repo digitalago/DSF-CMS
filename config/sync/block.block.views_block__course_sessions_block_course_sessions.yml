@@ -1,0 +1,34 @@
+uuid: 88e6adb4-03af-404a-8d80-dd43eb76ea40
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.course_sessions
+  module:
+    - node
+    - views
+  theme:
+    - de_theme
+id: views_block__course_sessions_block_course_sessions
+theme: de_theme
+region: content
+weight: -21
+provider: null
+plugin: 'views_block:course_sessions-block_course_sessions'
+settings:
+  id: 'views_block:course_sessions-block_course_sessions'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  exposed: {  }
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      course: course
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

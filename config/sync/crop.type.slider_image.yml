@@ -1,0 +1,12 @@
+uuid: a3f7da98-d38d-4177-bd63-9b3810ab7f32
+langcode: en
+status: true
+dependencies: {  }
+label: 'Slider image'
+id: slider_image
+description: 'Default max area for slides.'
+aspect_ratio: '19:9'
+soft_limit_width: 500
+soft_limit_height: 350
+hard_limit_width: null
+hard_limit_height: null

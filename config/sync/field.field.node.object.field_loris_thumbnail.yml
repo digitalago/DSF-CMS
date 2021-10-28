@@ -1,0 +1,19 @@
+uuid: 372cd59c-2670-4000-9e63-49e787a2bb3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_loris_thumbnail
+    - node.type.object
+id: node.object.field_loris_thumbnail
+field_name: field_loris_thumbnail
+entity_type: node
+bundle: object
+label: 'Loris Thumbnail'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

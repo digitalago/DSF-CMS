@@ -1,0 +1,84 @@
+id: ago_video_media
+label: AGO Video Media
+migration_group: ago
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: media
+  bundle: ago_video
+  constants:
+    bundle: video
+destination:
+  plugin: entity:media
+  default_bundle: video
+process:
+  bundle: 'constants/bundle'
+  name: name
+  uri: uri
+  uuid: uuid
+  langcode: langcode
+  filemime: filemime
+  field_category:
+    -
+      plugin: sub_process
+      source: field_category
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: media_category_taxonomy
+  field_credits: field_credits
+  field_description: field_description
+  field_license: field_license
+  field_media_duration: field_agoc_media_duration
+  field_media_thumbnail:
+    -
+      plugin: sub_process
+      source: field_agoc_media_thumbnail
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: image_media
+  field_release_date: field_release_date
+  field_media_subject:
+    -
+      plugin: sub_process
+      source: field_agoc_media_subject
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: tags_taxonomy
+  field_tags:
+    -
+      plugin: sub_process
+      source: field_agoc_media_subject
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: tags_taxonomy
+  field_track_name: field_track_name
+  field_video_title: field_video_title
+  'field_media_video_embed_field/value': 'field_media_video_embed_field/0/value'
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+  status: status
+  created: created
+  changed: changed
+migration_dependencies:
+  required:
+    - user
+    - file
+    - image_media
+    - media_category_taxonomy
+    - tags_taxonomy
+  optional: {  }
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

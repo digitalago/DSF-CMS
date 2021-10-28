@@ -1,0 +1,21 @@
+uuid: 6fa413e1-3d33-41f0-ba55-4a0d26abb689
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.people_list
+    - field.storage.block_content.field_footer_notes
+  module:
+    - text
+id: block_content.people_list.field_footer_notes
+field_name: field_footer_notes
+entity_type: block_content
+bundle: people_list
+label: 'Footer Notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

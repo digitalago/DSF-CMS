@@ -1,0 +1,60 @@
+uuid: df7cb1e5-0cf1-4885-bc2f-5bc0531d7f45
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_duration_in_weeks
+field_name: field_duration_in_weeks
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: one_day
+      label: 'One day only'
+    -
+      value: one_week
+      label: '1 week'
+    -
+      value: two_weeks
+      label: '2 weeks'
+    -
+      value: three_weeks
+      label: '3 weeks'
+    -
+      value: four_weeks
+      label: '4 weeks'
+    -
+      value: five_weeks
+      label: '5 weeks'
+    -
+      value: six_weeks
+      label: '6 weeks'
+    -
+      value: seven_weeks
+      label: '7 weeks'
+    -
+      value: eight_weeks
+      label: '8 weeks'
+    -
+      value: nine_weeks
+      label: '9 weeks'
+    -
+      value: ten_weeks
+      label: '10 weeks'
+    -
+      value: eleven_weeks
+      label: 'Eleven weeks'
+    -
+      value: twelve_weeks
+      label: 'Twelve weeks'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

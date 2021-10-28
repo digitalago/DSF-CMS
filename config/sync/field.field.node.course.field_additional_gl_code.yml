@@ -1,0 +1,19 @@
+uuid: 87a1be1a-2f1d-47a4-a9ec-0992a8994a6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_gl_code
+    - node.type.course
+id: node.course.field_additional_gl_code
+field_name: field_additional_gl_code
+entity_type: node
+bundle: course
+label: 'Additional General Ledger Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

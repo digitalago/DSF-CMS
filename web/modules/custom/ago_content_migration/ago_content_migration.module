@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * Module file that contains hooks for the migration.
+ */
+
+use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\migrate\Plugin\MigrateSourceInterface;
+use Drupal\migrate\Plugin\MigrateIdMapInterface;
+use Drupal\migrate\Row;
+
+/**
+ * Implements hook_migrate_prepare_row().
+ *
+ * Allows adding data to a row for a migration with the specified ID.
+ *
+ * @param \Drupal\migrate\Row $row
+ *   The row being imported.
+ * @param \Drupal\migrate\Plugin\MigrateSourceInterface $source
+ *   The source migration.
+ * @param \Drupal\migrate\Plugin\MigrationInterface $migration
+ *   The current migration.
+ */
+function ago_content_migration_migrate_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration)
+{
+    if ($migration->id() == 'user') {
+        $map = $row->getIdMap();
+        $uid = $row->getSourceProperty('uid');
+        $mail = $row->getSourceProperty('mail');
+
+        if (!isset($map['destid1']) || empty($map['destid1'])) {
+            if ($uid == 0) {
+                return FALSE;
+            }
+            $new_uid = \Drupal::database()->select('users_field_data', 'u')
+                ->fields('u', ['uid'])
+                ->condition('mail', $mail)
+                ->execute()
+                ->fetchField();
+
+            // If we haven't mapped the admin account based on email address, map it
+            // directly to the destination admin account.
+            if (!$new_uid && $uid == 1) {
+                $new_uid = 1;
+            }
+        }
+
+        if (!empty($new_uid)) {
+            $idmap = $migration->getIdMap();
+            $hash = isset($map['source_ids_hash']) ? $map['source_ids_hash'] : NULL;
+            $idmap->saveIDMapping(
+                $row,
+                [$new_uid],
+                MigrateIdMapInterface::STATUS_IGNORED,
+                MigrateIdMapInterface::ROLLBACK_PRESERVE,
+                $hash
+            );
+            return FALSE;
+        }
+
+    }
+}

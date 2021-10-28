@@ -1,0 +1,28 @@
+uuid: a3b837c6-d92b-4297-a24e-7b24f9448b25
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.super_card
+    - field.storage.block_content.field_image
+    - media.type.image
+id: block_content.super_card.field_image
+field_name: field_image
+entity_type: block_content
+bundle: super_card
+label: Image
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

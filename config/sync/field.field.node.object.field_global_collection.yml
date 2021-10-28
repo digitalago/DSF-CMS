@@ -1,0 +1,29 @@
+uuid: ebd13ed2-83c5-49d7-b3e9-511ff778d92d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_global_collection
+    - node.type.object
+    - taxonomy.vocabulary.global_collection
+id: node.object.field_global_collection
+field_name: field_global_collection
+entity_type: node
+bundle: object
+label: Collection
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      global_collection: global_collection
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

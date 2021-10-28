@@ -1,0 +1,96 @@
+/* 30-components/layout/_content.scss */
+
+ /* @content section */
+
+// #content{
+
+// }
+
+.node--type-dags-landing-page {
+  .section-content{
+     margin-bottom: 0;
+  }
+}
+
+.section-content{
+  @include clearfix;
+  position: relative;
+  display: block;
+  .layout-container{
+    position: relative;
+    max-width:  $wide-screen;
+    margin:  0 auto;
+    padding:  0 ms(2);
+    @include clearfix;
+    //@include breakpoint($narrow-screen) {
+    //  padding: 0 6.38298%;
+    //}
+    @include breakpoint($medium-screen) {
+    padding:  0 ms(2);
+    }
+    @include breakpoint ($wide-screen) {
+      padding:  0 ms(-1);
+    }
+  }
+}
+
+.layout-container hr {
+  margin-left: - ms(2);
+  margin-right: - ms(2);
+}
+
+.region--content {
+  margin-bottom: ms(5);
+}
+
+.region--content-prefix {
+  padding-bottom: ms(1);
+}
+
+//@layout with main column and first sidebar
+.layout-one-sidebar-display{
+  #sidebar-primary{
+    @include breakpoint($medium-screen) {
+      @include grid-span(3);
+    }
+  }
+
+  #main{
+    @include breakpoint($medium-screen) {
+      @include grid-span(9,4);
+    }
+  }
+}
+
+/*  @region main prefix */
+.region--content-prefix{
+
+}
+
+/*  @region main suffix */
+
+.region--content-suffix{
+
+}
+
+//section clear
+
+.views-element-container{
+  @include clearfix;
+  clear:both;
+  display: block;
+}
+
+//clearfixes
+
+.views-row {
+  @include clearfix;
+}
+
+.block-views-blockdags-top-reference-dags-top{
+  @include clearfix;
+}
+
+.block-views-blockdags-bottom{
+  @include clearfix;
+}

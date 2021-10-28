@@ -1,0 +1,5 @@
+// removes tap highlight on touchscreens
+@mixin reset-tap($color: rgba(0,0,0,0)) {
+  -webkit-tap-highlight-color: $color;
+  outline: none;
+}

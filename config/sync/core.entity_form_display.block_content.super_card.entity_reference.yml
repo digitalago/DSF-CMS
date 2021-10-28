@@ -1,0 +1,106 @@
+uuid: 56a504cc-f634-47e4-b725-d71bad6dfece
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.super_card
+    - core.entity_form_mode.block_content.entity_reference
+    - entity_browser.browser.image_browser
+    - field.field.block_content.super_card.body
+    - field.field.block_content.super_card.field_border
+    - field.field.block_content.super_card.field_card_background
+    - field.field.block_content.super_card.field_card_size
+    - field.field.block_content.super_card.field_image
+    - field.field.block_content.super_card.field_image_on_right
+    - field.field.block_content.super_card.field_link_single
+    - field.field.block_content.super_card.field_title_display
+    - field.field.block_content.super_card.field_view_mode
+  module:
+    - entity_browser
+    - link
+    - text
+id: block_content.super_card.entity_reference
+targetEntityType: block_content
+bundle: super_card
+mode: entity_reference
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_border:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_card_background:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_card_size:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_image:
+    weight: 3
+    settings:
+      entity_browser: image_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: default
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_image_on_right:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_link_single:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title_display:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_view_mode:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 187313d0-ccc1-4762-83e0-67e78bdc444d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_title
+    - node.type.slider_container
+id: node.slider_container.field_display_title
+field_name: field_display_title
+entity_type: node
+bundle: slider_container
+label: 'Display title'
+description: 'Use this if you want to override the title that displays (no HTML!)'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

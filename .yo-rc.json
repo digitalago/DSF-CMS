@@ -1,0 +1,18 @@
+{
+  "generator-echidna": {
+    "build": false,
+    "base": "de_boilerplate",
+    "mode": "pantheon",
+    "promptValues": {
+      "site": "ago-dsf",
+      "review": true
+    },
+    "site": "ago-dsf",
+    "review": true,
+    "template": "pantheon/template.gitlab-ci.yml",
+    "drupal": 8,
+    "php": "php71",
+    "simpletest": false,
+    "maxDrupalVersion": "8.7.5"
+  }
+}

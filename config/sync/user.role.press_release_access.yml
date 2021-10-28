@@ -1,0 +1,46 @@
+uuid: 054e4366-a47f-4434-8e35-3c5b84c8df64
+langcode: en
+status: true
+dependencies: {  }
+id: press_release_access
+label: 'Communications Access'
+weight: 4
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access site in maintenance mode'
+  - 'access tour'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'administer contact forms'
+  - 'administer nodes'
+  - 'administer redirects'
+  - 'change own username'
+  - 'create blog content'
+  - 'create media'
+  - 'create press_release content'
+  - 'create url aliases'
+  - 'delete media'
+  - 'delete own blog content'
+  - 'delete own press_release content'
+  - 'delete press_release revisions'
+  - 'edit any blog content'
+  - 'edit any press_release content'
+  - 'edit own blog content'
+  - 'edit own press_release content'
+  - 'link to any page'
+  - 'revert blog revisions'
+  - 'revert press_release revisions'
+  - 'schedule publishing of nodes'
+  - 'update any media'
+  - 'update media'
+  - 'use text format ago_content_editor'
+  - 'use text format basic_html'
+  - 'use text format content_editor'
+  - 'view blog revisions'
+  - 'view press_release revisions'
+  - 'view scheduled content'
+  - 'view the administration theme'

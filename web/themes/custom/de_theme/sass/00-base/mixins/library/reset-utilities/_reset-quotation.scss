@@ -1,0 +1,7 @@
+@mixin reset-quotation {
+  quotes: none;
+  &:before, &:after {
+    content: "";
+    content: none;
+  }
+}

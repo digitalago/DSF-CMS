@@ -1,0 +1,59 @@
+uuid: 20e8bd09-0356-4df7-b785-1b875fa4b82d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_container
+    - core.entity_form_mode.block_content.entity_reference
+    - field.field.block_content.card_container.field_container_background
+    - field.field.block_content.card_container.field_full_width
+    - field.field.block_content.card_container.field_info_grid
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+id: block_content.card_container.default
+targetEntityType: block_content
+bundle: card_container
+mode: default
+content:
+  field_container_background:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_full_width:
+    weight: 27
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_info_grid:
+    weight: 1
+    settings:
+      form_mode: entity_reference
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

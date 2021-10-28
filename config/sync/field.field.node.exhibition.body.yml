@@ -1,0 +1,23 @@
+uuid: 04ce5c1e-ac17-4c02-aba3-557f659e75c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.exhibition
+  module:
+    - text
+id: node.exhibition.body
+field_name: body
+entity_type: node
+bundle: exhibition
+label: 'Short Description'
+description: 'This is a short summary and will not appear on the exhibition page itself. Add a freeform called "exhibition overview" in the builder below for the first section.<br><b>Note:</b> If you have a formatted Word or Google Doc please use <a href="https://word2cleanhtml.com/" target="_blank"><b>this tool</b></a> or any other Paste from word cleaner you like. Then copy the clean text back into this editor.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

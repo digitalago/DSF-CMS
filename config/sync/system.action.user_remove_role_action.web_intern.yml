@@ -1,0 +1,14 @@
+uuid: 9128d5c2-7866-4ef3-96a7-fc8046a37224
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.web_intern
+  module:
+    - user
+id: user_remove_role_action.web_intern
+label: 'Remove the Web Intern role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: web_intern

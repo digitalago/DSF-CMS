@@ -1,0 +1,28 @@
+uuid: 729164e8-6a4b-4621-94d4-6ecdc462ed3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_release
+    - node.type.blog
+    - node.type.exhibition
+id: node.exhibition.field_press_release
+field_name: field_press_release
+entity_type: node
+bundle: exhibition
+label: 'Redirect Destination'
+description: 'Related press release or AGOInsider node.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      blog: blog
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: b7639b98-cf58-4316-bf51-35e2d79482e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alert
+    - field.storage.block_content.field_hide_on_mobile
+id: block_content.alert.field_hide_on_mobile
+field_name: field_hide_on_mobile
+entity_type: block_content
+bundle: alert
+label: 'Hide on mobile (Still shown on Desktop)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

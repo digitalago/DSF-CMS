@@ -1,0 +1,17 @@
+uuid: d17adccd-2524-40f9-b81e-546fcfec52a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: info_card
+label: 'Info card'
+effects:
+  43823261-3fe2-471e-8fbd-a88831b59eeb:
+    uuid: 43823261-3fe2-471e-8fbd-a88831b59eeb
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 270
+      height: 270
+      crop_type: focal_point

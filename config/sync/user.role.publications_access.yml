@@ -1,0 +1,35 @@
+uuid: 46732d8c-12d1-455b-8400-d7ef149f00c3
+langcode: en
+status: true
+dependencies: {  }
+id: publications_access
+label: 'Publications Access'
+weight: 5
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access media_container entity browser pages'
+  - 'access site in maintenance mode'
+  - 'access tour'
+  - 'access user contact forms'
+  - 'create media'
+  - 'create publication content'
+  - 'create url aliases'
+  - 'delete media'
+  - 'delete own publication content'
+  - 'edit any publication content'
+  - 'edit own publication content'
+  - 'link to any page'
+  - 'revert publication revisions'
+  - 'schedule publishing of nodes'
+  - 'update any media'
+  - 'update media'
+  - 'use text format ago_content_editor'
+  - 'use text format content_editor'
+  - 'view all revisions'
+  - 'view publication revisions'
+  - 'view scheduled content'
+  - 'view the administration theme'

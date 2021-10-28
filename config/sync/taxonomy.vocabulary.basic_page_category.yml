@@ -1,0 +1,8 @@
+uuid: c9ecf18b-672f-480c-8531-01396d7e9581
+langcode: en
+status: true
+dependencies: {  }
+name: 'Basic Page Category'
+vid: basic_page_category
+description: ''
+weight: 0

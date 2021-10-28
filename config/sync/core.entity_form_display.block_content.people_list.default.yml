@@ -1,0 +1,113 @@
+uuid: 9b1ab4d2-66ce-4ef6-8a4d-136457274ebf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.people_list
+    - field.field.block_content.people_list.field_background_colour
+    - field.field.block_content.people_list.field_footer_notes
+    - field.field.block_content.people_list.field_image_shape
+    - field.field.block_content.people_list.field_item_divider
+    - field.field.block_content.people_list.field_layout
+    - field.field.block_content.people_list.field_list_type
+    - field.field.block_content.people_list.field_list_width
+    - field.field.block_content.people_list.field_person
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+    - text
+id: block_content.people_list.default
+targetEntityType: block_content
+bundle: people_list
+mode: default
+content:
+  field_background_colour:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_footer_notes:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image_shape:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_item_divider:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_layout:
+    weight: 7
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        598b3c6b-c310-4bf2-8b9d-ee0b208624f9:
+          dependee: field_list_type
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: small
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: block_content
+          bundle: people_list
+    type: options_select
+    region: content
+  field_list_type:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_list_width:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_person:
+    weight: 1
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

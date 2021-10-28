@@ -1,0 +1,76 @@
+
+.menu--footer{
+  @include clearfix;
+  ul.menu {
+    margin: 20px 0;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-top: ms();
+    padding-bottom: ms();
+    @include breakpoint ($narrow-screen) {
+      padding-top: ms();
+       padding-bottom: ms(-1);
+      margin: ms(2) 0;
+    }
+    
+      border-top: 2px solid rgba($white,.5);
+      border-bottom: 2px solid rgba($white,.5);
+    
+    li {
+      @include antialiased;
+      padding-bottom: ms();
+      letter-spacing: 0.01em;
+      @include breakpoint ($narrow-screen) {
+        padding-bottom: 0;
+      }
+      @include breakpoint ($weird-screen) {
+        padding-left: ms();
+        padding-right: ms();
+      }
+      @media all and (min-width: 608px) {
+        border-right: 2px solid rgba($white,.5);
+        padding-left: ms(-1);
+        padding-right: ms(-1);
+        float: left;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        border-right: 0;
+      }
+      a {
+        text-decoration: none;
+        color: $white;
+        font-size: ms(3);
+        position: relative;
+        padding-bottom: 5px;
+        text-transform: capitalize;
+        @include antialiased;
+        @include breakpoint ($narrow-screen) {
+          font-size: ms(1);
+        }
+        @include breakpoint ($weird-screen) {
+          font-size: ms(2);
+        }
+        &:after {
+          transition: all .5s;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 0%;
+          content: '.';
+          color: transparent;
+          background: white;
+          height: 1px;
+        }
+        &:hover:after, &:active:after, &:focus:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

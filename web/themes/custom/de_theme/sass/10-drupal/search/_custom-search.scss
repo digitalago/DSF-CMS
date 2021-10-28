@@ -1,0 +1,417 @@
+/* 10-drupal/search/_custom-search.scss */
+
+@import "10-drupal/search/custom/index";
+
+#search-block-form .active {
+  display: inline-block !important;
+}
+
+#search-block-form {
+  @include breakpoint (max-width $narrow-screen) {
+    width: 100%;
+  }
+}
+
+/* components/search/_block-search.scss */
+#block-de-theme-search {
+  display: none;
+  float: right;
+  margin-right: 0;
+  @include breakpoint ($narrow-screen) {
+    margin-right: ms();
+  }
+  @include breakpoint (max-width $weird-screen) {
+    margin-top: ms(-1);
+  }
+  @include breakpoint (max-width $narrow-screen) {
+    margin-right: 0;
+    // margin-bottom: ms(-1);
+    clear: both;
+    width: 100%;
+  }
+
+  input[type="search"] {
+    height: 25px;
+    font-size: ms(1);
+    display: inline-block;
+    // background-color: transparent;
+    font-weight: 100;
+    border: none;
+    outline: none;
+    padding: 3px;
+    padding-right: 0;
+    color: $dark-grey;
+    // position: absolute;
+    position: relative;
+    font-family: $font-set-2;
+    top: 0;
+    // cursor: pointer;
+    width: 85%;
+    @include breakpoint (max-width $narrow-screen) {
+      float: left;
+    }
+    @include breakpoint ($narrow-screen) {
+      width: 150px;
+    }
+    @include breakpoint ($weird-screen) {
+      top: 14px;
+    }
+  }
+
+
+  input[type="submit"] {
+    height: 32px;
+    width: 12%;
+    padding: 3px;
+    margin-bottom: 0;
+    content: '';
+    border: 1px solid $dark-grey;
+    display: inline-block;
+    float: left;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    opacity: 1;
+    cursor: pointer;
+    transition: all .3s ease;
+    position: relative;
+    background: $dark-grey;
+    margin-bottom: ms();
+    &:hover {
+      background: tint($dark-grey, 15%);
+      color: $light-grey;
+    }
+    @include breakpoint ($narrow-screen) {
+      float: right;
+      width: 40px;
+      margin-bottom: 0;
+    }
+    @include breakpoint ($weird-screen) {
+      top: 14px;
+    }
+  }
+}
+
+/* Boxwood custom search block - top of the page */
+.region--branding .layout-container.expanded {
+  padding-bottom: 50px;
+  @include breakpoint ($narrow-screen) {
+    padding-bottom: 0;
+  }
+}
+
+//  general search styling
+.block-views-blockgeneral-search-block-general-results {
+  position: relative;
+
+  // Header and filters
+
+  .view-header {
+    border-bottom: 1px solid #E9E9E9;
+    padding: 5px 0 5px 0;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #676767;
+    font-size: 13px;
+    font-family: $font-set-2;
+    font-weight: 700;
+    padding: 0 0 10px 0;
+  }
+
+  .view-filters {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .form-wrapper {
+      display: inline-block;
+      clear: none;
+      float: none;
+    }
+
+    input.form-submit {
+      @include btn-big;
+      @include btn-white;
+      display: inline-block;
+      margin-left: -3px;
+      margin-right: 0;
+      height: 50px;
+      vertical-align: top;
+    }
+
+    .form-item-search {
+      display: inline-block;
+      margin: 0;
+
+      input {
+        height: 50px;
+        width: 250px;
+        border-radius: 0;
+        display: inline-block;
+        position: relative;
+        @include nimbus-reg;
+        font-size: 1em;
+        padding: 0.88889em 1em 0.79012em 2.566em;
+        border: 1px solid black;
+        box-sizing: border-box;
+        vertical-align: top;
+        color: $contrastgrey;
+        margin: 0;
+        height: 50px;
+        background-image: url(../../img/file_icons/search-black.png);
+        background-repeat: no-repeat;
+        background-position: 6% 50%;
+        background-size: 20px;
+      }
+    }
+  }
+
+  // Search items
+  .view-content {
+    padding: 10px 0 30px 0;
+  }
+
+  .pager {
+    ul {
+      padding-top: 0;
+    }
+  }
+
+  .views-row {
+    padding: 10px 0;
+
+    .views-field-title {
+      a {
+        font-family: $font-set-2;
+        font-weight: $normal;
+        color: $red !important;
+        font-size: 1.26562em !important;
+      }
+    }
+
+    .views-field-body {
+      p {
+        font-family: $font-set-2;
+        font-weight: 300;
+        font-size: 1em;
+        color: #333333;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.block-ago-search,
+.general-search-form {
+  float: right;
+  margin-right: ms(5);
+  margin-top: 1.2em;
+  max-width: 40%;
+  position: relative;
+  bottom: 50%;
+  transition: all .3s;
+  @include breakpoint ($narrow-screen) {
+    position: static;
+    margin-top: ms(1);
+  }
+  &.expanded {
+    position: absolute;
+    float:none;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 20px auto 0;
+    max-width: 80%;
+    @include breakpoint ($narrow-screen) {
+      float: right;
+      margin-right: ms(5);
+      margin-top: ms(1);
+      max-width: 40%;
+      position: static;
+    }
+  }
+
+  form {
+    position: relative;
+    padding-left: 5px;
+  }
+  form > div {
+   display: inline-block;
+  }
+  .form-item {
+    display: inline-block;
+    margin-bottom: .2em;
+  }
+  a {
+    color: $white;
+  }
+
+  label {
+    font-size: 0;
+  }
+
+  input {
+    background: transparent;
+    border: none;
+    color: $white;
+    font-family: $font-set-2;
+    width: 100%;
+    &:focus {
+      outline: none;
+      outline-offset: 0;
+    }
+    &::-webkit-input-placeholder {
+      color: $white;
+    }
+
+  }
+
+  #edit-search-content {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .search-wrapper {
+    border-bottom: 1px solid $white;
+    width: 0;
+    transition: all .3s;
+    overflow: hidden;
+    float:right;
+    > div {
+      width: 95%;
+    }
+    > a {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: none;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 1px;
+      background: $white;
+      transition: width .3s;
+      text-align:left;
+      margin: 0 auto;
+    }
+  }
+  .search-wrapper.focus {
+    &:after {
+      width: 100%;
+    }
+  }
+
+
+  .search-wrapper.expanded {
+    width: 91%;
+    > a {
+      display: block;
+    }
+  }
+
+  .form-item-expand-search {
+    a {
+      transition: all .3s;
+      right: 0;
+      padding-right: .25rem;
+    }
+  }
+
+  .form-item-expand-search a.expanded {
+    right: 100%;
+  }
+
+}
+
+//search .icon
+
+.block-ago-search,
+.general-search-form {
+   @include breakpoint($standard-screen) {
+    display:block;
+
+    .form-item-expand-search {
+      a {
+        &:before{
+          @include material-icon;
+          content:'\E8b6';
+          top: 0px;
+          padding: 0px 15px;
+        }
+      }
+    }
+
+    .close-search-btn{
+      &:before{
+      @include material-icon;
+      content:'\E5CD';
+      top: 0px;
+      padding: 0px;
+      }
+    }
+
+  }
+  display: none;
+
+}
+
+.layout-content {
+  .block-ago-search{
+    display: block;
+    max-width: 100%;
+  }
+}
+
+
+
+/* The in-page search form that shows up on the search page.
+   These can all be wiped, I'm just putting them in so it can be seen.
+*/
+#block-agosearchpageform {
+  .block-ago-search{
+    margin-top: 0;
+  }
+  .form-item-expand-search a:before,  .close-search-btn:before {
+    border: 1px solid #000;
+    color: #000;
+  }
+  input.form-submit {
+  @include btn-big;
+  @include btn-white;
+  display: inline-block;
+  margin-left: -3px;
+  margin-right: 0;
+  height: 50px;
+  vertical-align: top;
+  -webkit-font-smoothing: subpixel-antialiased;
+  }
+
+  .form-type-search {
+    input {
+      height: 50px;
+    width: 250px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    display: inline-block;
+    position: relative;
+    background-image: url(../../img/file_icons/search-black.png);
+    background-repeat: no-repeat;
+    background-position: 6% 50%;
+    background-size: 20px;
+    @include nimbus-reg;
+    font-size: 1em;
+    padding: 0.88889em 1em 0.79012em 2.566em;
+    border: 1px solid black;
+    box-sizing: border-box;
+    vertical-align: top;
+    color: $contrastgrey;
+
+    }
+
+  }
+}

@@ -1,0 +1,10 @@
+uuid: bdcd55e2-18a4-4ce0-aaba-d6b31f702919
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.grid_no_links
+label: 'Grid - No Links'
+targetEntityType: block_content
+cache: true

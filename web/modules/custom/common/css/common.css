@@ -1,0 +1,4 @@
+.field--name-field-event-session .ief-entity-submit.button.form-submit {
+  display: none !important;
+  pointer-events: none !important;
+}

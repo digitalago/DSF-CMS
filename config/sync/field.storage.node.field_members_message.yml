@@ -1,0 +1,19 @@
+uuid: 5eaee38d-1762-4498-be5b-eb6531d1e583
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_members_message
+field_name: field_members_message
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

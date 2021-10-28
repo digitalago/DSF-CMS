@@ -1,0 +1,9 @@
+loris_url: 'https://d1qs43ndkrnxwa.cloudfront.net/loris/'
+thumbnail_object: '350'
+thumbnail_collection: '350'
+main_img_object: '680'
+run_overnight: 1
+file_name_objects: Objects.csv
+file_name_images: Images.csv
+file_name_artists: Constituents.csv
+file_name_rel_objects: Relatedworks.csv

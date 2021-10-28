@@ -1,0 +1,24 @@
+uuid: 611dee0b-377a-44fb-be41-7d0820f71f6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exhibition_details
+    - node.type.exhibition
+  module:
+    - text
+id: node.exhibition.field_exhibition_details
+field_name: field_exhibition_details
+entity_type: node
+bundle: exhibition
+label: 'Exhibition Details'
+description: 'This is a short area to include exhibition details underneath the title. Location, free w/ admission vs. ticketed, etc.'
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>Admission is always&nbsp;<strong>FREE </strong>for&nbsp;AGO Members, AGO Annual&nbsp;Pass Holders &amp;&nbsp;Visitors&nbsp;25 and&nbsp;under. <a href=\"/visit\">Learn more.</a></p>\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,30 @@
+/* 20-patterns/widgets/cards/_card--highlight.scss */
+
+$card-bg-color: #D32F2F;
+$card-accent-color: #B71C1C;
+
+.card--highlight{
+  background-color: $card-bg-color;
+  color: white;
+  .card__title{
+    padding-right: ms(5);
+  }
+  .card__supporting-text{
+    border-bottom: 1px solid $card-accent-color;
+    padding-right: ms(6);
+  }
+  .card__button{
+    color: white;
+    &:hover,&:focus{
+      background-color: $card-accent-color;
+    }
+  }
+
+  // may need to do icons for different card formats
+  .material-icons{
+    position: absolute;
+    right: ms(-4);
+    top: ms(-2);
+    color: white;
+  }
+}

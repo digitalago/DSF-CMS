@@ -1,0 +1,7 @@
+accordion_block:
+  version: VERSION
+  js:
+    js/accordion_block.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

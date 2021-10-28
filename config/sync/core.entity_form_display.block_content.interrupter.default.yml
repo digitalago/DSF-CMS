@@ -1,0 +1,40 @@
+uuid: e386f59d-2656-41d4-9405-e9f5db111500
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.interrupter
+    - field.field.block_content.interrupter.field_link
+    - field.field.block_content.interrupter.field_text
+  module:
+    - link
+id: block_content.interrupter.default
+targetEntityType: block_content
+bundle: interrupter
+mode: default
+content:
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

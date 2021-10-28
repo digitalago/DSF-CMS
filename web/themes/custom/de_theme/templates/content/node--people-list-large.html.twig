@@ -1,0 +1,27 @@
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    node.id ? 'node-id-' ~ node.id,
+    'block-people-list-large',
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article id = "{{ node.label|clean_id }}" {{ attributes.addClass(classes) }}>
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    <div class="person-image">
+      {{ content.field_person_image }}
+    </div>
+    <div class="person-content">
+      <h3>{{ content.field_first_name }}{{ content.field_last_name }}</h3>
+      {{ content | without('field_person_image', 'field_first_name', 'field_last_name') }}
+    </div>
+  </div>
+
+</article>

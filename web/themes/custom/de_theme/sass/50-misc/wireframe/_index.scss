@@ -1,0 +1,7 @@
+/* _wireframe.scss */
+// @imports all SASS partials from /wireframe folder.
+// contains temporary styles for website use in pre-development.
+// before beginning development, comment out this file in _components.scss
+
+@import 'layout-wireframe';
+@import 'elements-wireframe';

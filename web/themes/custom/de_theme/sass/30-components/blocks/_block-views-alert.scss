@@ -1,0 +1,224 @@
+
+// ++++ Alert block styles
+
+.block-views-blockalert-block-alert, .block-views-blockalert-block-alert-front {
+	padding: 1.5em 0;
+	position: fixed;
+	display: block;
+	z-index: 1000;
+	top: 0;
+	// left: 0;
+	width: 100%;
+	min-width: 300px;
+	transition: top 0.3s;
+	text-align: center;
+	max-width: 1188px;
+	left: 50%;
+  transform: translateX(-50%);
+
+	&::before {
+		content: '';
+		position: absolute;
+		display: block;
+		left: -100%;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		display: block !important;
+		right: -100%;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+	}
+
+	// === IE11 specific style fix
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  	&::after{right:0;}
+	}
+
+	// === Alert Icon background color
+	&.grey-background.general-info--green,
+	&.white-background.general-info--green {
+		.view-display-id-block_alert, .view-display-id-block_alert_front {
+			&::before {
+				background-color: $green;
+			}
+		}
+	}
+
+	&.grey-background.internal--yellow,
+	&.white-background.internal--yellow {
+		.view-display-id-block_alert, .view-display-id-block_alert_front {
+			&::before {
+				background-color: $yellow;
+			}
+		}
+	}
+
+	&.grey-background.closure--red,
+	&.white-background.closure--red {
+		.view-display-id-block_alert, .view-display-id-block_alert_front {
+			&::before {
+				background-color: $alert-red;
+			}
+		}
+	}
+
+	&.black-text-white-background {
+		.view-display-id-block_alert, .view-display-id-block_alert_front {
+			&::before {
+				background-color: $black;
+			}
+		}
+	}
+
+	// === Grey background
+	&.grey-background {
+		background-color: $light-grey;
+
+		&::before {
+			background-color: $light-grey;
+		}
+
+		&::after {
+			background-color: $light-grey;
+		}
+	}
+
+	// ===== White background/black text and white background
+	&.black-text-white-background,
+	&.white-background {
+		background-color: $white;
+
+		&::before {
+			background-color: $white;
+		}
+
+		&::after {
+			background-color: $white;
+		}
+	}
+
+	// === Black text and white background
+	&.white-text-black-background {
+		.view-display-id-block_alert, .view-display-id-block_alert_front {
+			&::before {
+				background-color: $black;
+			}
+		}
+	}
+
+	//  === black background/white text
+	&.white-text-black-background {
+		background-color: $black;
+		color: $white;
+
+		&::before {
+			background-color: $black;
+		}
+
+		&::after {
+			background-color: $black;
+		}
+
+		.view-display-id-block_alert, .view-display-id-block_alert_front {
+			&::before {
+				background-color: $white;
+				color: $black;
+			}
+		}
+
+		.view-content {
+			border-color: $white;
+		}
+	}
+
+	// === Hide at breakpoints
+	&.hide-mobile {
+		position: absolute;
+  	top: -9999px;
+  	// left: -9999px;
+		@include breakpoint($weird-screen) {
+			// position: relative;
+			position: fixed;
+			top: 0;
+			// left: 0;
+		}
+	}
+
+	&.hide-desktop {
+		@include breakpoint($weird-screen) {
+			position: absolute;
+			top: -9999px;
+			// left: -9999px;
+		}
+	}
+
+	&.hide-both {
+		display: none;
+	}
+
+	// === Generic styling for all styles
+	.view-display-id-block_alert, .view-display-id-block_alert_front {
+		// &::before {
+		// 	font-family: 'Font Awesome 5 Free';
+		// 	font-weight: 900;
+		// 	content: '\f12a';
+		// 	width: 60px;
+	  //   height: 60px;
+	  //   position: absolute;
+	  //   // left: 0;
+	  //   top: 0;
+	  //   margin-top: 1em;
+	  //   border-radius: 50%;
+	  //   color: $white;
+    //   display: flex;
+	  //   justify-content: center;
+	  //   align-items: center;
+	  //   font-size: 1.938em;
+		//
+	  //   @include breakpoint($narrow-screen) {
+	  //   	top: 50%;
+	  //   	transform: translateY(-50%);
+	  //   	margin-top: 0;
+	  //   }
+		// }
+
+		_::-webkit-full-page-media, _:future, :root .safari_only {
+			&::before {
+				top: 2.5em;
+			}
+		}
+	}
+
+	.view-content {
+		padding: .8em 1.5em;
+		// margin-left: calc(60px + 1.5em);
+		// border-left: 1px solid $dark-grey;
+		z-index: 1;
+		position: relative;
+
+		@include breakpoint($medium-screen) {
+			padding: .8em 3.5em;
+			// margin-left: 7em;
+		}
+	}
+
+	.field--name-body  {
+		p {
+			padding-bottom: .5em;
+		}
+	}
+
+	.field--name-field-style-options,
+	.field--name-field-type {
+		display: none;
+	}
+}

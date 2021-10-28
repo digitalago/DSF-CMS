@@ -1,0 +1,29 @@
+uuid: 56653295-b7f2-4897-9173-dad0bfed3b25
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.whats_on
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: exposed_form_whats_on_events_archive
+theme: de_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:whats_on-events_archive'
+settings:
+  id: 'views_exposed_filter_block:whats_on-events_archive'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /events/archive
+    negate: false
+    context_mapping: {  }

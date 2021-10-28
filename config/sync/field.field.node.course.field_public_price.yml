@@ -1,0 +1,23 @@
+uuid: 53c5d146-475b-4735-aab0-99556566f17b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_price
+    - node.type.course
+id: node.course.field_public_price
+field_name: field_public_price
+entity_type: node
+bundle: course
+label: 'Public Price'
+description: 'If the price is "Free" please leave blank.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

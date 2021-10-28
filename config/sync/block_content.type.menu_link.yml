@@ -1,0 +1,8 @@
+uuid: 13fd2ef6-0f31-456e-ae1c-20bfb8d4b841
+langcode: en
+status: true
+dependencies: {  }
+id: menu_link
+label: 'Menu Link'
+revision: 1
+description: 'This block type is for black main menu except homepage (temporary) '

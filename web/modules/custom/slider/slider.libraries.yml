@@ -1,0 +1,8 @@
+slider_init:
+  version: VERSION
+  js:
+    js/slider_init.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - de_theme/slick

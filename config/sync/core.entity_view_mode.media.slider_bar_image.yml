@@ -1,0 +1,10 @@
+uuid: 13bf8032-e3b0-4a68-a2b0-751536efc0b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.slider_bar_image
+label: 'Slider Bar Image'
+targetEntityType: media
+cache: true

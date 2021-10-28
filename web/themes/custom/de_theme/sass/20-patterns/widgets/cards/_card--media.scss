@@ -1,0 +1,37 @@
+/* 20-patterns/widgets/cards/_card--media.scss */
+
+$card-bg-color: #0097A7;
+$card-accent-color: #00838F;
+
+.card--media{
+  background-color: $card-bg-color;
+  color: white;
+  .card__image{
+    line-height: 0;
+    img{
+      width: 100%;
+    }
+  }
+  .card__supporting-text{
+    border-bottom: 1px solid $card-accent-color;
+  }
+  .card__button{
+    color: white;
+    &:hover,&:focus{
+      background-color: $card-accent-color;
+    }
+  }
+
+  .card__title{
+    padding: 0;
+    position: relative;
+  }
+  .card__title-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: ms(-2) ms(-2);
+    background-color: $translucent-box;
+  }
+}

@@ -1,0 +1,34 @@
+uuid: 5e3250ee-aed6-43be-a24f-a4ae2569f92a
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.hero_thin_crop
+  module:
+    - crop
+    - focal_point
+name: hero_thin_wide
+label: 'Hero thin wide'
+effects:
+  4638e7e6-d179-4f9a-a381-e684b55cb0a3:
+    uuid: 4638e7e6-d179-4f9a-a381-e684b55cb0a3
+    id: focal_point_scale_and_crop
+    weight: -8
+    data:
+      width: 2560
+      height: 480
+      crop_type: focal_point
+  cc4eb7f6-4a84-4e4d-ac70-e7e0bcf263fd:
+    uuid: cc4eb7f6-4a84-4e4d-ac70-e7e0bcf263fd
+    id: image_scale
+    weight: -9
+    data:
+      width: 2560
+      height: 480
+      upscale: true
+  c0dfdc25-bb04-480f-b682-601ca87364b9:
+    uuid: c0dfdc25-bb04-480f-b682-601ca87364b9
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: hero_thin_crop

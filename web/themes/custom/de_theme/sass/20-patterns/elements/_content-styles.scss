@@ -1,0 +1,125 @@
+/* 20-patterns/elements/_content-styles.scss */
+// contains styles for the editor experience. eg. float images left or right,
+// headline and highlight typography.
+// this file gets imported by wysiwyg/wysiwyg-editor.scss.
+
+
+//ck credit
+
+.body-credit{
+  border-top: 1px solid $contrastgrey;
+  border-bottom: 1px solid $contrastgrey;
+  padding: 10px 0px;
+  margin: 10px 0px;
+  font-size: ms(-1);
+}
+
+//image alignment
+.inline-image-left,
+.inline-image-right,
+.inline-image-center{
+  @include image-style;
+}
+
+.inline-image-left{
+  @include image-style-left;
+  @include breakpoint (max-width $weird-screen) {
+    width: 100%;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.inline-image-right{
+  @include image-style-right;
+}
+
+.inline-image-left, .inline-image-right {
+  @include breakpoint (max-width $weird-screen) {
+    width: 100%;
+  }
+}
+
+.inline-image-center{
+  @include image-style-center;
+}
+
+.img-wrapper-center {
+  // width: auto !important;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  figure {
+
+    figcaption {
+      width: auto;
+    }
+  }
+  .align-center {
+    width: auto;
+    margin: ms(-2) auto;
+    figcaption {
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+      @include breakpoint ($weird-screen) {
+        padding: 0 2em;
+      }
+    }
+  }
+}
+
+.align-left {
+  margin-right: ms();
+}
+.align-right {
+  margin-left: ms();
+}
+.align-center {
+  margin: ms(-2) auto;
+  text-align:center;
+  
+}
+
+.inline-background-grey{
+  background: $light-grey;
+  color: $almostblack;
+  padding-top: 20px;
+  padding-bottom:20px;
+  padding-left:ms();
+  padding-right:ms();
+}
+
+.inline-background-grey.full-width h3 {
+  margin-bottom:ms(1);
+}
+
+.vert-align-centre {
+  position: relative;
+  @include breakpoint ($standard-screen) {
+    height: 380px;
+    background: $white;
+    img {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+    }
+  }
+}
+
+.column-2-left, .column-2-right {
+  .vert-align-centre {
+    @include breakpoint ($standard-screen) {
+      height:250px;
+    }  
+  }  
+}
+

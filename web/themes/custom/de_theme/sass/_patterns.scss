@@ -1,0 +1,8 @@
+/* _patterns.scss */
+// contains generic, underlying design patterns and their extensions.
+// eg. basic styles for all sidebar blocks or list displays of content
+
+@import '20-patterns/elements/index';
+@import '20-patterns/drupal/index';
+@import '20-patterns/vendors/index';
+@import '20-patterns/widgets/index';

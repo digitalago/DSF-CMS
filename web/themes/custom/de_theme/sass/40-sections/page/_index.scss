@@ -1,0 +1,24 @@
+/* sections/_page.scss */
+// anything basic page related that doe not live in a section should go here
+
+@import 'node-page';
+@import 'node-type-publication';
+@import 'node-type-lesson-plans';
+@import 'node-type-object';
+@import 'node-type-exhibition';
+@import 'frontpage';
+@import 'node-press-release';
+@import 'node-type-course';
+@import 'node-type-agoc-event';
+@import 'google-search';
+@import 'boxwood-frontpage';
+@import 'node-type-dags-person';
+@import 'visit-page';
+@import 'collection-page';
+@import 'media-centre';
+@import 'media-item';
+@import 'press-room';
+@import 'node-type-agoc-tours';
+@import 'node-type-ago-publication';
+@import 'node--type-menu';
+@import 'node--type-person';

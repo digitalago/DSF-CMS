@@ -1,0 +1,20 @@
+#drupal-off-canvas {
+  .form-item.form-type-radio {
+    input[type="radio"] {
+      display: inline-block !important;
+    }
+    input[type="radio"] ~ label:before {
+      display: none !important;
+    }
+  }
+  .form-item.form-type-checkbox {
+    input[type=checkbox] {
+      display: inline-block;
+      opacity: 1;
+    }
+
+    input[type="checkbox"] ~ label:before {
+      display: none !important;
+    }
+  }
+}

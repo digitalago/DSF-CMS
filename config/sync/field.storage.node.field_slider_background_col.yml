@@ -1,0 +1,27 @@
+uuid: 04ccef78-3b2f-4c2d-8d6c-2d76c3d4ba36
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_slider_background_col
+field_name: field_slider_background_col
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: slide-background-white
+      label: White
+    -
+      value: slide-background-black
+      label: Black
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

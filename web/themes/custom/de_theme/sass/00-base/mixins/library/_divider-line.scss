@@ -1,0 +1,30 @@
+// divider line
+@mixin divider-line($border-width: 1px, $border-style: solid, $border-color: $ui-borders-color, $spacing-top: ms(-2), $spacing-bottom: ms(-2)){
+  border-bottom: $border-width $border-style $border-color;
+  padding-top: $spacing-top;
+  padding-bottom: $spacing-bottom;
+  // &:first-child{
+  //   padding-top: 0;
+  // }
+  // &:last-child{
+  //   padding-bottom: 0;
+  // }
+}
+
+@mixin divider-line-2 ($border-width: 3px, $border-style: solid, $border-color: lighten($ui-borders-color, 30%), $spacing-top: ms(), $spacing-bottom: ms(-2)) {
+  border-bottom: $border-width $border-style $border-color;
+  padding-top: $spacing-top;
+  padding-bottom: $spacing-bottom;
+  &:last-child {
+    border: none;
+  }
+}
+
+@mixin divider-line-3 ($border-width: 1px, $border-style: solid, $border-color: lighten($ui-borders-color, 30%), $spacing-top: ms(1), $spacing-bottom: ms(3)) {
+  border-bottom: $border-width $border-style $border-color;
+  padding-top: $spacing-top;
+  padding-bottom: $spacing-bottom;
+  &:last-child {
+    border: none;
+  }
+}

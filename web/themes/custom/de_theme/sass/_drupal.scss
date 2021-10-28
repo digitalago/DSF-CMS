@@ -1,0 +1,12 @@
+/* _drupal.scss */
+// _drupal.scss contains echidnas default drupal style overrides and
+// baseline styles for default CORE drupal functionlaity eg. webform overrides,
+// basic search result styles.
+
+@import "10-drupal/comments/index";
+@import "10-drupal/forms/index";
+@import "10-drupal/forums/index";
+@import "10-drupal/search/index";
+@import "10-drupal/system/index";
+@import "10-drupal/user/index";
+@import "10-drupal/webforms/index";

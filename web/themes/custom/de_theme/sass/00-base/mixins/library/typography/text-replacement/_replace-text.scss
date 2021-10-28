@@ -1,0 +1,14 @@
+// http://compass-style.org/reference/compass/typography/text/replacement/#mixin-replace-text
+@mixin replace-text($img, $x: 50%, $y: 50%) {
+  @include hide-text;
+  background: {
+    @if is-url($img) {
+      image: $img;
+    }
+    @else {
+      image: image-url($img);
+    }
+    repeat: no-repeat;
+    position: $x $y;
+  };
+}

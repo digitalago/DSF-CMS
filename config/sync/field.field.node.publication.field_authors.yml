@@ -1,0 +1,21 @@
+uuid: 4338ad3b-7663-4f59-ad83-239e074b56d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_authors
+    - node.type.publication
+  module:
+    - text
+id: node.publication.field_authors
+field_name: field_authors
+entity_type: node
+bundle: publication
+label: Author(s)
+description: 'list the authors here. place authors on a new line with cmd/ctrl enter'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

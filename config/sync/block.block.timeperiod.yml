@@ -1,0 +1,29 @@
+uuid: d3d77025-84ff-43d8-ab77-4cba59e26e24
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.time_period
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: timeperiod
+theme: de_theme
+region: sidebar_first
+weight: -26
+provider: null
+plugin: 'facet_block:time_period'
+settings:
+  id: 'facet_block:time_period'
+  label: 'Time Period'
+  provider: facets
+  label_display: '0'
+  block_id: timeperiod
+visibility:
+  request_path:
+    id: request_path
+    pages: /collection/browse
+    negate: false
+    context_mapping: {  }

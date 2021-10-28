@@ -1,0 +1,10 @@
+uuid: daf0cecc-49de-4027-aeef-8b0f6864af6a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.alert
+label: Alert
+targetEntityType: block_content
+cache: true

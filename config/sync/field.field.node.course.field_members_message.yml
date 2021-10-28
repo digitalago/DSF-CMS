@@ -1,0 +1,24 @@
+uuid: cabb3514-9c6c-4a15-8827-212931311f41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_members_message
+    - node.type.course
+  module:
+    - text
+id: node.course.field_members_message
+field_name: field_members_message
+entity_type: node
+bundle: course
+label: 'Members Message'
+description: 'This is the default members message you can change it if needed .'
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>Members Save! Not a member? <a class=\"more-link\" href=\"membership\">Join Today.</a></p>\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

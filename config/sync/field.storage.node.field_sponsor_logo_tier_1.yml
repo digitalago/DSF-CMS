@@ -1,0 +1,20 @@
+uuid: 753d0d9b-9fb2-454a-aaf7-13ffb1683235
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_sponsor_logo_tier_1
+field_name: field_sponsor_logo_tier_1
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

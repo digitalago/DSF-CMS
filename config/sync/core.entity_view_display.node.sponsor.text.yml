@@ -1,0 +1,46 @@
+uuid: 38f55ede-cd37-4c33-916c-eabb7013a920
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.text
+    - field.field.node.sponsor.body
+    - field.field.node.sponsor.field_org_additional_text
+    - field.field.node.sponsor.field_org_website
+    - field.field.node.sponsor.field_sponsor_logo_tier_1
+    - field.field.node.sponsor.field_sponsor_logo_tier_2
+    - field.field.node.sponsor.field_sponsor_logo_tier_3a
+    - field.field.node.sponsor.field_sponsor_logo_tier_3b
+    - field.field.node.sponsor.field_sponsor_text
+    - node.type.sponsor
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.sponsor.text
+targetEntityType: node
+bundle: sponsor
+mode: text
+content:
+  field_sponsor_text:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  field_org_additional_text: true
+  field_org_website: true
+  field_sponsor_logo_tier_1: true
+  field_sponsor_logo_tier_2: true
+  field_sponsor_logo_tier_3a: true
+  field_sponsor_logo_tier_3b: true
+  links: true
+  search_api_excerpt: true

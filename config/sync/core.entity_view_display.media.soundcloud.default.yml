@@ -1,0 +1,63 @@
+uuid: 79cb8b7f-19a3-45b8-99f9-aca96eaeaa0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.soundcloud.field_artist_name
+    - field.field.media.soundcloud.field_category
+    - field.field.media.soundcloud.field_description
+    - field.field.media.soundcloud.field_media_duration
+    - field.field.media.soundcloud.field_media_soundcloud
+    - field.field.media.soundcloud.field_media_thumbnail
+    - field.field.media.soundcloud.field_release_date
+    - field.field.media.soundcloud.field_speaker_name
+    - field.field.media.soundcloud.field_subjects
+    - field.field.media.soundcloud.field_tags
+    - field.field.media.soundcloud.field_track_name
+    - media.type.soundcloud
+  module:
+    - media_entity_soundcloud
+id: media.soundcloud.default
+targetEntityType: media
+bundle: soundcloud
+mode: default
+content:
+  field_media_soundcloud:
+    weight: 0
+    label: hidden
+    settings:
+      type: classic
+      width: 100%
+      height: '166'
+      options:
+        auto_play: '0'
+        hide_related: '0'
+        show_comments: '0'
+        show_user: '0'
+        show_reposts: '0'
+    third_party_settings: {  }
+    type: soundcloud_embed
+    region: content
+  name:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_artist_name: true
+  field_category: true
+  field_description: true
+  field_media_duration: true
+  field_media_thumbnail: true
+  field_release_date: true
+  field_speaker_name: true
+  field_subjects: true
+  field_tags: true
+  field_track_name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,119 @@
+
+// contains the styling of connect block
+
+.block-insta {
+  background-color: black;
+  @extend .layout-container;
+  padding-top: 5em !important;
+  padding-bottom: 5em !important;
+  @include breakpoint($wide-screen) {
+    max-width: 100% !important;
+  }
+  h2 {
+    margin-bottom: 1em !important;
+    color: white;
+    border-bottom: none;
+    @include breakpoint($wide-screen) {
+      // @extend .layout-container;
+      max-width: 1188px;
+      margin: 0 auto;
+      padding-left: 0 !important;
+    }
+  }
+  .layout-container {
+    padding: 0 !important;
+  }
+  .social-links-wrapper {
+    margin-top: 2.5em;
+    .fab {
+      margin-bottom: 1em;
+      width: auto;
+      display: inline-block;
+      &:before {
+        color: white;
+        font-size: 2.5em;
+        margin-right: .25em;
+        position: relative;
+        top: 5px;
+      }
+      &:after {
+        color: white;
+        font-size: 1.5em;
+        font-family: $font-set-1;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &:hover {
+        cursor: pointer;
+        &:before, &:after {
+          color: $neutral-grey;
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+    a {
+      margin-right: 2em;
+    }
+    .social-link-text {
+      color: white;
+      text-decoration: none;
+      @include heading-3;
+      display: none;
+      @include breakpoint($small-screen) {
+      display: inline-block;
+      }
+    }
+  }
+}
+
+.instashow-popup {
+  .instashow-popup-control-close {
+    // top: 30px;
+    // right: 50px;
+    &:before, &:after {
+      background: white !important;
+    }
+    &:hover {
+      &:before, &:after {
+        background: $neutral-grey !important;
+      }
+    }
+  }
+
+  .instashow-popup-control-arrow{
+    top: -30px;
+    &:hover {
+      span {
+        transform: translateY(-50%) scaleY(1);
+        &:before {
+          color: $neutral-grey;
+        }
+      }
+    }
+    span {
+      right: 80px;
+      &:before {
+        font-family: "Font Awesome 5 Free";
+        content:"\f054";
+        color: white;
+        width: 0;
+        transform: rotate(0);
+        font-size: 3em;
+      }
+      &:after {
+        width: 0;
+      }
+      &:hover {
+      }
+    }
+  }
+
+  .instashow-popup-control-arrow-previous {
+    span {
+      left: 60px;
+      &:before {
+        content:"\f053";
+      }
+    }
+  }
+}

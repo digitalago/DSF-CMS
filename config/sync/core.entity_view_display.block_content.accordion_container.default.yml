@@ -1,0 +1,33 @@
+uuid: ddc12f37-3fcd-4528-ae55-5a87b2510019
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_container
+    - field.field.block_content.accordion_container.field_accordion
+    - field.field.block_content.accordion_container.field_description
+  module:
+    - text
+id: block_content.accordion_container.default
+targetEntityType: block_content
+bundle: accordion_container
+mode: default
+content:
+  field_accordion:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  search_api_excerpt: true

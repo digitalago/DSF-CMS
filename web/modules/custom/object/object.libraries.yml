@@ -1,0 +1,7 @@
+object:
+  version: VERSION
+  js:
+    js/object.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

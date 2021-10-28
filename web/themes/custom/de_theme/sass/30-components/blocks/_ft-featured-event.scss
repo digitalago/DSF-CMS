@@ -1,0 +1,209 @@
+/* FT featured event */
+
+.ft-block-header-wrap{
+    background: $black;
+    width: 100%;
+}
+  .ft-block-header{
+    @include breakpoint ($standard-screen-max){
+   //     max-height:100vh;  
+    }
+  //  width: 100%;
+  //  overflow: hidden;
+  //  background: $almostblack;
+    position: relative;
+    display: block;
+    overflow: auto;
+    background: black;
+    width: 100%;
+    margin: 0px auto;
+    padding-bottom: 20px;
+    @include breakpoint ($wide-screen){
+        width: 85%;
+       
+    }
+    @include breakpoint ($super-wide-screen){
+        width: 75%;
+       
+    }
+    
+
+    .ft-block-header-image{
+        width: 100%;
+        float: right;
+        height: 100%;
+        padding-bottom: 20px;
+        @include breakpoint ($wide-screen){
+            width: 48%;
+            padding: ms(6) ms(-1);
+        }
+        @include breakpoint ($super-wide-screen){
+            width: 48%;
+            padding: ms(6) ms(-1);
+        }
+
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .ft-block-header-content{
+        position: relative;
+        padding: ms(2) ms(2);
+        @include breakpoint ($medium-screen){
+      //  position: absolute;
+       // left:0;
+      //  right: 0;
+      //  top:10%;
+      //  bottom:10%;
+        padding: ms(4) ms(3);
+        }
+        width: 96%;
+       
+        @include breakpoint ($wide-screen){
+            width: 48%;
+            padding: ms(6) ms(-1);
+        }
+        @include breakpoint ($super-wide-screen){
+            width: 48%;
+            padding: ms(6) ms(-1);
+        }
+        
+        .ft-event-title{
+            
+            h1{
+                font-size: ms(12);
+                margin-bottom: 0;
+                color: $white;
+                text-transform: uppercase;
+                @include breakpoint ($narrow-screen){
+                    font-size: ms(13);
+            
+                }
+                @include breakpoint ($super-wide-screen){
+                    font-size: ms(15);
+            
+                }
+            }
+            width: 100%;
+        
+        }
+      
+        .ft-next-event{
+          
+            @include category-label;
+            color: white;
+            font-size: ms(3);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            @include breakpoint ($standard-screen){
+                font-size: ms(7);
+            }
+        }
+        .ft-event-date-description{
+       
+        font-weight: $normal;
+        font-size: ms(7);
+        line-height: ms(-1);
+        margin-top: 0.1em;
+        margin-bottom: 0.1em;
+        letter-spacing: 1px;
+        color: white;
+        font-family: $font-set-1;
+        -webkit-font-smoothing: antialiased;
+        padding: 20px 0;
+        @include breakpoint ($small-screen) {
+        font-size: ms(7);
+        max-width: 80%;
+         }
+         @include breakpoint ($wide-screen) {
+         font-size: ms(9);
+         max-width: 90%;
+    
+        }            
+        }
+
+        .ft-event-description{
+           
+            p{
+                @include nimbus-reg;
+                color: white;
+                font-size: ms(1);
+                line-height: normal;
+                font-weight: 100;
+                -webkit-font-smoothing: antialiased;
+                @include breakpoint ($narrow-screen) {
+                font-size: ms(2);    
+                }
+                @include breakpoint ($super-wide-screen) {
+                    font-size: ms(3);    
+                    }
+                a{
+                    color: white;
+                }
+            }
+            
+            width: 90%;
+            @include breakpoint ($wide-screen){
+                width: 80%;
+            }
+        }
+       
+        .ft-event-button{ 
+          font-size: ms(3);
+            a{  
+                @include btn-big;
+                @include breakpoint ($small-screen) {
+                @include btn-really-big;
+                }
+                background: transparent;
+                border: white 1px solid;
+                color: white;
+                text-decoration: none;
+                letter-spacing: 0.1em;
+            &:hover, &:focus{
+                background: $white;
+                color: $footer-bg;
+
+            }
+            }
+        }
+    }
+
+}
+
+.ft-block-body{
+    margin: 0 auto;
+    padding: 60px ms(3) 0px ms(3);
+    max-width: $wide-screen;
+    @include clearfix;
+    h2{
+        text-transform: uppercase;
+    }
+    .ft-body-left{
+        @include grid-span(12, 1);
+        @include breakpoint($weird-screen){
+            @include grid-span(8,1);
+        }
+        .ft-time{
+            @include heading-3;
+        }
+        .event-prices{
+            @include heading-3;
+        }
+    }
+    .ft-sponsors{
+        .node--type-agoc-sponsor-section{
+            padding: 0;
+            @include breakpoint($narrow-screen){
+                padding: 0px ms(-1); 
+            }
+        }
+        @include grid-span(12, 1);
+        @include breakpoint($weird-screen){
+            @include grid-span(4,9);
+
+            } 
+    }
+    }

@@ -1,0 +1,10 @@
+uuid: cf9638c8-354b-47d5-8c37-51893f51f717
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.press_release_list
+label: 'Press Release List'
+targetEntityType: node
+cache: true

@@ -1,0 +1,8 @@
+uuid: 4c691868-396f-462e-bdd0-541898d8352a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Placement Tags'
+vid: placement_tags
+description: ''
+weight: 0

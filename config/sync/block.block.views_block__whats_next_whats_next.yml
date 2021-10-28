@@ -1,0 +1,30 @@
+uuid: 9455b5d0-9680-4610-8399-51865056cc54
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.whats_next
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: views_block__whats_next_whats_next
+theme: de_theme
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_block:whats_next-whats_next'
+settings:
+  id: 'views_block:whats_next-whats_next'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/4336
+    negate: false
+    context_mapping: {  }

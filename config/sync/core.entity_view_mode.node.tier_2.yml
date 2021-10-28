@@ -1,0 +1,10 @@
+uuid: a1623855-a05d-4a87-85e4-cf8fd6a5d79f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.tier_2
+label: 'Tier 2'
+targetEntityType: node
+cache: true

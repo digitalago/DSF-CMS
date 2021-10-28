@@ -1,0 +1,10 @@
+uuid: 2c598922-b1f8-477b-bfcd-08648dd6eac9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.object_gallery
+label: 'Object Gallery'
+targetEntityType: node
+cache: true

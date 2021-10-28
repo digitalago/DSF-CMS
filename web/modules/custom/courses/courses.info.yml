@@ -1,0 +1,7 @@
+name: Courses
+description: Courses functionality for courses displays.
+package: Custom
+dependencies:
+  - drupal:ckeditor
+type: module
+core: 8.x

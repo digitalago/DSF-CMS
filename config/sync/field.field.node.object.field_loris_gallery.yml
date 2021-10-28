@@ -1,0 +1,19 @@
+uuid: 6a08851b-1c57-46f2-bfc8-0e55c2d57029
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_loris_gallery
+    - node.type.object
+id: node.object.field_loris_gallery
+field_name: field_loris_gallery
+entity_type: node
+bundle: object
+label: 'Loris Gallery'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

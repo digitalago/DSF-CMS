@@ -1,0 +1,29 @@
+uuid: 47be5b53-41f2-483a-8a27-6ccdaf7b247e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_filters
+    - node.type.event
+    - taxonomy.vocabulary.featured_filters
+id: node.event.field_featured_filters
+field_name: field_featured_filters
+entity_type: node
+bundle: event
+label: 'Featured Filters'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      featured_filters: featured_filters
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

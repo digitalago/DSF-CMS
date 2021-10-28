@@ -1,0 +1,21 @@
+uuid: 15cdecab-deb8-4f50-96bd-57d80cc27475
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration_in_weeks
+    - node.type.course_session
+  module:
+    - options
+id: node.course_session.field_duration_in_weeks
+field_name: field_duration_in_weeks
+entity_type: node
+bundle: course_session
+label: 'Duration in weeks'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

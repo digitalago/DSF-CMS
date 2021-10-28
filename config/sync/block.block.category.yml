@@ -1,0 +1,29 @@
+uuid: 39feb9b9-b281-447f-ba57-ec8fc0b3e9dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.category
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: category
+theme: de_theme
+region: sidebar_first
+weight: -24
+provider: null
+plugin: 'facet_block:category'
+settings:
+  id: 'facet_block:category'
+  label: Category
+  provider: facets
+  label_display: '0'
+  block_id: category
+visibility:
+  request_path:
+    id: request_path
+    pages: /collection/browse
+    negate: false
+    context_mapping: {  }

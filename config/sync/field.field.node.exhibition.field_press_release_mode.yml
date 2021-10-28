@@ -1,0 +1,23 @@
+uuid: 2959f7b6-6c57-4547-ae78-1dde67eadd9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_release_mode
+    - node.type.exhibition
+id: node.exhibition.field_press_release_mode
+field_name: field_press_release_mode
+entity_type: node
+bundle: exhibition
+label: Redirect
+description: 'Show alternate page instead of exhibition page if it''s not ready to publish (i.e., press release, AGOInsider page).'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

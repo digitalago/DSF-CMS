@@ -1,0 +1,21 @@
+uuid: abb4b4d5-028d-4713-89e4-43691580ca44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_custom_script
+    - node.type.collection_page
+  module:
+    - text
+id: node.collection_page.field_custom_script
+field_name: field_custom_script
+entity_type: node
+bundle: collection_page
+label: 'Custom Script'
+description: 'This is for additional code for things like tracking or special scripts.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

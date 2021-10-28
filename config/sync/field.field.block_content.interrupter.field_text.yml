@@ -1,0 +1,19 @@
+uuid: 4933de6a-b151-4bb8-a9c9-e3f78f6e7c12
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.interrupter
+    - field.storage.block_content.field_text
+id: block_content.interrupter.field_text
+field_name: field_text
+entity_type: block_content
+bundle: interrupter
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

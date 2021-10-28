@@ -1,0 +1,28 @@
+uuid: 332f6825-ea8e-4219-a4a1-d8152a0a77fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_session
+    - node.type.event
+    - node.type.event_session
+id: node.event.field_event_session
+field_name: field_event_session
+entity_type: node
+bundle: event
+label: 'Event Session'
+description: 'You must create sessions for each event date to appear in calendar.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event_session: event_session
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,41 @@
+
+// +++ Theming the Collection and Menu CT image banner field
+
+.block-field-blocknodecollection-pagefield-main-image,
+.block-field-blocknodemenufield-main-image {
+	.field--name-field-main-image {
+		width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-height: 960px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    	height: auto;
+    }
+	}  
+}
+
+.anonymous {
+	.block-field-blocknodecollection-pagefield-main-image,
+  .block-field-blocknodemenufield-main-image {
+		.field--name-field-main-image {
+			margin-top: -54px;
+		}
+	}
+}
+
+// == Collection title
+
+.node--type-collection-page,
+.node--type-menu {
+  .field--name-title {
+    span {
+      text-transform: uppercase;
+    }
+  }  
+}

@@ -1,0 +1,31 @@
+uuid: f43cd670-0a9c-4617-8b8c-79c8712dacf3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:067afef4-804e-440d-a114-453dab87b1ba'
+  module:
+    - block_content
+    - system
+  theme:
+    - de_theme
+id: collectionbrowsetitle
+theme: de_theme
+region: content_prefix
+weight: -31
+provider: null
+plugin: 'block_content:067afef4-804e-440d-a114-453dab87b1ba'
+settings:
+  id: 'block_content:067afef4-804e-440d-a114-453dab87b1ba'
+  label: 'Collection browse title'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /collection/browse
+    negate: false
+    context_mapping: {  }

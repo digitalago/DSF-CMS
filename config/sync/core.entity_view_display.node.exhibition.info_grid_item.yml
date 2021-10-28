@@ -1,0 +1,91 @@
+uuid: 27bd34b8-60f6-4e91-8c03-671abaf10ec6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.info_grid_item
+    - field.field.node.exhibition.body
+    - field.field.node.exhibition.field_date_time_description
+    - field.field.node.exhibition.field_end_date
+    - field.field.node.exhibition.field_exhibition_details
+    - field.field.node.exhibition.field_exhibition_type
+    - field.field.node.exhibition.field_image
+    - field.field.node.exhibition.field_internal_notes
+    - field.field.node.exhibition.field_meta_tags
+    - field.field.node.exhibition.field_multi_locations
+    - field.field.node.exhibition.field_off_sale_date
+    - field.field.node.exhibition.field_on_sale_date
+    - field.field.node.exhibition.field_placement_date
+    - field.field.node.exhibition.field_placement_tag
+    - field.field.node.exhibition.field_press_release
+    - field.field.node.exhibition.field_press_release_mode
+    - field.field.node.exhibition.field_start_date
+    - field.field.node.exhibition.field_tagline
+    - field.field.node.exhibition.field_tags
+    - field.field.node.exhibition.field_ticket_link
+    - field.field.node.exhibition.field_ticketing_status
+    - field.field.node.exhibition.layout_builder__layout
+    - node.type.exhibition
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.exhibition.info_grid_item
+targetEntityType: node
+bundle: exhibition
+mode: info_grid_item
+content:
+  body:
+    type: text_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_date_time_description:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: card_image
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_end_date: true
+  field_exhibition_details: true
+  field_exhibition_type: true
+  field_internal_notes: true
+  field_meta_tags: true
+  field_multi_locations: true
+  field_off_sale_date: true
+  field_on_sale_date: true
+  field_placement_date: true
+  field_placement_tag: true
+  field_press_release: true
+  field_press_release_mode: true
+  field_start_date: true
+  field_tagline: true
+  field_tags: true
+  field_ticket_link: true
+  field_ticketing_status: true
+  layout_builder__layout: true
+  search_api_excerpt: true

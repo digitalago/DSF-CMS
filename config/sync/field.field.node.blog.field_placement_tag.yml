@@ -1,0 +1,29 @@
+uuid: 7ded1bda-1306-4bab-9bdd-c7387c693a9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_placement_tag
+    - node.type.blog
+    - taxonomy.vocabulary.placement_tags
+id: node.blog.field_placement_tag
+field_name: field_placement_tag
+entity_type: node
+bundle: blog
+label: 'Placement Tag'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      placement_tags: placement_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

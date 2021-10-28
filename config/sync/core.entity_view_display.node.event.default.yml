@@ -1,0 +1,223 @@
+uuid: 73fbce76-e22e-4065-a5c7-1e58fd473bf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.body
+    - field.field.node.event.field_accessible
+    - field.field.node.event.field_additional_gl_code
+    - field.field.node.event.field_additional_value_member
+    - field.field.node.event.field_additional_value_public
+    - field.field.node.event.field_audience
+    - field.field.node.event.field_big_feature
+    - field.field.node.event.field_capacity
+    - field.field.node.event.field_date_time_description
+    - field.field.node.event.field_event_category
+    - field.field.node.event.field_event_session
+    - field.field.node.event.field_featured_event_image
+    - field.field.node.event.field_featured_filters
+    - field.field.node.event.field_free
+    - field.field.node.event.field_gl_code_events
+    - field.field.node.event.field_hide_ticketing
+    - field.field.node.event.field_internal_notes
+    - field.field.node.event.field_is_featured
+    - field.field.node.event.field_location_reference
+    - field.field.node.event.field_main_image
+    - field.field.node.event.field_marketing_flag
+    - field.field.node.event.field_media_container
+    - field.field.node.event.field_member_price
+    - field.field.node.event.field_members_message
+    - field.field.node.event.field_meta_tags
+    - field.field.node.event.field_placement_date
+    - field.field.node.event.field_placement_tag
+    - field.field.node.event.field_price_notes
+    - field.field.node.event.field_public_price
+    - field.field.node.event.field_short_description
+    - field.field.node.event.field_student_price
+    - field.field.node.event.field_tagline
+    - field.field.node.event.field_tags
+    - field.field.node.event.field_value_allocation
+    - field.field.node.event.field_value_member
+    - field.field.node.event.field_year_filter
+    - node.type.event
+  module:
+    - metatag
+    - text
+    - user
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  addtoany:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    weight: 14
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_accessible:
+    weight: 13
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_date_time_description:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_event_category:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_free:
+    weight: 10
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_hide_ticketing:
+    weight: 11
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_internal_notes:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_location_reference:
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_main_image:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: courseevent_image
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_media_container:
+    type: entity_reference_entity_view
+    weight: 17
+    label: hidden
+    settings:
+      view_mode: card_image
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_member_price:
+    weight: 6
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_members_message:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_meta_tags:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_price_notes:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_public_price:
+    weight: 7
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_student_price:
+    weight: 8
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_additional_gl_code: true
+  field_additional_value_member: true
+  field_additional_value_public: true
+  field_audience: true
+  field_big_feature: true
+  field_capacity: true
+  field_event_session: true
+  field_featured_event_image: true
+  field_featured_filters: true
+  field_gl_code_events: true
+  field_is_featured: true
+  field_marketing_flag: true
+  field_placement_date: true
+  field_placement_tag: true
+  field_short_description: true
+  field_tagline: true
+  field_tags: true
+  field_value_allocation: true
+  field_value_member: true
+  field_year_filter: true
+  search_api_excerpt: true

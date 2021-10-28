@@ -1,0 +1,265 @@
+uuid: decb521e-d62e-4ec4-91ca-5958cef2db46
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.inline_form_default
+    - entity_browser.browser.slide_item_browser
+    - field.field.node.slider_container.body
+    - field.field.node.slider_container.field_arrows
+    - field.field.node.slider_container.field_autoplay
+    - field.field.node.slider_container.field_display_image_credits
+    - field.field.node.slider_container.field_display_location
+    - field.field.node.slider_container.field_display_on_front
+    - field.field.node.slider_container.field_display_slide_date_ti
+    - field.field.node.slider_container.field_display_slide_descrip
+    - field.field.node.slider_container.field_display_slide_titles
+    - field.field.node.slider_container.field_display_slider_descri
+    - field.field.node.slider_container.field_display_title
+    - field.field.node.slider_container.field_image
+    - field.field.node.slider_container.field_pager
+    - field.field.node.slider_container.field_show_title
+    - field.field.node.slider_container.field_slide_container_class
+    - field.field.node.slider_container.field_slide_container_place
+    - field.field.node.slider_container.field_slide_timer
+    - field.field.node.slider_container.field_slider_background_col
+    - field.field.node.slider_container.field_slider_items
+    - field.field.node.slider_container.field_slider_transitions
+    - field.field.node.slider_container.field_slider_type
+    - field.field.node.slider_container.field_slider_width
+    - node.type.slider_container
+  module:
+    - entity_browser
+    - field_group
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_slider_options:
+      children:
+        - field_slider_type
+        - field_slider_width
+        - field_slider_background_col
+        - field_arrows
+        - field_pager
+        - field_autoplay
+        - field_slide_timer
+        - field_slider_transitions
+        - field_display_slide_titles
+        - field_display_slider_descri
+        - field_display_slide_descrip
+        - field_display_slide_date_ti
+        - field_display_image_credits
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Slider Options'
+id: node.slider_container.inline_form_default
+targetEntityType: node
+bundle: slider_container
+mode: inline_form_default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 5
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_arrows:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_autoplay:
+    weight: 27
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_display_image_credits:
+    weight: 34
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_display_location:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_display_on_front:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_display_slide_date_ti:
+    weight: 33
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_display_slide_descrip:
+    weight: 32
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_display_slide_titles:
+    weight: 30
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_display_slider_descri:
+    weight: 31
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_display_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image:
+    type: entity_browser_entity_reference
+    weight: 8
+    settings:
+      entity_browser: image_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: card_image
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    region: content
+  field_pager:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_show_title:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_slide_timer:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_slider_background_col:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_slider_items:
+    weight: 6
+    settings:
+      entity_browser: slide_item_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: teaser
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      selection_mode: selection_append
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_slider_transitions:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_slider_type:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_slider_width:
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 12
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_slide_container_class: true
+  field_slide_container_place: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

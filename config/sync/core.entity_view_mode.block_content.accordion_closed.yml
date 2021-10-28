@@ -1,0 +1,10 @@
+uuid: d39a8345-a034-44e7-9d85-9e5af29c6af5
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.accordion_closed
+label: 'Accordion Closed'
+targetEntityType: block_content
+cache: true

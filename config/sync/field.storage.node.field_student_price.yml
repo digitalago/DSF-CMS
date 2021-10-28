@@ -1,0 +1,20 @@
+uuid: c7eba0ed-5912-4761-9f97-506abd5ecfd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_student_price
+field_name: field_student_price
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

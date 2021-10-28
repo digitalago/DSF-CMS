@@ -1,0 +1,27 @@
+uuid: 38757a78-8f13-4410-af88-ad6f9ee31e24
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_slider_width
+field_name: field_slider_width
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: slider-full-width
+      label: 'Full Page'
+    -
+      value: slider-container-width
+      label: Container
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

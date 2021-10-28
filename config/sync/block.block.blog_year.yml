@@ -1,0 +1,29 @@
+uuid: ceb5f3d2-1f1f-4523-9121-3f63f736c777
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.blog_year
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: blog_year
+theme: de_theme
+region: sidebar_first
+weight: -15
+provider: null
+plugin: 'facet_block:blog_year'
+settings:
+  id: 'facet_block:blog_year'
+  label: Year
+  provider: facets
+  label_display: '0'
+  block_id: blog_year
+visibility:
+  request_path:
+    id: request_path
+    pages: /agoinsider/results
+    negate: false
+    context_mapping: {  }

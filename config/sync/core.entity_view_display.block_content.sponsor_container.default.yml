@@ -1,0 +1,23 @@
+uuid: 9b3e5e77-70b8-42e1-b33a-608bfa5d2d4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsor_container
+    - field.field.block_content.sponsor_container.field_sponsors
+id: block_content.sponsor_container.default
+targetEntityType: block_content
+bundle: sponsor_container
+mode: default
+content:
+  field_sponsors:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  search_api_excerpt: true

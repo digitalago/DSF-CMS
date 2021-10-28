@@ -1,0 +1,52 @@
+uuid: 3414dd9f-41ec-4482-b3d6-c9a009873c82
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.publication.body
+    - field.field.node.publication.field_associated_artists
+    - field.field.node.publication.field_authors
+    - field.field.node.publication.field_cover_image
+    - field.field.node.publication.field_editors
+    - field.field.node.publication.field_external_link
+    - field.field.node.publication.field_isbn_number
+    - field.field.node.publication.field_publication_date
+    - field.field.node.publication.field_retail_link
+    - field.field.node.publication.field_subject_area
+    - field.field.node.publication.layout_builder__layout
+    - node.type.publication
+  module:
+    - text
+    - user
+id: node.publication.teaser
+targetEntityType: node
+bundle: publication
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_associated_artists: true
+  field_authors: true
+  field_cover_image: true
+  field_editors: true
+  field_external_link: true
+  field_isbn_number: true
+  field_publication_date: true
+  field_retail_link: true
+  field_subject_area: true
+  layout_builder__layout: true
+  search_api_excerpt: true

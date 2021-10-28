@@ -1,0 +1,20 @@
+/* wireframe/_elements-wireframe.scss */
+// contains basic element and object styles for the wireframe for pre-development
+
+
+.headline-type{
+  color: $red;
+  a{
+    color: $red;
+  }
+}
+
+.highlight-type{
+  color: $red !important;
+}
+
+.small-type{
+  color: $black;
+}
+
+

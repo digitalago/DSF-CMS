@@ -1,0 +1,29 @@
+uuid: f21d90ca-0c67-4b59-9240-25bc8e726819
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_basic_page_category
+    - node.type.page
+    - taxonomy.vocabulary.basic_page_category
+id: node.page.field_basic_page_category
+field_name: field_basic_page_category
+entity_type: node
+bundle: page
+label: 'Basic Page Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      basic_page_category: basic_page_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

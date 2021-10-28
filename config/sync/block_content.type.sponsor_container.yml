@@ -1,0 +1,8 @@
+uuid: 050ae635-3583-466f-9666-62006624e131
+langcode: en
+status: true
+dependencies: {  }
+id: sponsor_container
+label: 'Sponsor Container'
+revision: 0
+description: ''

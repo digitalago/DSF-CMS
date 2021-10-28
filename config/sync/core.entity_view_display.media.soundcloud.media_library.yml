@@ -1,0 +1,41 @@
+uuid: 099f4d9b-8f6d-4d28-bea5-d2c93d40de98
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.soundcloud.field_media_soundcloud
+    - image.style.medium
+    - media.type.soundcloud
+  module:
+    - image
+id: media.soundcloud.media_library
+targetEntityType: media
+bundle: soundcloud
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_artist_name: true
+  field_category: true
+  field_description: true
+  field_media_duration: true
+  field_media_soundcloud: true
+  field_media_thumbnail: true
+  field_release_date: true
+  field_speaker_name: true
+  field_subjects: true
+  field_tags: true
+  field_track_name: true
+  name: true
+  search_api_excerpt: true
+  uid: true

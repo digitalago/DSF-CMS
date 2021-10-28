@@ -1,0 +1,7 @@
+collection_import.form:
+  path: '/admin/content/import-form'
+  defaults:
+    _form: '\Drupal\collection_import\Form\CollectionImportForm'
+    _title: 'Import Administration'
+  requirements:
+    _permission: 'administer site configuration'

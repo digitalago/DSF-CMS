@@ -1,0 +1,21 @@
+uuid: 282e1b2e-05ae-43cc-9023-7e91a9237088
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price_notes
+    - node.type.event
+  module:
+    - text
+id: node.event.field_price_notes
+field_name: field_price_notes
+entity_type: node
+bundle: event
+label: 'Price Notes'
+description: 'This field is for secondary price information.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

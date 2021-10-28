@@ -1,0 +1,365 @@
+/* sponsors  */
+
+.node--type-agoc-sponsor-section{
+  max-width: $wide-screen;
+  margin: 0px auto;
+  padding: 20px ms(1);
+  @include breakpoint($medium-screen) {
+  //padding:  20px 0;
+}
+
+.field--name-field-agoc-sponsor-container>.field__item {
+    padding-top: 15px;
+    padding-bottom: 10px;
+   &:first-child{
+     padding-top:10px;
+   }
+  }
+}
+
+.tier-1, .tier-2, .tier-3, .tier-4, .tier-custom{
+ .sponsor-logo-image{
+   display: block;
+   img{
+  // vertical-align: middle;
+   
+   }
+ }
+ .sponsor-title{
+   display: none;
+   
+ }
+}
+
+.tier-big-text, .tier-little-text{
+  .sponsor-title{
+    padding: 10px 0px;
+  }
+ .sponsor-logo-image{
+   display: none;
+ }
+}
+
+.tier-big-text{
+  @include knockout-28;
+  font-size: ms(3);
+}
+
+.tier-little-text{
+  @include knockout-28;
+  font-size: ms(1);
+}
+
+.sponsor-extra-text{
+   @include nimbus-reg;
+   font-size: ms(-2);
+}
+
+ .sponsor-section-title{
+   h2{
+     margin-bottom: 0;
+     p{
+       @include knockout-28;
+       line-height: inherit;
+       margin-bottom: 10px;
+       font-size: ms(0);
+       
+     }
+     
+   }
+ }
+
+ .sponsor-group-head{
+   h3{
+     font-size: ms(0);
+     p{
+      @include nimbus-bold-reg;
+      font-size: ms(0);
+      color: $almostblack;
+      font-weight: $normal;
+      margin-bottom: 0;
+      -webkit-font-smoothing: subpixel-antialiased;
+     }
+     strong.actually-bold {
+        font-weight:bold !important;
+      }
+     margin-bottom: 0;
+   }
+ }
+
+.sponsor-logo-image{
+  padding: 10px 0;
+}
+
+ .sponsor-inline {
+    .field__item {
+      vertical-align: middle;
+      display:block;
+      padding-right: 15px;
+      padding-bottom:5px;
+      @include breakpoint ($small-screen){
+      display:inline-block; 
+      }
+    }
+    }
+    .sponsor-3col {
+      .sponsor-group-sponsors{
+      column-count: 1;
+      @include breakpoint ($narrow-screen){
+        column-count: 2;
+        }
+      @include breakpoint ($standard-screen){
+      column-count: 3;
+      }
+      .field__item {
+        vertical-align: middle;
+        display:inline-block;
+        width: 100%;
+      }
+    }
+    }
+
+.sponsors-block{
+  clear:both;
+  border-top: 1px solid $neutral-grey;
+  margin-top: 20px;
+  .node--type-agoc-sponsor-section{
+  padding: 20px 0px;
+  }
+}
+
+
+
+.signature-sponsor{
+  .sponsor-logo-image{
+    object-fit: contain;
+    position: relative;
+    height: auto;
+    .field__item{
+      padding-right: 10px;
+    }
+    img{
+     // zoom: 60%;
+      height: auto;
+      margin: auto;
+      vertical-align: middle;
+    //  -moz-transform: scale(0.82,0.82);
+    //  -moz-transform-origin: center left;
+    }
+  }
+}
+
+.tier-1{
+  .sponsor-logo-image{
+    object-fit: contain;
+    position: relative;
+    height: auto;
+    .field__item{
+      padding-right: 10px;
+    }
+    img{
+    //  zoom: 50%;
+      height: auto;
+      margin: auto;
+      vertical-align: middle;
+    //  transform: scale(0.6,0.6);
+    //  transform-origin: top left;
+      //-moz-transform: scale(0.6,0.6);
+      -moz-transform-origin: top left;
+      outline: 1px solid transparent;
+    }
+  }
+}
+
+.tier-2{
+  .sponsor-logo-image{
+    object-fit: contain;
+    position: relative;
+    height: auto;
+    .field__item{
+      padding-right: 10px;
+    }
+    img{
+      //zoom: 35%;
+      height: auto;
+     // margin: auto;
+      vertical-align: middle;
+     // transform: scale(0.5,0.5);
+   //  transform-origin: top left;
+   //   -moz-transform: scale(0.5,0.5);
+   //   -moz-transform-origin: top left;
+      outline: 1px solid transparent;
+    }
+  }
+}
+
+.tier-3{
+  .sponsor-logo-image{
+    object-fit: contain;
+    position: relative;
+    height: auto;
+    .field__item{
+      padding-right: 5px;
+      display: block;
+    }
+    img{
+    //  zoom: 30%;
+      height: auto;
+      margin: auto;
+      vertical-align: middle;
+     // transform: scale(0.35, 0.35);
+    //  transform-origin: top left;
+    //  -moz-transform: scale(0.35,0.35);
+    //  -moz-transform-origin: top left;
+      outline: 1px solid transparent;
+    }
+  }
+}
+
+.tier-signature{
+  .sponsor-logo-image{
+    object-fit: contain;
+    position: relative;
+    height: auto;
+    .field__item{
+      padding-right: 5px;
+      display: block;
+    }
+    img{
+     // zoom: 60%;
+      height: auto;
+      margin: auto;
+      vertical-align: middle;
+    //  transform: scale(0.6,0.6);
+    //  transform-origin: top left;
+    //  -moz-transform: scale(0.6,0.6);
+   //   -moz-transform-origin: top left;
+      outline: 1px solid transparent;
+    }
+  }
+}
+
+.agoc-footer-text{
+  font-size: ms(-1);
+  font-weight: 300;
+  padding-top: 15px;
+}
+
+.field--name-field-agoc-footer-text{
+  p{
+    font-size: ms(-1);
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+
+/* Sidebar in Exhibition Template */
+
+.column-4-right {
+
+  .node--type-agoc-sponsor-section { 
+    padding-top:0; 
+  }
+
+  .sponsor-section-title h2 { 
+    line-height:1em; 
+  }
+}
+
+.sponsorsContent{
+  h4{
+    @include nimbus-reg;
+    font-size: 1em;
+    color: #222222;
+    font-weight: 300;
+    margin-bottom: 0;
+    -webkit-font-smoothing: subpixel-antialiased
+  }
+  .node--view-mode-sponsor-logo{
+    .sponsor-title{display:none;}
+  }
+  .sponsor-title{
+    @include knockout-28;
+    font-size: ms(3);
+  }
+  ul{
+    padding-left: 0;
+    li{
+      list-style: none;
+    }
+  }
+}
+
+
+// kill the padding on ck embeds so the top aligns
+.embedded-entity{
+  .node--type-agoc-sponsor-section{
+    padding: 20px 0px;
+    @include breakpoint($narrow-screen){
+    padding-top: 0px !important;
+    }
+  }
+}
+
+//deprecated exhibition sponsors
+
+.field--name-field-exhibition-sponsors{
+  .node--view-mode-sponsor-logoz{
+    .sponsor-title{
+      display: none;
+    }
+  }
+}
+
+// Sponsor image tiers
+
+.node--view-mode-tier-1,
+.node--view-mode-tier-2,
+.node--view-mode-tier-3a,
+.node--view-mode-tier-3b {
+  .node__content {
+    width: 100%;
+  }
+}
+
+.node--type-sponsor {
+
+  // ===== Tier 1
+  .field--name-field-sponsor-logo-tier-1  {
+    margin-bottom: 2em;
+
+    img {
+      max-height: 125px;
+      width: auto;
+    }
+  }
+
+  // ===== Tier 2
+  .field--name-field-sponsor-logo-tier-2  {
+    margin-bottom: 2em;
+
+    img {
+      max-height: 100px;
+      width: auto;
+    }
+  }
+
+  // ===== Tier 3a
+  .field--name-field-sponsor-logo-tier-3a  {
+    margin-bottom: 2em;
+
+    img {
+      max-height: 70px;
+      width: auto;
+    }
+  }
+
+  // ===== Tier 3b
+  .field--name-field-sponsor-logo-tier-3b  {
+    margin-bottom: 2em;
+
+    img {
+      max-height: 50px;
+      width: auto;
+    }
+  }
+}

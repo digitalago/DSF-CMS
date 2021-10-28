@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ */
+#}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    slider_background_col,
+    slider_width,
+    slide_container_place,
+    node.id ? 'node-id-' ~ node.id,
+    display_image_credits,
+    display_slide_description,
+    display_slider_description,
+    display_slide_titles,
+    display_slide_date_time,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article id = "{{ node.label|clean_id }}" {{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {% if show_title %}
+    {% if content.field_display_title %}
+      <h1{{ title_attributes }}>
+        {{ content.field_display_title }}
+      </h1>
+    {% else %}
+      <h1{{ title_attributes }}>
+        {{ label }}
+      </h1>
+    {% endif %}
+  {% endif %}
+  {{ title_suffix }}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content|without('body','field_slide_container_place', 'field_slider_type', 'field_show_title','field_display_image_credits','field_display_slide_descrip','field_display_slider_descri','field_display_slide_titles','field_slider_background_col','field_slider_width','field_display_slide_date_ti', 'field_display_title') }}
+    <div class="slider-nav-controls"></div>
+    <div class="slider-description">{{ content.body}}</div>
+  </div>
+
+</article>

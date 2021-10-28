@@ -1,0 +1,41 @@
+id: ago_faq_set
+label: AGO FAQ Set
+migration_group: ago
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: node
+  bundle: ago_faq_set
+destination:
+  plugin: 'entity:block_content'
+  default_bundle: faq_set
+process:
+  info: title
+  created: created
+  changed: changed
+  field_faqs:
+    -
+      plugin: sub_process
+      source: field_faqs
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: ago_faq
+  status: status
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+migration_dependencies:
+  required:
+    - user
+    - file
+    - image_media
+    - ago_faq
+  optional: {  }
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

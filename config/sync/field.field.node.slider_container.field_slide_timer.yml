@@ -1,0 +1,23 @@
+uuid: adf821c2-5776-4384-b7bc-931fb5192918
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide_timer
+    - node.type.slider_container
+id: node.slider_container.field_slide_timer
+field_name: field_slide_timer
+entity_type: node
+bundle: slider_container
+label: 'Slide Timer'
+description: '1000 = 1 second'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 100
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

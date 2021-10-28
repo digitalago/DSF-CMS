@@ -1,0 +1,31 @@
+uuid: 884b71fc-1ea8-45fb-996d-0f6ec3e49cdf
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1adf7af9-d7ed-4be0-81f4-4b9e0ce0f1f0'
+  module:
+    - block_content
+    - system
+  theme:
+    - de_theme
+id: ago_insider_header
+theme: de_theme
+region: content_prefix
+weight: -34
+provider: null
+plugin: 'block_content:1adf7af9-d7ed-4be0-81f4-4b9e0ce0f1f0'
+settings:
+  id: 'block_content:1adf7af9-d7ed-4be0-81f4-4b9e0ce0f1f0'
+  label: 'AGO Insider Header'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /agoinsider/results
+    negate: false
+    context_mapping: {  }

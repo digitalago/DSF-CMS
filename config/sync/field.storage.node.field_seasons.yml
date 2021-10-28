@@ -1,0 +1,33 @@
+uuid: 4cfa6bc1-513a-4819-a8fe-bf45d52b0578
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_seasons
+field_name: field_seasons
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Fall
+      label: Fall
+    -
+      value: Spring
+      label: Spring
+    -
+      value: Summer
+      label: Summer
+    -
+      value: Winter
+      label: Winter
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

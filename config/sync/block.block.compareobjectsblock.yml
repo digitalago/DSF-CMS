@@ -1,0 +1,26 @@
+uuid: 584136b2-a948-4a70-8599-00f25d622376
+langcode: en
+status: true
+dependencies:
+  module:
+    - collection_blocks
+    - system
+  theme:
+    - de_theme
+id: compareobjectsblock
+theme: de_theme
+region: sidebar_first
+weight: -17
+provider: null
+plugin: compare_objects_block
+settings:
+  id: compare_objects_block
+  label: 'Compare Objects Block'
+  provider: collection_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /collection/browse
+    negate: false
+    context_mapping: {  }

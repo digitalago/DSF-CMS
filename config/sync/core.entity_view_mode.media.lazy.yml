@@ -1,0 +1,10 @@
+uuid: 5dcee7e0-fb89-45a6-849a-1ea5e13d313e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.lazy
+label: Lazy
+targetEntityType: media
+cache: true

@@ -1,0 +1,19 @@
+uuid: 233f3338-5211-48a8-b77a-a976dc513211
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_value_public
+    - node.type.event
+id: node.event.field_additional_value_public
+field_name: field_additional_value_public
+entity_type: node
+bundle: event
+label: 'Additional Value $/% (Public)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: d65ed9e0-1e76-4042-966a-cde29188a324
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: bistro_menus
+label: 'Bistro Menus'
+type: 'canonical_entities:node'
+pattern: '/dine/ago-bistro/[node:title]'
+selection_criteria:
+  653f9fe0-e597-4b0f-86d7-c508d5e13d2f:
+    id: node_type
+    bundles:
+      menu: menu
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 653f9fe0-e597-4b0f-86d7-c508d5e13d2f
+selection_logic: and
+weight: -5
+relationships: {  }

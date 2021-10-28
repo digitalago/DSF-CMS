@@ -1,0 +1,54 @@
+uuid: 971a19ae-99f4-4d56-ba15-14fa3c127f3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alert
+    - core.entity_view_mode.block_content.alert
+    - field.field.block_content.alert.body
+    - field.field.block_content.alert.field_hide_on_desktop
+    - field.field.block_content.alert.field_hide_on_mobile
+    - field.field.block_content.alert.field_display_on_front
+    - field.field.block_content.alert.field_display_site_wide
+    - field.field.block_content.alert.field_style_options
+    - field.field.block_content.alert.field_type
+  module:
+    - layout_builder
+    - options
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: block_content.alert.alert
+targetEntityType: block_content
+bundle: alert
+mode: alert
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_style_options:
+    type: list_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_type:
+    type: list_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_display_on_front: true
+  field_display_site_wide: true
+  field_hide_on_desktop: true
+  field_hide_on_mobile: true
+  search_api_excerpt: true

@@ -1,0 +1,26 @@
+uuid: 0069bee1-5196-4cdf-9d1d-a21412e8e7cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - collection_blocks
+    - system
+  theme:
+    - de_theme
+id: return_to_collection_link_block
+theme: de_theme
+region: content_prefix
+weight: -32
+provider: null
+plugin: return_to_collection_link_block
+settings:
+  id: return_to_collection_link_block
+  label: 'Return to Collection Link Block'
+  provider: collection_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/collection/\r\n/collection/browse"
+    negate: false
+    context_mapping: {  }

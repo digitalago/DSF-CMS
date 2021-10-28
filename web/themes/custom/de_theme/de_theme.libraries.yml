@@ -1,0 +1,40 @@
+base:
+  css:
+    theme:
+      dist/css/de_theme.css: {}
+      # dist/css/ie/ie.css: { browsers: {IE: 'IE 9', '!IE': false } }
+      # dist/css/ie/ie-lt9.css: { browsers: {IE: 'lte IE 9', '!IE': false } }
+  js:
+    dist/js/script.min.js: {}
+  dependencies:
+  - de_theme/ssm
+  - de_theme/matchheight
+  - core/modernizr
+  - core/jquery
+ssm:
+  js:
+    bower_components/SimpleStateManager/dist/ssm.min.js: {}
+
+matchheight:
+  js:
+    bower_components/matchHeight/jquery.matchHeight-min.js: {}
+  dependencies:
+  - core/jquery
+slick:
+  css:
+    theme:
+      bower_components/slick-carousel/slick/slick.css: {}
+  js:
+    bower_components/slick-carousel/slick/slick.min.js: {}
+
+# html5shiv:
+#   # Block the page from being loaded until html5shiv is initialized.
+#   header: true
+#   remote: https://github.com/aFarkas/html5shiv
+#   version: "3.7.3"
+#   license:
+#     name: GNU-GPL-2.0-or-later
+#     url: http://www.gnu.org/licenses/gpl-2.0.html
+#     gpl-compatible: true
+#   js:
+#     assets/vendor/html5shiv/html5shiv.min.js: { weight: -22, browsers: { IE: 'lte IE 8', '!IE': false }, minified: true }

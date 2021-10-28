@@ -1,0 +1,28 @@
+uuid: ea87797c-1051-4cca-b1cb-1f864e990e79
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.slider_container
+    - field.storage.block_content.field_slider_container
+    - node.type.slider_container
+id: block_content.slider_container.field_slider_container
+field_name: field_slider_container
+entity_type: block_content
+bundle: slider_container
+label: 'Slider Container'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      slider_container: slider_container
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

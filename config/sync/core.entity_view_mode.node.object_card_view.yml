@@ -1,0 +1,10 @@
+uuid: f3528331-0af3-4890-bae8-a4d8a8c1c5c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.object_card_view
+label: 'Object Card View'
+targetEntityType: node
+cache: true

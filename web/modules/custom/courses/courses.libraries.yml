@@ -1,0 +1,21 @@
+courses_helper:
+  version: VERSION
+  js:
+    js/courses_view.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+courses_edit:
+  version: VERSION
+  css:
+    theme:
+      css/course-field-overrides.css: {}
+
+courses_search:
+  version: VERSION
+  js:
+    js/courses_search.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

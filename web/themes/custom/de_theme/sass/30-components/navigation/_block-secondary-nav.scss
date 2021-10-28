@@ -1,0 +1,96 @@
+/* 30-components/navigation/_block-secondary-nav.scss */
+
+// Black menu bar
+/*
+.navigation.menu--main {
+  .menu {
+    width: 100%;
+    padding: ms() 0 ms(-2) 0;
+    display: inline-block;
+    .menu-item {
+      display: inline-block;
+      float: left;
+      padding-right: 9%;
+      @include breakpoint ($wide-screen) {
+        padding-right: 12.7%;
+      }
+      // &:first-child {
+      //   display: none;
+      // }
+      &:last-child {
+        display: none;
+      }
+      &:nth-last-child(2) {
+        padding-right: 0;
+      }
+      a {
+        font-size: ms(1);
+        position: relative;
+        text-decoration: none;
+        font-weight: $normal;
+        padding-bottom: ms(-4);
+        &:after {
+          transition: all .5s;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 0%;
+          content: '.';
+          color: transparent;
+          background: white;
+          height: 1px;
+        }
+        &:hover:after, &:active:after, &:focus:after {
+          width: 100%;
+        }
+      }
+    }
+    .menu-item--active-trail {
+      a:after {
+        transition: all .5s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        content: '.';
+        color: transparent;
+        background: white;
+        height: 1px;
+      }
+    }
+  }
+  .visually-hidden {
+    display: none;
+  }
+}
+
+
+
+// .block-secondary-nav{
+//   display: inline-block;
+//   .menu{
+//     @include reset;
+//     @include clearfix;
+//     @include navigation-list;
+//   }
+
+//   .menu li{
+//     @include reset;
+//     @include reset-font;
+//   }
+
+//   .menu a{
+//     margin-right: ms();
+//     color: white;
+//   }
+
+//   .menu .last a{
+//     margin-right: 0;
+//   }
+// }
+
+*/

@@ -1,0 +1,25 @@
+uuid: 3df540c9-07ec-45b4-bd3e-d95ef245eebc
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.16_9
+  module:
+    - crop
+name: media_card_380
+label: 'Media Card 380'
+effects:
+  9478cf80-6942-49f7-8b8f-90bd1195fa0c:
+    uuid: 9478cf80-6942-49f7-8b8f-90bd1195fa0c
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: '16_9'
+  de07c464-a5d5-40bf-a596-6cb6ae364690:
+    uuid: de07c464-a5d5-40bf-a596-6cb6ae364690
+    id: image_scale
+    weight: 2
+    data:
+      width: 380
+      height: 380
+      upscale: true

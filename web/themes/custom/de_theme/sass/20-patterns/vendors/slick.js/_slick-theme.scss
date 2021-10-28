@@ -1,0 +1,31 @@
+/* 20-patterns/vendors/slick.js/_slick-theme.scss */
+// echidna overrides for slick.js theme. @import where necesssary
+
+.slick-slider{
+  margin-bottom: 0;
+}
+
+.node {
+  .field-name-field-images .field-item{
+    padding: ms(-1);
+  }
+
+   .slick-next{
+      right:  20px;
+   }
+
+   .slick-prev{
+    left: 20px;
+   }
+
+  .slick-prev,
+  .slick-next{
+    height: 48px;
+    width: 48px;
+  }
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 48px;
+    color: $dark-grey;
+  }
+}

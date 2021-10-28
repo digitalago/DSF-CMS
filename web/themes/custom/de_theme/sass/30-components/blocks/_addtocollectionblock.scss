@@ -1,0 +1,135 @@
+
+#cboxClose {
+  border: 1px solid $black;
+  width: auto;
+  height: auto;
+  padding:  1px 11px 6px 1px;
+  margin: ms(-2) ms(3);
+  font-family: $font-set-2;
+  text-transform: capitalize;
+  transition: background-color .3s ease-out;
+  @include breakpoint ($narrow-screen) {
+    margin: ms() ms(3)
+  }
+  &:before {
+    content: '';
+    @include material-icon;
+    display: inline-block;
+    content: "\E14C";
+    position: relative;
+    padding-right: 0px;
+  }
+  &:hover {
+    color: $white;
+    background: $black;
+  }
+}
+
+#colorbox {
+  padding: ms();
+}
+
+#block-addtocollectionblock {
+  display: none;
+}
+
+#colorbox #block-addtocollectionblock {
+  display: block;
+  @include clearfix;
+}
+
+form#add-to-collection-form, form#edit-collection-form, form#new-collection-form {
+  @include clearfix;
+  padding: 3em 1.5em;
+  // @include breakpoint ($narrow-screen) {
+  //   padding: ms(5) ms(3);
+  // }
+  label {
+    font-size: ms(1);
+    font-family: $font-set-2;
+    font-weight: 300;
+  }
+  .form-select {
+    width: 100%;
+    clear: both;
+    box-sizing: border-box;
+    background-size: 6%;
+    padding: 6px 10px;
+  }
+  .form-type-textarea .form-textarea-wrapper{
+    margin-top: ms(-3);
+    display: block;
+  }
+  .fieldset-legend {
+    font-family: $font-set-2;
+  }
+  .form-item-col-visibility {
+    float: left;
+    width: 50%;
+  }
+  #edit-visibility {
+    margin: ms(-2) 0 ms(-5);
+    display: inline-block;
+    width: 100%;
+  }
+  a#edit-new-collection {
+    @include btn-red;
+    font-family: $font-set-2;
+    font-weight: $normal;
+    text-transform: uppercase;
+    font-size: ms(1);
+    padding: ms(-4) ms();
+    margin-right: ms(-1);
+  }
+  a#edit-add-to-collection {
+    margin-bottom: 0;
+  }
+  .form-submit {
+    margin: 0 ms() ms(-1) 0;
+    @include breakpoint (max-width $small-screen) {
+      // margin: 0 ms() ms(-1) 0;
+      float: left;
+      clear: both;
+      display: inline-block;
+    }
+  }
+  .form-actions p {
+    margin-top: ms();
+    display: block;
+    clear: both;
+    color: $red;
+    font-weight: $medium;
+  }
+}
+
+//New collection form
+
+form#new-collection-form {
+  // padding: ms(6) ms(3);
+  label {
+    display: inline-block;
+    font-family: $font-set-2;
+  }
+  span.fieldset-legend {
+    font-family: $font-set-2;
+    font-weight: 300;
+  }
+  .form-radios {
+    .form-type-radio {
+      float: left;
+      display: inline-block;
+      width: 40%;
+    }
+  }
+  .description {
+    clear: both;
+  }
+  .form-submit {
+    margin-bottom: 0;
+  }
+}
+
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  display: none;
+}
+

@@ -1,0 +1,31 @@
+uuid: 7343b19b-04ad-4957-af9e-b7e02da91b68
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9fa65ae3-42e7-4748-9471-73263044ac86'
+  module:
+    - block_content
+    - system
+  theme:
+    - de_theme
+id: enews_subscribe_cta_form
+theme: de_theme
+region: middle_full_width
+weight: -26
+provider: null
+plugin: 'block_content:9fa65ae3-42e7-4748-9471-73263044ac86'
+settings:
+  id: 'block_content:9fa65ae3-42e7-4748-9471-73263044ac86'
+  label: 'Enews subscribe CTA - form'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/host-your-event\r\n/ago\r\n/gallery/*\r\n/agoinsider\r\n/agoinsider/results\r\n/agoinsider/*"
+    negate: true
+    context_mapping: {  }

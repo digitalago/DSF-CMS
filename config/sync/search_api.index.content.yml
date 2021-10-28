@@ -1,0 +1,551 @@
+uuid: 9c19ec72-5e98-44e5-957e-f36ebfd2f83c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_artist_maker
+    - field.storage.node.field_blog_category
+    - field.storage.node.field_categories
+    - field.storage.node.field_course_audience
+    - field.storage.node.field_course_section
+    - field.storage.node.field_course_day_end
+    - field.storage.node.field_course_type
+    - field.storage.node.field_date_text
+    - field.storage.node.field_date_time_description
+    - field.storage.node.field_day_of_the_week
+    - field.storage.node.field_end_date
+    - field.storage.node.field_event_session
+    - field.storage.node.field_end_time
+    - field.storage.node.field_event_category
+    - field.storage.node.field_featured_filters
+    - field.storage.node.field_featured_filters_courses
+    - field.storage.node.field_global_collection
+    - field.storage.node.field_institution
+    - field.storage.node.field_loris_thumbnail
+    - field.storage.node.field_marketing_flag
+    - field.storage.node.field_object_id
+    - field.storage.node.field_object_name
+    - field.storage.node.field_object_name_reference
+    - field.storage.node.field_object_type
+    - field.storage.node.field_on_sale
+    - field.storage.node.field_post_includes_media
+    - field.storage.node.field_press_release_date
+    - field.storage.node.field_start_date
+    - field.storage.node.field_start_time
+    - field.storage.node.field_subjects
+    - field.storage.node.field_tagline
+    - field.storage.node.field_time_period
+    - field.storage.node.field_year_filter
+    - search_api.server.pantheon
+  module:
+    - node
+    - search_api
+    - courses
+    - taxonomy
+id: content
+name: Content
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  courses_after_five:
+    label: 'Courses After Five'
+    property_path: courses_after_five
+    type: boolean
+  field_artist_maker:
+    label: Artist/Maker
+    datasource_id: 'entity:node'
+    property_path: field_artist_maker
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_artist_maker
+  field_blog_category:
+    label: 'Blog Category'
+    datasource_id: 'entity:node'
+    property_path: field_blog_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_blog_category
+  field_categories:
+    label: Category
+    datasource_id: 'entity:node'
+    property_path: field_categories
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_categories
+  field_course_audience:
+    label: 'Course Section » Content » Course Audience'
+    datasource_id: 'entity:node'
+    property_path: 'field_course_section:entity:field_course_audience'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_course_audience
+        - field.storage.node.field_course_section
+      module:
+        - node
+  field_course_day_end:
+    label: 'Course Section » Content » Course Day End'
+    datasource_id: 'entity:node'
+    property_path: 'field_course_section:entity:field_course_day_end'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_course_day_end
+        - field.storage.node.field_course_section
+      module:
+        - node
+  field_course_type:
+    label: 'Course Type'
+    datasource_id: 'entity:node'
+    property_path: field_course_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_course_type
+  field_date_text:
+    label: Date
+    datasource_id: 'entity:node'
+    property_path: field_date_text
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_date_text
+  field_date_time_description:
+    label: 'Date/Time Description'
+    datasource_id: 'entity:node'
+    property_path: field_date_time_description
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_date_time_description
+  field_day_of_the_week:
+    label: 'Course Section » Content » Day of the Week'
+    datasource_id: 'entity:node'
+    property_path: 'field_course_section:entity:field_day_of_the_week'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_course_section
+        - field.storage.node.field_day_of_the_week
+      module:
+        - node
+  field_end_date:
+    label: 'Course Section » Content » End Date'
+    datasource_id: 'entity:node'
+    property_path: 'field_course_section:entity:field_end_date'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_course_section
+        - field.storage.node.field_end_date
+      module:
+        - node
+  field_end_date_1:
+    label: 'Event Session » Content » End Date'
+    datasource_id: 'entity:node'
+    property_path: 'field_event_session:entity:field_end_date'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_end_date
+        - field.storage.node.field_event_session
+      module:
+        - node
+  field_end_time:
+    label: 'Event Session » Content » End Time'
+    datasource_id: 'entity:node'
+    property_path: 'field_event_session:entity:field_end_time'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_end_time
+        - field.storage.node.field_event_session
+      module:
+        - node
+  field_event_category:
+    label: 'Event Category'
+    datasource_id: 'entity:node'
+    property_path: field_event_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_event_category
+  field_event_session:
+    label: 'Event Session'
+    datasource_id: 'entity:node'
+    property_path: field_event_session
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_event_session
+  field_featured_filters:
+    label: 'Featured Filters'
+    datasource_id: 'entity:node'
+    property_path: field_featured_filters
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_featured_filters
+  field_featured_filters_courses:
+    label: 'Featured Filters for courses'
+    datasource_id: 'entity:node'
+    property_path: field_featured_filters_courses
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_featured_filters_courses
+  field_global_collection:
+    label: Collection
+    datasource_id: 'entity:node'
+    property_path: field_global_collection
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_global_collection
+  field_institution:
+    label: Institution/Owner
+    datasource_id: 'entity:node'
+    property_path: field_institution
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_institution
+  field_loris_thumbnail:
+    label: 'Loris Thumbnail'
+    datasource_id: 'entity:node'
+    property_path: field_loris_thumbnail
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_loris_thumbnail
+  field_marketing_flag:
+    label: 'Marketing Flag'
+    datasource_id: 'entity:node'
+    property_path: field_marketing_flag
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_marketing_flag
+  field_object_id:
+    label: 'Object Id'
+    datasource_id: 'entity:node'
+    property_path: field_object_id
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_object_id
+  field_object_name:
+    label: 'Object Name'
+    datasource_id: 'entity:node'
+    property_path: field_object_name
+    type: text
+    boost: !!float 5
+    dependencies:
+      config:
+        - field.storage.node.field_object_name
+  field_object_name_reference:
+    label: 'Object Name Reference'
+    datasource_id: 'entity:node'
+    property_path: field_object_name_reference
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_object_name_reference
+  field_object_type:
+    label: 'Object Type'
+    datasource_id: 'entity:node'
+    property_path: field_object_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_object_type
+  field_on_sale:
+    label: 'Course Section » Content » On Sale'
+    datasource_id: 'entity:node'
+    property_path: 'field_course_section:entity:field_on_sale'
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_course_section
+        - field.storage.node.field_on_sale
+      module:
+        - node
+  field_post_includes_media:
+    label: 'Post includes media'
+    datasource_id: 'entity:node'
+    property_path: field_post_includes_media
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_post_includes_media
+  field_press_release_date:
+    label: 'Blog Publication Date'
+    datasource_id: 'entity:node'
+    property_path: field_press_release_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_press_release_date
+  field_start_date:
+    label: 'Event Session » Content » Start Date'
+    datasource_id: 'entity:node'
+    property_path: 'field_event_session:entity:field_start_date'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_event_session
+        - field.storage.node.field_start_date
+      module:
+        - node
+  field_start_date_1:
+    label: 'Start Date'
+    datasource_id: 'entity:node'
+    property_path: field_start_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_start_date
+  field_start_time:
+    label: 'Course Section » Content » Start Time'
+    datasource_id: 'entity:node'
+    property_path: 'field_course_section:entity:field_start_time'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_course_section
+        - field.storage.node.field_start_time
+      module:
+        - node
+  field_start_time_1:
+    label: 'Event Session » Content » Start Time'
+    datasource_id: 'entity:node'
+    property_path: 'field_event_session:entity:field_start_time'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_session
+        - field.storage.node.field_start_time
+      module:
+        - node
+  field_subjects:
+    label: Subjects
+    datasource_id: 'entity:node'
+    property_path: field_subjects
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_subjects
+  field_tagline:
+    label: 'Post Summary'
+    datasource_id: 'entity:node'
+    property_path: field_tagline
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_tagline
+  field_time_period:
+    label: 'Time Period'
+    datasource_id: 'entity:node'
+    property_path: field_time_period
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_time_period
+  field_year_filter:
+    label: 'Blog Year'
+    datasource_id: 'entity:node'
+    property_path: field_year_filter
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_year_filter
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  promote:
+    label: 'Promoted to front page'
+    datasource_id: 'entity:node'
+    property_path: promote
+    type: boolean
+    dependencies:
+      module:
+        - node
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  status_1:
+    label: 'Event Session » Content » Published'
+    datasource_id: 'entity:node'
+    property_path: 'field_event_session:entity:status'
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_event_session
+      module:
+        - node
+  status_2:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 13
+    dependencies:
+      module:
+        - node
+  title_1:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:taxonomy_term':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  courses_after_five: {  }
+  ignore_character:
+    all_fields: false
+    fields:
+      - body
+      - field_date_text
+      - field_date_time_description
+      - field_loris_thumbnail
+      - field_object_id
+      - field_object_name
+      - field_start_time
+      - title
+      - title_1
+      - type
+    ignorable: '[''¿¡!?,.:;]'
+    ignorable_classes:
+      - Pc
+      - Pd
+      - Pe
+      - Pf
+      - Pi
+      - Po
+      - Ps
+    weights:
+      preprocess_index: -10
+      preprocess_query: -10
+  ignorecase:
+    all_fields: false
+    fields:
+      - body
+      - field_date_text
+      - field_date_time_description
+      - field_loris_thumbnail
+      - field_object_id
+      - field_object_name
+      - field_start_time
+      - title
+      - title_1
+      - type
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  stemmer:
+    all_fields: false
+    fields:
+      - body
+      - field_object_name
+      - title
+    exceptions:
+      mexican: mexic
+      texan: texa
+    weights:
+      preprocess_index: 0
+      preprocess_query: 0
+  transliteration:
+    all_fields: false
+    fields:
+      - body
+      - field_date_text
+      - field_date_time_description
+      - field_loris_thumbnail
+      - field_object_id
+      - field_object_name
+      - field_start_time
+      - title
+      - title_1
+      - type
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: pantheon

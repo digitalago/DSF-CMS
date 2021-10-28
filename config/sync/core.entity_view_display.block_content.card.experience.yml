@@ -1,0 +1,54 @@
+uuid: 6b2f73fe-69dc-4b2f-9ae5-d08ef5044a54
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - core.entity_view_mode.block_content.experience
+    - field.field.block_content.card.body
+    - field.field.block_content.card.field_image
+    - field.field.block_content.card.field_link
+    - field.field.block_content.card.field_page_to_appear_view
+    - field.field.block_content.card.field_title_display
+    - field.field.block_content.card.field_view_mode
+    - field.field.block_content.card.field_weight
+  module:
+    - layout_builder
+    - link
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: block_content.card.experience
+targetEntityType: block_content
+bundle: card
+mode: experience
+content:
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: card_image
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  body: true
+  field_page_to_appear_view: true
+  field_title_display: true
+  field_view_mode: true
+  field_weight: true
+  search_api_excerpt: true

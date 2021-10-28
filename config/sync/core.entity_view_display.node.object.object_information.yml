@@ -1,0 +1,358 @@
+uuid: b82728fb-2256-47f1-92bb-6a41ace4a541
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.object_information
+    - field.field.node.object.body
+    - field.field.node.object.comment
+    - field.field.node.object.field_artist_description
+    - field.field.node.object.field_artist_maker
+    - field.field.node.object.field_catalogue_reference
+    - field.field.node.object.field_categories
+    - field.field.node.object.field_copyright
+    - field.field.node.object.field_credit_line
+    - field.field.node.object.field_credit_line_repro
+    - field.field.node.object.field_date_text
+    - field.field.node.object.field_dimensions
+    - field.field.node.object.field_exhibition_history
+    - field.field.node.object.field_gallery_number
+    - field.field.node.object.field_global_collection
+    - field.field.node.object.field_inscription
+    - field.field.node.object.field_inscription_source
+    - field.field.node.object.field_institution
+    - field.field.node.object.field_is_zoom_allowed
+    - field.field.node.object.field_links
+    - field.field.node.object.field_location
+    - field.field.node.object.field_loris_gallery
+    - field.field.node.object.field_loris_thumbnail
+    - field.field.node.object.field_markings
+    - field.field.node.object.field_medium
+    - field.field.node.object.field_meta_tags
+    - field.field.node.object.field_mirador_main_formatter
+    - field.field.node.object.field_object_id
+    - field.field.node.object.field_object_name
+    - field.field.node.object.field_object_name_reference
+    - field.field.node.object.field_object_number
+    - field.field.node.object.field_object_rights_type
+    - field.field.node.object.field_object_type
+    - field.field.node.object.field_place_of_origin
+    - field.field.node.object.field_portfolio_image_data
+    - field.field.node.object.field_previous_owners
+    - field.field.node.object.field_provenance
+    - field.field.node.object.field_provenance_remarks
+    - field.field.node.object.field_published_reference
+    - field.field.node.object.field_related_works
+    - field.field.node.object.field_restrictions
+    - field.field.node.object.field_signature
+    - field.field.node.object.field_subjects
+    - field.field.node.object.field_time_period
+    - node.type.object
+  module:
+    - field_group
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - metatag
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  layout_builder_restrictions:
+    allowed_blocks: {  }
+    allowed_layouts: {  }
+  field_group:
+    group_accordion:
+      children:
+        - group_dimensions
+        - group_description
+        - group_signature_inscriptions
+        - group_catalogue_raisonne
+        - group_provenance
+        - group_subjects
+      parent_name: ''
+      weight: 11
+      format_type: accordion
+      format_settings:
+        id: ''
+        classes: ''
+        effect: none
+      label: Accordion
+      region: content
+    group_dimensions:
+      children:
+        - field_dimensions
+      parent_name: group_accordion
+      weight: 16
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Dimensions
+      region: content
+    group_signature_inscriptions:
+      children:
+        - field_signature
+        - field_inscription
+        - field_markings
+      parent_name: group_accordion
+      weight: 18
+      format_type: accordion_item
+      format_settings:
+        formatter: closed
+        id: ''
+        classes: ''
+      label: 'Signature, Inscriptions, and Markings'
+      region: content
+    group_catalogue_raisonne:
+      children:
+        - field_catalogue_reference
+      parent_name: group_accordion
+      weight: 19
+      format_type: accordion_item
+      format_settings:
+        formatter: closed
+        id: ''
+        classes: ''
+      label: 'Catalogue Raisonné'
+      region: content
+    group_provenance:
+      children:
+        - field_provenance
+        - field_previous_owners
+      parent_name: group_accordion
+      weight: 20
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Provenance
+      region: content
+    group_description:
+      children:
+        - body
+      parent_name: group_accordion
+      weight: 17
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Description
+      region: content
+    group_subjects:
+      children:
+        - field_subjects
+      parent_name: group_accordion
+      weight: 21
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Subjects
+      region: content
+id: node.object.object_information
+targetEntityType: node
+bundle: object
+mode: object_information
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_artist_maker:
+    type: entity_reference_entity_id
+    weight: 1
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_catalogue_reference:
+    weight: 15
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_categories:
+    weight: 2
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_credit_line:
+    weight: 5
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_date_text:
+    weight: 3
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_dimensions:
+    weight: 16
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_gallery_number:
+    weight: 8
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_inscription:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_institution:
+    weight: 9
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_links:
+    weight: 10
+    label: inline
+    settings:
+      trim_length: null
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_location:
+    weight: 7
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_markings:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_medium:
+    weight: 4
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_meta_tags:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_object_name_reference:
+    type: entity_reference_entity_id
+    weight: 0
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_object_number:
+    weight: 6
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_previous_owners:
+    weight: 15
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_provenance:
+    weight: 14
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_related_works:
+    weight: 12
+    label: above
+    settings:
+      view_mode: object_card_view
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_signature:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_subjects:
+    weight: 14
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  addtoany: true
+  comment: true
+  field_artist_description: true
+  field_copyright: true
+  field_credit_line_repro: true
+  field_exhibition_history: true
+  field_global_collection: true
+  field_inscription_source: true
+  field_is_zoom_allowed: true
+  field_loris_gallery: true
+  field_loris_thumbnail: true
+  field_mirador_main_formatter: true
+  field_object_id: true
+  field_object_name: true
+  field_object_rights_type: true
+  field_object_type: true
+  field_place_of_origin: true
+  field_portfolio_image_data: true
+  field_provenance_remarks: true
+  field_published_reference: true
+  field_restrictions: true
+  field_time_period: true
+  links: true
+  search_api_excerpt: true

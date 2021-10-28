@@ -1,0 +1,277 @@
+// ----------
+// Dags slider
+// ----------
+
+.modal {
+  background: #fff;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  .title-container {
+    padding-top: ms(8);
+    padding-bottom: 10px;
+    @include breakpoint($small-screen) {
+      padding-top: ms(3);
+      
+    }
+
+    h2 {
+      font-size: ms(5);
+      //font-weight: 700; // MK RED-241
+      text-transform: uppercase;
+    }
+  }
+
+  .layout-container {
+    &:nth-child(2) {
+      padding-bottom: ms(2);
+      max-width: 100%;
+    }
+    &:last-child {
+      padding-bottom: ms(4);
+
+      .field__label {
+        font-size: ms(4);
+        margin-bottom: ms(-4);
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .close-link {
+    border: 1px solid $almostblack;
+    position: absolute;
+    top: ms(4);
+    transition: border .15s;
+    right: ms(2);
+
+    &:hover {
+      border-color: $almostblack;
+      background-color: $almostblack;
+      color: white;
+      a {
+        color: white;
+      }
+    }
+
+    span, a {
+      display: inline-block;
+
+    }
+
+    span {
+      padding: ms(-2) 0 ms(-2) ms(1)*.5;
+      vertical-align: middle;
+    }
+
+    a {
+      font-family: $font-set-2;
+      padding: ms(-4) ms(1) ms(-4) ms(-2);
+      text-decoration: none;
+      vertical-align: baseline;
+    }
+  }
+}
+
+.dags-photo-collection {
+  margin: 0 auto;
+  // max-width: 1360px;
+  max-width: 1188px;
+  padding: 0 (1360-1162)*.5px;
+  position: relative;
+  width: 100%;
+
+  @media (max-width: 55.9375em) {
+    padding: 0 ms(1);
+  }
+  @media (max-width: 464px) {
+    padding: 0;
+  }
+
+  .arrow-prev, .arrow-next {
+    cursor: pointer;
+    // height: 100%;
+    position: absolute;
+    top: 25%;
+    z-index: 10;
+    @include breakpoint (380px) {
+      top: 30%;
+    }
+    @include breakpoint (550px) {
+      top: 33%;
+    }
+    // @include breakpoint ($narrow-screen) {
+    //   top: 35%;
+    // }
+    @include breakpoint ($weird-screen) {
+      top: 35%;
+    }
+    @include breakpoint ($medium-screen) {
+      top: 37%;
+    }
+    @include breakpoint ($wide-screen) {
+      top: 40%;
+    }
+    // @media (max-width: 55.9375em) {
+    //   width: 6.38298%;
+    // }
+
+    span {
+      display: block;
+      font-size: ms(4);
+    }
+  }
+
+  .slick-arrow {
+    @media all and (max-width: 464px) {
+      display: none !important;
+    }
+  }
+  .arrow-prev {
+    // left: -22px;
+    left: 0;
+    // padding-left: 1em;
+    // @include breakpoint ($narrow-screen) {
+    //   left: 0;
+    // }
+    // @media (max-width: 55.9375em) {
+    //   left: auto;
+    //   right: 101%;
+    // }
+    // @media (max-width: 608px) {
+    //   right: 100%;
+    // }
+    // @media (max-width: 380px) {
+    //   right: 102%;
+    // }
+  }
+
+  .arrow-next {
+    right: 0;
+    // padding-right: 1em;
+    // @media (max-width: 55.9375em) {
+    //   left: 99%;
+    //   right: auto;
+    // }
+    // @media (max-width: 608px) {
+    //   left: 97%;
+    // }
+  }
+}
+
+.dags-photo-slides {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 0 !important;
+  .slick-slide {
+    // height: 80vh;
+    // @include breakpoiny
+    // @include breakpoint (1300px) {
+    //   height: 90vh;
+    // }
+  }
+  .dags-media {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    outline: 0;
+    // height: auto;
+    .image {
+      overflow: hidden;
+    }
+
+    .field--type-image {
+      display: block;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      margin: 0 auto;
+      height: 180px;
+      @include breakpoint (375px) {
+        height: 220px;
+      }
+      @include breakpoint (550px) {
+        height: 300px;
+      }
+      @include breakpoint ($weird-screen) {
+        height: 400px;
+      }
+      @include breakpoint ($standard-screen) {
+        height: 500px;
+      }
+      @include breakpoint ($wide-screen) {
+        height: 600px;
+      }
+      @include breakpoint ($wxga-screen) {
+        height: 650px;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        vertical-align: middle;
+        // height: 100%;
+        width: auto;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+
+    .title {
+      margin: ms(2) 0 ms(1);
+
+      div {
+        font-family: $font-set-1;
+        font-size: ms(4);
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+
+    .field--name-field-managed-credit {
+      margin: ms() 0 0 0 !important;
+    }
+    .caption, .field--name-field-managed-credit{
+      margin: 0 0 ms(2);
+      color: $contrastgrey;
+      display: block;
+      text-align: center;
+      width: 100%;
+      font-size: .9em;
+      @include breakpoint ($narrow-screen) {
+        margin: 0 0 ms(4);
+      }
+      // text-align: center;
+    }
+  }
+
+  .dags-photo-slides {
+  }
+
+  .slick-dots {
+    bottom: 0;
+    li {
+      @include breakpoint (max-width $narrow-screen) {
+        margin: 0;
+      }
+    }
+    button {
+      text-align:center;
+      &::before {
+        font-size: 24px;
+        @include breakpoint ($narrow-screen) {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

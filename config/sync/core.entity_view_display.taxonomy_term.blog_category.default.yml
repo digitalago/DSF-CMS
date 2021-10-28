@@ -1,0 +1,32 @@
+uuid: 2f5cebeb-e13f-4513-b338-fbcf911a82ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.blog_category.field_term_image
+    - taxonomy.vocabulary.blog_category
+  module:
+    - text
+id: taxonomy_term.blog_category.default
+targetEntityType: taxonomy_term
+bundle: blog_category
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_term_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: image_only_medium
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

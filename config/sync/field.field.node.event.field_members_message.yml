@@ -1,0 +1,21 @@
+uuid: 5d504ca2-9535-4254-bdbb-8d86806e0eab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_members_message
+    - node.type.event
+  module:
+    - text
+id: node.event.field_members_message
+field_name: field_members_message
+entity_type: node
+bundle: event
+label: 'Members Message'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

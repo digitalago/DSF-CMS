@@ -1,0 +1,80 @@
+uuid: dd7db9a7-2c21-4ec8-a0a0-444c250bb068
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.course.body
+    - field.field.node.course.field_additional_gl_code
+    - field.field.node.course.field_additional_value_member
+    - field.field.node.course.field_additional_value_public
+    - field.field.node.course.field_capacity
+    - field.field.node.course.field_course_audience
+    - field.field.node.course.field_course_on_sale_date
+    - field.field.node.course.field_course_section
+    - field.field.node.course.field_course_type
+    - field.field.node.course.field_date_time_description
+    - field.field.node.course.field_featured_filters_courses
+    - field.field.node.course.field_gl_code
+    - field.field.node.course.field_internal_notes
+    - field.field.node.course.field_main_image
+    - field.field.node.course.field_marketing_flag
+    - field.field.node.course.field_members_message
+    - field.field.node.course.field_members_price
+    - field.field.node.course.field_meta_tags
+    - field.field.node.course.field_placement_date
+    - field.field.node.course.field_placement_tag
+    - field.field.node.course.field_public_price
+    - field.field.node.course.field_tagline
+    - field.field.node.course.field_tags
+    - field.field.node.course.field_value_allocation
+    - field.field.node.course.field_value_member
+    - node.type.course
+  module:
+    - text
+    - user
+id: node.course.teaser
+targetEntityType: node
+bundle: course
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_additional_gl_code: true
+  field_additional_value_member: true
+  field_additional_value_public: true
+  field_capacity: true
+  field_course_audience: true
+  field_course_on_sale_date: true
+  field_course_section: true
+  field_course_type: true
+  field_date_time_description: true
+  field_featured_filters_courses: true
+  field_gl_code: true
+  field_internal_notes: true
+  field_main_image: true
+  field_marketing_flag: true
+  field_members_message: true
+  field_members_price: true
+  field_meta_tags: true
+  field_placement_date: true
+  field_placement_tag: true
+  field_public_price: true
+  field_tagline: true
+  field_tags: true
+  field_value_allocation: true
+  field_value_member: true
+  search_api_excerpt: true

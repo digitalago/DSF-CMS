@@ -1,0 +1,14 @@
+uuid: 6e4d1b2d-3260-41c6-8559-33601578f0ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.press_release_access
+  module:
+    - user
+id: user_add_role_action.press_release_access
+label: 'Add the Communications Access role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: press_release_access

@@ -1,0 +1,10 @@
+uuid: 9981d568-c688-49cb-af6f-bc9fff64bd38
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.event_card_view
+label: 'Event Card View'
+targetEntityType: node
+cache: true

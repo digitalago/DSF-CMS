@@ -1,0 +1,29 @@
+uuid: 5540ce58-d46b-42d8-bd73-9aed56793520
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.blog_promoted_to_front_page
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: blog_promoted_to_front_page
+theme: de_theme
+region: sidebar_first
+weight: -13
+provider: null
+plugin: 'facet_block:blog_promoted_to_front_page'
+settings:
+  id: 'facet_block:blog_promoted_to_front_page'
+  label: 'Featured Posts'
+  provider: facets
+  label_display: '0'
+  block_id: blog_promoted_to_front_page
+visibility:
+  request_path:
+    id: request_path
+    pages: /agoinsider/results
+    negate: false
+    context_mapping: {  }

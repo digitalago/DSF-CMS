@@ -1,0 +1,17 @@
+uuid: eb04a6d1-a7ab-4220-81f4-3fe5601e3aba
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: twitter_large_image
+label: 'Twitter Large Image'
+effects:
+  ae4c1883-941e-487d-8f62-b8afccc6289b:
+    uuid: ae4c1883-941e-487d-8f62-b8afccc6289b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 876
+      height: 438
+      crop_type: focal_point

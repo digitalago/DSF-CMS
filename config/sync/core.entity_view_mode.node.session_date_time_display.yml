@@ -1,0 +1,10 @@
+uuid: f75701f6-118d-4aa3-b5ac-7e435b676013
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.session_date_time_display
+label: 'Session Date/Time Display'
+targetEntityType: node
+cache: true

@@ -1,0 +1,164 @@
+/* 20-patterns/elements/_button.scss */
+
+// global button styles
+
+.btn{
+  @include btn;
+}
+
+.btn-primary, .btn-black{
+  @include btn-black;
+  padding: 5px 15px 5px 15px;
+  font-size: ms(2);
+  display: inline-block;
+}
+
+.btn-secondary, .btn-red {
+  @include btn-red;
+  padding: 5px 15px 5px 15px;
+  font-size: ms(2);
+  display: inline-block;
+}
+
+.btn-flat{
+  @include btn-flat;
+  //@include btn;
+  position: relative;
+}
+
+.btn-grey {
+  @include btn-grey;
+  padding: 5px 15px 5px 15px;
+  font-size: ms(2);
+}
+
+.btn-white {
+  @include btn-white;
+  padding: 5px 15px 5px 15px;
+  font-size: ms(2);
+}
+
+.btn-black-big {
+  @include btn-black;
+  @include btn-big;
+}
+
+.btn-red-big {
+  @include btn-red;
+  @include btn-big;
+}
+
+.btn-grey-big {
+  @include btn-grey;
+  @include btn-big;
+}
+
+.btn-white-big {
+  @include btn-white;
+  @include btn-big;
+}
+
+.btn-black-really-big {
+  @include btn-black;
+  @include btn-really-big;
+}
+
+.btn-red-really-big {
+  @include btn-red;
+  @include btn-really-big;
+}
+
+.btn-grey-really-big {
+  @include btn-grey;
+  @include btn-really-big;
+}
+
+.btn-white-really-big {
+  @include btn-white;
+  @include btn-really-big;
+}
+
+.btn-white-nimbus {
+  @include btn-white-nimbus;
+}
+
+
+.btn-back {
+    color: $red;
+    text-decoration: none;
+    padding-bottom: 2px;
+    font-size: ms(-1);
+    display: inline-block;
+    span{
+      border-bottom: 1px solid $red;
+      &:hover {
+      border-bottom: 1px solid transparent;
+      }
+    }
+    
+    font-family: $font-set-2;
+    padding: 7px 12px 3px 24px;
+    position: relative;
+    &:before {
+    content: '\e5c4';
+    display: inline-block;
+    padding-right: 13px;
+    font-family: 'Material Icons';
+    font-size: 20px;
+    top: 7px;
+    left: 0;
+    padding: 0px 0px;
+    position: absolute;
+  }
+}
+
+.btn-view, .list-view-control {
+  @include btn-view;
+  }
+
+
+.btn-grid, .grid-view-control {
+  @include btn-grid;
+  }
+
+.zoom-tool-toggle {
+  @include btn-zoom;
+}
+
+// this shouldn't be two classes-- find where it's used!
+
+.more-links {
+  color: $red;
+  text-decoration: none;
+  border-bottom: 1px solid $red;
+  &:hover {
+    border-bottom: 1px solid transparent;
+  }
+}
+
+.more-link {
+  padding-bottom: ms(1);
+  a{
+    color: $red;
+    border-bottom: 1px solid $red;
+    text-decoration: none;
+    padding-bottom: 2px;
+    font-weight: 300;
+    &:hover {
+      border-bottom: 1px solid transparent;
+    }
+    &:after{
+      content: '\e315';
+      display: inline-block;
+      padding-left: 5px;
+      font-family: 'Material Icons';
+      vertical-align: sub;
+      margin-right: -3px;
+    }
+  }
+  padding-top: ms(1);
+  font-family: $font-set-2;
+  font-size: ms(0);
+
+}
+

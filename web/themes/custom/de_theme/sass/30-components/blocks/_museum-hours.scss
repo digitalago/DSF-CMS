@@ -1,0 +1,112 @@
+.block-views-blockhours-displays-museum-hours {
+  padding-bottom: 40px;
+  .views-row {
+    h3 {
+      cursor: pointer;
+      position:relative;
+      max-width: 92%;
+      &:after {
+        font-family: 'Material Icons';
+        content:'\e15b';
+        position: absolute;
+        right: -7%;
+        font-size: 24px;
+        font-weight: normal;
+      }
+    }
+    .node--type-ago-hours {
+      padding-top: 15px;
+      border-bottom: 1px solid $neutral-grey;
+      .node__content {
+        display: block;
+      }
+    }
+    .collapsed {
+      h3:after {
+        content: '\e145';
+        font-family: 'Material Icons';
+        font-weight: normal;
+      }
+      .node__content {
+        display: none;
+      }
+    }
+  }
+
+
+}
+
+.start-end-time{
+  display: block;
+  @include breakpoint ($small-screen){
+  display: inline-block;
+  min-width: 120px;
+}
+}
+
+/* AGO Bistro page, Holiday shopping page */
+.node--view-mode-inline .start-end-time{
+  
+  @include breakpoint ($small-screen){
+  display: block;
+
+}
+}
+
+.field--name-field-agoc-day-of-the-week-text{
+  @include nimbus-bold-reg;
+  display: inline-block;
+  font-size: ms(-1);
+  min-width: 122px;
+  text-transform: uppercase; 
+}
+
+.field--name-field-agoc-start-time, .field--name-field-agoc-end-time {
+  @include nimbus-reg;
+  display: inline-block;
+  font-size: ms(-1);
+}
+
+.paragraph--type--hours {padding-bottom: 8px;}
+
+.block-views-blockhours-displays-museum-hours .views-row h3{
+  @include nimbus-bold-reg;
+  font-size: ms(0);
+}
+
+.field--name-field-hours{
+  padding: 10px 0px;
+  
+}
+
+
+//notes
+
+.hour-day-notes{
+  .field--name-field-agoc-notes{
+  p{
+    font-size: ms(-2);
+    margin-bottom: 0;
+    }
+  }
+}
+
+.field--name-field-agoc-notes{
+  p{
+    font-size: ms(-1);
+    }
+}
+
+//hack to hide title for top hours
+.block-views-blockhours-displays-museum-hours h2{
+  text-transform:uppercase;
+}
+
+.block-views-blockhours-displays-museum-hours .views-row:first-child{
+  .node--type-ago-hours{
+  padding-top: 0px;}
+  h3{display: none;
+    &:after {display: none;}
+  }
+
+}

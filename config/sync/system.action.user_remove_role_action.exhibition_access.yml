@@ -1,0 +1,14 @@
+uuid: e2840198-4983-4fdb-8629-c319f64587c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.exhibition_access
+  module:
+    - user
+id: user_remove_role_action.exhibition_access
+label: 'Remove the Exhibitions Access role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: exhibition_access

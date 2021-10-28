@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a formatted link to the image in Loris as a thumbnail.
+ *
+ * Available variables:
+ * - img_attributes: A collection of html attributes formatted as a string.
+ * - urls: URLs to the images on the Loris server.
+ *
+ * @see template_preprocess_collection_mirador_thumb_formatter()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if urls is not empty %}
+<div class="{{ img_attributes }}" id="id-{{ main_id }}" data-artist="{{artist_name}}" data-title="{{ title }}" data-objNumber="{{ objNumber }}">
+  <div class="loris-img-wrapper">
+    <div class="navigation-wrapper">
+      <div class="arrow-prev">
+        <span class="fa fa-chevron-left"></span>
+      </div>
+      <div class="main-image-wrapper">
+        {% for url in urls %}
+          {% if loop.index == 1 %}
+            <img src="{{ url.full }}" alt = "{{ title }}" class="main-{{ loop.index }} active-image">
+          {% else %}
+            <img src="{{ url.full }}" alt = "{{ title }}" class="main-{{ loop.index }} element-invisible">
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="arrow-next">
+        <span class="fa fa-chevron-right"></span>
+      </div>
+    </div>
+    <div class="thumb-image-wrapper">
+      {% for url in urls %}
+        <div class="thumbnail-image">
+          {% if loop.index == 1 %}
+          <img src="{{ url.thumb }}" alt = "{{ title }}" id="thumb-{{ loop.index }}" class="thumb-{{ loop.index }} active-thumb-image">
+          {% else %}
+            <img src="{{ url.thumb }}" alt = "{{ title }}" id="thumb-{{ loop.index }}" class="thumb-{{ loop.index }}">
+          {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% if credit %}
+      <div class="credit-line">
+        {{ credit }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

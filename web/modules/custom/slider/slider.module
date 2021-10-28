@@ -1,0 +1,142 @@
+<?php
+/**
+ * @file
+ * Contains hooks for slider module.
+ */
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function slider_preprocess_field(&$variables) {
+  if (isset($variables['field_name']) && $variables['field_name'] == 'field_slider_items' && isset($variables['items'])) {
+    if (isset($variables['element']['#object']->field_slider_type)) {
+      $slider_type = $variables['element']['#object']->field_slider_type->getValue();
+      if (isset($slider_type[0]['value'])) {
+        $slider_type = $slider_type[0]['value'];
+        $view_mode = _slider_map_slider_type($slider_type);
+      }
+    }
+    foreach ($variables['items'] as $key => $item) {
+      $variables['element'][$key]['#view_mode'] = $view_mode;
+      $variables['items'][$key]['content']['#cache']['max-age'] = 0;
+      $variables['items'][$key]['content']['#view_mode'] = $view_mode;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function slider_preprocess_node(&$variables) {
+  if ($variables['node']->bundle() == 'slider_container') {
+    $slider_classes = [];
+    $arrows = $variables['node']->field_arrows->getValue();
+    if (isset($arrows[0]['value'])) {
+      $slider_classes['arrows'] = $arrows[0]['value'];
+    }
+    $autoplay = $variables['node']->field_autoplay->getValue();
+    if (isset($autoplay[0]['value']) && $autoplay[0]['value'] == 1) {
+      $slider_classes['autoplay'] = 'autoplay';
+    }
+    $pager = $variables['node']->field_pager->getValue();
+    if (isset($pager[0]['value'])) {
+      $slider_classes['pager'] = $pager[0]['value'];
+    }
+    $slider_transitions = $variables['node']->field_slider_transitions->getValue();
+    if (isset($slider_transitions[0]['value'])) {
+      $slider_classes['transitions'] = $slider_transitions[0]['value'];
+    }
+    $slider_transitions = $variables['node']->field_slider_transitions->getValue();
+    if (isset($slider_transitions[0]['value'])) {
+      $slider_classes['transitions'] = $slider_transitions[0]['value'];
+    }
+    $slider_transitions = $variables['node']->field_slider_transitions->getValue();
+    if (isset($slider_transitions[0]['value'])) {
+      $slider_classes['transitions'] = $slider_transitions[0]['value'];
+    }
+    $timer = $variables['node']->field_slide_timer->getValue();
+    if (isset($timer[0]['value'])) {
+      $slider_classes['timer'] =  $timer[0]['value'];
+    }
+    $display_image_credits = $variables['node']->field_display_image_credits->getValue();
+    if (isset($display_image_credits[0]['value']) && $display_image_credits[0]['value'] == 1) {
+      $variables['display_image_credits'] =  'hide-slide-image-credits';
+    }
+    $display_slide_description = $variables['node']->field_display_slide_descrip->getValue();
+    if (isset($display_slide_description[0]['value']) && $display_slide_description[0]['value'] == 1) {
+      $variables['display_slide_description'] =  'hide-slide-item-description';
+    }
+    $display_slider_description = $variables['node']->field_display_slider_descri->getValue();
+    if (isset($display_slider_description[0]['value']) && $display_slider_description[0]['value'] == 1) {
+      $variables['display_slider_description'] =  'hide-slider-description';
+    }
+    $display_slide_titles = $variables['node']->field_display_slide_titles->getValue();
+    if (isset($display_slide_titles[0]['value']) && $display_slide_titles[0]['value'] == 1) {
+      $variables['display_slide_titles'] =  'hide-slide-titles';
+    }
+    $display_slide_date_time = $variables['node']->field_display_slide_date_ti->getValue();
+    if (isset($display_slide_date_time[0]['value']) && $display_slide_date_time[0]['value'] == 1) {
+      $variables['display_slide_date_time'] =  'hide-slide-date';
+    }
+    $slider_background_col = $variables['node']->field_slider_background_col->getValue();
+    if (isset($slider_background_col[0]['value'])) {
+      $variables['slider_background_col'] =  $slider_background_col[0]['value'];
+    }
+    $slider_width = $variables['node']->field_slider_width->getValue();
+    if (isset($slider_width[0]['value'])) {
+      $variables['slider_width'] =  $slider_width[0]['value'];
+    }
+    $slide_container_place = $variables['node']->field_slide_container_place->getValue();
+    if (isset($slide_container_place[0]['value'])) {
+      $variables['slide_container_place'] =  $slide_container_place[0]['value'];
+    }
+    $show_title = $variables['node']->field_show_title->getValue();
+    if (isset($show_title[0]['value'])) {
+      $variables['show_title'] =  $show_title[0]['value'];
+    }
+    $variables['#attached']['drupalSettings']['slider_classes'][$variables['node']->id()] = $slider_classes;
+    $variables['#attached']['library'] = ['slider/slider_init'];
+  }
+  if ($variables['node']->bundle() == 'slider_item') {
+    $title_style = $variables['node']->field_title_style->getValue();
+    if (isset($title_style[0]['value'])) {
+      $variables['title_style'] =  $title_style[0]['value'];
+    }
+  }
+}
+
+/**
+ * Helper function to map slider type to the view mode.
+ *
+ * @param str $slider_type
+ *    type of the slider.
+ *
+ * @return str $view_mode
+ *    view mode for the slider.
+ */
+function _slider_map_slider_type($slider_type) {
+  switch ($slider_type) {
+    case 'featured_extended':
+      $view_mode = 'featured_s';
+      break;
+    case 'featured':
+      $view_mode = 'slider';
+      break;
+    case 'hero':
+      $view_mode = 'slider_hero';
+      break;
+    case 'media':
+      $view_mode = 'slider';
+      break;
+    case 'image_only':
+      $view_mode = 'slide_image_only';
+      break;
+    case 'video_only':
+      $view_mode = 'slide_video_only';
+      break;
+    case 'hero_thin':
+      $view_mode = 'slider_hero_thin_banner';
+      break;
+  }
+  return $view_mode;
+}

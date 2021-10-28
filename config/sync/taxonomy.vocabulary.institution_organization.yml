@@ -1,0 +1,8 @@
+uuid: 680c3b0d-2406-4760-8caf-554756e8098c
+langcode: en
+status: true
+dependencies: {  }
+name: Institution/Organization
+vid: institution_organization
+description: 'Used for facet search.'
+weight: 0

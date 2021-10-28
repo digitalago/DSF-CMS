@@ -1,0 +1,19 @@
+uuid: 38fb5a74-fd9a-4081-b270-2b77783fb72c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_exhibition_history
+field_name: field_exhibition_history
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

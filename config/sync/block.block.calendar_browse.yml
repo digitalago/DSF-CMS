@@ -1,0 +1,26 @@
+uuid: f1087b0f-a694-4e77-a306-4044fbda1879
+langcode: en
+status: true
+dependencies:
+  module:
+    - events
+    - system
+  theme:
+    - de_theme
+id: calendar_browse
+theme: de_theme
+region: content
+weight: -25
+provider: null
+plugin: calendar_browse_block
+settings:
+  id: calendar_browse_block
+  label: 'Calendar Browse'
+  provider: events
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events/calendar\r\n/events/browse"
+    negate: false
+    context_mapping: {  }

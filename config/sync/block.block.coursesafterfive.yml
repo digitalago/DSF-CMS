@@ -1,0 +1,29 @@
+uuid: 4ca84672-eb49-4a1f-8297-63cbeb23ed41
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.courses_after_five
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: coursesafterfive
+theme: de_theme
+region: sidebar_first
+weight: -30
+provider: null
+plugin: 'facet_block:courses_after_five'
+settings:
+  id: 'facet_block:courses_after_five'
+  label: 'Courses After Five'
+  provider: facets
+  label_display: '0'
+  block_id: coursesafterfive
+visibility:
+  request_path:
+    id: request_path
+    pages: /learn/courses
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,67 @@
+
+// global alert styles
+
+.alerts {
+  @include nimbus-reg;
+  border: 1px solid $contrastgrey;
+  padding: 20px;
+  color: $almostblack;
+  font-size: ms(-1);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  position: relative;
+  max-width:  $wide-screen;
+  margin:  0 auto;
+  @include clearfix;
+}
+
+.alert-closure {
+  @extend .alerts;
+  background-color: $mint;
+}
+
+.alert-internal {
+  @extend .alerts;
+  background-color: $light-blue;
+}
+
+.alert-general {
+  @extend .alerts;
+  background-color: $pale-yellow;
+}
+
+.alert-hours {
+  @extend .alerts;
+  background-color: $light-pink;
+}
+
+.alert-title {
+  @include nimbus-bold-reg;
+  text-transform: uppercase;
+  &:before{
+    margin-left: 15px;
+    margin-right: 15px;
+    color: $almostblack;
+    font-weight: bold;
+    content: '\E001';
+    font-family: 'Material Icons';
+    float: left;
+    line-height: 35px;
+    font-size:24px;
+  }
+}
+.node--type-agoc-alert-messages {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  .messages p{display: block;}
+  .field--name-body{
+    padding-left: 53px;
+  }
+}
+
+// ck editor style
+.alertbox{
+  @extend .alerts;
+  background-color: $pale-yellow;
+
+}

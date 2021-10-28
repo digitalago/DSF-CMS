@@ -1,0 +1,28 @@
+uuid: 237b415f-a188-4d3b-9a36-4337b75615ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.object_container
+    - field.storage.block_content.field_object
+    - node.type.object_container
+id: block_content.object_container.field_object
+field_name: field_object
+entity_type: block_content
+bundle: object_container
+label: 'Object Container'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      object_container: object_container
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: object
+field_type: entity_reference

@@ -1,0 +1,30 @@
+uuid: f3decc2a-058d-4cc9-9b16-b9a7728d302d
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_list_type
+field_name: field_list_type
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: large
+      label: 'People List Large'
+    -
+      value: medium
+      label: 'People List Medium'
+    -
+      value: small
+      label: 'People List Small'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

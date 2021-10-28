@@ -1,0 +1,29 @@
+uuid: 6335a625-3de3-4951-a5e2-4d7b50c0aba3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_filters_courses
+    - node.type.course
+    - taxonomy.vocabulary.featured_filters_courses
+id: node.course.field_featured_filters_courses
+field_name: field_featured_filters_courses
+entity_type: node
+bundle: course
+label: 'Featured Filters for courses'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      featured_filters_courses: featured_filters_courses
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

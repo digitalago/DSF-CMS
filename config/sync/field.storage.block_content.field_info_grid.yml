@@ -1,0 +1,19 @@
+uuid: 80193a95-ab96-4e33-981f-b3b41aec9470
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_info_grid
+field_name: field_info_grid
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: block_content
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

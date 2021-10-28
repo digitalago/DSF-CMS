@@ -1,0 +1,8 @@
+uuid: 575187e2-627d-492e-a537-c386d05254c0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Associated Artists'
+vid: associated_artists
+description: ''
+weight: 0

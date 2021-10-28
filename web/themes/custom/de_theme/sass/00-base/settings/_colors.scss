@@ -1,0 +1,46 @@
+// @colour palettte  ==============================================
+// using color names as variables is fine.
+
+// theme colors
+// $var-color: #ffffff
+$footer-bg:#383838;
+$red: #e02626;
+$white: #fff;
+$black: #000;
+$almostblack: #222222;
+$almostwhite: #f5f5f5;
+$contrastgrey: #757575;
+
+// greys
+// $light-grey: #E0E0E0;
+$light-grey: #f8f8f8;
+$neutral-grey: #757575;
+$dark-grey: #212121;
+$grey-bg: #dedede;
+$credit-grey: #757575;
+$hr-color: #a5a5a5;
+$warm-grey: #444444;
+
+// ui colours for shadows, borders, etc. Can be used on their own, or part of mixins or placeholders
+$ui-borders-color: $neutral-grey;
+$ui-grey: $neutral-grey;
+
+$translucent-box: rgba(0, 0, 0, 0.65);
+
+//alert colours
+$green: #2ee255;
+$yellow: #eae307;
+$alert-red: #ff0100;
+$mint: #DDFDE4;
+$light-blue: #DAF1FC;
+$pale-yellow: #FAFCDB;
+$light-pink: #FFDDDD;
+
+$colours: (
+  light-grey: $light-grey,
+  dark: $almostblack,
+  grey: $light-grey,
+  black: $almostblack,
+  white: $white,
+  red: $red,
+);

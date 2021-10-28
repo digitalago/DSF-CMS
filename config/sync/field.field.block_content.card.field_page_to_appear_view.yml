@@ -1,0 +1,23 @@
+uuid: 91edabee-86d6-41b6-a1d3-9c3de6453d2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.storage.block_content.field_page_to_appear_view
+id: block_content.card.field_page_to_appear_view
+field_name: field_page_to_appear_view
+entity_type: block_content
+bundle: card
+label: 'Page to appear (View)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

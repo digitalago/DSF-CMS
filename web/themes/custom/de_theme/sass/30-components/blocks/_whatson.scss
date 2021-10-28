@@ -1,0 +1,379 @@
+/* what's on */
+//see cards.scss for card view
+
+.view-what-s-on-ago {
+  padding-top: 11px;
+  .view-filters {
+    width: 100%;
+    @include breakpoint ($medium-screen) {
+      @include float-span(3);
+    }
+    .views-auto-submit-click, .form-date {
+      display: none;
+    }
+  }
+  .view-content {
+    clear: right;
+    width: 100%;
+    float: right;
+    @include breakpoint ($medium-screen) {
+      width: 73%;
+    }
+    .ago-card {
+      .date-time-info {
+        margin-top: ms(-1);
+      }
+    }
+  }
+
+  .whatson-info-wrapper {
+    float: right;
+    display: inline-block;
+    width: 100%;
+    @include breakpoint ($narrow-screen) {
+      width: 65%;
+    }
+  }
+  .date-time-info{
+    @include nimbus-reg;
+    color: $contrastgrey;
+    font-size: 16px;
+    font-size: 1rem;
+    padding-bottom: 3px;
+  }
+  .category-tag {
+    @include category-label;
+  }
+  .views-field-title {
+    @include card-title;
+    font-size: ms(5);
+    line-height: ms(1);
+    text-decoration: none;
+    padding-bottom: 0em;
+    margin-bottom: 3px;
+    a {
+      text-decoration: none;
+    }
+  }
+  .short-description {
+    p{
+    @include nimbus-reg;
+    color: $almostblack;
+    font-size: ms(0);
+    padding: 0;
+    }
+  }
+  .views-more-link {
+    @include btn-flat;
+    font-family: $font-set-2;
+  }
+}
+
+
+.block-views-exposed-filter-blockwhat-s-on-ago-whats-on-list-view {
+  form {
+    .form-item-event-date, #edit-submit-what-s-on-ago {
+      display: none;
+    }
+  }
+}
+
+// what's on calendar
+.selected-day {
+  background-color: $dark-grey;
+  color: $white;
+}
+
+.calendar-btn{
+  @include btn-white-nimbus;
+  padding: 7px 10px;
+  line-height: 1.5em;
+  &:after {
+    content: '\f073';
+    font-family: "Font Awesome 5 Free";
+    padding-left: ms();
+  }
+}
+.browse-btn{
+  @include btn-white-nimbus;
+  padding: 7px 10px;
+  line-height: 1.5em;
+}
+
+.activeBtn {
+  color: white !important;
+  background: $almostblack !important;
+}
+
+.block-ago-whats-on,
+.block-events-calendar-block {
+  border: 1px solid $almostblack;
+  padding: 7px 7px 14px 2px;
+  margin-bottom: ms(1);
+  .header {
+    @include nimbus-bold-reg;
+    font-size: ms(-1);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0px 13px 0px;
+
+    .month-day{
+      letter-spacing: 0.1em;
+    }
+
+    .left.button {
+    margin-left: 0;
+    margin-right: 0;
+    &:after{
+      content:'\e408';
+      font-family: 'Material Icons';
+      position: relative;
+      top: 5px;
+      padding: 10px 5px;
+      font-size: 18px;
+      line-height: 1;
+      font-weight: normal;
+      }
+    }
+   .right.button {
+    margin-left: 0;
+    margin-right: 0;
+    &:after{
+      content:'\e409';
+      font-family: 'Material Icons';
+      position: relative;
+      top: 5px;
+      padding: 10px 5px;
+      font-size: 18px;
+      line-height: 1;
+      font-weight: normal;
+      }
+    }
+  }
+  #days {
+  margin: 0;
+    td{
+      @include nimbus-bold-reg;
+      font-size: ms(-2);
+      text-align: center;
+      text-transform: uppercase;
+      line-height: ms(-1);
+      padding: ms(-5) ms(-8);
+      width: auto;
+      @include breakpoint (1155px) {
+        padding: ms(-3) ms(-4);
+        width: 32px;
+        text-align: right;
+        font-size: ms(-1);
+      }
+    }
+  }
+  #cal-frame .curr {
+    margin: 0;
+    td{
+      @include nimbus-reg;
+      font-size: ms(-1);
+      text-align: center;
+      line-height: ms(-1);
+      width: auto;
+      padding: ms() 0;
+      cursor: pointer;
+      @include breakpoint ($medium-screen) {
+        width: auto;
+        padding: ms(-5) ms(-8);
+        font-size: ms(-2);
+      }
+       @include breakpoint (1155px) {
+        padding: ms(-3) ms(-4);
+        width: 32px;
+        text-align: right;
+        font-size: ms(-1);
+      }
+    }
+  }
+
+  .temp {
+    display: none;
+  }
+}
+
+#block-browsecalendarswitcher,
+#block-calendar-browse {
+  float:right;
+  padding-bottom: 1.125em;
+
+  > div {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.view-what-s-on-ago .view-content {
+  width: 100%;
+}
+
+ #block-agowhatsoncalendar {
+  display: none;
+ }
+
+#views-exposed-form-what-s-on-ago-whats-on-list-view, #views-exposed-form-what-s-on-ago-whats-on-card, #block-exposedformagoc-courses-viewcourses-grid, #block-exposedformagoc-courses-viewadmin-archive-course, #views-exposed-form-course-search-courses-grid {
+  .form-type-textfield{
+    width:100%;
+  }
+  .form-text{
+    width: 100%;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    display: inline-block;
+    position: relative;
+    background-image: url(../../img/file_icons/search-black.png);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 2% 50%;
+    font-family: "nimbus-sans", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    padding: 0.88889em 1em 0.79012em 2.566em;
+    @include breakpoint ($medium-screen) {
+      background-position: 6% 50%;
+      background-size: 20px;
+    }
+  }
+}
+
+#edit-search-api-fulltext.form-text{
+  width: 100%;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  display: inline-block;
+  position: relative;
+  background-image: url(../../img/file_icons/search-black.png);
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 2% 50%;
+  font-family: "nimbus-sans", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  padding: 0.88889em 1em 0.79012em 2.566em;
+  @include breakpoint ($medium-screen) {
+    background-position: 6% 50%;
+    background-size: 20px;
+  }
+}
+
+.block-views-blocktour-tours-list,
+.block-views-blocktour-tours-whats-on {
+  margin-top: ms(3);
+  display: inline-block;
+  h2 {
+    text-transform: uppercase;
+  }
+  h3 {margin-bottom: 5px;}
+}
+
+.block-views-blocktour-tours-whats-on {
+  .views-field-field-agoc-start-time {
+    float: left;
+    margin-bottom: ms(-5);
+    @include breakpoint ($narrow-screen) {
+     margin-bottom: 0;
+   }
+  }
+  .views-field-title, .views-field-field-agoc-short-description {
+    width: 100%;
+    float: right;
+    @include breakpoint ($narrow-screen) {
+      width: 85%;
+    }
+  }
+}
+
+.view-display-id-tours_whats_on{
+  .views-field-field-agoc-start-time{
+    display: inline-block;
+    text-decoration: none;
+    font-size: ms(5);
+    line-height: 1em;
+    @include breakpoint ($narrow-screen) {
+
+    }
+  }
+  .views-field-title{
+    display: inline-block;
+    font-size: ms(5);
+    .field-content a {
+      text-decoration: none;
+    }
+  }
+  .views-field-field-agoc-short-description{
+    font-size: ms(0);
+    color: $almostblack;
+  }
+}
+
+.today{
+  background: $almostblack;
+  color: $white;
+}
+
+.block-views-exposed-filter-blockwhat-s-on-ago-whats-on-card,
+.block-views-exposed-filter-blockwhat-s-on-ago-whats-on-list-view{
+  top: -10px;
+  #edit-field-featured-filters-target-id {
+    .form-checkboxes {
+      padding-bottom: ms(-6);
+    }
+  }
+}
+
+
+
+//ago list
+
+.ago-list {
+  padding-bottom: 1em;
+  border-bottom: 1px solid $neutral-grey;
+  margin-bottom: 1.6em;
+  .flag {
+    position: absolute;
+    z-index: 9;
+  }
+  .view-mode-preview-thumbnail {
+    position: relative;
+    background: $light-grey;
+    margin-bottom: ms();
+    @include breakpoint ($narrow-screen) {
+      @include float-span(4);
+    }
+    @include breakpoint ($small-screen) {
+      height: 325px;
+    }
+    @include breakpoint ($weird-screen-max) {
+      height: 280px
+    }
+    img {
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  .field-content{
+    @include grid-span(9, 4);
+  }
+}
+
+// events archive
+#block-exposedformwhat-s-on-agoevents-archive{
+  .form-item{
+    margin-right: 0;
+  }
+}
+
+#edit-media-type--wrapper{
+
+ .fieldset-legend{
+  @include filter-label;
+  font-weight: normal;
+ }
+}

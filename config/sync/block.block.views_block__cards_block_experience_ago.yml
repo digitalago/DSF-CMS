@@ -1,0 +1,31 @@
+uuid: 1b2903e8-59ee-4224-98e4-3c3c277ed8d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.cards
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: views_block__cards_block_experience_ago
+theme: de_theme
+region: middle_full_width
+weight: -29
+provider: null
+plugin: 'views_block:cards-block_experience_ago'
+settings:
+  id: 'views_block:cards-block_experience_ago'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/events/browse\r\n/events/calendar"
+    negate: false
+    context_mapping: {  }

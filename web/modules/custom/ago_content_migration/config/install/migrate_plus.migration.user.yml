@@ -1,0 +1,24 @@
+id: user
+label: AGO Users
+migration_group: ago
+source:
+  plugin: user_role
+  key: migrate
+  entity_type: user
+destination:
+  plugin: entity:user
+process:
+  name: name
+  pass: pass
+  mail: mail
+  timezone: timezone
+  status: status
+  created: created
+  changed: changed
+  access: access
+  login: login
+  roles: roles
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

@@ -1,0 +1,46 @@
+uuid: 0a6ced11-5ec0-4e1d-b338-43efb51c885b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration
+id: file
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: ago
+label: 'AGO Files'
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: file
+process:
+  filename: filename
+  temp_path:
+    -
+      plugin: str_replace
+      source: uri
+      search: 'public://'
+      replace: 'public://migration_files/'
+  uri:
+    plugin: custom_file_copy
+    source:
+      - '@temp_path'
+      - uri
+  filemime: filemime
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+  status: status
+  created: created
+  changed: changed
+destination:
+  plugin: 'entity:file'
+migration_dependencies:
+  required:
+    - user
+  optional: {  }

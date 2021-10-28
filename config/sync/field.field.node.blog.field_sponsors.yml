@@ -1,0 +1,28 @@
+uuid: 39dc45b8-36a1-4cf4-a7a0-82051f18b455
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsor_container
+    - field.storage.node.field_sponsors
+    - node.type.blog
+id: node.blog.field_sponsors
+field_name: field_sponsors
+entity_type: node
+bundle: blog
+label: Sponsors
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      sponsor_container: sponsor_container
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

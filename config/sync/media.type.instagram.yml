@@ -1,0 +1,15 @@
+uuid: 704ddc0f-e144-4d67-bae0-f393beda2967
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_instagram
+id: instagram
+label: Instagram
+description: ''
+source: instagram
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_instagram
+field_map: {  }

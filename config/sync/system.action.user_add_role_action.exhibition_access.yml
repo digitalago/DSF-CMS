@@ -1,0 +1,14 @@
+uuid: dc110a7b-882e-4bf1-9f94-bedf5941532e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.exhibition_access
+  module:
+    - user
+id: user_add_role_action.exhibition_access
+label: 'Add the Exhibitions Access role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: exhibition_access

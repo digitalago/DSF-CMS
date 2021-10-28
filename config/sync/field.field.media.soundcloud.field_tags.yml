@@ -1,0 +1,29 @@
+uuid: 9f15f08a-ed1a-4e53-bfb1-c70b0c16ac21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_tags
+    - media.type.soundcloud
+    - taxonomy.vocabulary.image_tags
+id: media.soundcloud.field_tags
+field_name: field_tags
+entity_type: media
+bundle: soundcloud
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      image_tags: image_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

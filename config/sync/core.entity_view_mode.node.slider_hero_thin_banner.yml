@@ -1,0 +1,10 @@
+uuid: b4b023e2-6965-42c2-bedb-c62af22ea691
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.slider_hero_thin_banner
+label: 'Slider Hero Thin Banner'
+targetEntityType: node
+cache: true

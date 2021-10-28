@@ -1,0 +1,360 @@
+uuid: 0a4600d9-e2de-4577-8b88-72b48128c846
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.object.body
+    - field.field.node.object.comment
+    - field.field.node.object.field_artist_description
+    - field.field.node.object.field_artist_maker
+    - field.field.node.object.field_catalogue_reference
+    - field.field.node.object.field_categories
+    - field.field.node.object.field_copyright
+    - field.field.node.object.field_credit_line
+    - field.field.node.object.field_credit_line_repro
+    - field.field.node.object.field_date_text
+    - field.field.node.object.field_dimensions
+    - field.field.node.object.field_exhibition_history
+    - field.field.node.object.field_gallery_number
+    - field.field.node.object.field_global_collection
+    - field.field.node.object.field_inscription
+    - field.field.node.object.field_inscription_source
+    - field.field.node.object.field_institution
+    - field.field.node.object.field_is_zoom_allowed
+    - field.field.node.object.field_links
+    - field.field.node.object.field_location
+    - field.field.node.object.field_loris_gallery
+    - field.field.node.object.field_loris_thumbnail
+    - field.field.node.object.field_markings
+    - field.field.node.object.field_medium
+    - field.field.node.object.field_meta_tags
+    - field.field.node.object.field_mirador_main_formatter
+    - field.field.node.object.field_object_id
+    - field.field.node.object.field_object_name
+    - field.field.node.object.field_object_name_reference
+    - field.field.node.object.field_object_number
+    - field.field.node.object.field_object_rights_type
+    - field.field.node.object.field_object_type
+    - field.field.node.object.field_place_of_origin
+    - field.field.node.object.field_portfolio_image_data
+    - field.field.node.object.field_previous_owners
+    - field.field.node.object.field_provenance
+    - field.field.node.object.field_provenance_remarks
+    - field.field.node.object.field_published_reference
+    - field.field.node.object.field_related_works
+    - field.field.node.object.field_restrictions
+    - field.field.node.object.field_signature
+    - field.field.node.object.field_subjects
+    - field.field.node.object.field_time_period
+    - node.type.object
+  module:
+    - addtoany
+    - collection_blocks
+    - ctools
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - link
+    - metatag
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          71e32a9d-69e8-4d64-b0b2-8e68127c51da:
+            uuid: 71e32a9d-69e8-4d64-b0b2-8e68127c51da
+            region: content
+            configuration:
+              id: collection_grid_link_block
+              label: 'Collection Grid Link Block'
+              provider: collection_blocks
+              label_display: '0'
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          36ff71b7-15ee-4896-a3af-e7e402abe934:
+            uuid: 36ff71b7-15ee-4896-a3af-e7e402abe934
+            region: content
+            configuration:
+              id: zoom_tool_block
+              label: 'Zoom Tool Block'
+              provider: collection_blocks
+              label_display: '0'
+              context_mapping: {  }
+            additional: {  }
+            weight: 2
+          b9afa405-885e-4eff-b90a-b28d396a8467:
+            uuid: b9afa405-885e-4eff-b90a-b28d396a8467
+            region: content
+            configuration:
+              id: webform_link_block
+              label: 'Webform Link Block'
+              provider: collection_blocks
+              label_display: '0'
+              context_mapping: {  }
+            additional: {  }
+            weight: 3
+          6f141bf3-f0b1-48ec-a3a7-4cbda67e92fc:
+            uuid: 6f141bf3-f0b1-48ec-a3a7-4cbda67e92fc
+            region: content
+            configuration:
+              id: addtoany_block
+              label: 'AddToAny buttons'
+              provider: addtoany
+              label_display: '0'
+              context_mapping: {  }
+            additional: {  }
+            weight: 4
+          529a3607-8e4f-410c-ba00-bcf55737ad4a:
+            uuid: 529a3607-8e4f-410c-ba00-bcf55737ad4a
+            region: content
+            configuration:
+              id: 'entity_view:node'
+              label: 'Object Gallery'
+              provider: ctools
+              label_display: '0'
+              view_mode: object_gallery
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          5a3c8b53-e6d9-4323-ac12-8ae37d57d331:
+            uuid: 5a3c8b53-e6d9-4323-ac12-8ae37d57d331
+            region: content
+            configuration:
+              id: 'entity_view:node'
+              label: 'Object Information'
+              provider: ctools
+              label_display: '0'
+              view_mode: object_information
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_blocks: {  }
+    allowed_layouts: {  }
+id: node.object.default
+targetEntityType: node
+bundle: object
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_artist_maker:
+    weight: 1
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_catalogue_reference:
+    weight: 17
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_categories:
+    weight: 3
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_credit_line:
+    weight: 6
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_date_text:
+    weight: 4
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_dimensions:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_gallery_number:
+    weight: 9
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_inscription:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_institution:
+    weight: 10
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_links:
+    weight: 11
+    label: inline
+    settings:
+      trim_length: null
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_location:
+    weight: 8
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_markings:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_medium:
+    weight: 5
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_meta_tags:
+    weight: 22
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_object_name:
+    weight: 0
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_object_number:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_object_type:
+    weight: 2
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_previous_owners:
+    weight: 19
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_provenance:
+    weight: 18
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_related_works:
+    weight: 21
+    label: above
+    settings:
+      view_mode: object_card_view
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_signature:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_subjects:
+    weight: 20
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  addtoany: true
+  comment: true
+  field_artist_description: true
+  field_copyright: true
+  field_credit_line_repro: true
+  field_exhibition_history: true
+  field_global_collection: true
+  field_inscription_source: true
+  field_is_zoom_allowed: true
+  field_loris_gallery: true
+  field_loris_thumbnail: true
+  field_mirador_main_formatter: true
+  field_object_id: true
+  field_object_name_reference: true
+  field_object_rights_type: true
+  field_place_of_origin: true
+  field_portfolio_image_data: true
+  field_provenance_remarks: true
+  field_published_reference: true
+  field_restrictions: true
+  field_time_period: true
+  links: true
+  search_api_excerpt: true

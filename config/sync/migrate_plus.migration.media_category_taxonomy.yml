@@ -1,0 +1,43 @@
+uuid: e75ddd15-29a7-4302-bb5a-9a2c2847827e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration
+id: media_category_taxonomy
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: ago
+label: 'AGO Media Category Taxonomy'
+source:
+  plugin: custom_taxonomy_term
+  key: migrate
+  entity_type: taxonomy_term
+  bundle: media_category
+process:
+  name: name
+  langcode: langcode
+  weight: weight
+  status: status
+  description/value: description/0/value
+  description/format:
+    -
+      plugin: static_map
+      source: description/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: full_html
+  created: created
+  changed: changed
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: media_category
+migration_dependencies: null

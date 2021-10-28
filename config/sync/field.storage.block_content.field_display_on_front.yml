@@ -1,0 +1,18 @@
+uuid: efd4c92c-1c85-4f51-b73c-250f7e2d38e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_display_on_front
+field_name: field_display_on_front
+entity_type: block_content
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

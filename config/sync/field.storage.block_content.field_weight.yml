@@ -1,0 +1,20 @@
+uuid: 3412c482-09b6-4563-9a9b-5e7004761e64
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - weight
+id: block_content.field_weight
+field_name: field_weight
+entity_type: block_content
+type: weight
+settings:
+  unsigned: false
+module: weight
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: b1a81958-4747-4d72-980f-2cb0076b52d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_license
+    - media.type.video
+  module:
+    - options
+id: media.video.field_license
+field_name: field_license
+entity_type: media
+bundle: video
+label: License
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

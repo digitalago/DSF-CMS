@@ -1,0 +1,23 @@
+uuid: acf2ffb6-05c9-4ad7-87d5-30e3c149f08d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_website
+    - node.type.sponsor
+  module:
+    - link
+id: node.sponsor.field_org_website
+field_name: field_org_website
+entity_type: node
+bundle: sponsor
+label: 'Organization Website'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

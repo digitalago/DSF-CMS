@@ -1,0 +1,21 @@
+uuid: 203a75ff-ae43-4f67-95bc-8fd8e7447669
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_placement_date
+    - node.type.exhibition
+  module:
+    - datetime
+id: node.exhibition.field_placement_date
+field_name: field_placement_date
+entity_type: node
+bundle: exhibition
+label: 'Placement Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

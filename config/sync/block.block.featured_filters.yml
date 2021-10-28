@@ -1,0 +1,29 @@
+uuid: e9397e86-817a-4b62-8387-14d369d1d48d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.featured_filters
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: featured_filters
+theme: de_theme
+region: sidebar_first
+weight: -19
+provider: null
+plugin: 'facet_block:featured_filters'
+settings:
+  id: 'facet_block:featured_filters'
+  label: 'Featured Filters'
+  provider: facets
+  label_display: '0'
+  block_id: featured_filters
+visibility:
+  request_path:
+    id: request_path
+    pages: /events/browse
+    negate: false
+    context_mapping: {  }

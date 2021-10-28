@@ -1,0 +1,19 @@
+uuid: c86d0832-dfa7-4d73-b891-803e14c90e54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_capacity
+    - node.type.event
+id: node.event.field_capacity
+field_name: field_capacity
+entity_type: node
+bundle: event
+label: Capacity
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

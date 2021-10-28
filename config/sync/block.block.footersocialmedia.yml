@@ -1,0 +1,31 @@
+uuid: 9c147776-3e0a-4b70-8637-ac16fc6e7e7a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6fcb8c7e-1138-4365-acd4-3ae28709c75e'
+  module:
+    - block_content
+    - system
+  theme:
+    - de_theme
+id: footersocialmedia
+theme: de_theme
+region: footer
+weight: -14
+provider: null
+plugin: 'block_content:6fcb8c7e-1138-4365-acd4-3ae28709c75e'
+settings:
+  id: 'block_content:6fcb8c7e-1138-4365-acd4-3ae28709c75e'
+  label: 'Footer Social Media'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /ago
+    negate: true
+    context_mapping: {  }

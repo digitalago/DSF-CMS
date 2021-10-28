@@ -1,0 +1,10 @@
+uuid: 5fb88835-1211-4505-bde2-1d8255688d3e
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.referenced_entity
+label: 'Referenced Entity'
+targetEntityType: block_content
+cache: true

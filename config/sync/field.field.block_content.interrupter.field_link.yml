@@ -1,0 +1,23 @@
+uuid: dccb0f4c-6a27-469f-85d3-875b0ae28da2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.interrupter
+    - field.storage.block_content.field_link
+  module:
+    - link
+id: block_content.interrupter.field_link
+field_name: field_link
+entity_type: block_content
+bundle: interrupter
+label: Link
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

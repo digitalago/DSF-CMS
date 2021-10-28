@@ -1,0 +1,640 @@
+/* sections/page/_node-type-exhibition.scss */
+// anything exhibition page related goes here
+// currently for boxwood
+
+.node--type-agoc-exhibition,
+.node--type-exhibition {
+  .node--type-agoc-sponsor-section {
+    padding-top: 0 !important;
+    @include breakpoint ($narrow-screen) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .node__content {
+    > .layout--twocol-section--50-50 {
+      @include clearfix;
+      border-bottom: 1px solid $almostblack;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+
+      .layout__region--first {
+        order: 2;
+        @include breakpoint($narrow-screen) {
+          order: 1;
+        }
+      }
+
+      .layout__region--second {
+        order: 1;
+        @include breakpoint($narrow-screen) {
+          order: 2;
+        }
+      }
+    }
+
+    .block-field-blocknodeexhibitiontitle {
+      max-width: 85%;
+
+      .field--name-title {
+        max-width: 80%;
+        display: block;
+        text-transform: uppercase;
+        line-height: 0.88889em;
+        font-family: $font-set-3;
+        font-size: 2.88651em;
+        margin-bottom: 1em;
+        @include breakpoint($narrow-screen) {
+          font-size: ms(12);
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .horizontal-sponsors {
+    .field--name-field-media-image {
+      img {
+        max-width: 70px;
+      }
+    }
+  }
+  // .button-wrapper {
+  //  padding: 15px 0px 30px 0px;
+  //  .tickets-btn{
+  //    @include btn-red;
+  //    @include btn-big;
+  //    margin-bottom: 10px 0px;
+  //  }
+  // }
+  .block-field-blocknodeexhibitionfield-date-time-description {
+    @include nimbus-bold-reg;
+    color: $almostblack;
+    font-size: ms(1);
+    margin: 3px 0;
+    @include breakpoint ($narrow-screen) {
+      font-size: ms(3);
+      margin: ms(-5) 0;
+      max-width: 80%;
+      padding-bottom: 10px;
+    }
+    display: block;
+  }
+
+  .block-field-blocknodeexhibitionfield-exhibition-details {
+    clear: both;
+    @include breakpoint($narrow-screen) {
+      width: 80%;
+    }
+
+    h3 {
+      @include nimbus-bold-reg;
+      font-size: ms(0);
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+      margin-top: ms(1);
+    }
+
+    blockquote {
+      p {
+        font-size: ms(5);
+      }
+    }
+
+    p {
+      font-size: ms(-1);
+    }
+  }
+}
+
+.block-extra-field-blocknodeexhibitionaddtoany {
+  display: none;
+  border: 1px solid $almostblack;
+  padding: 3px 7px 0 0;
+  float: right;
+  @include breakpoint ($narrow-screen) {
+    display: inline-block;
+    clear: both;
+  }
+}
+
+.block-field-blocknodeexhibitionfield-image {
+  .field--name-field-media-image {
+    position: relative;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+    width: auto;
+    max-height: 620px;
+  }
+}
+
+.exhibition-right {
+  @include clearfix;
+  @include grid-span(12,1);
+  @include breakpoint ($narrow-screen) {
+    @include grid-span(6,7);
+  }
+  @include breakpoint ($medium-screen) {
+    @include grid-span(7,6);
+  }
+
+  .field--name-field-managed-image {
+    position: relative;
+    text-align: center;
+
+    img {
+      margin: auto;
+      width: auto;
+      max-height: 620px;
+    }
+  }
+}
+
+#middle-full-width {
+  padding-top: 20px;
+}
+//makes the insta block
+.block-insta {
+  background: $white;
+  padding: ms(-1) 0 !important;
+
+  h2 {
+    color: $almostblack;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-bottom: ms(-6) !important;
+    @include breakpoint ($narrow-screen) {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+  }
+
+  .layout-container {
+    padding-left: ms(-1) !important;
+    padding-right: ms(-1) !important;
+  }
+
+  .social-links-wrapper {
+    margin-top: 1em !important;
+
+    .fab:before {
+      color: $almostblack;
+    }
+  }
+}
+
+.field--name-field-exhibition-body {
+  padding-top: 20px;
+}
+// }
+// boxwood junk
+.node--type-exhibition-boxwood {
+  .field--name-field-display-title {
+    font-size: ms(3);
+    margin-bottom: ms(-3);
+    line-height: ms(1);
+    font-weight: $normal;
+    @include breakpoint($narrow-screen) {
+      font-size: ms(4);
+    }
+  }
+
+  .region--content-prefix {
+    margin-bottom: ms(2);
+    padding-bottom: 0;
+    border-bottom: 1px solid $neutral-grey;
+    margin: 0 auto ms(2);
+    width: auto;
+    @include breakpoint ($wide-screen) {
+      width: 1164px;
+    }
+
+    .layout-container {
+      @include breakpoint (max-width $wide-screen) {
+        padding: 0 2.3em;
+      }
+      @include breakpoint (max-width $medium-screen) {
+        padding: 0 3.8em;
+      }
+      @include breakpoint (max-width $narrow-screen) {
+        padding: 0 2.3em;
+      }
+    }
+  }
+  //Style of sponsored by
+  .field--name-field-sponsored-by {
+    margin-top: ms();
+    display: inline-block;
+
+    p {
+      line-height: ms();
+    }
+  }
+  //Styling of exhibition date block
+  .block-views-blockexhibition-exhibition-dates {
+    float: left;
+    display: block;
+    font-family: $font-set-2;
+    margin-bottom: ms();
+    // margin-left: ms();
+    h2 {
+      font-size: ms();
+      font-weight: $bold;
+      text-transform: uppercase;
+      font-family: $font-set-2;
+      // letter-spacing: 1px;
+      margin-top: ms(-4);
+    }
+  }
+  //Exhibition Content
+  .block-views-blockexhibition-landing-exhibition-content {
+    display: block;
+    position: relative;
+
+    .view-content {
+      .views-row {
+        .views-field-field-content {}
+      }
+    }
+  }
+  //Sidebar
+  .exhibition-sub-nav {
+    @include clearfix;
+    @include breakpoint (max-width $medium-screen) {
+      margin-bottom: ms(1);
+    }
+
+    ul {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    li {
+      list-style-type: none;
+      margin-bottom: 0;
+
+      a {
+        width: 100%;
+        color: white;
+        background-color: $red;
+        text-decoration: none;
+        padding: ms(-1);
+        transition: all 0.3s ease-out;
+        display: inline-block;
+        font-weight: $medium;
+        border-bottom: 1px solid white;
+        font-family: $font-set-2;
+        @include breakpoint ($narrow-screen) {
+          border-bottom: 2px solid white;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+          background-color: black;
+        }
+      }
+    }
+  }
+}
+//Things that are related to exhibition
+#block-contentrelatedtoexhibition {
+  @include clearfix;
+  @include divider-line-3;
+  border-top: 1px solid lighten($ui-borders-color, 30%);
+
+  .field--name-field-references {
+    width: 100%;
+    margin-top: ms();
+
+    & > .field__item {
+      margin-bottom: ms(1);
+      @include float-span(3);
+
+      &:last-child {
+        margin-right: 0;
+      }
+      @include breakpoint (max-width $narrow-screen) {
+        @include float-span(6);
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .field--name-field-reference-to-content a {
+      font-weight: $medium;
+      font-size: ms(1);
+      text-transform: uppercase;
+      margin-bottom: ms();
+      font-family: $font-set-2;
+      display: inline-block;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+// ex specific mailchimp signup
+#mc_embed_signup.exhibition {
+  @include clearfix;
+  padding: 0;
+
+  label {
+    @include heading-2;
+    @include knockout-48;
+    display: block;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+//
+//exhibitions views
+
+.view-ago-exhibitions {
+  .event-date-time {
+    @include nimbus-reg;
+    font-size: ms(1);
+    padding: 0 0 5px;
+    clear: both;
+  }
+}
+
+.node--view-mode-featured-item {
+  border: 1px solid $almostblack;
+  margin: 0 auto;
+  max-width: $wide-screen;
+  //  border: 1px solid $almostblack;
+  @include clearfix;
+  margin-bottom: 20px;
+}
+
+.node--view-mode-exhibition-card-view {
+  @include clearfix;
+  margin-bottom: 20px;
+}
+
+.block-in-content {
+  display: block;
+  @include clearfix;
+}
+
+.featured-item-left {
+  @include grid-span(12,1);
+  padding: 10px;
+  @include breakpoint ($narrow-screen) {
+    @include grid-span(6,1);
+    padding: 20px;
+  }
+  @include breakpoint ($medium-screen) {
+    @include grid-span(4,1);
+    padding: 20px;
+  }
+  padding-top: ms(9);
+
+  .event-date-time {
+    @include nimbus-reg;
+    font-size: ms(2);
+    padding: 20px 0 35px;
+    clear: both;
+    display: block;
+  }
+
+  .button-wrapper {
+    display: flex;
+    padding-bottom: 20px;
+  }
+
+  h3 {
+    @include knockout-48;
+    font-size: ms(9);
+    @include breakpoint ($narrow-screen) {
+      font-size: ms(11);
+    }
+    line-height: ms(-1);
+    margin-bottom: 0.25em;
+    text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .event-date-time {
+    @include nimbus-reg;
+    font-size: ms(2) !important;
+    padding: 20px 0 35px 0 !important;
+    clear: both;
+    display: block;
+  }
+
+  .featured-item-btn {
+    @include btn-red;
+    @include btn-big;
+    margin-bottom: 10px 0;
+  }
+}
+
+.featured-item-right {
+  background: $light-grey;
+  overflow: auto;
+  position: relative;
+  @include grid-span(12,1);
+  min-height: 180px;
+  @include breakpoint ($narrow-screen) {
+    min-height: 410px;
+    @include grid-span(6,7);
+  }
+  @include breakpoint ($medium-screen) {
+    min-height: 550px;
+    max-height: 550px;
+    @include grid-span(8,5);
+  }
+
+  img {
+    position: relative;
+    @include breakpoint ($narrow-screen) {
+      position: absolute;
+      top: 0;
+      // transform: translateY(-50%);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-height: 100%;
+      width: auto;
+      margin: auto;
+
+      &:hover {
+        //  position: absolute;
+        //  top: 50%;
+        // transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.grid-3-columns .exhibition-card {
+  @include breakpoint ($small-screen) {
+    padding-bottom: 60px !important;
+  }
+
+  .field--name-field-managed-image {
+    position: relative;
+    background: $light-grey;
+    // @include float-span(6);
+    height: 200px;
+    @include breakpoint ($small-screen) {
+      padding-bottom: 40px !important;
+      // @include float-span(12);
+      height: 325px;
+      margin-bottom: 10px;
+      max-height: 100%;
+    }
+    @include breakpoint ($weird-screen-max) {
+      height: 368px;
+    }
+    @include breakpoint (max-width $small-screen) {
+      text-align: center;
+    }
+  }
+}
+
+.grid-4-columns .exhibition-card {
+  @include breakpoint ($small-screen) {
+    padding-bottom: 60px !important;
+  }
+
+  .field--name-field-managed-image {
+    position: relative;
+    background: $light-grey;
+    //@include grid-span(6,1);
+    height: 200px;
+    @include breakpoint ($small-screen) {
+      //  padding-bottom: 40px !important;
+      // @include grid-span(12);
+      height: 325px;
+      //margin-bottom: 10px;
+      max-height: 100%;
+    }
+    @include breakpoint ($weird-screen-max) {
+      height: 268px;
+    }
+    @include breakpoint (max-width $small-screen) {
+      text-align: center;
+    }
+  }
+}
+
+.exhibition-card {
+  border: 1px solid $neutral-grey;
+  @include clearfix;
+  padding-bottom: 0 !important;
+
+  a:hover img,
+  img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .field--name-field-agoc-image {
+    position: relative;
+    background: $light-grey;
+    //  height: 200px;
+    @include grid-span(12);
+    //  @include breakpoint ($small-screen) {
+    //    height: 325px;
+    //    padding-bottom: 40px !important;
+    //  }
+    //  @include breakpoint
+  }
+
+  .card-details-wrapper {
+    padding: 10px 4% 50px;
+    // @include breakpoint ($narrow-screen){
+    // padding-left:2.12766%;
+    // padding-right:2.12766%;
+    // }
+    @include grid-span(12);
+    display: block;
+
+    .title-wrapper {
+      @include card-title;
+      margin-bottom: 0.25em;
+      line-height: ms();
+      margin-top: 5px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .btn-white-nimbus {
+      right: 0;
+      padding: 15px 15px 12px;
+      float: right;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+}
+//mini menu block
+#block-exhibitionsarchiveminimenu,
+#block-exhibitionsminimenu,
+#minimenu {
+  padding: 20px 0;
+
+  .field__item {
+    font-size: ms(2);
+    padding-right: 5px;
+    display: inline;
+
+    a {
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        color: $red;
+      }
+    }
+
+    &:after {
+      content: '|';
+      padding-left: 7px;
+    }
+
+    &:last-child {
+      &:after {
+        content: '';
+      }
+    }
+  }
+}
+
+#standard-current-exhibitions {
+  padding-bottom: ms(1);
+}
+
+#exhibition-archive-links,
+#galleries-in-focus,
+#upcoming-exhibitions {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}

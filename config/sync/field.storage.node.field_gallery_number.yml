@@ -1,0 +1,19 @@
+uuid: bbe45ed8-32f6-425c-a904-6d12acc326e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_gallery_number
+field_name: field_gallery_number
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

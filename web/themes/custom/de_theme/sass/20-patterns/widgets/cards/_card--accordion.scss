@@ -1,0 +1,49 @@
+/* 20-patterns/widgets/cards/_card--accordion.scss */
+
+.card--accordion{
+  .card__actions{
+    border-bottom: 1px solid $light-grey;
+    padding: 0;
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  .card__toggle{
+    text-decoration: none;
+    display: block;
+    padding: ms(-2);
+    transition: background-color 0.3s ease-out;
+    &:hover{
+      background-color: $light-grey;
+      &:before{
+        transform: rotate(180deg); // this might be wonky for users
+      }
+    }
+    &:before{
+      transition: transform 0.3s ease-out;
+      @include material-icons;
+    }
+    .material-icons{
+      display: none !important;
+      position: absolute;
+    }
+
+    &--inactive{
+      &:before{
+        content: "expand_more";
+      }
+    }
+
+    &--active{
+      background-color: #D32F2F;
+      color: white;
+      &:before{
+        content: "expand_less";
+        color: white;
+      }
+      &:hover{
+        background-color: black;
+      }
+    }
+  }
+}

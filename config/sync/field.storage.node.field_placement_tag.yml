@@ -1,0 +1,20 @@
+uuid: 766b272c-1074-4c52-b6f5-e50f9da02bd2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_placement_tag
+field_name: field_placement_tag
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

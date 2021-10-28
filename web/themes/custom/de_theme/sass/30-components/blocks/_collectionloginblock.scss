@@ -1,0 +1,52 @@
+#block-collectionloginblock {
+  display: none;
+}
+
+#colorbox #block-collectionloginblock {
+  display: block;
+}
+
+.collection-login-wrapper {
+  margin: ms(6) ms(1) ms(3);
+  display: inline-block;
+  @include breakpoint ($small-screen) {
+    margin: ms(1) ms(3);
+  }
+  h2 {
+    font-size: ms(3);
+  }
+  a#noThanksBtn {
+    @include btn-black;
+    text-transform: capitalize;
+    padding: ms(-2) ms();
+    margin-left: 0;
+    display: inline-block;
+    text-decoration: none;
+    font-family: $font-set-2;
+    font-size: ms(-1);
+  }
+  .form-type-textfield {
+    position: relative;
+    display: inline-block;
+    margin-top: ms(3);
+    width: 100%;
+  }
+  .form-text {
+    box-sizing: border-box;
+  }
+  .form-submit {
+    @include btn-red;
+    float: right;
+  }
+  .item-list {
+    li {
+      list-style: none;
+      list-style-type: none;
+      float: left;
+      // margin: 0;
+      // @include breakpoint ($narrow-screen) {
+      margin: ms(-2) ms(-1) 0 0;
+      // }
+    }
+  }
+}

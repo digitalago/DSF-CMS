@@ -1,0 +1,21 @@
+uuid: 69008108-a215-4fce-8cfb-b0013ba00c16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tagline
+    - node.type.page
+  module:
+    - text
+id: node.page.field_tagline
+field_name: field_tagline
+entity_type: node
+bundle: page
+label: 'Post Summary'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

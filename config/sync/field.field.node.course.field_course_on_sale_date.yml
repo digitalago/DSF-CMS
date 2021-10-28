@@ -1,0 +1,21 @@
+uuid: 59244d1c-4c95-470f-b961-5bb30bdbfef0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_on_sale_date
+    - node.type.course
+  module:
+    - datetime
+id: node.course.field_course_on_sale_date
+field_name: field_course_on_sale_date
+entity_type: node
+bundle: course
+label: 'Course On Sale Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

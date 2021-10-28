@@ -1,0 +1,12 @@
+uuid: 87aeaa4c-cef3-40dc-a151-3861164e80f7
+langcode: en
+status: true
+dependencies: {  }
+label: '16:9'
+id: '16_9'
+description: 'for media cards.'
+aspect_ratio: '16:9'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

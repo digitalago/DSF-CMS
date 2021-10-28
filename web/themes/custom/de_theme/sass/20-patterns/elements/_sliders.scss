@@ -1,0 +1,283 @@
+// global slider styles
+//more styles in events/ and frontpage
+
+
+//slider options
+
+.hide-slide-image-credits{
+    .field--name-field-image-credit{
+        display: none;
+    }
+}
+
+.hide-slider-description {
+    .field--name-body{
+        display: none;
+    }
+}
+
+.hide-slide-titles, .hide-slide-titles .node--view-mode-slider-hero, .hide-slide-titles .node--view-mode-slider-hero-thin-banner{
+    .slide-title{
+        display: none;
+    }
+}
+
+.hide-slide-date-time-description{
+   .field--name-field-agoc-display-slide-date-ti{
+        display: none;
+    }
+}
+
+.hide-slide-item-description {
+  .slide-description{
+      display: none;
+  }
+}
+
+.hide-slide-item-date-time-description {
+  .slide-date-time-description{
+      display: none;
+  }
+}
+
+.slider-container-width{
+    position: relative;
+    max-width:  $wide-screen;
+    margin:  0 auto;
+    // padding:  10px ms(2);
+    padding: 10px 0;
+    @include clearfix;
+    @include breakpoint($medium-screen) {
+    // padding:  10px ms(2);
+    padding: 10px 0;
+    }
+    @include breakpoint ($wide-screen) {
+      // padding:  40px ms(-1);
+      padding: 40px 0;
+    }
+}
+
+.slider-full-width{
+    position: relative;
+    max-width:  100%;
+    margin:  0;
+    padding:  0;
+    @include clearfix;
+    @include breakpoint($medium-screen) {
+    padding:  0;
+    }
+    @include breakpoint ($wide-screen) {
+      padding:  0;
+    }
+
+}
+
+
+.slide-title-black{
+    .slide-title{
+        color: $almostblack !important;
+    }
+}
+
+.slide-title-white{
+    .slide-title{
+        color: $white !important;
+    }
+}
+
+
+.slide-background-black{
+    padding-top: 20px;
+    background: $almostblack;
+    color: $white;
+    .slick-dots{
+    li{
+        button{
+        text-align: center;
+        color: $white;
+        font-size: 10px;
+        width:22px;
+        height: 21px;
+        @include nimbus-bold-reg;
+        overflow: visible;
+        &:before{
+            content: '\f111';
+            display: inline-block;
+            padding-left: 0px;
+            font-family: "Font Awesome 5 Free";
+            color: $light-grey;
+            font-weight: 300;
+            font-size: 23px;
+        }
+
+        }
+    }
+
+    }
+    .slick-dots li.slick-active button:before{
+       color: $white;
+    }
+     .node .slick-prev, .node .slick-next{
+    height: 36px;
+    width: 36px;
+    &:before{
+    font-size: 36px;
+    color: $white;
+    }
+    }
+
+    .slider-title, .field--name-body, .slide-description, .slide-date-time-description, .field--name-field-image-credit p{
+    color: $white;
+    }
+}
+
+//image only slider
+
+.node--view-mode-slide-image-only{
+
+  .field--name-field-image-credit p{
+      padding: 15px 0 10px 0;
+      font-size: ms(-1);
+      color: $contrastgrey;
+      text-align: center;
+  }
+  .slider-title{
+      @include heading-3;
+      margin-bottom: 0;
+      padding-top: 10px;
+  }
+  .slide-title{
+      @include heading-3;
+      margin-bottom: 0;
+      padding-top: 10px;
+  }
+
+    .slide-date-time-description{
+    @include nimbus-bold-reg;
+    color: $contrastgrey;
+    font-size: ms(0);
+    margin: 3px 0;
+    @include breakpoint ($narrow-screen){
+    font-size: ms(3);
+    margin: ms(-5) 0;
+    }
+    display: block;
+
+  }
+  .slide-image{
+    img{
+        max-height: 250px;
+        margin: 0px auto;
+        @include breakpoint ($narrow-screen){
+        max-height: 100%;
+        }
+      }
+  }
+
+
+}
+
+//hero
+.node--view-mode-slider-hero {
+    .slide-title{
+        @include knockout-48;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        height: 100%;
+        //left: 10%;
+        margin: 0 auto;
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        text-shadow: 0px 0px 15px rgba(0,0,0,0.7);
+        font-size: ms(9);
+        letter-spacing: 1px;
+        span{
+            margin: 0px auto;
+            width: 62%;
+            display: block;
+            line-height: 0.889em;
+        }
+         @include breakpoint($small-screen) {
+        font-size: ms(15);
+        }
+        @include breakpoint ($wide-screen) {
+         font-size: ms(18);
+        }
+
+    }
+    .field--name-field-slider-items .slick-current{
+        img {width: 100%;}
+    }
+}
+
+//hero thin
+.node--view-mode-slider-hero-thin-banner{
+    padding-bottom: 10px;
+    .slide-title{
+        @include knockout-48;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        height: 100%;
+        //left: 10%;
+        margin: 0 auto;
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        text-shadow: 0px 0px 15px rgba(0,0,0,0.7);
+        font-size: ms(9);
+        letter-spacing: 1px;
+        span{
+            margin: 0px auto;
+            width: 62%;
+            display: block;
+            line-height: 0.889em;
+        }
+         @include breakpoint($small-screen) {
+        font-size: ms(15);
+        }
+        @include breakpoint ($wide-screen) {
+         font-size: ms(18);
+        }
+
+    }
+     .field--name-field-slider-items .slick-current {
+        img {width: 100%;}
+    }
+}
+
+
+//host your event hero hack
+.node--type-dags-landing-page{
+.node--view-mode-slider-hero .slide-title span{
+    width: 76%;
+ @include breakpoint ($wide-screen){
+    width: 56%;
+  }
+  @include breakpoint ($wide-screen-max){
+    width: 51%;
+  }
+  @include breakpoint (1636px){
+    width: 41%;
+  }
+}
+}
+
+//slider default
+.node--type-ago-slider-container.node--view-mode-full {
+    .field--name-field-agoc-display-title{
+        padding: 20px 0;
+    }
+    .slider-description{
+        padding: 10px 0;
+        clear: both;
+    }
+}
+
+.node--type-ago-slider-container{
+    #footer{
+        display: none;
+    }
+}

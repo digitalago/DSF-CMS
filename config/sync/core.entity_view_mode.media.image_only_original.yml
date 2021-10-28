@@ -1,0 +1,10 @@
+uuid: 16703ee9-c2d1-4e27-a94c-2b8263e040d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_only_original
+label: 'Image Only: Original'
+targetEntityType: media
+cache: true

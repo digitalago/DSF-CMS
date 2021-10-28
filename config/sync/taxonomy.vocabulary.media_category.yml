@@ -1,0 +1,8 @@
+uuid: 36766210-7503-4d7e-868e-207829c122b8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media Category'
+vid: media_category
+description: 'The Category for labeling media.'
+weight: 0

@@ -1,0 +1,19 @@
+uuid: faccc537-b859-484c-91d4-4c721faa6d05
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_short_description
+field_name: field_short_description
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

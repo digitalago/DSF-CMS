@@ -1,0 +1,10 @@
+uuid: e0af64e4-f4db-4521-8598-55c63e57ec54
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.hero_slide_thin
+label: 'Hero Slide Thin'
+targetEntityType: media
+cache: true

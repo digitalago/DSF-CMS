@@ -1,0 +1,12 @@
+uuid: fb85d6f4-9ed2-4a28-b279-618206692746
+langcode: en
+status: true
+dependencies: {  }
+id: 5_columns
+label: '5 Columns'
+classes: five-columns
+type: component
+weight: 0
+block_restrictions:
+  - 'inline_block:card_container'
+layout_restrictions: {  }

@@ -1,0 +1,36 @@
+uuid: a71589bd-5ef7-4aff-81e0-23d35e84858d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - menu_block
+    - system
+  theme:
+    - de_theme
+id: footer
+theme: de_theme
+region: footer
+weight: -15
+provider: null
+plugin: 'menu_block:footer'
+settings:
+  id: 'menu_block:footer'
+  label: Footer
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'footer:'
+  suggestion: footer
+  label_type: block
+visibility:
+  request_path:
+    id: request_path
+    pages: /ago
+    negate: true
+    context_mapping: {  }

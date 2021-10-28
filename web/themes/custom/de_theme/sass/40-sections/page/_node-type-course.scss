@@ -1,0 +1,201 @@
+/* AGOC Courses styling */
+
+.node--type-course {
+  h1{
+    margin-bottom: ms(-9);
+  }
+  #content {
+    @include breakpoint($narrow-screen) {
+      @include grid-span(12);
+      }
+    @include grid-span(12);
+    .course-content-wrapper {
+      clear:both;
+      @include breakpoint($narrow-screen) {
+      @include grid-span(8, 1);
+      padding-bottom: 20px;
+      }
+      @include grid-span(12, 1);
+      float: none;
+    }
+    }
+    .courses-right {
+      @include clearfix;
+      @include breakpoint($narrow-screen) {
+        float: right;
+        @include grid-span(4, 9);
+      }
+      @include grid-span(12, 1);
+      float: none;
+      img {
+        width: 100%;
+      }
+    }
+    .field--name-field-members-price, .field--name-field-public-price {
+      margin-bottom: 0;
+      .field__label {
+      @include price;
+      top: 0px;
+      float:left;
+      }
+      .field__item {
+      font-size: ms(1);
+      @include nimbus-bold-reg;
+      text-transform: normal;
+      top: 0px;
+      }
+    }
+    .addtoany_list {
+      float: right;
+      border: 1px solid $almostblack;
+      margin: 10px 0px;
+    }
+
+
+    .view-course-sections {
+    .views-row {
+      position: relative;
+    }
+    .views-field-field-instructor {
+      .field-content {
+        display: inline-block;
+        a {
+          text-decoration: none;
+          color: $red;
+        }
+      }
+    }
+    .views-field-field-ticket-link, .ticket-link-btn {
+      margin-top: ms();
+      position: relative;
+      @include breakpoint ($narrow-screen) {
+        float: right;
+        position: absolute;
+        right: 3%;
+        top: 0%;
+      .cancelled{background: $neutral-grey; border: 1px solid $neutral-grey;}
+      }
+      .sold-out{background: $red; border: 1px solid $red; }
+    }
+
+  }
+  .course-view-subtext {
+    color: $contrastgrey;
+    font-size: (-2);
+    width: 75%;
+    padding: 5px 0px;
+    line-height: normal;
+  }
+
+  .field--name-field-members-price,
+  .field--name-field-members-price {
+     .field--label-inline{
+      margin-bottom: 0;
+      padding-bottom: 5px;
+     .field__label{
+        float: left;
+        @include nimbus-reg;
+        font-size: ms(2);
+        text-transform: none;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+.block-views-blockcourse-sessions-block-course-sessions {
+  display: inline-block;
+  width: 100%;
+  margin-top: ms();
+  font-family: $font-set-2;
+  .view-course-sessions {
+    .view-content {
+      .views-row {
+        padding: ms();
+        background-color: $light-grey;
+        border-bottom: 1px solid $almostblack;
+        &:first-child {
+          border-top: 1px solid $almostblack;
+        }
+      }
+    }
+  }
+
+  .views-field-nothing-1 {
+    .course {
+      span {
+        &:last-of-type {
+          &::after {
+            content: ',';
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  .views-field-body {
+    color: $dark-grey;
+     p{
+    margin: 0em;
+    }
+
+  }
+  .views-field-field-instructor {
+    color: $dark-grey;
+    font-weight: $medium;
+    p{
+    margin: 0em;
+    }
+
+  }
+}
+
+.block-views-block-courses-view-similar-courses {
+  padding-top: ms(4);
+  padding-bottom: 20px;
+  h2{
+    padding-bottom: 0;
+  }
+}
+
+
+.course-members-message {
+  .more-link {
+    display: inline-block;
+  }
+}
+
+.course-category {
+  padding-bottom: 10px;
+  @include category-label;
+  font-size: ms(3);
+  .field__item {
+    display: inline-block;
+    &:after {
+      content: ",";
+      right: -2px;
+      position: relative;
+    }
+    &:last-child:after {
+      content: none;
+    }
+
+  }
+}
+
+.block-views-exposed-filter-block-courses-view-courses-grid {
+  padding-bottom: 20px;
+}
+
+.block-views-blockcourses-similar-courses {
+  padding-top: 1.60181em;
+  padding-bottom: 20px;
+
+  .view-courses {
+    .view-empty {
+      font-weight: $light;
+    }
+  }
+}

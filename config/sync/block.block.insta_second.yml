@@ -1,0 +1,26 @@
+uuid: 1fde1ab0-2234-4432-9f93-ccd90c271d3e
+langcode: en
+status: true
+dependencies:
+  module:
+    - insta
+    - system
+  theme:
+    - de_theme
+id: insta_second
+theme: de_theme
+region: middle_full_width
+weight: -27
+provider: null
+plugin: insta_second_block
+settings:
+  id: insta_second_block
+  label: 'Connect with us'
+  provider: insta
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/agoinsider\r\n/agoinsider/*"
+    negate: false
+    context_mapping: {  }

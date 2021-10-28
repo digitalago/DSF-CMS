@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a formatted link to the image in Loris as a thumbnail.
+ *
+ * Available variables:
+ * - img_attributes: A collection of html attributes formatted as a string.
+ * - url: URL to the image on the Loris server.
+ *
+ * @see template_preprocess_boxwood_mirador_thumb_formatter()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<img {{ img_attributes }} src="{{ url }}" alt="{{ node.label|length > 100 ? node.label|slice(0, 100) ~ '...' : node.label  }}">

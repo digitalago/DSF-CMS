@@ -1,0 +1,15 @@
+uuid: cf0c2fcb-a633-4e11-9497-fae19a718816
+langcode: en
+status: true
+dependencies: {  }
+name: image_medium
+label: 'Image: Medium'
+effects:
+  2c7ddbf7-d3f6-4239-89d4-1eaf96d00177:
+    uuid: 2c7ddbf7-d3f6-4239-89d4-1eaf96d00177
+    id: image_scale
+    weight: 1
+    data:
+      width: 750
+      height: 750
+      upscale: true

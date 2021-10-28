@@ -1,0 +1,10 @@
+uuid: 82c7754c-fe3f-492f-a41c-475d40c995e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.sponsor_editor
+label: 'Sponsor Editor'
+targetEntityType: node
+cache: true

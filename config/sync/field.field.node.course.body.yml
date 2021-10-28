@@ -1,0 +1,23 @@
+uuid: 676cf32b-7035-4b7c-a349-435c62a16115
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.course
+  module:
+    - text
+id: node.course.body
+field_name: body
+entity_type: node
+bundle: course
+label: Description
+description: "Enter the description here. <br>\r\n<b>Note:</b> If you have a formatted Word or Google Doc please use <a href=\"https://word2cleanhtml.com/\" target=\"_blank\"><b>this tool</b></a> or any other Paste from word cleaner you like. Then copy the clean text back into this editor."
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

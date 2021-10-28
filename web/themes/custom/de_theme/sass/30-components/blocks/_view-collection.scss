@@ -1,0 +1,636 @@
+/* Styling of view collection of the collection*/
+
+#block-views-block-the-collection-the-collection {
+  >h2 {
+    display: block;
+    margin: ms(-1) 0;
+  }
+
+}
+
+.views-control,
+.list-view-control {
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+
+  i {
+    @include breakpoint (max-width $narrow-screen) {
+      margin-top: -3px;
+    }
+  }
+}
+
+.views-control.active {
+  display: inline-block !important;
+  transition: all .3s ease-out;
+}
+
+.field--name-field-related-works {
+  .field__item {
+    margin-bottom: ms(-2) !important;
+  }
+
+  .title-wrapper {
+    @include card-title;
+    font-size: 23px;
+    font-size: 1.4rem;
+    line-height: ms();
+    margin-top: 5px;
+    letter-spacing: 0.03em;
+  }
+
+  .card-details-wrapper {
+    >.field__items {
+      a {
+        font-weight: 300;
+        color: $red;
+      }
+
+      .field__item {
+        margin-top: ms(-2);
+      }
+    }
+
+    >.field__item {
+      margin-top: ms(-2);
+      @include grey-info;
+
+      @include breakpoint ($small-screen) {
+        font-size: ms(-1);
+      }
+    }
+  }
+}
+
+
+
+// .view-the-collection.view-display-id-page_1
+.view-id-collection_search.view-display-id-collection_browse_page,
+.field--name-field-related-works,
+.view-display-id-my_collections {
+  margin-bottom: ms(1);
+  display: block;
+  position: relative;
+  @include clearfix;
+
+  .view-content {
+    margin: ms() 0;
+
+  }
+
+  .views-row,
+  >.field__item {
+    // border: 1px solid $contrastgrey;
+    margin-bottom: 1.6em;
+    border: none;
+    position: relative;
+    //padding: ms(-1);
+    transition: all .3s ease-out;
+    // @include breakpoint (401px) {
+    //   min-height: 445px;
+    // }
+    min-height: 500px;
+
+    @include breakpoint ($weird-screen) {
+      min-height: 420px;
+    }
+
+    &:hover {
+      background-color: $light-grey;
+    }
+
+    &:last-child {
+      // border-bottom: none;
+    }
+
+    @include float-span(3);
+
+    &:nth-child(4n) {
+      margin-right: 0 !important;
+      ;
+    }
+
+    @include breakpoint (max-width $weird-screen) {
+      @include float-span(6);
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @include breakpoint (max-width 400px) {
+      @include float-span(12);
+      margin-right: 0;
+      margin-bottom: ms(2);
+    }
+
+    .views-field-nothing {
+      // width: 200px;
+      max-width: 350px;
+      overflow: hidden;
+      height: 300px;
+      display: block;
+      position: relative;
+      background: $light-grey;
+
+      @include breakpoint (401px) {
+        height: 207px;
+      }
+
+      @include breakpoint ($small-screen) {
+        height: 272px;
+      }
+
+      @include breakpoint ($narrow-screen) {
+        height: 300px
+      }
+
+      // @include breakpoint ($narrow-screen) {
+      //   height: 330px;
+      // }
+      @include breakpoint ($weird-screen) {
+        height: 184px;
+      }
+
+      // @include breakpoint($medium-screen) {
+      //   height: 160px;
+      // }
+      // @include breakpoint ($standard-screen) {
+      //   max-height: 184px;
+      // }
+
+      span,
+      a {
+        height: 300px;
+        position: relative;
+        display: block;
+        overflow: hidden;
+
+        @include breakpoint (401px) {
+          height: 207px;
+        }
+
+        @include breakpoint ($small-screen) {
+          height: 272px;
+        }
+
+        @include breakpoint ($narrow-screen) {
+          height: 300px
+        }
+
+        @include breakpoint ($weird-screen) {
+          height: 184px;
+        }
+      }
+
+      img {
+        // width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 300px;
+        width: auto;
+        margin: auto;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        @include breakpoint (401px) {
+          max-height: 207px;
+        }
+
+        @include breakpoint ($small-screen) {
+          max-height: 272px;
+        }
+
+        @include breakpoint ($narrow-screen) {
+          max-height: 300px
+        }
+
+        @include breakpoint ($weird-screen) {
+          max-height: 184px;
+        }
+      }
+    }
+
+    .views-field-field-date-text-1 {
+      padding: 3px 0px 3px 0px;
+    }
+
+    .views-field-field-artist-maker {
+      margin-bottom: 5px !important;
+    }
+
+    .views-field {
+      width: 96%;
+      margin: 0 auto;
+
+      .field-content {
+        @include nimbus-reg;
+        color: $almostblack;
+
+
+
+
+        a {
+          font-weight: 300;
+          color: $red;
+        }
+
+        .title-wrapper {
+          padding: 10px 0;
+
+          a {
+
+            color: $almostblack;
+            // padding: ms(-5) 0;
+            @include card-title;
+            font-size: ms(4);
+            font-weight: $normal;
+            display: inline;
+            margin-bottom: ms(-5);
+            line-height: ms(1);
+            @include breakpoint ($small-screen) {
+              font-size: ms(3);
+
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .views-field-field-object-name,
+    .views-field-field-date,
+    .views-field-field-obj-rights-type {
+      @include breakpoint (min-width 400px) {
+        min-height: 20px;
+      }
+    }
+
+    .views-field-nothing-1 {
+      float: right;
+      font-family: $font-set-2;
+      margin-top: ms(2);
+      bottom: 2%;
+      font-size: 0.889em;
+      position: absolute;
+
+      // position: relative;
+      .compare-link-wrapper,
+      .add-link-wrapper {
+        display: none;
+        padding-top: 5px;
+        padding-right: 3px;
+
+        @include breakpoint ($small-screen) {
+          display: block;
+        }
+
+        a {
+          color: $contrastgrey;
+        }
+
+        .material-icons {
+          font-size: 16px;
+          position: relative;
+          top: 3px;
+        }
+      }
+    }
+  }
+
+
+  //List view style
+  .views-row-list {
+    @include breakpoint (400px) {
+      @include float-span(12);
+      @include divider-line;
+      border: 0px solid transparent !important;
+      transition: all .3s ease-out;
+      min-height: 200px;
+      max-height: 200px;
+      margin-bottom: 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      @include breakpoint ($small-screen) {
+        min-height: 300px;
+        max-height: 300px;
+      }
+
+      @include breakpoint ($standard-screen) {
+        min-height: 250px;
+        max-height: 250px;
+      }
+    }
+
+    .views-field-nothing {
+      @include breakpoint (400px) {
+        @include float-span(12);
+        height: auto;
+        margin-bottom: 20px;
+
+        @include breakpoint (400px) {
+          @include float-span(5);
+        }
+
+        @include breakpoint ($weird-screen) {
+          @include float-span(4);
+        }
+
+        @include breakpoint ($standard-screen) {
+          @include float-span(3);
+        }
+
+        span,
+        a {
+          height: 200px;
+
+          @include breakpoint (max-width $weird-screen) {
+            height: 270px;
+          }
+
+          @include breakpoint (max-width $narrow-screen) {
+            height: 225px;
+          }
+
+          @include breakpoint (max-width $small-screen) {
+            height: 145px;
+          }
+
+          @include breakpoint (max-width 398px) {
+            height: 300px;
+          }
+        }
+
+        img {
+          // width: 100%;
+          width: auto;
+        }
+      }
+    }
+
+    .views-field:not(.views-field-nothing) {
+      @include float-span(12);
+      font-size: ms();
+      margin-bottom: 0;
+      font-weight: $medium;
+      height: auto !important;
+
+      @include breakpoint (400px) {
+        @include float-span(6);
+      }
+
+      @include breakpoint ($small-screen) {
+        font-size: ms(1);
+        //margin-bottom: ms(-3);
+      }
+
+      @include breakpoint ($weird-screen) {
+        // font-size: ms(1);
+        @include float-span(6);
+      }
+
+      @include breakpoint ($standard-screen) {
+        @include float-span(7);
+      }
+    }
+
+    .views-field-title a {
+
+      // font-size: ms(4);
+      @include breakpoint (max-width $narrow-screen) {
+        font-size: ms(3);
+        margin-bottom: ms();
+      }
+
+      @include breakpoint (max-width $small-screen) {
+        font-size: ms(2);
+      }
+    }
+
+    .views-field-nothing-1 {
+      width: 100% !important;
+
+      .field-content {
+        float: left;
+        position: relative;
+        bottom: 0;
+        display: inline-block;
+        overflow: hidden;
+        font-size: 0.9em;
+        clear: right;
+        right: 2%;
+        margin-bottom: ms(-1);
+
+        @include breakpoint (400px) {
+          float: right;
+          position: absolute;
+        }
+
+        .compare-link-wrapper {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+//Footer (object button) of view under Mirador image
+.view-id-objects .view-footer {
+  max-width: $wide-screen;
+  text-align: right;
+  display: block;
+  padding: ms(-1) ms(-1) 0 ms(-1);
+  width: auto;
+  margin: auto;
+
+  @include breakpoint ($narrow-screen) {
+    // width: 488px; /*Three buton items*/
+    // width: 300px;
+  }
+
+  .view-object-buttons {
+    display: inline-block;
+    height: 38px;
+
+    //margin-top: 5px;
+    .views-row {
+      display: inline-block;
+
+      //width: auto;
+      //float: left;
+      //margin-bottom: ms(-3);
+      //margin-right: 2.12766%;
+      p {
+        margin: 0;
+      }
+
+      &:hover {
+        color: tint(black, 15%);
+      }
+
+      a {
+        display: inline-block;
+
+        span {
+          display: none;
+
+          @include breakpoint ($narrow-screen) {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  #block-addtoanybuttons {
+    vertical-align: top;
+    width: auto;
+    display: inline-block;
+    // padding: 3px;
+    float: none;
+    margin-right: 2px;
+    margin-top: 0px;
+    padding: 2px 7px 0 0;
+
+    @include breakpoint ($narrow-screen) {
+      margin-right: 0px;
+      margin-top: 0px;
+      height: 37px;
+
+      .a2a_button_facebook,
+      .a2a_button_twitter,
+      .a2a_button_copy_link {
+        padding-top: 1px;
+      }
+
+    }
+
+    // margin-left: 2.12766%;
+  }
+}
+
+.view-id-objects.view-display-id-page_1 .views-row {
+  box-sizing: border-box;
+  // border: 1px solid $contrastgrey;
+  transition: all 0.2s;
+  transform: scale(1);
+
+  &:before {
+    transition: all 0.2s;
+    font-family: "Font Awesome 5 Free";
+    content: '\f00c';
+    color: #fff;
+    background: $red;
+    height: 50px;
+    width: 50px;
+    font-size: 1.2em;
+    padding: 15px 20px 20px 15px;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  p {
+    line-height: 1.3em;
+    margin-bottom: 6px;
+  }
+}
+
+.view-id-objects.view-display-id-page_1 .compare-selected-middle {
+  border: 2px solid $red;
+  transform: scale(1.05);
+
+  &:before {
+    opacity: 1;
+    top: 10%;
+    transform: scale(1.05);
+  }
+
+}
+
+.view-id-objects.view-display-id-page_1 .compare-selected {
+  border: 2px solid $red;
+  transform: scale(1);
+
+  &:before {
+    top: 0%;
+    opacity: 0;
+    transform: scale(1);
+  }
+
+}
+
+//View list button
+div#block-viewaslist {
+  float: right;
+  display: none;
+  margin-left: ms();
+
+  @include breakpoint (400px) {
+    display: inline-block;
+  }
+
+  .views-control {
+    border: 1px solid black;
+    padding: ms(-3);
+    // width: auto;
+    text-align: center;
+    width: 124px;
+    height: 41px;
+
+    span {
+      line-height: 1.64em;
+      display: none;
+      position: relative;
+      cursor: pointer;
+      font-family: $font-set-2;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @include breakpoint (400px) {
+        display: inline-block;
+        margin-left: 23px;
+        // top: 2px;
+      }
+
+      @include breakpoint ($narrow-screen) {
+        line-height: 1.5em;
+      }
+
+      @include breakpoint (max-width $narrow-screen) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .list-view-control,
+  .grid-view-control {
+    display: none;
+  }
+}

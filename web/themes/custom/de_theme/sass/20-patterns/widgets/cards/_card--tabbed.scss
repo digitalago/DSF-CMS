@@ -1,0 +1,45 @@
+/* 20-patterns/widgets/cards/_card--tabbed-content.scss */
+
+.card--tabbed{
+  & > .card__actions{
+    padding-bottom: 0;
+    .card__actions-list{
+      @include reset;
+      @include no-bullets;
+      border-bottom: 5px solid #D32F2F;
+      display: flex;
+      overflow: scroll;
+      li{
+        @include reset;
+        flex: 0 0 auto;
+      }
+    }
+
+    .card__tab{
+      margin-right: ms(-4);
+      padding: ms(-6) ms(-1);
+      display: block;
+      text-decoration: none;
+      font-weight: $bold;
+      transition: background-color 0.3s ease-out;
+      font-size: ms(-1);
+    }
+
+    &--inactive{
+      background-color: $light-grey;
+      &:hover{
+        background-color: black;
+        color: white;
+      }
+    }
+
+    &--active{
+      background-color: #D32F2F;
+      color: white;
+    }
+
+    li:last-child .card__tab{
+      margin-right: 0;
+    }
+  }
+}

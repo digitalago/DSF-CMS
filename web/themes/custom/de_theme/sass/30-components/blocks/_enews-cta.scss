@@ -1,0 +1,214 @@
+/* Enews signup block */
+
+/* front page */
+#enews-subscribe-cta---form {
+  background-color: $almostblack;
+  color: $white;
+}
+
+#block-enewssubscribecta{
+    @include clearfix;
+
+    .emailcta-description{
+    @include nimbus-reg;
+    font-size: ms(-1);
+    padding: 10px 0px;
+    width: 100%;
+    text-align: center;
+    }
+    #mc_embed_signup{
+    padding: 30px 0px;
+    }
+  }
+
+  #mc-embedded-subscribe-form{
+    label{
+      @include heading-2;
+      @include knockout-48;
+      display: block;
+      margin-bottom: 0;
+      text-align: center;
+      }
+    .emailcta-description{
+      @include nimbus-reg;
+      font-size: ms(-1);
+      padding: 10px 0px;
+      width: 100%;
+      text-align: center;
+      }
+  }
+
+
+  #mc_embed_signup{
+    max-width: $wide-screen;
+    margin: 40px auto;
+    // background: $light-grey !important;
+    // padding: 20px;
+    padding: 60px;
+
+    #mc_embed_signup_scroll{
+
+      display: flex;
+      position: relative;
+
+      width: 95%;
+      @include breakpoint ($standard-screen){
+      width: 85%;
+      margin: 0px auto;
+      }
+      @include breakpoint ($wide-screen){
+      width: 75%;
+      margin: 0px auto;
+      }
+
+    .mc-field-group{
+      display: inline-block;
+    }
+
+    input.email{
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    display: block;
+    position: relative;
+    height: 50px;
+    @include nimbus-reg;
+    font-size: ms(0);
+    @include breakpoint ($narrow-screen){
+    }
+    padding: 16px 10px 11px 15px;
+    border: 1px solid $almostblack;
+    width: 100%;
+    }
+
+    input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
+    background: white !important;
+    }
+
+    .button{
+    @include btn-big;
+    @include btn-white;
+    display: inline-block;
+    margin-left: -3px;
+    margin-right: 0;
+    height: 50px;
+    }
+    }
+
+    input[type=submit] {
+    -webkit-border-radius:0px;
+    }
+  }
+
+.middle{
+  #block-enews-subscribe-cta-form {
+      background: $almostblack !important;
+      #mc_embed_signup_scroll{
+      width: 95%;
+      @include breakpoint ($standard-screen){
+        width: 85%;
+        margin: 0px auto;
+      }
+      @include breakpoint ($wide-screen){
+        width: 60%;
+        margin: 0px auto;
+      }
+      }
+
+    #mc_embed_signup{
+      max-width: $wide-screen;
+      margin: 0px auto;
+      background: $almostblack !important;
+      padding: 40px;
+      @include breakpoint ($narrow-screen){
+      padding: 60px;
+      }
+      label{
+      @include heading-2;
+      @include knockout-48;
+      color: $white;
+      display: block;
+      margin-bottom: 0;
+      text-align: center;
+      }
+      .emailcta-description{
+        color: $white;
+        @include nimbus-reg;
+        font-size: ms(-1);
+        padding: 10px 0px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// main enews signup page
+
+.mailchimp-page{
+  // background: red;
+  background: $light-grey !important;
+  .indicates-required{
+    @include nimbus-reg;
+    font-size: ms(0);
+  }
+  .asterisk{
+    color: $red;
+  }
+  .mc-field-group{
+    line-height: 0em;
+    padding-bottom: 10px;
+  }
+  #mc_embed_signup_scroll_two{
+
+  label{
+    text-align: left;
+    font-size: ms(3);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0 0 10px 0;
+    border: none;
+    display: block;
+    white-space: normal;
+    width: 100%;
+  }
+}
+input{
+  @include nimbus-reg;
+  font-size: ms(2);
+  font-weight: normal;
+  border: 1px solid $almostblack;
+  letter-spacing: 1px;
+  padding: 10px;
+  }
+  #mce-FNAME{
+    width: 100%;
+  }
+  #mce-LNAME{
+    width: 100%;
+  }
+  #mce-EMAIL{
+    padding-top: 10px;
+    width: 100%;
+    max-width: 592px;
+  }
+
+  .mc-field-group.name{
+    display: inline-block;
+    min-width: 300px;
+    padding-right: 10px;
+
+  }
+
+  .mc-field-group{
+    padding-top: 25px;
+  }
+
+  #mc-embedded-subscribe{
+    margin: 1em 0 1em 0;
+    @include btn-big;
+    @include knockout-28;
+    color: $almostblack;
+    text-transform: uppercase;
+  }
+
+}

@@ -1,0 +1,14 @@
+menu:
+  version: VERSION
+  js:
+    js/menu.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+main_menu:
+  version: VERSION
+  js:
+    js/main_menu.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

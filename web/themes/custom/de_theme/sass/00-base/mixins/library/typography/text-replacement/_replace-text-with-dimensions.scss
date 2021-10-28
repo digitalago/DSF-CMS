@@ -1,0 +1,7 @@
+// http://compass-style.org/reference/compass/typography/text/replacement/#mixin-replace-text-with-dimensions
+
+@mixin replace-text-with-dimensions($img, $x: 50%, $y: 50%, $inline: false) {
+  @include replace-text(if($inline, inline-image($img), $img), $x, $y);
+  width: image-width($img);
+  height: image-height($img);
+}

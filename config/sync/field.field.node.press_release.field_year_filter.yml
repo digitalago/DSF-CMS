@@ -1,0 +1,29 @@
+uuid: 16258e09-cc0e-4042-8616-3d046b1241f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year_filter
+    - node.type.press_release
+    - taxonomy.vocabulary.year
+id: node.press_release.field_year_filter
+field_name: field_year_filter
+entity_type: node
+bundle: press_release
+label: 'Press Release Year'
+description: 'the year the press release was published'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      year: year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

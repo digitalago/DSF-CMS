@@ -1,0 +1,60 @@
+ /* 10-drupal/system/_messages.scss */
+
+.messages{
+  border: none;
+  border-radius: 0;
+  padding: ms(-1) ms(1);
+  background-image: none;
+  font-family: $font-set-2;
+  @include z-depth-1;
+  &:before{
+    margin-right: ms(-6);
+  }
+
+  & + .messages {
+    margin-top: ms();
+  }
+
+  p {
+    display: block;
+    margin-bottom: 0;
+    line-height: 1.25em;
+  }
+
+  .messages__item + .messages__item {
+    margin-top: ms(-1);
+  }
+
+  &--status{
+    background-color: rgb(212,255,227);
+    color: $dark-grey;
+    &:before{
+      @include material-icons;
+      content: "check_circle";
+      color: green;
+    }
+  }
+
+  &--warning{
+    background-color: rgb(249,253,219);
+    color: $dark-grey;
+    &:before{
+      @include material-icons;
+      content: "warning";
+      color: $dark-grey;
+    }
+  }
+
+  &--error{
+    background-color: rgb(255,219,220);
+    color: $dark-grey;
+    &:before{
+      @include material-icons;
+      content: "error";
+      color: $dark-grey;
+    }
+  }
+  .alert {
+    display: inline;
+  }
+}

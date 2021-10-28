@@ -1,0 +1,29 @@
+uuid: 0d75dfc0-b5db-4574-a4b7-e8da80940bd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.components_container
+    - field.storage.block_content.field_components
+    - node.type.object
+id: block_content.components_container.field_components
+field_name: field_components
+entity_type: block_content
+bundle: components_container
+label: Components
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      object: object
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

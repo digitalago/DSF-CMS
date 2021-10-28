@@ -1,0 +1,27 @@
+uuid: 22d778c7-c547-44d8-9388-9500490c9068
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_container
+    - field.field.block_content.card_container.field_container_background
+    - field.field.block_content.card_container.field_full_width
+    - field.field.block_content.card_container.field_info_grid
+  module:
+    - render_block_formatter
+id: block_content.card_container.default
+targetEntityType: block_content
+bundle: card_container
+mode: default
+content:
+  field_info_grid:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: render_block
+    region: content
+hidden:
+  field_container_background: true
+  field_full_width: true
+  search_api_excerpt: true

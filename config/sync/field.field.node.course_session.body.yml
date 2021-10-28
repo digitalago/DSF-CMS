@@ -1,0 +1,23 @@
+uuid: 600d026d-2857-4104-9ce8-1e7a200ed082
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.course_session
+  module:
+    - text
+id: node.course_session.body
+field_name: body
+entity_type: node
+bundle: course_session
+label: Notes
+description: "This is for individual course information.\r\nLike special dates or things customer needs to know see."
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

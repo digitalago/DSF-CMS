@@ -1,0 +1,58 @@
+<?php
+/**
+ * @file Contains hooks for the AGO Insta module
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function insta_theme() {
+  return array(
+    'insta' => array(
+      'variables' => array(
+        'data_source' => NULL,
+      ),
+    ),
+    'toronto_insta' => array(
+      'variables' => array(
+        'data_source' => NULL,
+      ),
+    ),
+    'insta_bistro' => array(
+      'variables' => array(
+        'data_source' => NULL,
+      ),
+    ),
+    'insta_gdt' => array(
+      'variables' => array(
+        'data_source' => NULL,
+        'data-is-filter-only' => NULL,
+      ),
+    ),
+    'insta_art_rental' => array(
+      'variables' => array(
+        'data_source' => NULL,
+      ),
+    ),
+    'insta_shop' => array(
+      'variables' => array(
+        'data_source' => NULL,
+      ),
+    ),
+    'insta_look_forward' => array(
+      'variables' => array(
+        'data_source' => NULL,
+      ),
+    ),
+    'insta_ago_next' => array(
+      'variables' => array(
+        'data_source' => NULL,
+      ),
+    ),
+    'insta_ago_youth' => array(
+      'variables' => array(
+        'data_source' => NULL,
+      ),
+    ),
+  );
+}

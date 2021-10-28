@@ -1,0 +1,63 @@
+//* Press release content type styling */
+
+.node--type-press-release, .node--type-exhibition {
+  .section-content {
+    .layout-container{
+      position: relative;
+      max-width:  $wide-screen;
+      // max-width:  $wxga-screen;
+      margin:  0 auto;
+      padding:  ms(2);
+      @include clearfix;
+      @include breakpoint($narrow-screen $weird-screen-max) {
+        padding: ms() 6.38298%;
+      }
+      @include breakpoint($medium-screen) {
+        padding: 0 ms(2);
+      }
+      @include breakpoint ($wide-screen) {
+        padding: 0 ms(-1);
+      }
+    }
+  }
+
+}
+
+.field--name-field-press-release-date {
+ font-size: ms(2);
+ display:block;
+ @include nimbus-bold-reg;
+ clear: both;
+ padding-bottom: 20px;
+ text-transform: uppercase;
+}
+//a2a
+.node--type-press-release {
+  .a2a_kit{
+    border: 1px solid $almostblack;
+    float: left;
+  }
+  .field--name-body{
+    clear: both;
+    display:block;
+    padding-top: ms(0);
+  }
+}
+//press release list
+
+.press-release{
+  padding-top: ms(1);
+  padding-bottom: ms(3);
+  border-bottom: 1px solid $almostblack;
+  h3{
+    margin-bottom: 5px;
+  }
+  
+  .field--name-field-agoc-press-release-date{
+    @include nimbus-bold-reg;
+    color: $almostblack;
+    font-size: ms(0);
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+}

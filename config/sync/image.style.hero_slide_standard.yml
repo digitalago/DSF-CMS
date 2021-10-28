@@ -1,0 +1,25 @@
+uuid: d73497c0-f97d-46cd-8e61-420b40139903
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.hero_slide_crop
+  module:
+    - crop
+name: hero_slide_standard
+label: 'Hero Slide standard'
+effects:
+  b54c588b-8ddd-4e4d-97bb-a5c01d8c09d2:
+    uuid: b54c588b-8ddd-4e4d-97bb-a5c01d8c09d2
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: hero_slide_crop
+  41307c8c-fb91-4aa4-b0c3-6e0316b4b216:
+    uuid: 41307c8c-fb91-4aa4-b0c3-6e0316b4b216
+    id: image_scale
+    weight: 2
+    data:
+      width: 1920
+      height: 720
+      upscale: true

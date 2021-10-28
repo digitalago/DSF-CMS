@@ -1,0 +1,21 @@
+uuid: 094bc9f0-451a-4459-97a1-c62f39910bf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_release_date
+    - media.type.soundcloud
+  module:
+    - datetime
+id: media.soundcloud.field_release_date
+field_name: field_release_date
+entity_type: media
+bundle: soundcloud
+label: 'Release Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,899 @@
+/* 20-patterns/elements/_elements.scss */
+
+// contains authors unclassed HTML element styles such as h1, h2, table, etc
+html {
+    font-size: 87.5%;
+    font-family: $font-set-1;
+    @include breakpoint($narrow-screen) {
+        font-size: 100%;
+    }
+    color: $almostblack;
+    background: transparent;
+    //transition: background 5s ease-out;
+    overflow-y: scroll; //inuit css
+    min-height: 100%; //inuit css
+    -moz-osx-font-smoothing: grayscale; //inuit css
+    // -webkit-font-smoothing: antialiased; //inuit css
+    -webkit-text-size-adjust: 100%
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mm-opened {
+    background: $red !important;
+}
+body {
+  overflow: hidden !important;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    font-family: $font-set-1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+pre,
+table,
+fieldset,
+form details,
+blockquote,
+object,
+iframe,
+pre,
+address,
+code,
+dl,
+dt,
+dd,
+embed,
+audio,
+video {
+    font-size: ms();
+    line-height: ms(2);
+    margin: 0 0 ms() 0;
+    font-family: $font-set-1;
+}
+
+h2 b,
+h3 b,
+h2 strong,
+h3 strong {
+    font-weight: 300 !important;
+}
+
+#main,
+.section-dags,
+#middle-full-width {
+    ul,
+    li {
+        font-family: $font-set-2;
+        font-weight: 300;
+    }
+}
+
+.layout-content {
+    @include clearfix;
+}
+
+strong,
+b {
+    font-weight: $bold;
+}
+
+em {
+    font-style: italic;
+}
+
+a {
+    color: $black;
+    transition: color 0.3s ease-out;
+    &:hover {
+        text-decoration: none;
+        color: $red;
+    }
+}
+
+
+/* Set consistent quote types. */
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $normal;
+    font-family: $font-set-1;
+    b,
+    strong {
+        font-weight: $bold;
+    }
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+sub {
+    font-size: smaller;
+    vertical-align: sub;
+}
+
+p {
+    font-size: ms(1);
+    font-family: $font-set-2;
+    line-height: 1.6em;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    @include breakpoint($small-screen) {
+        font-size: ms(0);
+    }
+    a {
+        color: $red;
+    }
+}
+
+blockquote {
+    border-left: 7px solid $red;
+    padding: 0;
+    text-align: left;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+//blockquote:before {
+// color: $red;
+// color: $almostblack;
+// content: open-quote;
+//font-size: ms(7);
+//margin-right: ms(-4);
+//vertical-align: top;
+//line-height: 0;
+//}
+blockquote p {
+    @include knockout-28;
+    padding-left: 20px;
+    display: block;
+    font-size: ms(5);
+    font-style: italic;
+}
+
+p.blockquote-name {
+    font-style: italic;
+    font-weight: $bold;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid $hr-color;
+}
+
+a[href^="tel:"] {
+    color: $almostblack;
+    text-decoration: underline;
+    margin: 0;
+    float: none;
+    padding: 0;
+    border: 0px none;
+    font-size: ms();
+}
+
+//forms etc
+input,
+textarea {
+    margin: 0;
+}
+
+textarea {
+    vertical-align: top;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url('../../img/file_icons/arrow-down.png') no-repeat;
+    background-position: 97% 60%;
+    background-size: contain;
+    background-size: 22px auto;
+    padding: 3px 10px;
+    border-radius: 0;
+    margin: ms() 0;
+    font-family: $font-set-2;
+    option {
+        padding: 6px;
+    }
+}
+
+input[type=checkbox] {
+    display: block;
+    opacity: 0;
+    &~label {
+        position: relative;
+        padding-left: 28px;
+        cursor: pointer;
+        &:before {
+            @include material-icon;
+            content: "\e835";
+            color: #ababab;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            font-size: 22px;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            /* Support for Safari and Chrome. */
+            text-rendering: optimizeLegibility;
+            /* Support for Firefox. */
+            -moz-osx-font-smoothing: grayscale;
+            /* Support for IE. */
+            font-feature-settings: 'liga';
+            transition: all .2s ease;
+            z-index: 1;
+        }
+    }
+    &:checked~label:before {
+        content: "\e834";
+        color: $almostblack;
+        @include material-icon;
+        font-size: 22px;
+        text-align: center;
+        position: absolute;
+        padding: 0;
+        top: 0px;
+        left: 0;
+        transform: scale3d(0.88, 0.88, 1);
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+        transition: all .2s ease;
+        z-index: 1;
+    }
+    &:checked~label {
+        color: $red;
+    }
+}
+
+input[type=checkbox]:focus+label:before {
+    color: $red;
+}
+
+input[type="search"] {
+    border-radius: 0;
+    -webkit-appearance: none !important;
+}
+
+input[type="radio"] {
+    display: none;
+    &~label {
+        position: relative;
+        padding-left: 28px;
+        cursor: pointer;
+        transition: all .5s ease-out;
+        &:hover {
+            color: $red;
+        }
+        &:hover:before {
+            border-color: $red;
+        }
+        &:before {
+            transition: all .3s linear;
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border: 2px solid $black;
+            border-radius: 50%;
+            background: #fff;
+            line-height: ms(-1);
+            padding: 2.5px;
+            -moz-padding: 3px;
+            // padding: 2px;
+        }
+    }
+    &:checked~label:before {
+        display: block;
+        position: absolute;
+        font-family: "Font Awesome 5 Free";
+        content: '\f111';
+        border-radius: 100%;
+        // font-size: 9px;
+        font-size: 52%;
+        border: 2px solid $red;
+        margin: auto;
+        transition: all 0.25s linear;
+        -webkit-transition: all 0.25s linear;
+    }
+    &:checked~label {
+        color: $red;
+    }
+}
+
+//tables
+table {
+    width: 100%;
+    p,
+    ul {
+        @include reset;
+    }
+    tbody {
+        border: none;
+    }
+    th,
+    td {
+        text-align: left;
+        padding: ms(1) ms(-3);
+        border: none;
+        vertical-align: top;
+        font-size: ms(-1);
+        @include breakpoint($weird-screen) {
+            font-size: ms();
+            line-height: ms(1);
+        }
+    }
+    tr.odd {
+        background-color: white;
+    }
+    tr:nth-child(odd) {
+        background-color: white;
+    }
+    tr.even {
+        background-color: white;
+    }
+    tr:nth-child(even) {
+        background-color: white;
+    }
+    th,
+    thead th {
+        background-color: white;
+        border-bottom: 1px solid tint($ui-borders-color, 75);
+        line-height: ms(2);
+    }
+    caption {
+        caption-side: bottom;
+    }
+}
+
+// Responsive tables - added via javascript to tables in the body field
+.table-responsive {
+    overflow-y: hidden;
+    cursor: ew-resize;
+}
+
+.table-controls {
+    text-align: right;
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: ms(-6);
+    .instruction {
+        color: $neutral-grey;
+        text-transform: uppercase;
+        font-size: ms(-1);
+        margin-right: ms(-1);
+    }
+    .material-icons {
+        vertical-align: middle;
+        @include md-18;
+        margin-right: ms(-9);
+    }
+}
+
+// lists
+ul,
+ol {
+    li {
+        margin: 0;
+    }
+}
+
+ul {
+    padding-left: ms();
+    li {
+        list-style: disc;
+        p {
+            line-height: ms(1);
+            margin-bottom: 0.4em;
+        }
+    }
+}
+
+ol {
+    padding-left: 1.2em;
+    li {
+        list-style: decimal;
+    }
+}
+
+li>a {
+    color: $red;
+}
+
+//images
+img {
+    &:focus {
+        outline: none;
+    }
+}
+
+a {
+    img {
+        display: block;
+        //-webkit-transform: rotate(0);
+        //-moz-transform: rotate(0);
+        //transform: rotate(0);
+        // -webkit-backface-visibility: hidden;
+        // backface-visibility: hidden;
+        position: relative;
+        opacity: 1;
+        transition: opacity 0.3s ease-out;
+        -webkit-backface-visibility: hidden;
+        &:focus {
+            outline-color: #f8f8f8;
+        }
+    }
+}
+
+:focus {
+    outline: 0;
+}
+
+a:hover {
+    img {
+        opacity: .75;
+        -webkit-backface-visibility: hidden;
+        // position: relative;
+        //-webkit-transform: rotate(0);
+        // -moz-transform: rotate(0);
+        // transform: rotate(0);
+        // transform: translate3d(0px,0px,0px);
+    }
+}
+
+// from kickstart
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.element-invisible {
+    display: none !important;
+    transition: all 500 ease-in-out;
+}
+
+i {
+    // vertical-align: middle;
+    padding-right: 3px;
+}
+
+.spinner {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../../img/squares.gif) center no-repeat #fff;
+}
+
+.skip-link {
+    color: $red !important;
+}
+
+figure {
+    margin: 0 0 ms(-2) 0;
+}
+
+//exposed filters
+.views-exposed-form label {
+    @include filter-label;
+}
+
+.views-exposed-form .form-actions input.form-submit {
+    @include btn-white-nimbus;
+    text-transform: none;
+    border-radius: 0px;
+}
+
+.views-exposed-form .form-actions #edit-reset {
+    @include btn-white-nimbus;
+    text-transform: none;
+}
+
+.views-exposed-form .form-type-checkbox label {
+    margin-bottom: ms(-2);
+    @include nimbus-reg;
+    font-size: ms(0);
+    text-transform: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+//image credit
+.field--name-field-image-credit {
+    @include credit;
+}
+
+//image caption
+.caption>figcaption {
+    font-weight: $normal;
+    color: $contrastgrey;
+    line-height: ms(1);
+    font-family: $font-set-2;
+    font-size: ms(-1);
+}
+
+// hide ugly ajax loader
+.ajax-progress-fullscreen {
+    display: none !important;
+}
+
+//internal notes
+.field--name-field-agoc-internal-notes {
+    .field__label {
+        font-size: ms(2);
+        font-weight: normal;
+    }
+    p {
+        font-size: ms(-1);
+    }
+    background: #DAF1FC;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+//misc
+.callout {
+    font-family: $font-set-2;
+    color: $red;
+    font-size: ms(3);
+    font-weight: $medium;
+}
+
+.styleguide-header {
+    clear: both;
+    margin-top: ms(5);
+    margin-bottom: ms();
+    font-size: ms(-1);
+    text-transform: uppercase;
+    color: $dark-grey;
+    // color: $neutral-grey;
+    border-bottom: 1px solid $light-grey;
+    border-bottom: 1px solid $neutral-grey;
+    &:nth-child(1) {
+        margin-top: 0;
+    }
+}
+
+.flag {
+    @include nimbus-bold-reg;
+    position: absolute;
+    background-color: $red;
+    padding: 7px 10px;
+    color: $white;
+    text-transform: uppercase;
+    font-size: ms(-2);
+    display: inline-block;
+    z-index: 9;
+}
+
+//General file styling // MIME type icons
+a.file--mime-application-pdf.file--application-pdf {
+    &:before {
+      content: '\f1c1';
+      font-family: "Font Awesome 5 Free";
+      padding-right: 5px;
+    }
+  }
+
+.file--mime-application-pdf {
+    background-image: none;
+    a {
+        &:before {
+            content: '\f1c1';
+            font-family: "Font Awesome 5 Free";
+        }
+    }
+}
+
+.file--x-office-document {
+    background-image: none;
+    a {
+        &:before {
+            content: '\f1c2';
+            font-family: "Font Awesome 5 Free";
+        }
+    }
+}
+
+.file--x-office-presentation {
+    background-image: none;
+    a {
+        &:before {
+            content: '\f1c4';
+            font-family: "Font Awesome 5 Free";
+        }
+    }
+}
+
+.file--image {
+    background-image: none;
+    a {
+        &:before {
+            content: '\f1c5';
+            font-family: "Font Awesome 5 Free";
+        }
+    }
+}
+
+.file--package-x-generic {
+    background-image: none;
+    a {
+        &:before {
+            content: '\f1c6';
+            font-family: "Font Awesome 5 Free";
+        }
+    }
+}
+
+.file {
+    display: block;
+    padding-top: 5px;
+    padding-left: 0px;
+    a {
+        &:before {
+            padding-right: 8px;
+        }
+    }
+}
+
+//unpublished nodes
+.node--unpublished,
+.admin-unpub {
+    background-color: #ffb6b6 !important;
+    opacity: 0.5;
+}
+
+.video-embed-field-responsive-video {
+    margin: 20px 0px;
+}
+
+.views-field-field-referenced-content {
+    padding: 0px 0;
+}
+
+.fineprint {
+    display: block;
+    line-height: normal;
+    padding-top: 5px;
+    font-size: ms(-2);
+}
+
+.compact {
+    line-height: ms(3);
+    margin-bottom: 0;
+}
+
+.text {
+    p {
+        font-size: ms(1);
+    }
+}
+
+.intro {
+    @include nimbus-novus;
+    font-size: ms(4);
+    line-height: ms(2);
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+//custom list styling
+.two-column-list {
+    column-count: 1;
+    @include breakpoint($standard-screen) {
+        column-count: 2;
+        padding-left: 0;
+        li {
+            margin-left: 1em;
+            padding-left: 0;
+        }
+    }
+
+    hr {
+        @include breakpoint($standard-screen) {
+            border-top:none !important;
+        }
+    }
+}
+
+.three-column-list {
+    column-count: 1;
+    @include breakpoint($weird-screen) {
+        column-count: 2;
+        padding-left: 0;
+        li {
+            margin-left: 1em;
+            padding-left: 0;
+        }
+    }
+
+    @include breakpoint($standard-screen) {
+        column-count: 3;
+        padding-left: 0;
+        li {
+            margin-left: 1em;
+            padding-left: 0;
+        }
+    }
+
+    hr {
+        @include breakpoint($standard-screen) {
+            border-top:none !important;
+        }
+    }
+}
+
+.four-column-list {
+    column-count: 1;
+    @include breakpoint($weird-screen) {
+        column-count: 2;
+        padding-left: 0;
+        li {
+            margin-left: 1em;
+            padding-left: 0;
+        }
+    }
+
+
+    @include breakpoint($standard-screen) {
+        column-count: 4;
+        padding-left: 0;
+        li {
+            margin-left: 1em;
+            padding-left: 0;
+        }
+    }
+
+    hr {
+        @include breakpoint($weird-screen) {
+            border-top:none !important;
+        }
+    }
+}
+
+.column-keep-together {
+    @include breakpoint($standard-screen) {
+    display: inline-block;
+     -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    width:90%;
+    }
+}
+
+.three-column-list h4.divider, .two-column-list h4.divider {
+    border-top:1px dashed $grey-bg;
+    padding-top:10px;
+
+}
+
+ul.dense-list {  /* very long lists like kusama donors, that require distinct indenting */
+    list-style:none;
+    list-style-type:none;
+    margin-left: 2em;
+    text-indent: -1.5em;
+}
+
+ul.dense-list li {
+    list-style:none;
+    list-style-type:none;
+}
+
+
+//adds space. use these classes on empty divs to space stuff.
+.spacer {
+    height: 20px;
+}
+
+.spacer-big {
+    height: 40px;
+}
+
+//hides the error message unless you're logged in
+body.anonymous .messages--error {
+    display: none;
+}
+
+.off-canvas-wrapper {
+    display: none;
+}
+
+.toolbar-tray-open {
+    padding-top: 80px;
+}
+
+.label-above-inline .field__label:after,
+.field--label-above .field__label:after {
+    display: none;
+}
+
+//hiding the zoom tool
+//.zoom-tool-toggle {display: none !important;}
+//animations
+
+
+.wow {
+    @include breakpoint (max-width $narrow-screen) {
+        visibility: visible !important;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+    }
+}
+
+// .body-loading {
+//     visibility: hidden;
+// }
+
+
+
+//image fix
+.media-ago-images {position: initial;}
+
+.vertical-padded{
+    padding-top: ms(1) !important;
+    padding-bottom: ms(1) !important;
+}
+
+//hiding audience filter
+
+.form-item-field-agoc-course-audience-target-id {display: none;}
+
+span.subheading-underline {
+    font-weight: $normal;
+    font-family: $font-set-1;
+    padding-bottom: 7px;
+    border-bottom: 1px solid $credit-grey;
+    line-height: 1.125em;
+    display: block;
+}
+
+div.inline-text {
+    font-family: $font-set-2;
+    display: inline-block;
+    float: left;
+}
+
+p.no-margin {
+    margin-bottom: 0;
+}
+
+div.knockout, div.knockout-big-text {
+  @include knockout-28;
+  font-size: ms(3);
+}

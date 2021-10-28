@@ -1,0 +1,19 @@
+uuid: 5aa327f8-6aa4-4a98-8724-b216647d122a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_copyright
+    - node.type.object
+id: node.object.field_copyright
+field_name: field_copyright
+entity_type: node
+bundle: object
+label: 'Copyright Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

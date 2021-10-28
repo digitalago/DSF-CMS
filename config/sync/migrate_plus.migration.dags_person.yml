@@ -1,0 +1,80 @@
+uuid: 7974ea6d-eb94-4296-9528-866fd8936def
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration
+id: dags_person
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: ago
+label: 'AGO DAGS Person'
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: node
+  bundle: dags_person
+process:
+  title: title
+  created: created
+  changed: changed
+  status: status
+  field_first_name: field_first_name
+  field_last_name: field_last_name
+  field_person_description/value: field_person_description/0/value
+  field_person_description/format:
+    -
+      plugin: static_map
+      source: field_alert/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: full_html
+  field_person_image:
+    -
+      plugin: sub_process
+      source: field_person_image
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: image_media
+  field_person_type:
+    -
+      plugin: sub_process
+      source: field_person_type
+      process:
+        target_id:
+          plugin: static_map
+          source: target_id
+          map:
+            50: 840
+            51: 839
+            3391: 838
+            52: 842
+            2382: 841
+            53: 843
+          default_value: null
+  field_role_description: field_role_description
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+destination:
+  plugin: 'entity:node'
+  default_bundle: person
+migration_dependencies:
+  required:
+    - user
+    - file
+    - image_media
+    - image_tags_taxonomy
+  optional: {  }

@@ -1,0 +1,10 @@
+uuid: b78b22c4-0605-4137-b9b6-59dd44e9078e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.people_list_medium
+label: 'People List Medium'
+targetEntityType: node
+cache: true

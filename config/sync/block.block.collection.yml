@@ -1,0 +1,29 @@
+uuid: 8b1c1c7a-406a-4e7e-b820-a17ff1b9b786
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.collection
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: collection
+theme: de_theme
+region: sidebar_first
+weight: -23
+provider: null
+plugin: 'facet_block:collection'
+settings:
+  id: 'facet_block:collection'
+  label: Collection
+  provider: facets
+  label_display: '0'
+  block_id: collection
+visibility:
+  request_path:
+    id: request_path
+    pages: /collection/browse
+    negate: false
+    context_mapping: {  }

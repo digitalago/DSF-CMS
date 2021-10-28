@@ -1,0 +1,19 @@
+uuid: f907eee4-b239-479f-b52f-8b6817ab1ea0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alpha_sort
+    - node.type.artist_maker
+id: node.artist_maker.field_alpha_sort
+field_name: field_alpha_sort
+entity_type: node
+bundle: artist_maker
+label: 'Alpha Sort'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,112 @@
+uuid: 561c06fa-42e6-4a70-b055-86aef938c267
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.inline_form_default
+    - entity_browser.browser.image_browser
+    - field.field.node.slider_item.body
+    - field.field.node.slider_item.field_category_slider
+    - field.field.node.slider_item.field_cta_link
+    - field.field.node.slider_item.field_date_time_short_descriptio
+    - field.field.node.slider_item.field_slide_image
+    - field.field.node.slider_item.field_title_style
+    - node.type.slider_item
+  module:
+    - entity_browser
+    - link
+    - scheduler
+    - text
+id: node.slider_item.inline_form_default
+targetEntityType: node
+bundle: slider_item
+mode: inline_form_default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 5
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_category_slider:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_cta_link:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_date_time_short_descriptio:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_slide_image:
+    type: entity_browser_entity_reference
+    weight: 2
+    settings:
+      entity_browser: image_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: card_image
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_replace: false
+    third_party_settings: {  }
+    region: content
+  field_title_style:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  scheduler_settings: true
+  sticky: true
+  uid: true
+  url_redirects: true

@@ -1,0 +1,54 @@
+uuid: 9c2e7fc6-74df-42ca-8d59-45cd3c80dce6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.slider_hero_thin_banner
+    - field.field.node.slider_item.body
+    - field.field.node.slider_item.field_category_slider
+    - field.field.node.slider_item.field_cta_link
+    - field.field.node.slider_item.field_date_time_short_descriptio
+    - field.field.node.slider_item.field_slide_image
+    - field.field.node.slider_item.field_title_style
+    - node.type.slider_item
+  module:
+    - layout_builder
+    - options
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.slider_item.slider_hero_thin_banner
+targetEntityType: node
+bundle: slider_item
+mode: slider_hero_thin_banner
+content:
+  field_slide_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: hero_slide_thin
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_title_style:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_category_slider: true
+  field_cta_link: true
+  field_date_time_short_descriptio: true
+  search_api_excerpt: true

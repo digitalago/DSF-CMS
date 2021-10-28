@@ -1,0 +1,17 @@
+uuid: 0ff7203c-793c-41fc-a5a9-8d446f703c50
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.media_card
+    - image.style.media_card_380
+id: media_card
+label: 'Media Card'
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: media_card_380
+breakpoint_group: responsive_image
+fallback_image_style: media_card

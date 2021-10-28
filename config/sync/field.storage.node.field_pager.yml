@@ -1,0 +1,27 @@
+uuid: 5deb3c14-5c2a-49b9-8915-22be75e18de6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_pager
+field_name: field_pager
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: hide_bullets
+      label: 'Hide Bullets'
+    -
+      value: show_bullets
+      label: 'Show Bullets'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

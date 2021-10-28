@@ -1,0 +1,17 @@
+uuid: b2a56131-526f-4013-97c0-093deb205104
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Object Container'
+type: object_container
+description: 'Container for the object references in card view mode.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

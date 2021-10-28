@@ -1,0 +1,81 @@
+/* 30-components/navigation/_sidebar-menu.scss */
+
+#sidebar-primary {
+  // margin-top: ms(-2);
+  .region--sidebar-first {
+    // background-color: $light-grey;
+    margin-right: 0;
+    @include breakpoint ($medium-screen) {
+      margin-right: ms(2);
+    }
+  }
+  #block-de-theme-main-menu {
+    a {
+      width: 100%;
+      color: white;
+      background-color: $red;
+      text-decoration: none;
+      // padding: ms() ms() ms(-2);
+      padding: ms(-2) ms();
+      transition: all .3s ease-out;
+      display: inline-block;
+      font-weight: $medium;
+      border-bottom: 1px solid white;
+      font-family: $font-set-2;
+      @include breakpoint ($narrow-screen) {
+        border-bottom: 2px solid white;
+      }
+      &:hover, &:active, &:focus {
+        background-color: black;
+      }
+    }
+
+    > ul.menu > .menu-item > .menu > .menu-item  {
+      // border-left: 5px solid $red;
+      // margin-bottom: ms(-6);
+      &:last-child {
+        margin-bottom: 0;
+      }
+      > a {
+        display: block;
+        background-color: $light-grey;
+        color: black;
+        padding: ms(-2) ms(-1) ms(-2) ms(4);
+        font-weight: $medium;
+        &:hover, &:active, &:focus {
+          color: $red;
+        }
+        // &:before {
+        //   content: '> ';
+        //   display: inline-block;
+        //   padding-right: ms(-2);
+        // }
+      }
+
+      //Second level
+      > ul.menu > .menu-item > a {
+        display: block;
+        background-color: $light-grey;
+        color: black;
+        font-weight: $normal;
+        padding: ms(-2) ms(-1) ms(-2) ms(6);
+        &:hover, &:active, &:focus {
+          color: $red;
+        }
+      }
+    }
+
+    //is active state
+    .is-active {
+      background-color: black;
+      // border-bottom: 1px solid white;
+    }
+  }
+}
+
+#sidebar-primary #block-de-theme-main-menu {
+  display: none;
+  @include breakpoint ($medium-screen) {
+    display: block;
+  }
+}

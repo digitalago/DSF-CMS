@@ -1,0 +1,23 @@
+uuid: a7967795-cfa7-4fda-80cf-26f7e37fc789
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.super_card
+    - field.storage.block_content.field_title_display
+id: block_content.super_card.field_title_display
+field_name: field_title_display
+entity_type: block_content
+bundle: super_card
+label: 'Hide Title'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

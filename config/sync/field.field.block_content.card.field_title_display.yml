@@ -1,0 +1,23 @@
+uuid: 4956ed67-f725-42f4-98e9-6a504377c2ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.storage.block_content.field_title_display
+id: block_content.card.field_title_display
+field_name: field_title_display
+entity_type: block_content
+bundle: card
+label: 'Hide Title'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

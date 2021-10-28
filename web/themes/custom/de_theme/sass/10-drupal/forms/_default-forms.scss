@@ -1,0 +1,39 @@
+/* 10-drupal/forums/_default-forms.scss */
+
+.form-item{
+  margin-bottom: ms();
+}
+
+
+.form-composite > .fieldset-wrapper > .description,
+.form-item .description{
+  font-size: ms(-1);
+  margin-top: ms(-4);
+}
+
+.form-text{
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid black;
+  padding: .75em;
+  margin: ms(-4) 0;
+  box-sizing: border-box;
+  font-family: $font-set-2;
+}
+
+.form-submit{
+  @include btn;
+  @include btn-black;
+}
+
+.form-textarea-wrapper textarea{
+  padding: ms();
+  font-family: $font-set-2;
+  border: 1px solid $dark-grey;
+}
+
+.description {
+  font-family: $font-set-2 !important;
+  font-size: ms();
+  color: $neutral-grey;
+}

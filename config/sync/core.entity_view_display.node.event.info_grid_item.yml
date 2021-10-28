@@ -1,0 +1,118 @@
+uuid: e2657fa9-b893-47c8-8f7d-80023d8dc322
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.info_grid_item
+    - field.field.node.event.body
+    - field.field.node.event.field_accessible
+    - field.field.node.event.field_additional_gl_code
+    - field.field.node.event.field_additional_value_member
+    - field.field.node.event.field_additional_value_public
+    - field.field.node.event.field_audience
+    - field.field.node.event.field_big_feature
+    - field.field.node.event.field_capacity
+    - field.field.node.event.field_date_time_description
+    - field.field.node.event.field_event_category
+    - field.field.node.event.field_event_session
+    - field.field.node.event.field_featured_event_image
+    - field.field.node.event.field_featured_filters
+    - field.field.node.event.field_free
+    - field.field.node.event.field_gl_code_events
+    - field.field.node.event.field_hide_ticketing
+    - field.field.node.event.field_internal_notes
+    - field.field.node.event.field_is_featured
+    - field.field.node.event.field_location_reference
+    - field.field.node.event.field_main_image
+    - field.field.node.event.field_marketing_flag
+    - field.field.node.event.field_media_container
+    - field.field.node.event.field_member_price
+    - field.field.node.event.field_members_message
+    - field.field.node.event.field_meta_tags
+    - field.field.node.event.field_placement_date
+    - field.field.node.event.field_placement_tag
+    - field.field.node.event.field_price_notes
+    - field.field.node.event.field_public_price
+    - field.field.node.event.field_short_description
+    - field.field.node.event.field_student_price
+    - field.field.node.event.field_tagline
+    - field.field.node.event.field_tags
+    - field.field.node.event.field_value_allocation
+    - field.field.node.event.field_value_member
+    - field.field.node.event.field_year_filter
+    - node.type.event
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.event.info_grid_item
+targetEntityType: node
+bundle: event
+mode: info_grid_item
+content:
+  body:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 400
+    third_party_settings: {  }
+    type: text_summary_or_trimmed
+    region: content
+  field_date_time_description:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_main_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: card_image
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  addtoany: true
+  field_accessible: true
+  field_additional_gl_code: true
+  field_additional_value_member: true
+  field_additional_value_public: true
+  field_audience: true
+  field_big_feature: true
+  field_capacity: true
+  field_event_category: true
+  field_event_session: true
+  field_featured_event_image: true
+  field_featured_filters: true
+  field_free: true
+  field_gl_code_events: true
+  field_hide_ticketing: true
+  field_internal_notes: true
+  field_is_featured: true
+  field_location_reference: true
+  field_marketing_flag: true
+  field_media_container: true
+  field_member_price: true
+  field_members_message: true
+  field_meta_tags: true
+  field_placement_date: true
+  field_placement_tag: true
+  field_price_notes: true
+  field_public_price: true
+  field_short_description: true
+  field_student_price: true
+  field_tagline: true
+  field_tags: true
+  field_value_allocation: true
+  field_value_member: true
+  field_year_filter: true
+  links: true
+  search_api_excerpt: true

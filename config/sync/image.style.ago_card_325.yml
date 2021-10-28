@@ -1,0 +1,25 @@
+uuid: 0f720532-337c-42a2-9900-05e1bb6daffa
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.square_crop
+  module:
+    - crop
+name: ago_card_325
+label: 'AGO Card - 3 columns - 380w'
+effects:
+  8658a95e-63fc-40aa-b55a-9b4c2eeff7df:
+    uuid: 8658a95e-63fc-40aa-b55a-9b4c2eeff7df
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: square_crop
+  ef624442-86ba-4c47-ab70-571685080f1f:
+    uuid: ef624442-86ba-4c47-ab70-571685080f1f
+    id: image_scale
+    weight: 2
+    data:
+      width: 580
+      height: 580
+      upscale: true

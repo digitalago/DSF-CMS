@@ -1,0 +1,29 @@
+uuid: 44936d2c-dcc8-4769-aa32-d005d4c0cb87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_placement_tag
+    - node.type.course
+    - taxonomy.vocabulary.placement_tags
+id: node.course.field_placement_tag
+field_name: field_placement_tag
+entity_type: node
+bundle: course
+label: 'Placement Tag'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      placement_tags: placement_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

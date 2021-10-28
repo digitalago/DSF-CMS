@@ -1,0 +1,19 @@
+uuid: e349ae35-2c28-4405-9d98-8814943d7adc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suffix
+    - node.type.artist_maker
+id: node.artist_maker.field_suffix
+field_name: field_suffix
+entity_type: node
+bundle: artist_maker
+label: Suffix
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,91 @@
+uuid: cc8b17e7-a0f7-4d76-9d71-dbadfd2793b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.slider_item.body
+    - field.field.node.slider_item.field_category_slider
+    - field.field.node.slider_item.field_cta_link
+    - field.field.node.slider_item.field_date_time_short_descriptio
+    - field.field.node.slider_item.field_slide_image
+    - field.field.node.slider_item.field_title_style
+    - image.style.thumbnail
+    - node.type.slider_item
+  module:
+    - field_group
+    - media
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_slide_group_left:
+      children:
+        - field_slide_image
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: column-3-left
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'slide group left'
+    group_slide_group_right:
+      children:
+        - body
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: column-9-right
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'slide group right'
+id: node.slider_item.teaser
+targetEntityType: node
+bundle: slider_item
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 3
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_slide_image:
+    type: media_thumbnail
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_category_slider: true
+  field_cta_link: true
+  field_date_time_short_descriptio: true
+  field_title_style: true
+  search_api_excerpt: true

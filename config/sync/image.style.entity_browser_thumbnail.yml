@@ -1,0 +1,17 @@
+uuid: 510883ae-f474-4151-972e-1a7b7c4c8a7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: entity_browser_thumbnail
+label: 'Entity Browser Thumbnail'
+effects:
+  8e8e7ca2-055c-42fb-b329-176d88c1b40e:
+    uuid: 8e8e7ca2-055c-42fb-b329-176d88c1b40e
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 319
+      height: 184
+      crop_type: focal_point

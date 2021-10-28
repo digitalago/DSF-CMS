@@ -1,0 +1,21 @@
+uuid: ff6cd7c0-8dfd-4e2f-a6c4-b0d5b8d9b55e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert
+    - node.type.blog
+  module:
+    - text
+id: node.blog.field_alert
+field_name: field_alert
+entity_type: node
+bundle: blog
+label: Alert
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

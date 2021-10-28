@@ -1,0 +1,19 @@
+uuid: 3765d2cd-5157-4c14-9114-7146aba93af7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_time_description
+    - node.type.course
+id: node.course.field_date_time_description
+field_name: field_date_time_description
+entity_type: node
+bundle: course
+label: 'Date/Time Description'
+description: "Short description for date and time of the course that appears in browse courses card view.\r\n(ex. Tuesday, July 4 - August 22 or Tuesdays, Thursdays and Fridays starting in July)."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

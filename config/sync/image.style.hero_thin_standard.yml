@@ -1,0 +1,25 @@
+uuid: a96c9d5d-fb54-4ad3-a274-f5acc106aedd
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.hero_thin_crop
+  module:
+    - crop
+name: hero_thin_standard
+label: 'Hero thin standard'
+effects:
+  fb527b23-8f34-4be2-8076-ee05c1a19c35:
+    uuid: fb527b23-8f34-4be2-8076-ee05c1a19c35
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: hero_thin_crop
+  37a23dcf-d361-476c-8379-2b0dd55c8c44:
+    uuid: 37a23dcf-d361-476c-8379-2b0dd55c8c44
+    id: image_scale
+    weight: 2
+    data:
+      width: 1920
+      height: 360
+      upscale: true

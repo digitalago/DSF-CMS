@@ -1,0 +1,25 @@
+uuid: fd06e87c-6b65-4fd4-ab84-390111588d45
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.free_crop_region
+  module:
+    - crop
+name: max_800x800
+label: 'Max 800x800'
+effects:
+  e1617b42-5ec1-44e7-8992-d870f3695128:
+    uuid: e1617b42-5ec1-44e7-8992-d870f3695128
+    id: image_scale
+    weight: -9
+    data:
+      width: 800
+      height: 800
+      upscale: true
+  5e00b977-301e-44d3-990d-90663dab6d6a:
+    uuid: 5e00b977-301e-44d3-990d-90663dab6d6a
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: free_crop_region

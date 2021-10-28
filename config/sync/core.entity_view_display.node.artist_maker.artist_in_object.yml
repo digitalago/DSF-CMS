@@ -1,0 +1,69 @@
+uuid: 4f28dab4-3bfc-46ee-adac-6b1442ebe799
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.artist_in_object
+    - field.field.node.artist_maker.body
+    - field.field.node.artist_maker.field_alpha_sort
+    - field.field.node.artist_maker.field_alternate_names
+    - field.field.node.artist_maker.field_birth_place
+    - field.field.node.artist_maker.field_death_place
+    - field.field.node.artist_maker.field_first_letter_index
+    - field.field.node.artist_maker.field_first_name
+    - field.field.node.artist_maker.field_last_name
+    - field.field.node.artist_maker.field_nationality
+    - field.field.node.artist_maker.field_object_id
+    - field.field.node.artist_maker.field_prefix
+    - field.field.node.artist_maker.field_suffix
+    - node.type.artist_maker
+  module:
+    - user
+id: node.artist_maker.artist_in_object
+targetEntityType: node
+bundle: artist_maker
+mode: artist_in_object
+content:
+  field_first_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_name:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_prefix:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_suffix:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  body: true
+  field_alpha_sort: true
+  field_alternate_names: true
+  field_birth_place: true
+  field_death_place: true
+  field_first_letter_index: true
+  field_nationality: true
+  field_object_id: true
+  links: true
+  search_api_excerpt: true

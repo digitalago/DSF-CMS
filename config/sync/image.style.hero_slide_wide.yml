@@ -1,0 +1,25 @@
+uuid: fce9b5ce-313b-476d-a1c0-fc81323c1e95
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.hero_slide_crop
+  module:
+    - crop
+name: hero_slide_wide
+label: 'Hero Slide Wide'
+effects:
+  9776c441-fd6e-42fc-bdd5-493921b2b9dd:
+    uuid: 9776c441-fd6e-42fc-bdd5-493921b2b9dd
+    id: crop_crop
+    weight: 2
+    data:
+      crop_type: hero_slide_crop
+  61d44b63-d94d-4292-a8f3-51c7ef9aaf32:
+    uuid: 61d44b63-d94d-4292-a8f3-51c7ef9aaf32
+    id: image_scale
+    weight: 2
+    data:
+      width: 2560
+      height: 960
+      upscale: true

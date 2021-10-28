@@ -1,0 +1,10 @@
+uuid: 5bd7c9eb-1373-4e79-94b9-2503b6ec7cb1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.people_list_small
+label: 'People List Small'
+targetEntityType: node
+cache: true

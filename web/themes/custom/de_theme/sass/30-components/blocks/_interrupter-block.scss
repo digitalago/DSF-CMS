@@ -1,0 +1,98 @@
+/* 30-components/block/cta-block.scss*/
+// contains the styling of cta block
+
+.block-inline-blockinterrupter,
+.cta,
+.interrupter {
+  // @extend .layout-container;
+  margin: 2em auto !important;
+
+  .cta-wrapper {
+    @include clearfix;
+    border-top: 1px solid $neutral-grey;
+    border-bottom: 1px solid $neutral-grey;
+    margin: 0 auto !important;
+    padding: 0 1em !important;
+    vertical-align:middle;
+    @include breakpoint ($wide-screen) {
+      padding: 0 3em !important;
+    }
+
+    .cue-text,
+    .field--name-field-text {
+      margin: 1em 0;
+      font-family: $font-set-1;
+      display: inline-block;
+      font-size: ms(3);
+      line-height: 1.6em;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      vertical-align:middle;
+      @include breakpoint ($narrow-screen) {
+        font-size: ms(5);
+        line-height: 1em;
+        max-width: 75%;
+      }
+
+      a {
+        display: inline;
+        margin: 0;
+        float: none;
+        clear: none;
+        border: none;
+        text-transform: none;
+        padding: 0;
+        font-size: inherit;
+        color: $almostblack;
+        letter-spacing: normal;
+      }
+    }
+
+    .field--name-field-link {
+      display: inline-block;
+      vertical-align: middle;
+      float: right;
+    }
+
+    a {
+      display: block;
+      margin: 0 auto 20px;
+      float: none;
+      clear: both;
+      border: 1px solid black;
+      text-transform: uppercase;
+      font-family: $font-set-1;
+      letter-spacing: 1px;
+      font-size: ms(3);
+      padding: 10px 15px;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      text-decoration: none;
+      text-align: center;
+      @include breakpoint ($small-screen) {
+        //width: 144px;
+        display: inline-block;
+        margin: ms(-1) 0;
+        float: right;
+      }
+
+      &:before {
+        // @include material-icons;
+        //content:"chat_bubble";
+        //vertical-align: middle;
+        //margin-right: .5em;
+        //color: black;
+        // font-size: 18px;
+      }
+
+      &:hover {
+        color: white;
+        background-color: black;
+
+        &:before {
+          color: white;
+        }
+      }
+    }
+  }
+}

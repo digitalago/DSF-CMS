@@ -1,0 +1,10 @@
+uuid: fe27a97f-7ce4-47f9-99b8-77b4e0af04ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.featured_s
+label: 'Featured Slider Extended'
+targetEntityType: node
+cache: true

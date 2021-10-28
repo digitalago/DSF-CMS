@@ -1,0 +1,10 @@
+uuid: c35dcff8-d9a3-44ba-8cb0-7478d38037e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.artist_in_object
+label: 'Artist in Object'
+targetEntityType: node
+cache: true

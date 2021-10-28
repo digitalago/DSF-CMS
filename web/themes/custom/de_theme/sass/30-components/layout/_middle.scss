@@ -1,0 +1,42 @@
+/* Middle region setup */
+
+.section-dags {
+  position: relative;
+  max-width:  $wide-screen;
+  margin:  0 auto;
+  padding:  0 ms(2);
+  @include clearfix;
+  @include breakpoint($narrow-screen $weird-screen-max) {
+    padding: 0 6.38298%;
+  }
+  @include breakpoint($medium-screen) {
+  padding:  0 ms(2);
+  }
+  @include breakpoint ($wide-screen) {
+    padding:  0 ms(-1);
+  }
+}
+
+#dags-sidebar{
+  width: 100%;
+  @include breakpoint($medium-screen) {
+    @include grid-span(3);
+  }
+}
+.region--middle-sidebar {
+  margin-right: 0;
+  @include breakpoint($medium-screen) {
+    margin-right: ms(2);
+  }
+}
+
+.region--middle-content {
+  width: 100%;
+  @include breakpoint($medium-screen) {
+    @include grid-span(9,4);
+  }
+}
+
+.region--middle-full-width {
+  padding: 0;
+}

@@ -1,0 +1,43 @@
+/* mixins/library/custom/_button-arrow */
+
+@mixin arrow-right {
+  &:after {
+    content: '\f105';
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 22px;
+    // background: url("../../img/file_icons/arrow-right.png");
+    padding-left: 15px;
+    // vertical-align: middle;
+    font-weight: $light;
+    @include breakpoint ($narrow-screen) {
+      font-size: 25px;
+    }
+    @include breakpoint ($standard-screen) {
+      font-size: 30px;
+    }
+  }
+  &:hover:after {
+  }
+}
+
+@mixin arrow-right-small {
+  &:after {
+    content: '\f054';
+    display: inline-block;
+    padding-left: 5px;
+    // vertical-align: middle;
+    vertical-align: text-bottom;
+    font-family: "Font Awesome 5 Free";
+    font-weight: $light;
+    font-size: 12px;
+    @include breakpoint ($narrow-screen) {
+      font-size: 15px;
+      padding-left: 10px;
+      vertical-align: text-bottom;
+    }
+  }
+  &:hover:after {
+
+  }
+}

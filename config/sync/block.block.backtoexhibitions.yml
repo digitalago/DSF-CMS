@@ -1,0 +1,33 @@
+uuid: 764ed57a-9b62-4b66-a129-343f2aa938de
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e9693786-64f6-451a-8bf5-89990d265757'
+  module:
+    - block_content
+    - ctools
+  theme:
+    - de_theme
+id: backtoexhibitions
+theme: de_theme
+region: content_prefix
+weight: 0
+provider: null
+plugin: 'block_content:e9693786-64f6-451a-8bf5-89990d265757'
+settings:
+  id: 'block_content:e9693786-64f6-451a-8bf5-89990d265757'
+  label: 'Back to Exhibitions'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      exhibition: exhibition
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

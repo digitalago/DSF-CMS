@@ -1,0 +1,42 @@
+uuid: d5deaae2-a8c3-4c83-9b62-2013dbbf8e8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.content_browsers
+  module:
+    - entity_browser_entity_form
+    - views
+name: event_sessions
+label: 'Event Sessions'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Add New / Select Session'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  16357dbb-70c9-42aa-a983-83919f341b8d:
+    settings:
+      entity_type: node
+      bundle: event_session
+      form_mode: inline_form_default
+      submit_text: 'Save Session'
+    uuid: 16357dbb-70c9-42aa-a983-83919f341b8d
+    weight: 1
+    label: 'New Session'
+    id: entity_form
+  12c09217-6d85-430b-a0bd-32d0c3d25396:
+    settings:
+      view: content_browsers
+      view_display: event_browser
+      submit_text: 'Select Session'
+      auto_select: false
+    uuid: 12c09217-6d85-430b-a0bd-32d0c3d25396
+    weight: 2
+    label: 'Select Session'
+    id: view

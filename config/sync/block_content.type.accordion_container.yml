@@ -1,0 +1,8 @@
+uuid: ebbe6c01-77e6-4014-ab91-d8f0143103c2
+langcode: en
+status: true
+dependencies: {  }
+id: accordion_container
+label: 'Accordion Container'
+revision: 0
+description: ''

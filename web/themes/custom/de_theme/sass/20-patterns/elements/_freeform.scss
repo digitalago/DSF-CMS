@@ -1,0 +1,174 @@
+// freeform dags component
+
+.freeform-container-width {
+  position: relative;
+  max-width: $wide-screen;
+  margin: 0 auto;
+  padding: 0 ms(2);
+  @include clearfix;
+  @include breakpoint($medium-screen) {
+    padding: 0 ms(2);
+  }
+  @include breakpoint ($wide-screen) {
+    padding: 0 ms(-1);
+  }
+}
+
+.freeform-full-width {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 ms(2);
+  @include clearfix;
+  @include breakpoint($medium-screen) {
+    padding: 0 ms(2);
+  }
+  @include breakpoint ($wide-screen) {
+    padding: 0 ms(-1);
+  }
+}
+
+.freeform-full-width-seamless {
+  position: relative;
+  // max-width: 100%;
+  margin: 0;
+  // padding: 0;
+  @include clearfix;
+}
+
+.block-inline-blockbasic.black-background,
+.node--type-ago-free-form.block-background-black {
+  background: $almostblack;
+  color: $white;
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+
+  h2 {
+    color: $white;
+  }
+
+  h3 a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &.freeform-full-width, &.freeform-full-width-seamless {
+    &:before {
+      background-color: $almostblack;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+      z-index: -1;
+      background-size: cover;
+    }
+
+    &:after {
+      background-color: $almostblack;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+      z-index: -1;
+      background-size: cover;
+    }
+  }
+}
+
+.block-inline-blockbasic.grey-background,
+.node--type-ago-free-form.block-background-grey {
+  background: $light-grey;
+  color: $almostblack;
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+
+  &.freeform-full-width-seamless {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  &.freeform-full-width, &.freeform-full-width-seamless {
+    &:before {
+      background-color: $light-grey;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+      z-index: -1;
+      background-size: cover;
+    }
+
+    &:after {
+      background-color: $light-grey;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+      z-index: -1;
+      background-size: cover;
+    }
+  }
+}
+
+.block-inline-blockbasic.white-background,
+.node--type-ago-free-form.block-background-white {
+  background: $white;
+  color: $almostblack;
+}
+
+.block-inline-blockbasic.red-background,
+.node--type-ago-free-form.block-background-red {
+  background: $red;
+  color: $white;
+  position: relative;
+  z-index: 1;
+
+  &.freeform-full-width, &.freeform-full-width-seamless {
+    &:before {
+      background-color: $red;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+      z-index: -1;
+      background-size: cover;
+    }
+
+    &:after {
+      background-color: $red;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+      z-index: -1;
+      background-size: cover;
+    }
+  }
+}

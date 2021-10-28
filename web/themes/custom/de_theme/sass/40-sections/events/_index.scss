@@ -1,0 +1,121 @@
+/* sections/_events.scss */
+// all event related items like calendars, recent events, event nodes
+// .path-frontpage,
+.node--type-dags-landing-page {
+  .region--navigation-primary{
+    background: $almostblack;
+  }
+  .section-content {
+    padding-top: 0 !important;
+
+    > .layout-container {
+      padding: 0;
+      max-width: 100%;
+    }
+  }
+
+
+
+}
+
+@import 'node-event';
+@import 'slick';
+@import 'free-style';
+@import 'slider';
+@import 'navigation';
+@import 'the-spaces';
+
+.field--name-field-managed-credit, .culinary-team .caption {
+  text-align: right;
+  color: $neutral-grey;
+  font-size: .9em;
+  display: block;
+  font-family: $font-set-2;
+}
+// .general-text-image, .default-component {
+.general-text-image {
+  padding: ms(2) 0 ms(2)*4;
+  .field--name-field-managed-credit {
+    text-align: left;
+    font-weight: $medium;
+  }
+  @media all and (min-width: 767px) {
+    .copy {
+      float: left;
+      width: (876/1670)*100%;
+    }
+
+    article {
+      float: right;
+      width: (712/1670)*100%;
+    }
+
+
+    .image_left {
+      .copy {
+        float: right;
+      }
+
+      article {
+        float: left;
+      }
+    }
+  }
+}
+
+@import 'gallery';
+@import 'people';
+@import 'contact';
+
+
+.region--footer {
+  background: #000;
+  color: #fff;
+  padding-bottom: ms(2);
+
+  // .footer-hero {
+  //   background: url('../../img/footer.jpg') no-repeat center bottom;
+  //   background-size: cover;
+  //   content: '';
+  //   display: block;
+  //   margin: 0 0 ms(2)*2;
+  //   width: 100%;
+  //   height: 250px;
+  //   height: 27vw;
+  // }
+
+  .block-events-footer__site-name {
+    font-family: $font-set-1;
+    font-size: ms(3);
+    margin: 0;
+  }
+
+  .block-events-footer__site-address {
+    font-family: $font-set-2;
+    margin-bottom: ms(1)*2;
+  }
+
+  .block-events-footer__site-logo {
+    margin: 0;
+    text-align: right;
+
+    a, img {
+      display: block;
+      float: right;
+    }
+  }
+
+  .block-events-footer__social-media {
+    a {
+      color: #fff;
+      font-size: ms(2);
+
+      .fa-li {
+        position: relative;;
+        left: auto;
+        top: auto;
+        width: auto;
+      }
+    }
+  }
+}

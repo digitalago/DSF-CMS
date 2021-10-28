@@ -1,0 +1,48 @@
+uuid: ad59fc1c-7ef6-4c41-9706-ef995797d8fa
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration
+id: ago_faq_set
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: ago
+label: 'AGO FAQ Set'
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: node
+  bundle: ago_faq_set
+process:
+  info: title
+  created: created
+  changed: changed
+  field_faqs:
+    -
+      plugin: sub_process
+      source: field_faqs
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: ago_faq
+  status: status
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+destination:
+  plugin: 'entity:block_content'
+  default_bundle: faq_set
+migration_dependencies:
+  required:
+    - user
+    - file
+    - image_media
+    - ago_faq
+  optional: {  }

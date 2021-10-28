@@ -1,0 +1,14 @@
+uuid: a5a550ae-5290-449c-ac84-ee92a73d3dd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.web_intern
+  module:
+    - user
+id: user_add_role_action.web_intern
+label: 'Add the Web Intern role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: web_intern

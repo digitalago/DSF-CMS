@@ -1,0 +1,17 @@
+uuid: 7bf9f0a1-6fc5-44f6-904d-529ddb547bff
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.free_crop_region
+  module:
+    - crop
+name: free_crop_region
+label: 'Free Crop Region'
+effects:
+  f9c59455-8996-4dd5-816b-120cc6ceddb2:
+    uuid: f9c59455-8996-4dd5-816b-120cc6ceddb2
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: free_crop_region

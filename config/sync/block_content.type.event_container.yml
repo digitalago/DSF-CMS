@@ -1,0 +1,8 @@
+uuid: 7d4a7b33-610d-43d0-9df1-b2ab978867f5
+langcode: en
+status: true
+dependencies: {  }
+id: event_container
+label: 'Event Container'
+revision: 0
+description: ''

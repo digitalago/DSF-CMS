@@ -1,0 +1,23 @@
+uuid: 7b1eb69f-05cd-40d2-ad4e-58f57023ea02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider_transitions
+    - node.type.slider_container
+  module:
+    - options
+id: node.slider_container.field_slider_transitions
+field_name: field_slider_transitions
+entity_type: node
+bundle: slider_container
+label: 'Slider Transitions'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: slide
+default_value_callback: ''
+settings: {  }
+field_type: list_string

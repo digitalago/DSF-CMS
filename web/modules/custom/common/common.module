@@ -1,0 +1,298 @@
+<?php
+
+use Drupal\block\Entity\Block;
+use Drupal\block_content\Entity\BlockContent;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+use Drupal\node\Entity\Node;
+use \Drupal\Core\State\StateInterface;
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() as hook_form_node_form_alter().
+ */
+function common_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['#attached']['library'][] = 'common/common';
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ *
+ * Adds class if hidden.
+ */
+function common_preprocess_block(&$variables) {
+  if(isset($variables['content']['#block_content'])) {
+
+    $id = $variables['content']['#block_content']->get('info')->getString();
+    if(isset($id)) {
+      $char = ['_', " ", "(", ")"];
+      $id = str_replace($char, '-', $id);
+      $id = strtolower($id);
+      $variables['attributes']['id'] = $id;
+    }
+
+    $bundle = $variables['content']['#block_content']->bundle();
+    $variables['attributes']['class'][] = str_replace('_', '-', $bundle) . '-block';
+    if($bundle == 'super_card') {
+
+      // Border
+      $border = $variables['content']['#block_content']->get('field_border')->getString();
+      if(!empty($border)) {
+        $variables['attributes']['class'][] = $border;
+      }
+
+      // Card background
+      $card_bg = $variables['content']['#block_content']->get('field_card_background')->getString();
+      if(!empty($card_bg)) {
+        $variables['attributes']['class'][] = 'card-bg-' . $card_bg;
+      }
+
+      $card_size = $variables['content']['#block_content']->get('field_card_size')->getString();
+      if(!empty($card_size)) {
+        $variables['attributes']['class'][] = $card_size;
+      }
+
+      //Animation
+      $image_right = $variables['content']['#block_content']->get('field_image_on_right')->getString();
+      if(!empty($image_right) && $image_right == '1') {
+        $variables['attributes']['class'][] = 'animate-right';
+      }
+      else {
+        $variables['attributes']['class'][] = 'animate-left';
+      }
+    }
+
+    if($bundle == 'card_container') {
+
+      // Container background
+      $container_bg = $variables['content']['#block_content']->get('field_container_background')->getString();
+      if(!empty($container_bg)) {
+        $variables['attributes']['class'][] = 'container-bg-' . $container_bg;
+      }
+
+      // Full width
+      $full_width = $variables['content']['#block_content']->get('field_full_width')->getString();
+      if(!empty($full_width) && $full_width == '1') {
+        $variables['attributes']['class'][] = 'full-width';
+      }
+    }
+
+    if ($bundle == 'people_list') {
+
+      // Container background
+      $bg_colour = $variables['content']['#block_content']->get('field_background_colour')->getString();
+      if (!empty($bg_colour)) {
+        $variables['attributes']['class'][] = 'bg-' . $bg_colour;
+      }
+
+      // Image Shape
+      $shape = $variables['content']['#block_content']->get('field_image_shape')->getString();
+      if(!empty($shape)) {
+        $variables['attributes']['class'][] = $shape;
+      }
+
+      // Item Divider
+      $divider_colour = $variables['content']['#block_content']->get('field_item_divider')->getString();
+      if(!empty($divider_colour)) {
+        $variables['attributes']['class'][] = 'divider-' . $divider_colour;
+      }
+
+      // List Type
+      $type = $variables['content']['#block_content']->get('field_list_type')->getString();
+      if(!empty($type)) {
+        $variables['attributes']['class'][] = 'list-' . $type;
+        foreach ($variables['content']['field_person']['#items'] as $key => $item) {
+         $variables['content']['field_person'][$key]['#view_mode'] = 'people_list_' . $type;
+         $variables['content']['field_person'][$key]['content']['#cache']['max-age'] = 0;
+        }
+        // layouts
+        if($type == 'small') {
+          $layout = $variables['content']['#block_content']->get('field_layout')->getString();
+          $variables['attributes']['class'][] = 'small-' . $layout . '-column';
+        }
+      }
+
+      $width = $variables['content']['#block_content']->get('field_list_width')->getString();
+      if(!empty($width)) {
+        $variables['attributes']['class'][] = strtr($width, "_", "-");
+      }
+    }
+    // freeform
+    if ($bundle == 'basic') {
+        $variables['attributes']['class'][] = 'block-basic';
+
+      // Container background
+      $hide_mobile = $variables['content']['#block_content']->get('field_hide_on_mobile')->getString();
+      $hide_desktop = $variables['content']['#block_content']->get('field_hide_on_desktop')->getString();
+      if(!empty($hide_desktop) && $hide_desktop == 1) {
+        $variables['attributes']['class'][] = 'hide-desktop';
+      }
+      if(!empty($hide_mobile) && $hide_mobile == 1) {
+        $variables['attributes']['class'][] = 'hide-mobile';
+      }
+      if(!empty($hide_mobile) && !empty($hide_desktop) && $hide_mobile == 1 && $hide_desktop == 1 ) {
+        $variables['attributes']['class'][] = 'hide-both';
+      }
+
+      $bg_colour = $variables['content']['#block_content']->get('field_background_colour')->getString();
+      if (!empty($bg_colour)) {
+        $variables['attributes']['class'][] = $bg_colour . '-background';
+      }
+
+      //width
+      $width = $variables['content']['#block_content']->get('field_list_width')->getString();
+      if(!empty($width)) {
+        $variables['attributes']['class'][] = 'freeform-' . strtr($width, "_", "-");
+      }
+    }
+
+    if($bundle == 'faq_set') {
+      //width
+      $width = $variables['content']['#block_content']->get('field_list_width')->getString();
+      if(!empty($width)) {
+        $variables['attributes']['class'][] = 'accordion-' . strtr($width, "_", "-");
+      }
+      $bg_colour = $variables['content']['#block_content']->get('field_background_colour')->getString();
+      if (!empty($bg_colour)) {
+        $variables['attributes']['class'][] = $bg_colour . '-background';
+      }
+    }
+
+    if ($bundle == 'menu_link') {
+      $float_menu = $variables['content']['#block_content']->get('field_floating_menu')->getString();
+      if(!empty($float_menu) && $float_menu == '1') {
+        $variables['attributes']['class'][] = 'float-menu';
+      }
+      else {
+        $variables['attributes']['class'][] = 'mini-menu';
+      }
+    }
+
+    if ($bundle == 'object_container') {
+      $tid = $variables['content']['#block_content']->get('field_object')->getValue()[0]['target_id'];
+      if(!empty($tid)) {
+        $node = Node::load($tid);
+        $type = $node->bundle();
+        if($type == 'object_container') {
+          $layout = $node->get('field_layout_type')->getString();
+          $width = $node->get('field_layout_width')->getString();
+          $variables['attributes']['class'][] = $layout . ' ' . $width;
+        }
+      }
+    }
+
+    // if ($bundle == 'card_container') {
+    //   $grid = $variables['content']['#block_content']->get('field_info_grid');
+    //   if(isset($grid) && !empty($grid)) {
+    //     $ids = $grid->getValue()[0]['target_id'];
+    //     kint($ids);
+    //     foreach ($ids as $id) {
+    //       kint($id);
+    //     }
+    //   }
+    // }
+
+    if ($bundle == 'card' || $bundle == 'super_card') {
+      if ($variables['content']['#block_content']->hasField('field_title_display')) {
+        $hide_title = $variables['content']['#block_content']->get('field_title_display');
+        if (isset($hide_title) && !empty($hide_title)) {
+          $hide = $hide_title->getString();
+          if ($hide == '1') {
+          $variables['attributes']['class'][] = 'hide-title';
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_options_list_alter for page templates.
+ *
+ * Change -None-
+ */
+function common_options_list_alter(array &$options, array $context) {
+  if ($context['fieldDefinition']->getName() === 'field_card_background') {
+    $options['_none'] = t('- Default -');
+  }
+  if ($context['fieldDefinition']->getName() === 'field_border') {
+    $options['_none'] = t('None');
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+ function common_preprocess_field(&$variables) {
+   if($variables['field_type'] == 'entity_reference') {
+     if($variables['element']['#field_name'] == 'field_info_grid') {
+       $entity = $variables['element']['#object'];
+       $target_entity = $entity
+        ->getFieldDefinition($variables['field_name'])
+        ->getSetting('target_type');
+
+        if ($target_entity == 'block_content') {
+        foreach ($variables['items'] as &$item) {
+          if($item['content']['content']['#block_content']->bundle() == 'super_card') {
+            $item['attributes']['class'] = 'super-card';
+          }
+          if($item['content']['content']['#block_content']->bundle() == 'card') {
+            $item['attributes']['class'] = 'info-grid-card';
+          }
+        }
+
+        // $number_items = count($variables['items']);
+        // if(!empty($number_items)) {
+        //   if($number_items == '6') {
+        //     $variables['attributes']['class'] = 'six-columns';
+        //   }
+        //   else if($number_items == '5') {
+        //     $variables['attributes']['class'] = 'five-columns';
+        //   }
+        //   else if($number_items == '4') {
+        //     $variables['attributes']['class'] = 'four-columns';
+        //   }
+        //   else if($number_items == '3') {
+        //     $variables['attributes']['class'] = 'three-columns';
+        //   }
+        //   else if($number_items == '2') {
+        //     $variables['attributes']['class'] = 'two-columns';
+        //   }
+        //   else if($number_items == '1') {
+        //     $variables['attributes']['class'] = 'one-column';
+        //   }
+        // }
+      }
+     }
+   }
+ }
+
+ /**
+ * Implements hook_form_alter().
+ */
+// function common_form_alter(&$form, &$form_state, $form_id) {
+//   if ($form_id == 'block_content_people_list_form' ) {
+//     $form['field_layout']['#states'] = [
+//       'visible' => [
+//         ':input[name="field_list_type"]' => array('value' => 'small'),
+//       ],
+//     ];
+//   }
+// }
+
+
+function common_preprocess_html(&$variables) {
+  // Add class to the body.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if($node) {
+    if ($node->hasField('field_hide_title')) {
+      $hide_title = $node->get('field_hide_title');
+      if (isset($hide_title) && !empty($hide_title)) {
+        $hide = $hide_title->getString();
+          if ($hide == '1') {
+            $variables['attributes']['class'][] = 'no-title';
+          }
+        }
+      }
+    }
+  }

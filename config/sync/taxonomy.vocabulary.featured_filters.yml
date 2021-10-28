@@ -1,0 +1,8 @@
+uuid: 7b4a324e-b4a2-4a19-85c2-feecdd0d23f8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Featured Filters'
+vid: featured_filters
+description: ''
+weight: 0

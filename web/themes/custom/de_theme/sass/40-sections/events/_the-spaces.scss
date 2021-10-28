@@ -1,0 +1,105 @@
+//////////////////////
+// The Spaces
+//////////////////////
+
+.the-spaces {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  // padding-bottom: 2em;
+  h2 {
+    //padding: 0 (1360-1162)*.5px;
+    @media (max-width: 55.9375em) {
+      padding: 0 0.6em;
+    }
+  }
+  .slider-wrap {
+    border-bottom: 1px solid $neutral-grey;
+  }
+  @include breakpoint($standard-screen) {
+    margin-top: 3.25em;
+    margin-bottom: 3.25em;
+  }
+  .dags-slider.bullets {
+    .dags-slides {
+      padding-bottom: 0;
+    }
+  }
+  .dags-slider .slider-wrap {
+    margin: 0 auto;
+    // max-width: 1360px;
+    max-width: 1188px;
+    padding: 0 (1360-1162)*.5px;
+    position: relative;
+    width: 100%;
+    @include breakpoint($wide-screen) {
+      // padding: 0 (1360-1162)*.5px;
+      padding: 0 80px;
+    }
+    @media (max-width: 55.9375em) {
+      padding: 0 ms(1);
+    }
+    .arrow-prev, .arrow-next {
+      align-items: center;
+      cursor: pointer;
+      display: inline-block !important;
+      // height: 100%;
+      justify-content: center;
+      max-height: 100vh;
+      position: absolute;
+      top: 0;
+      width: auto;
+      // width: (1360-1162)*.5px;
+      z-index: 10;
+
+      // @media (max-width: 55.9375em) {
+      //   width: 6.38298%;
+      // }
+
+      span {
+        display: block;
+        font-size: ms(4);
+        position: absolute;
+        top: 64%;
+        @include breakpoint (410px) {
+          top: 70%;
+        }
+        @include breakpoint($small-screen) {
+          top: 75%;
+        }
+        @include breakpoint ($weird-screen) {
+          top: 80%;
+        }
+        @include breakpoint($standard-screen) {
+          top: 85%;
+        }
+      }
+    }
+
+    .arrow-prev {
+      left: -15px;
+      // @include breakpoint ($weird-screen) {
+      //   left: -23px;
+      // }
+      // @include breakpoint ($wide-screen) {
+      //   left: -25px;
+      // }
+      // @include breakpoint($wxga-screen) {
+      //   left: -99px;
+      // }
+
+      @include breakpoint ($medium-screen) {
+        left: auto;
+        right: 101.3%;
+      }
+    }
+
+    .arrow-next {
+      right: 10px;
+
+     @include breakpoint ($medium-screen) {
+        left: 99%;
+        right: auto;
+      }
+    }
+  }
+}

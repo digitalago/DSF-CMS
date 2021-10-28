@@ -1,0 +1,28 @@
+diff --git a/modules/ctools_views/src/Plugin/Display/Block.php b/modules/ctools_views/src/Plugin/Display/Block.php
+index 7ebc1b1..2dc8400 100644
+--- a/modules/ctools_views/src/Plugin/Display/Block.php
++++ b/modules/ctools_views/src/Plugin/Display/Block.php
+@@ -41,15 +41,14 @@ class Block extends CoreBlock {
+    */
+   public function buildOptionsForm(&$form, FormStateInterface $form_state) {
+     parent::buildOptionsForm($form, $form_state);
+-    $options = $form['allow']['#options'];
+-    $options['offset'] = $this->t('Pager offset');
+-    $options['pager'] = $this->t('Pager type');
+-    $options['hide_fields'] = $this->t('Hide fields');
+-    $options['sort_fields'] = $this->t('Reorder fields');
+-    $options['disable_filters'] = $this->t('Disable filters');
+-    $options['configure_sorts'] = $this->t('Configure sorts');
+-    $form['allow']['#options'] = $options;
+-    // Update the items_per_page if set.
++
++    $form['allow']['#options']['offset'] = $this->t('Pager offset');
++    $form['allow']['#options']['pager'] = $this->t('Pager type');
++    $form['allow']['#options']['hide_fields'] = $this->t('Hide fields');
++    $form['allow']['#options']['sort_fields'] = $this->t('Reorder fields');
++    $form['allow']['#options']['disable_filters'] = $this->t('Disable filters');
++    $form['allow']['#options']['configure_sorts'] = $this->t('Configure sorts');
++
+     $defaults = [];
+     if (!empty($form['allow']['#default_value'])) {
+       $defaults = array_filter($form['allow']['#default_value']);

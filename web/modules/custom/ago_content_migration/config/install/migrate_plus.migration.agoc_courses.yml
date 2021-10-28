@@ -1,0 +1,162 @@
+id: agoc_courses
+label: AGO Courses
+migration_group: ago
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: node
+  bundle: agoc_courses
+destination:
+  plugin: entity:node
+  default_bundle: course
+process:
+  title: title
+  created: created
+  changed: changed
+  'body/value': 'body/0/value'
+  'body/summary': 'body/0/summary'
+  'body/format':
+    -
+      plugin: static_map
+      source: body/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: 'full_html'
+  status: status
+  field_additional_gl_code: field_agoc_additional_gl_code
+  field_additional_value_member: field_agoc_additional_value_memb
+  field_additional_value_public: field_agoc_additional_value_allo
+  field_capacity: field_agoc_capacity
+  field_date_time_description: field_date_time_description
+  field_course_type:
+    -
+      plugin: sub_process
+      source: field_agoc_course_type
+      process:
+        target_id:
+          plugin: static_map
+          source: target_id
+          map:
+            902: 770
+            900: 771
+            903: 772
+            906: 773
+            904: 774
+            905: 775
+            899: 776
+            907: 777
+          default_value: null
+  field_course_audience:
+    -
+      plugin: sub_process
+      source: field_agoc_course_audience
+      process:
+        target_id:
+          plugin: static_map
+          source: target_id
+          map:
+            915: 790
+            917: 791
+          default_value: null
+  field_featured_filters_courses:
+    -
+      plugin: sub_process
+      source: field_featured_filters_courses
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: featured_filters_courses_taxonomy
+  field_gl_code: field_agoc_gl_code
+  field_course_section:
+    -
+      plugin: sub_process
+      source: field_agoc_course_section
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: agoc_course_sections
+  field_course_on_sale_date: field_agoc_course_on_sale_date
+  field_main_image:
+    -
+      plugin: sub_process
+      source: field_agoc_image
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: image_media
+  'field_meta_tags/value': 'field_metatags/0/value'
+  field_marketing_flag:
+    -
+      plugin: sub_process
+      source: field_marketing_flag
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: agoc_marketing_flag_taxonomy
+  field_value_member: field_agoc_value_member
+  field_value_allocation: field_agoc_value_allocation
+  'field_internal_notes/value': 'field_agoc_internal_notes/0/value'
+  'field_internal_notes/format':
+    -
+      plugin: static_map
+      source: field_agoc_internal_notes/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: 'full_html'
+  'field_members_message/value': 'field_agoc_members_message/0/value'
+  'field_members_message/format':
+    -
+      plugin: static_map
+      source: field_agoc_members_message/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: 'full_html'
+  field_members_price: field_agoc_member_price
+  field_public_price: field_agoc_price
+  field_tags:
+    -
+      plugin: sub_process
+      source: field_tags
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: tags_taxonomy
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+migration_dependencies:
+  required:
+    - user
+    - file
+    - image_media
+    - agoc_course_sections
+    - tags_taxonomy
+    - featured_filters_courses_taxonomy
+    - agoc_marketing_flag_taxonomy
+  optional: {  }
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

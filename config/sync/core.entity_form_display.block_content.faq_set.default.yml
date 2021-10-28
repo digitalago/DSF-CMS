@@ -1,0 +1,58 @@
+uuid: 427cff37-44f9-475e-93d6-49e10770fc15
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.faq_set
+    - core.entity_form_mode.node.inline_form_default
+    - field.field.block_content.faq_set.field_background_colour
+    - field.field.block_content.faq_set.field_faqs
+    - field.field.block_content.faq_set.field_list_width
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+id: block_content.faq_set.default
+targetEntityType: block_content
+bundle: faq_set
+mode: default
+content:
+  field_background_colour:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_faqs:
+    weight: 3
+    settings:
+      form_mode: inline_form_default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_list_width:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

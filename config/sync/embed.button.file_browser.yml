@@ -1,0 +1,27 @@
+uuid: 3dcfe51f-7e27-4988-a7f2-4c43bd05db5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.inline_media_browser
+  module:
+    - entity_embed
+    - file
+    - image
+label: 'File Browser'
+id: file_browser
+type_id: entity
+type_settings:
+  entity_type: file
+  bundles: {  }
+  display_plugins:
+    - 'image:image'
+    - 'file:file_default'
+    - 'file:file_url_plain'
+  entity_browser: inline_media_browser
+  entity_browser_settings:
+    display_review: false
+icon:
+  data: iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAASklEQVR4AWOgIwhkeMnwHw024NOAqfwBfi3/MaACRAvxGhhgWojWgNBCtAaEFmI1ILRgasAHR7KGUQ2v8Cp/gS2LvsKj3JeBbgAAdxEbSO+WQHoAAAAASUVORK5CYII=
+  uri: 'public://embed_buttons/ic_insert_drive_file_black_24dp_1x_1.png'
+icon_uuid: null

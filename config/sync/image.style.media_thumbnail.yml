@@ -1,0 +1,17 @@
+uuid: e4969a43-eed3-453c-9710-cb9354bd664f
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: media_thumbnail
+label: 'Media thumbnail'
+effects:
+  cc973da3-0244-46ae-8503-43011e4a7910:
+    uuid: cc973da3-0244-46ae-8503-43011e4a7910
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 182
+      height: 104
+      crop_type: focal_point

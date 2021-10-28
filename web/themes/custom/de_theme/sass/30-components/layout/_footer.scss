@@ -1,0 +1,199 @@
+/* 30-components/layout/_footer.scss */
+
+
+/* @footer section */
+
+#footer{
+  // background-color: $dark-grey;
+  color: $white;
+  margin-bottom: 0;
+  padding-bottom: ms(2);
+  @include breakpoint ($narrow-screen) {
+    padding-bottom: ms(6);
+  }
+  p {
+    color: $white;
+    padding-bottom: 0;
+  }
+
+
+.footer-logo {
+  @include breakpoint ($narrow-screen) {
+  width: 175px;
+  height: auto;
+  float: right;}
+  width: 40%;
+  float: right;
+}
+
+
+}
+
+#block-footerheadline {
+  background-color: lighten($dark-grey, 5%);
+  text-align: left;
+  @include breakpoint ($narrow-screen) {
+    text-align: center;
+  }
+  .field--name-body p {
+    margin: ms(2);
+    display: inline-block;
+    color: $white;
+    font-size: ms(2);
+    font-weight: $normal;
+    font-family: $font-set-1;
+  }
+}
+
+#footer {
+  // padding-top: ms(2);
+  // @include breakpoint ($narrow-screen) {
+  //   padding-top: ms(6);
+  // }
+
+  .contact-info {
+    @include float-span(6);
+    @include antialiased;
+    display: inline-block;
+    @include breakpoint ($narrow-screen) {
+      @include float-span(7);
+    }
+    h4 {
+      font-size: ms(3);
+      font-weight: $normal;
+       @include breakpoint ($small-screen) {
+        font-size: ms(4);
+      }
+    }
+    p {
+      font-family: $font-set-1;
+      font-size: ms(2);
+      -webkit-font-smoothing: antialiased;
+      line-height: normal;
+    }
+    span {
+      clear: both;
+      float: left;
+    }
+    .cell-number {
+      margin-top: ms();
+      font-size: ms();
+      color: $white !important;
+      @include breakpoint (max-width 768px) {
+        width: 250px;
+      }
+      @include breakpoint (max-width 608px) {
+        width: auto;
+      }
+      @include breakpoint (max-width 350px) {
+        width: 200px;
+      }
+
+
+      @include breakpoint ($narrow-screen) {
+        font-size: ms(1);
+      }
+    }
+  }
+  .figure-box {
+    // width: 15%;
+    width: 150px;
+    display: inline-block;
+    margin: ms(1) 0;
+    border: 0;
+    float: left;
+    @include breakpoint ($narrow-screen) {
+      width: 175px;
+      margin: 0;
+      float: right;
+    }
+    figure {
+      margin: 0;
+      padding: 0;
+      @include breakpoint (max-width $narrow-screen) {
+        padding: 0;
+      }
+    }
+    figcaption {
+      color: $white;
+      font-family: $font-set-1;
+      font-size: 1.95em;
+      font-weight: $normal;
+      letter-spacing: 0.2px;
+      // @include breakpoint ($narrow-screen) {
+      //   letter-spacing: 0.5px;
+      // }
+      @include breakpoint (max-width $narrow-screen) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+//social icons
+
+div#block-footersocialmedia {
+  @include clearfix;
+  float: none;
+  display: block;
+  position: relative;
+  right: 0;
+  // overflow: auto;
+  clear: both;
+  width: auto;
+  margin-top: 0;
+  @include breakpoint ($medium-screen) {
+    float: right;
+    display: inline-block;
+    position: absolute;
+    margin-top: -62px;
+    width: 200px;
+    clear: right;
+    right: 1%;
+  }
+  a {
+    text-decoration: none;
+    margin-left: 0;
+    margin-right: 2%;
+    @include breakpoint ($medium-screen) {
+      margin-left: 8%;
+      margin-right: 0;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  em.fab {
+    font-size: 30px;
+    color: $white;
+    display: inline;
+    transition: color .3s ease-out;
+    &:hover {
+      color: rgba($white,.75);
+    }
+  }
+}
+
+#block-copyright {
+  @include clearfix;
+  float: left;
+  color: rgba($white,.75);
+  margin-top: ms(1);
+  p {
+    line-height: normal;
+    @include subpixel-antialiased;
+    font-size: ms(-1);
+    font-weight: 300;
+
+    // text-transform: capitalize;
+  }
+}
+
+.region--footer{
+  // padding-top: ms();
+  padding-bottom: ms();
+  padding-top: ms(2);
+  @include breakpoint ($narrow-screen) {
+    padding-top: ms(6);
+  }
+}

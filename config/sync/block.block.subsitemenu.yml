@@ -1,0 +1,30 @@
+uuid: f561f49d-d04b-4456-8e6e-33988deef1f5
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.subsite-menu
+  module:
+    - menu_block
+  theme:
+    - de_theme
+id: subsitemenu
+theme: de_theme
+region: branding
+weight: -28
+provider: null
+plugin: 'menu_block:subsite-menu'
+settings:
+  id: 'menu_block:subsite-menu'
+  label: 'Subsite Menu'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'subsite-menu:'
+  suggestion: subsite_menu
+  label_type: block
+visibility: {  }

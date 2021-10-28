@@ -1,0 +1,10 @@
+uuid: a92fe863-8b86-4b61-a8b2-8e3f1c1e7620
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.gallery_thumb
+label: 'Gallery thumb'
+targetEntityType: media
+cache: true

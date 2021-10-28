@@ -1,0 +1,29 @@
+uuid: 639fac77-fe45-4469-93ed-8e6b9cf89c86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_time_period
+    - node.type.object
+    - taxonomy.vocabulary.time_period
+id: node.object.field_time_period
+field_name: field_time_period
+entity_type: node
+bundle: object
+label: 'Time Period'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      time_period: time_period
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

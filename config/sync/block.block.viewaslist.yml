@@ -1,0 +1,26 @@
+uuid: 1233b0ef-5877-42db-95cb-fef60c35b97d
+langcode: en
+status: true
+dependencies:
+  module:
+    - collection_blocks
+    - system
+  theme:
+    - de_theme
+id: viewaslist
+theme: de_theme
+region: content_prefix
+weight: -30
+provider: null
+plugin: view_list_grid_block
+settings:
+  id: view_list_grid_block
+  label: 'View as List'
+  provider: collection_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/collection/browse\r\n/user/*/my-collections"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,19 @@
+/* parents image stylings */
+
+.partners-section {
+  .copy {
+    ul {
+      width: 100%;
+      li {
+        list-style: none;
+        list-style-type: none;
+        float: none;
+        width: auto;
+        @include breakpoint ($weird-screen) {
+          width: 33.3333%;
+          float: left;
+        }
+      }
+    }
+  }
+}

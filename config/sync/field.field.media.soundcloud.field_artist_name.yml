@@ -1,0 +1,19 @@
+uuid: 49a2a02e-2889-45ca-b67e-a2abe7271e7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_artist_name
+    - media.type.soundcloud
+id: media.soundcloud.field_artist_name
+field_name: field_artist_name
+entity_type: media
+bundle: soundcloud
+label: 'Artist Name'
+description: 'Place the Artist Name in this field like how it is in Sound Cloud.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

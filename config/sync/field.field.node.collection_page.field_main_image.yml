@@ -1,0 +1,28 @@
+uuid: 7ede33d6-47b5-43ca-a1c1-5741e852492e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main_image
+    - media.type.image
+    - node.type.collection_page
+id: node.collection_page.field_main_image
+field_name: field_main_image
+entity_type: node
+bundle: collection_page
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

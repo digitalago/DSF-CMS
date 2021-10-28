@@ -1,0 +1,61 @@
+<?php
+/**
+ * @file
+ * Contains hooks for AGO Courses module.
+ */
+
+use \Drupal\Core\Form\FormStateInterface;
+use \Drupal\Core\StringTranslation\TranslatableMarkup;
+use \Drupal\Core\Url;
+use \Drupal\Core\Render\Markup;
+
+/**
+ * Implements hook_form_alter().
+ */
+function courses_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] == 'views-exposed-form-course-search-courses-grid') {
+    // Add reset link element.
+    $form['actions']['reset'] = [
+      '#title' => new TranslatableMarkup('Reset'),
+      '#type' => 'link',
+      '#url' => Url::fromRoute('view.course_search.courses_grid'),
+      '#attributes' => ['class' => ['button', 'form-submit']],
+      '#attached' => ['library' => ['courses/courses_helper']],
+    ];
+    // Add library that append submit button below the facets.
+    $form['#attached']['library'][] = 'courses/courses_search';
+  }
+
+  if ($form['#id'] == 'node-course-edit-form') {
+    array_push($form['#attached']['library'], 'courses/courses_edit');
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for views field templates.
+ */
+function courses_preprocess_views_view_field(&$variables) {
+if (($variables['view']->id() == 'course_sessions' && $variables['field']->options['id'] == 'nothing_1')) {
+    $weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    $output = $variables['output']->__toString();
+    foreach ($weekdays as $key => $day) {
+      if (strpos($output, 'one-day-only') === FALSE) {
+        $output = str_replace($day, $day . 's', $output);
+      }
+    }
+    $variables['output'] =  Markup::create($output);
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function courses_preprocess_field(&$variables) {
+  if (isset($variables['field_name']) && $variables['field_name'] == 'field_course_type' && isset($variables['element']['#items'])) {
+    $entity = $variables['element']['#items']->getEntity();
+    $target_ids = $entity->field_course_type->getValue();
+    foreach ($target_ids as $key => $id) {
+      $variables['items'][$key]['target_id'] = $id['target_id'];
+    }
+  }
+}

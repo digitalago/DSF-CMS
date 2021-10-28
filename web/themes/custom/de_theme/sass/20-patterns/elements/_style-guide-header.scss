@@ -1,0 +1,16 @@
+/* 20-patterns/elements/_style-guide-header.scss */
+
+.styleguide-header{
+  clear: both;
+  margin-top: ms(5);
+  margin-bottom: ms();
+  font-size: ms(-1);
+  text-transform: uppercase;
+  color: $dark-grey;
+  // color: $neutral-grey;
+  border-bottom: 1px solid $light-grey;
+  border-bottom: 1px solid $neutral-grey;
+  &:nth-child(1){
+    margin-top: 0;
+  }
+}

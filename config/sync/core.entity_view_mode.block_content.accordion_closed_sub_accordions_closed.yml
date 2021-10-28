@@ -1,0 +1,10 @@
+uuid: 7dbaaf27-06bf-45f4-b7fc-070cc7304442
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.accordion_closed_sub_accordions_closed
+label: 'Accordion Closed And Sub Accordions Closed'
+targetEntityType: block_content
+cache: true

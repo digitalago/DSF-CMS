@@ -1,0 +1,19 @@
+uuid: bb3c7b1b-eeea-40a4-9114-e6461bbbb8fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_person_description
+field_name: field_person_description
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: 25ba12e0-927d-4c03-94f9-7be4d9434464
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_image_tag
+    - media.type.image
+    - taxonomy.vocabulary.image_tags
+id: media.image.field_image_tag
+field_name: field_image_tag
+entity_type: media
+bundle: image
+label: 'Image Tag'
+description: 'If you need a new tag created or unsure of what tag to use please ask webteam.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      image_tags: image_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

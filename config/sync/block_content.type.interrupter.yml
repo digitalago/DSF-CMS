@@ -1,0 +1,8 @@
+uuid: b60e329c-6a02-473a-9b4c-cc67dbc1fb32
+langcode: en
+status: true
+dependencies: {  }
+id: interrupter
+label: Interrupter
+revision: 0
+description: ''

@@ -1,0 +1,23 @@
+uuid: 8d0b0c36-555f-40ce-96a7-5e3ebe7c7a7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_members_price
+    - node.type.course
+id: node.course.field_members_price
+field_name: field_members_price
+entity_type: node
+bundle: course
+label: 'Members Price'
+description: 'If the price is "Free" please leave blank.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

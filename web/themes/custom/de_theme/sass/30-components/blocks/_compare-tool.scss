@@ -1,0 +1,104 @@
+/* 30-components/block/_compare-tool.scss*/
+// contains the styling of compare tool
+
+#block-compareobjectsblock {
+  @include clearfix;
+  display: block;
+  // display: none;
+  // @include breakpoint ($medium-screen) {
+  //   display: block;
+  // }
+  .compare-toolbox-wrapper {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    width: 240px;
+    background-color: $white;
+    min-height: 150px;
+    // -webkit-overflow-scrolling: touch;
+    // overflow-scrolling: touch;
+    @include breakpoint (1100px) {
+      width: 264px;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      clear: both;
+    }
+    p {
+      line-height: ms(1);
+      font-size: 0.9em;
+    }
+    .compare-btn{
+      @include clearfix;
+    }
+
+    .compare-toggle {
+      .compare-btn {
+        @include btn-compare;
+      }
+    }
+
+    .compare-objects {
+      @include clearfix;
+
+      ul {
+        padding-left: 0;
+        padding-top: 10px;
+        li {
+          list-style-type: none;
+          list-style: none;
+          padding-bottom: 7px;
+          a {
+            font-family: $font-set-2;
+            font-weight: $normal;
+            font-size: ms(-1);
+            text-transform: capitalize;
+            text-decoration: none;
+            line-height: ms(1);
+            white-space: pre-wrap;
+            width: 95%;
+            display: block;
+            position: relative;
+            padding-left: 32px;
+           // padding-bottom: 3px;
+            &:before{
+              content: '\e15c';
+              @include material-icon;
+              font-size: 19px;
+              padding: 0px;
+              top:2px;
+            }
+            &:hover, &:active, &:focus {
+              text-decoration: underline;
+            }
+            i.fa {
+              padding-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.compare-tool-mobile {
+  width: 100% !important;
+  padding: ms(0) 0;
+  left: 0;
+  display: none;
+  @include breakpoint ($small-screen){
+  display: block;
+  }
+  @include breakpoint ($standard-screen){
+    padding: ms(0) ms(0);
+  }
+}
+
+/* This add space on the page top give compare tool some space*/
+
+//   .path-collection .layout-wrapper {
+//     @media all and (max-width: 896px) {
+//     top: 147px;
+//     display: block;
+//     position: relative;
+//   }
+// }

@@ -1,0 +1,13 @@
+/* 10-drupal/forums/_reset-forms.scss */
+
+.form-item, .form-actions {
+  @include reset;
+  // border: 1px solid red;
+}
+
+.form-composite > .fieldset-wrapper > .description,
+.form-item .description{
+  @include reset-font;
+}
+
+

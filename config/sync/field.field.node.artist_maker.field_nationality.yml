@@ -1,0 +1,19 @@
+uuid: a1ae45da-c7d6-4518-b886-e04b9c685be5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nationality
+    - node.type.artist_maker
+id: node.artist_maker.field_nationality
+field_name: field_nationality
+entity_type: node
+bundle: artist_maker
+label: Nationality
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

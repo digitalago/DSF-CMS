@@ -1,0 +1,10 @@
+uuid: acf46e01-c011-42e0-9e9f-75100d8e2186
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.media_page
+label: 'Media page'
+targetEntityType: media
+cache: true

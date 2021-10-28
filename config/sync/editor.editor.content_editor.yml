@@ -1,0 +1,79 @@
+uuid: a15f2360-24d9-47e4-903a-996d5d008f8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.content_editor
+  module:
+    - ckeditor
+format: content_editor
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Undo
+            - Redo
+            - Cut
+            - Copy
+            - Maximize
+            - Bold
+            - Italic
+            - Styles
+            - PasteFromWord
+            - SpecialChar
+            - Blockquote
+            - RemoveFormat
+            - HorizontalRule
+            - '-'
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Media
+          items:
+            - add_image
+            - file_browser
+            - media
+            - video_embed
+        -
+          name: Tools
+          items:
+            - Source
+  plugins:
+    stylescombo:
+      styles: ''
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: default
+    language:
+      language_list: un
+    video_embed:
+      defaults:
+        children:
+          autoplay: false
+          responsive: true
+          width: '854'
+          height: '480'
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

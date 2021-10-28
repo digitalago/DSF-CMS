@@ -1,0 +1,158 @@
+// View course search
+
+.view-course-search.view-id-course_search {
+  .view-content {
+    @include clearfix;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    margin: 5px 0;
+    @include breakpoint($narrow-screen) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .views-row {
+      margin-bottom: 1em;
+      position: relative;
+      border: 1px solid $contrastgrey;
+      width: 100%;
+      height: 520px;
+      margin-top: 5px;
+      overflow: hidden;
+      @include breakpoint($narrow-screen) {
+        height: 515px;
+        flex: 0 1 48%;
+        margin-left: 0;
+        margin-right: 2%;
+      }
+      @include breakpoint($weird-screen) {
+        height: 505px;
+        flex: 0 1 31%;
+        margin-right: 2%;
+      }
+
+      .views-field.views-field-field-marketing-flag {
+        .flag:empty {
+          all: none;
+        }
+      }
+
+      .view-mode-preview-thumbnail {
+        height: 325px;
+        position: relative;
+        background: #f8f8f8;
+        @include breakpoint ($narrow-screen) {
+          height: 232px;
+        }
+
+        .media--view-mode-card-image {
+          height: 325px;
+          background: #f8f8f8;
+          margin-top: -5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          @include breakpoint ($weird-screen) {
+            height: 232px;
+          }
+
+          img {
+            margin: auto;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-height: 100%;
+            max-width: 100%;
+            display: block;
+            visibility: visible;
+            animation-name: fadeIn;
+          }
+        }
+      }
+
+      .views-field.views-field-nothing {
+        .card-details-wrapper {
+          padding: 0.79012em 1em 0;
+          display: block;
+          width: 100%;
+
+          > .category-tag {
+            text-transform: uppercase;
+            font-size: 1em;
+            letter-spacing: 1px;
+            font-family: $font-set-2;
+
+            > a {
+              text-decoration: none;
+              padding: 0.70233em 0;
+            }
+          }
+
+          > .views-field-title {
+            a {
+              display: block;
+              text-decoration: none;
+              letter-spacing: 0.01em;
+              font-size: 30px;
+              font-size: 1.8rem;
+              line-height: 1.125em;
+              font-family: $font-set-1;
+            }
+          }
+
+          > .card-description {
+            font-family: $font-set-2;
+            font-weight: 300;
+            color: $contrastgrey;
+            padding: 0.70233em 0;
+          }
+        }
+      }
+
+      .views-field.views-field-nid-1 {
+        a {
+          position: absolute;
+          font-family: $font-set-2;
+          right: -1px;
+          padding: 15px 15px 12px;
+          float: right;
+          bottom: -1px;
+          border: 1px solid $almostblack;
+          font-size: 0.88889em;
+          padding: 0.79012em 1em;
+          background-color: #fff;
+          color: $almostblack;
+          text-decoration: none;
+          display: inline-block;
+          border-radius: 0;
+          font-weight: 300;
+          border-bottom: 0;
+          border-right: 0;
+          position: absolute;
+
+          &:active,
+          &:hover {
+            background-color: $almostblack;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Customize search button to match previous site.
+input.form-submit#edit-submit-course-search {
+  background-color: $white;
+  border: 1px solid $almostblack;
+  color: $almostblack;
+
+  &:hover {
+    background-color: $almostblack;
+    color: $white;
+  }
+}

@@ -1,0 +1,176 @@
+/* 30-components/block/people-list.scss*/
+// contains the styling of people list
+$layout: (
+  one-column: 100%,
+  two-column: 50%,
+  three-column: 33%,
+  four-column: 24%,
+  five-column: 20%,
+  six-column: 14.8%,
+);
+
+.block-people-list {
+  h2 {
+    text-transform: uppercase;
+    border-bottom: none;
+    padding-bottom: 7px;
+  }
+
+  @each $name, $color in $colours {
+    &.bg-#{$name} {
+      position: relative;
+      z-index: 1;
+      @if $name == black {
+        color: $white;
+      }
+      @if $name == red {
+        h2 {
+          color: white;
+        }
+        .person-content {
+          h3, .field--name-field-role-description {
+            color: white;
+          }
+        }
+      }
+      background: $color;
+
+      &.full-width {
+        &:before {
+          background-color: $color;
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 50%;
+          margin-left: -50vw;
+          width: 100vw;
+          z-index: -1;
+          background-size: cover;
+        }
+
+        &:after {
+          background-color: $color;
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 50%;
+          margin-left: -50vw;
+          width: 100vw;
+          z-index: -1;
+          background-size: cover;
+        }
+      }
+    }
+
+    &.divider-#{$name} {
+      &:not(.list-small) {
+        .field--name-field-person {
+          > .field__item {
+            border-bottom: 1px solid $color;
+          }
+        }
+      }
+    }
+  }
+
+  &.circle {
+    .field__item {
+      .person-image {
+        .field--name-field-person-image {
+          .field--name-field-managed-image {
+            img {
+              border-radius: 50%;
+              margin: auto;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              max-height: 100%;
+              max-width: 100%;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.list-small {
+    .field--name-field-person {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .field__item {
+        flex: 0 1 49%;
+        // margin-right: 2%;
+        @include breakpoint($weird-screen) {
+          flex: 0 1 31%;
+          // &:nth-child(2) {
+          //   margin-right: 2%;
+          // }
+          //
+          // &:nth-child(4) {
+          //   margin-right: 0;
+          // }
+        }
+        @include breakpoint($standard-screen) {
+          flex: 0 1 14.8%;
+          // &:nth-child(4) {
+          //   margin-right: 2%;
+          // }
+          //
+          // &:nth-child(6) {
+          //   margin-right: 0;
+          // }
+        }
+      }
+    }
+    @each $key, $val in $layout {
+      &.small-#{$key} {
+        .field--name-field-person {
+          .field__item {
+            @include breakpoint($standard-screen) {
+              flex: 0 1 $val !important;
+            }
+          }
+        }
+      }
+    }
+
+    &.full-width {
+      // width: 100vw;
+      // margin-left: calc(-50vw + 50%);
+    }
+
+    &.full-width-seamless {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      .field--name-field-person {
+        justify-content: unset !important;
+      }
+    }
+  }
+
+  .field--name-field-person {
+    > .field__item {
+      padding: 1rem 0;
+    }
+  }
+}
+
+//Form
+.layout-builder-configure-block {
+  .field--type-list-string.js-form-wrapper {
+    &.field--name-field-item-divider, &.field--name-field-image-shape, &.field--name-field-list-type {
+      .js-form-item.form-item {
+        display: block !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+uuid: 7344e955-5e9b-4a58-91e7-4ec6dcfd01a0
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - de_theme
+id: main_nav_mobile
+theme: de_theme
+region: branding
+weight: -29
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'main:'
+  suggestion: main
+  label_type: block
+visibility: {  }

@@ -1,0 +1,10 @@
+uuid: bcd1ed23-c5d2-4312-84ac-017cbfa92bd8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.people_list_large
+label: 'People List Large'
+targetEntityType: node
+cache: true

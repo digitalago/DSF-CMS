@@ -1,0 +1,28 @@
+uuid: 354792c2-d453-4558-8bd4-30a440f42b69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider_items
+    - node.type.slider_container
+    - node.type.slider_item
+id: node.slider_container.field_slider_items
+field_name: field_slider_items
+entity_type: node
+bundle: slider_container
+label: 'Slider Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      slider_item: slider_item
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

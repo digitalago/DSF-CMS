@@ -1,0 +1,317 @@
+/* AGOC Courses styling */
+
+.node--type-agoc-event, .node--type-event {
+  #content {
+    @include breakpoint($medium-screen) {
+      @include grid-span(12);
+    }
+    @include grid-span(12);
+    h1 {
+      text-transform: uppercase;
+    }
+    .event-content-wrapper {
+      clear:both;
+      @include breakpoint($weird-screen) {
+      @include grid-span(7, 6);
+      margin-bottom: 20px;
+      border-bottom: 1px solid #757575;
+      }
+      @include grid-span(12, 1);
+      float: none;
+    }
+    }
+    .event-left{
+      @include breakpoint($weird-screen) {
+        float: left;
+        @include grid-span(5, 1);
+        padding-right: 20px;
+      }
+      @include grid-span(12, 1);
+      float: none;
+      img {
+        width: 100%;
+      }
+      .block-views-blockwhat-s-on-ago-ticketing{
+        display: block;
+      }
+    }
+
+    .field--name-field-agoc-member-price, .field--name-field-agoc-price, .field--name-field-agoc-student-price {
+      margin-bottom: 0;
+      padding-bottom: 5px;
+      .field__label {
+      @include price;
+      top: 0px;
+      float:left;
+      }
+      .field__item {
+      font-size: ms(1);
+      @include nimbus-bold-reg;
+      text-transform: normal;
+      top: 0px;
+      }
+
+    }
+    .event-location {
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .addtoany_list {
+      float: right;
+      border: 1px solid $almostblack;
+      margin: 10px 0px;
+    }
+
+  .event-access{
+    padding: 10px 0px;
+    @include nimbus-reg;
+      a{
+      color: $red;
+      }
+      i{
+      font-size:20px;
+      position: relative;
+      top: -2px;
+      }
+    }
+
+   .event-date-time{
+    @include nimbus-reg;
+    font-size: ms(1);
+    padding: 20px 0px 5px 0px;
+    clear: both;
+   }
+  .event-location{
+    @include nimbus-bold-reg;
+    font-size: ms(1);
+    padding: 0px 0px 15px 0px;
+    clear: both;
+    }
+
+
+  .event-prices{
+    padding: 20px 0px;
+    }
+
+  .price-free{
+    @include price;
+    padding: 20px 0px;
+  }
+
+  .event-price-notes{
+    padding: 10px 0px;
+    @include nimbus-reg;
+    font-size: ms(0);
+  }
+
+  .view-agoc-event-sections {
+  .views-row {
+    position: relative;
+  }
+
+  .views-field-field-agoc-ticket-link {
+    margin-top: ms();
+    position: relative;
+    @include breakpoint ($narrow-screen) {
+      float: right;
+      position: absolute;
+      right: 3%;
+      top: 0%;
+    }
+  }
+}
+
+}
+
+
+.block-views-blockagoc-event-sections-event-sections {
+  display: inline-block;
+  width: 100%;
+  margin-top: ms();
+  font-family: $font-set-2;
+  .view-agoc-event-sections {
+    .view-content {
+      .views-row {
+        padding: ms();
+        background-color: $light-grey;
+        border-bottom: 1px solid $almostblack;
+        &:first-child {
+          border-top: 1px solid $almostblack;
+        }
+      }
+    }
+  }
+  .views-field-body {
+    color: $dark-grey;
+    p{
+    margin: 0em;
+    }
+  }
+}
+
+.block-views-blockwhats-on-ticketing {
+  padding: 10px 0px;
+  margin-bottom: ms();
+
+  width: 100%;
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .views-row {
+    padding: ms();
+    background-color: $light-grey;
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid $dark-grey;
+    &:first-child {
+      border-top: 1px solid $dark-grey;
+    }
+  }
+  .views-field-field-start-time {
+    float: left;
+    h3 {
+      font-size: ms(1);
+      margin-bottom: 10px;
+      line-height: 2em;
+    }
+  }
+  .views-field-field-ticketing-status {
+    float: none;
+    clear: left;
+    @include breakpoint (max-width $narrow-screen) {
+      float: inherit;
+      clear: both;
+    }
+  }
+  .btn-free {
+    font-size: ms(2);
+    text-transform: uppercase;
+    font-family: $font-set-3;
+    @include antialiased;
+  }
+
+}
+
+.block-views-blockwhat-s-on-ago-ticketing{
+        display: none;
+      }
+
+
+.block-views-blockwhats-on-similar-events {
+  padding-top: ms(4);
+  .view-empty {
+    font-weight: 300;
+    margin: 0 0 1em 0;
+
+    a {
+      color: $red;
+    }
+  }
+}
+
+.block-views-blockwhats-on-similar-events {
+  padding-top: 20px;
+  border-top:1px solid #757575;
+  @include breakpoint($narrow-screen) {
+    padding-top: 0px;
+  }
+  padding-bottom: 20px;
+  h2{margin-bottom: 0;}
+  @include breakpoint ($weird-screen) {
+  border-top:hidden;
+  }
+  .media--view-mode-card-image,
+  .field--name-field-media-image {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  .view-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card-4col {
+    height: auto;
+    width: auto;
+    flex: 0 1 100%;
+    max-width: 100%;
+    float: none;
+    clear: none;
+
+    @include breakpoint($small-screen) {
+      flex: 0 48.93617%;
+      max-width: 48.93617%;
+    }
+
+    @include breakpoint($medium-screen) {
+      flex: 0 1 23.40426%;
+      max-width: 23.40426%;
+    }
+
+    .date-time-info {
+      font-family: $font-set-2;
+      color: $neutral-grey;
+      margin-bottom: ms();
+      font-size: 1em;
+      margin-top: 0.88889em;
+      margin-bottom: 1em;
+      font-weight: $normal;
+
+      @include breakpoint($small-screen) {
+        font-size: 1.125em;
+      }
+    }
+  }
+}
+
+.event-category {
+  @include category-label;
+  font-size: ms(3);
+}
+
+.course-members-message{
+  .more-link{
+    display: inline-block;
+  }
+}
+
+.event-ticket-note{
+  display: block;
+  clear: left;
+  p{
+    font-size: ms(-1);
+    }
+}
+
+.event-heading{
+  display:none;
+  @include breakpoint ($narrow-screen){
+    display:block;
+  }
+}
+
+.event-heading-mobile{
+  display: block;
+  @include breakpoint ($narrow-screen){
+    display:none;
+  }
+  h1{
+    margin-bottom: 20px;
+    }
+}
+
+.ticketing-info{
+  h2{
+    padding-bottom: 10px;
+  }
+}
+
+

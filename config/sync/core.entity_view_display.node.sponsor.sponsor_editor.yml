@@ -1,0 +1,58 @@
+uuid: ed3551e0-1965-4966-9b5c-099b1c0e2417
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.sponsor_editor
+    - field.field.node.sponsor.body
+    - field.field.node.sponsor.field_org_additional_text
+    - field.field.node.sponsor.field_org_website
+    - field.field.node.sponsor.field_sponsor_logo_tier_1
+    - field.field.node.sponsor.field_sponsor_logo_tier_2
+    - field.field.node.sponsor.field_sponsor_logo_tier_3a
+    - field.field.node.sponsor.field_sponsor_logo_tier_3b
+    - field.field.node.sponsor.field_sponsor_text
+    - node.type.sponsor
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks: {  }
+      blacklisted_blocks: {  }
+      allowed_layouts: {  }
+id: node.sponsor.sponsor_editor
+targetEntityType: node
+bundle: sponsor
+mode: sponsor_editor
+content:
+  field_org_website:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  field_org_additional_text: true
+  field_sponsor_logo_tier_1: true
+  field_sponsor_logo_tier_2: true
+  field_sponsor_logo_tier_3a: true
+  field_sponsor_logo_tier_3b: true
+  field_sponsor_text: true
+  links: true
+  search_api_excerpt: true

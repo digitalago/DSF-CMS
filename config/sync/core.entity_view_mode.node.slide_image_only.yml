@@ -1,0 +1,10 @@
+uuid: 2fbdf79f-c045-45da-af95-b76353c4e9bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.slide_image_only
+label: 'Slide Image Only'
+targetEntityType: node
+cache: true

@@ -1,0 +1,24 @@
+uuid: b0cd1f29-afc3-49d3-9b0c-7f4d3d936f93
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: Local
+description: ''
+folder: ../config/envs/local
+module:
+  devel: 0
+  devel_debug_log: 0
+  kint: 0
+  serialization: 0
+theme: {  }
+blacklist: {  }
+graylist:
+  - devel.settings
+  - devel.toolbar.settings
+  - serialization.settings
+  - system.menu.devel
+  - system.performance
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

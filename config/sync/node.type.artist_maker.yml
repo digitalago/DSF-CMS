@@ -1,0 +1,17 @@
+uuid: 57b21afa-0665-4e81-bab7-44d54e99dfd8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Artist/Maker
+type: artist_maker
+description: 'Holds information about artist/makers of the objects.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

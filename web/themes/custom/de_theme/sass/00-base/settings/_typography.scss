@@ -1,0 +1,25 @@
+// @type settings    ==============================================
+
+// ===== Font Awesome
+
+$fa-font-path: '../../../fonts/webfonts';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/variables';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/brands';
+
+
+// modular scale settings are located in typography/_modular-scale.scss
+
+$light: 100;
+$normal: 300;
+$medium: 600;
+$bold: 700;
+$ultra-bold: 900;
+
+
+$font-set-1b: 'Alternate Gothic No3 D Regular', 'nimbus-sans', Helvetica, sans-serif;
+
+$font-set-1: 'Knockout 28 A', 'Knockout 28 B', 'Alternate Gothic No3 D Regular', 'nimbus-sans', sans-serif;
+$font-set-2: 'nimbus-sans', Helvetica, Arial, sans-serif;
+$font-set-3: 'Knockout 48 A', 'Knockout 48 B', 'Alternate Gothic No3 D Regular', 'nimbus-sans', sans-serif;
+$font-set-4: 'nimbus-sans-novus','nimbus-sans', Helvetica, Arial, sans-serif;

@@ -1,0 +1,226 @@
+// General button styling
+@mixin btn{
+  display: inline-block;
+  position: relative;
+  font-size: ms(1);
+  font-weight: $normal;
+  overflow: hidden;
+  text-decoration: none;
+  vertical-align: bottom;
+  transition: background-color .3s ease-out, border-color .3s ease-out;
+  margin-right: ms();
+  margin-bottom: ms();
+  @include reset-tap;
+  text-decoration: none;
+  -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+
+// Black button styles, eg. submit buttons
+@mixin btn-black{
+  background-color: $almostblack;
+  border: 1px solid $almostblack;
+  color: white;
+  text-transform: uppercase;
+  font-family: $font-set-3;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 10px 10px 10px 10px;
+  -webkit-border-radius: 0;
+  -webkit-font-smoothing: antialiased;
+    border-radius: 0;
+  &:hover{
+    color: $almostblack;
+    background-color: white;
+    border: 1px solid $almostblack;
+  }
+}
+
+
+
+// Red button styles, eg. cancel or preview buttons
+@mixin btn-red{
+  border: 1px solid $red;
+  background-color: $red;
+  color: white;
+  text-transform: uppercase;
+  font-family: $font-set-3;
+  letter-spacing: 1px;
+  text-decoration: none;
+  -webkit-border-radius: 0;
+  -webkit-font-smoothing: antialiased;
+    border-radius: 0;
+  &:hover,&:focus{
+    color: $red;
+    background-color: white;
+    border: 1px solid $red;
+
+  }
+}
+
+@mixin btn-grey {
+  border: 1px solid $contrastgrey;
+  background-color: $contrastgrey;
+  color: white;
+  text-transform: uppercase;
+  font-family: $font-set-3;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-border-radius: 0;
+  -webkit-font-smoothing: antialiased;
+    border-radius: 0;
+  &:hover,&:focus{
+    background-color: white;
+    border: 1px solid $contrastgrey;
+    color: $contrastgrey;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin btn-white{
+  border: 1px solid $almostblack;
+  background-color: $white;
+  color: $almostblack;
+  text-transform: uppercase;
+  font-family: $font-set-3;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-border-radius: 0;
+  -webkit-font-smoothing: antialiased;
+    border-radius: 0;
+  &:hover,&:focus{
+    background-color: $almostblack;
+    border: 1px solid $almostblack;
+    color: $white;
+  }
+}
+
+
+@mixin btn-big{
+  font-size: ms(3);
+  padding: 10px 15px 10px 15px;
+  -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+@mixin btn-really-big{
+  font-size: ms(5);
+  padding: 10px 15px 10px 15px;
+  -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+
+// a flat simple button style with no default background color.
+// NOT an extension of .btn
+@mixin btn-flat{
+  border: 1px solid $almostblack;
+  font-size: ms(-1);
+  padding: ms(-2) ms();
+  background-color: $white;
+  color: $almostblack;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-border-radius: 0;
+    border-radius: 0;
+  &:hover {
+    background-color: $almostblack;
+    border: 1px solid $almostblack;
+    color: white;
+  }
+}
+
+@mixin btn-white-nimbus{
+  @include btn-flat;
+  @include nimbus-reg;
+  // padding: 7px 10px 3px 10px;
+  // line-height: 1.6em;
+}
+
+
+@mixin btn-cta{
+  -webkit-border-radius: 0;
+    border-radius: 0;
+  &:hover,&:focus, &:active {
+    color: tint(black, 35%);
+  }
+}
+
+@mixin btn-view {
+  @include btn-flat;
+  font-family: $font-set-2;
+  padding: 7px 12px 3px 36px;
+  position: relative;
+
+  &:before {
+    content: '\e8ef';
+    @include material-icon;
+  }
+}
+
+@mixin material-icon{
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    padding-right: 13px;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    top: 7px;
+    left: 0;
+    padding: 0px 7px;
+    position: absolute;
+}
+
+
+@mixin btn-grid {
+  @include btn-flat;
+  font-family: $font-set-2;
+  padding: 7px 12px 3px 36px;
+  position: relative;
+  &:before {
+    content: '\e8f0';
+    @include material-icon;
+  }
+}
+
+@mixin btn-compare {
+  border: 1px solid $red;
+  background-color: $red;
+  color: white;
+  @include nimbus-reg;
+  padding: 10px 12px 10px 36px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-border-radius: 0;
+    border-radius: 0;
+  &:before {
+    content: '\e3b9';
+    @include material-icon;
+    }
+    &:hover {
+    background-color: $white;
+    border: 1px solid $red;
+    color: $red;
+  }
+
+}
+
+@mixin btn-zoom {
+  @include btn-flat;
+  padding: 7px 12px 3px 36px;
+  position: relative;
+  -webkit-border-radius: 0;
+    border-radius: 0;
+  margin-right: 3px;
+  &:before {
+    content: '\e56b';
+    @include material-icon;
+    }
+
+}

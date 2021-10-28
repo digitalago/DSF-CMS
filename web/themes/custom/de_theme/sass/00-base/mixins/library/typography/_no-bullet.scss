@@ -1,0 +1,6 @@
+@mixin no-bullet{
+  list-style-image: none;
+  list-style-type: none;
+  list-style: none;
+  margin-left: 0;
+}

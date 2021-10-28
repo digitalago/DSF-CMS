@@ -1,0 +1,93 @@
+uuid: 625fc81d-a6d7-4356-93f3-213d482b91c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.video.field_category
+    - field.field.media.video.field_credits
+    - field.field.media.video.field_description
+    - field.field.media.video.field_license
+    - field.field.media.video.field_media_duration
+    - field.field.media.video.field_media_subject
+    - field.field.media.video.field_media_thumbnail
+    - field.field.media.video.field_media_video_embed_field
+    - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_release_date
+    - field.field.media.video.field_tags
+    - field.field.media.video.field_video_title
+    - media.type.video
+  module:
+    - video_embed_field
+id: media.video.default
+targetEntityType: media
+bundle: video
+mode: default
+content:
+  field_category:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_credits:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_description:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_media_duration:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_subject:
+    weight: 5
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_media_video_embed_field:
+    label: hidden
+    settings:
+      autoplay: true
+      responsive: true
+      width: 854
+      height: 480
+    third_party_settings: {  }
+    type: video_embed_field_video
+    weight: 0
+    region: content
+  name:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_license: true
+  field_media_thumbnail: true
+  field_media_video_file: true
+  field_release_date: true
+  field_tags: true
+  field_video_title: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

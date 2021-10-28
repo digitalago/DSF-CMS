@@ -1,0 +1,10 @@
+uuid: 8436c24e-dedc-4f21-b793-04b01ad85a00
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.grid_no_description
+label: 'Grid - No Description'
+targetEntityType: block_content
+cache: true

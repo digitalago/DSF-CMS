@@ -1,0 +1,30 @@
+uuid: eeb93d19-b54a-4a39-b64f-bc15e915d66c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.alert
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: views_block__alert_block_alert_front
+theme: de_theme
+region: branding
+weight: -36
+provider: null
+plugin: 'views_block:alert-block_alert_front'
+settings:
+  id: 'views_block:alert-block_alert_front'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

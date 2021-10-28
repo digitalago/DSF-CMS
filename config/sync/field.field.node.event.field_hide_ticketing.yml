@@ -1,0 +1,23 @@
+uuid: 854b5985-0dbe-46ad-90aa-d595f3fcf769
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_ticketing
+    - node.type.event
+id: node.event.field_hide_ticketing
+field_name: field_hide_ticketing
+entity_type: node
+bundle: event
+label: 'Hide Ticketing Info'
+description: 'Check to hide ticketing info.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

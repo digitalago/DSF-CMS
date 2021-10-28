@@ -1,0 +1,10 @@
+uuid: bdd28b4e-6fc4-468d-80c0-7cec03ed4499
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.experience
+label: Experience
+targetEntityType: block_content
+cache: true

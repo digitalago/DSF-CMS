@@ -1,0 +1,5 @@
+@mixin no-drag-image {
+    user-drag: none;
+    // -moz-user-select: none;
+    // -webkit-user-drag: none;
+}

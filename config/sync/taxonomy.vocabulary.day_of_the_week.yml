@@ -1,0 +1,8 @@
+uuid: bca4e671-e9af-4b5d-9ad8-ffc1e59dc69b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Day of the Week'
+vid: day_of_the_week
+description: 'This is to be used for filters and future Day of the Week items.'
+weight: 0

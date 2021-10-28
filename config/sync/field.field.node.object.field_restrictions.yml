@@ -1,0 +1,19 @@
+uuid: 0e43e3b0-a53c-444f-8a98-c18dda7c6a41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_restrictions
+    - node.type.object
+id: node.object.field_restrictions
+field_name: field_restrictions
+entity_type: node
+bundle: object
+label: Restrictions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

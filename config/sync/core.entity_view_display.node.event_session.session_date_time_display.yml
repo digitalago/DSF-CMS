@@ -1,0 +1,57 @@
+uuid: 8613dec5-dc6c-4e84-a2e9-37d5a867efc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.session_date_time_display
+    - field.field.node.event_session.body
+    - field.field.node.event_session.field_end_date
+    - field.field.node.event_session.field_end_time
+    - field.field.node.event_session.field_start_date
+    - field.field.node.event_session.field_start_time
+    - field.field.node.event_session.field_ticket_link
+    - field.field.node.event_session.field_ticketing_status
+    - node.type.event_session
+  module:
+    - datetime
+    - layout_builder
+    - options
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.event_session.session_date_time_display
+targetEntityType: node
+bundle: event_session
+mode: session_date_time_display
+content:
+  field_start_date:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_start_time:
+    type: list_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_end_date: true
+  field_end_time: true
+  field_ticket_link: true
+  field_ticketing_status: true
+  search_api_excerpt: true

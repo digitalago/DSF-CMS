@@ -1,0 +1,70 @@
+/* 20-patterns/drupal/_view-displays.scss */
+
+// grid display with or without images. you can tweak these, but if you
+// are doing heavy styling, it's suggested you enhance these in a separate partial
+// remember to use matchHeight on the .views-row elements in js/script.js
+
+.grid-display{
+  @include breakpoint($narrow-screen) {
+    .views-row{
+      @include float-span(6);
+      &:nth-child(2n+2){
+        @include float-span(6,'last');
+      }
+    }
+  }
+  // no sidebars AND one second sidebar (may need to separate)
+  .no-sidebars &,
+  .one-sidebar.sidebar-second{
+    @include breakpoint($standard-screen) {
+      .views-row{
+        @include float-span(4);
+        &:nth-child(2n+2){
+          @include float-span(4);
+        }
+        &:nth-child(3n+3) {
+          @include float-span(4,'last');
+        }
+      }
+    }
+  }
+}
+
+
+// list display with or without images
+
+%list-display{
+  li,
+  .views-row{
+    @include divider-line;
+  }
+  // generates list-display--images
+  // &--images{
+  //   .field-name-field-image{
+  //     @include breakpoint($narrow-screen) {
+  //       @include float-span(4, $gutter: 1);
+  //     }
+  //     @include breakpoint($standard-screen) {
+  //       @include float-span(5, $gutter: 1);
+  //     }
+  //     margin-bottom: 0;
+  //   }
+
+  //   .views-field-title,
+  //   .views-field-body,
+  //   .views-field-field-date,
+  //   .views-field-field-posted-date,
+  //   .views-field-view-node{
+  //     @include breakpoint($narrow-screen) {
+  //       @include float-span(8,'last', $gutter: 1);
+  //     }
+  //     @include breakpoint($standard-screen) {
+  //       @include float-span(7,'last', $gutter: 1);
+  //     }
+  //   }
+
+  //   .views-field-body p:last-child{
+  //     margin-bottom: 0;
+  //   }
+  // }
+}

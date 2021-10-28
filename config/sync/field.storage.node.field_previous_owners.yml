@@ -1,0 +1,20 @@
+uuid: ed5d8955-5338-4261-bfbe-998ba310ec97
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_previous_owners
+field_name: field_previous_owners
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

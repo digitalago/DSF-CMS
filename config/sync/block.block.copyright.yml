@@ -1,0 +1,31 @@
+uuid: e26f4aa0-0ab3-4f5b-b075-e198413db038
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:986f5dcd-67fe-4f2a-80ca-0d9e153c9c2a'
+  module:
+    - block_content
+    - system
+  theme:
+    - de_theme
+id: copyright
+theme: de_theme
+region: footer
+weight: -13
+provider: null
+plugin: 'block_content:986f5dcd-67fe-4f2a-80ca-0d9e153c9c2a'
+settings:
+  id: 'block_content:986f5dcd-67fe-4f2a-80ca-0d9e153c9c2a'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /ago
+    negate: true
+    context_mapping: {  }

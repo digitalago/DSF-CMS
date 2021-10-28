@@ -1,0 +1,8 @@
+uuid: 771e7c4f-a5cc-43b0-a9b3-24d66ac3322e
+langcode: en
+status: true
+dependencies: {  }
+id: card_container
+label: 'Card Container'
+revision: 0
+description: ''

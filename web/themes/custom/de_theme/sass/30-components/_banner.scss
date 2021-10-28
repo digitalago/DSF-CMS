@@ -1,0 +1,93 @@
+//Style for banner image
+
+#banner {
+  @include clearfix;
+  display: block;
+  overflow: hidden;
+}
+
+.no-bg {
+  display: none;
+}
+
+.node--type-lesson-plan, .node--type-page, {
+  .banner-wrapper.has-bg{
+    background-position: center;
+    background-size: cover;
+    min-height: 200px;
+    max-height: 300px;
+    @include breakpoint ($weird-screen) {
+      min-height: 350px;
+      max-height: 960px;
+    }
+  }
+}
+
+//Banner image style for publication content type
+.node--type-publication, .node--type-exhibition-boxwood {
+  .banner-wrapper.has-bg{
+    background-position: center;
+    background-size: cover;
+    min-height: 210px;
+    max-height: 350px;
+    @include breakpoint ($small-screen) {
+      min-height: 350px;
+      max-height: 400px;
+    }
+    @include breakpoint ($weird-screen) {
+      min-height: 450px;
+      max-height: 500px;
+    }
+    @include breakpoint ($wxga-screen) {
+      min-height: 600px;
+      max-height: 650px;
+    }
+    .views-row {
+      color: white;
+      margin: 10% 0 0 0;
+      width: 50%;
+      @include breakpoint ($narrow-screen) {
+        margin: 15% 0 0 8%;
+      }
+      @include breakpoint ($medium-screen) {
+        margin: 12% 0 0 8%;
+      }
+      @include breakpoint ($wide-screen) {
+        margin: 10% 0 0 14%;
+      }
+      @include breakpoint (max-width $narrow-screen) {
+        padding: ms() ms(3);
+        width: 100%;
+        background: rgba(0,0,0, .4);
+      }
+     // h1 {
+     //   font-weight: $normal;
+     //   font-size: ms(4);
+     //   line-height: ms();
+     //   letter-spacing: 1px;
+     //   @include breakpoint ($small-screen) {
+     //     font-size: ms(6);
+     //   }
+     //   @include breakpoint ($medium-screen) {
+     //     font-size: ms(8);
+     //   }
+    //}
+     // span {
+     //   font-size: ms();
+     //   font-weight: $normal;
+     //   @include breakpoint ($small-screen) {
+     //     font-size: ms(1);
+     //   }
+     //   @include breakpoint ($medium-screen) {
+     //     font-size: ms(2);
+     //   }
+     // }
+      p {
+        font-size: ms(1);
+        @include breakpoint ($small-screen) {
+          font-size: ms(3);
+        }
+      }
+    }
+  }
+}

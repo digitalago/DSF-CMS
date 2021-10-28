@@ -1,0 +1,14 @@
+uuid: 3306eba0-c0c4-4ee6-bff7-c7fa889fddc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.course_access
+  module:
+    - user
+id: user_remove_role_action.course_access
+label: 'Remove the Courses Access role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: course_access

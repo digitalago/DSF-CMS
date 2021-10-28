@@ -1,0 +1,19 @@
+uuid: 7a88f76f-3592-4172-a570-14d0e6c91d0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_text
+    - node.type.object
+id: node.object.field_date_text
+field_name: field_date_text
+entity_type: node
+bundle: object
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

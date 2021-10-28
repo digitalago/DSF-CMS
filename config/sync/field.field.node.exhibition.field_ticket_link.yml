@@ -1,0 +1,23 @@
+uuid: 46fcff99-0c9c-44d1-8d59-85d498ff22d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ticket_link
+    - node.type.exhibition
+  module:
+    - link
+id: node.exhibition.field_ticket_link
+field_name: field_ticket_link
+entity_type: node
+bundle: exhibition
+label: 'Ticket Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

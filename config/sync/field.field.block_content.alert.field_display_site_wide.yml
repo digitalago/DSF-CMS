@@ -1,0 +1,23 @@
+uuid: 937380e2-db1d-4028-ad6b-3cbe6e44c0a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alert
+    - field.storage.block_content.field_display_site_wide
+id: block_content.alert.field_display_site_wide
+field_name: field_display_site_wide
+entity_type: block_content
+bundle: alert
+label: 'Display Site-wide'
+description: 'Select to display the Alert on all pages, excluding the Front.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

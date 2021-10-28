@@ -1,0 +1,21 @@
+uuid: 44597447-2f2d-4f38-8553-cbb7018048f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_release_date
+    - node.type.press_release
+  module:
+    - datetime
+id: node.press_release.field_press_release_date
+field_name: field_press_release_date
+entity_type: node
+bundle: press_release
+label: 'Press Release Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

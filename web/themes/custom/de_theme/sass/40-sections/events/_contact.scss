@@ -1,0 +1,109 @@
+// ----------
+// Contact
+// ----------
+
+.contact-us {
+  background: #1f1f1f;
+  color: $white;
+  padding-top: ms(2)*4;
+  padding-bottom: ms(2)*4;
+
+  .text {
+    > p {
+      font-size: ms(1);
+      color: $white;
+      max-width: 786px;
+    }
+  }
+
+  label {
+    @include filter-label;
+  }
+
+  input, textarea {
+    font-size: ms(1);
+    color: $almostblack;
+  }
+
+  textarea {
+    margin: ms(-4) 0;
+  }
+
+  input[type=submit] {
+    color: $white;
+    font-size: ms(1);
+    margin-left: 0;
+
+    &:hover, &:focus {
+      color: $black;
+    }
+  }
+
+  select {
+    background-color: $white;
+    background-size: 24px;
+    background-position: right 1em center;
+    color: $black;
+    display: block;
+    font-size: ms(1);
+    padding: .75em;
+    margin: ms(-4) 0 ms(1);
+    width: 62%;
+    min-width: 15em;
+  }
+
+  .form-item, .form-email {
+    @media all and (min-width: 767px) {
+      width: 1048/1700*100%;
+      width: 1048/1920*100vw;
+    }
+  }
+
+  .form-email {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid black;
+    padding: .75em;
+    margin: 0.6243em 0;
+    box-sizing: border-box;
+    font-family: "nimbus-sans", sans-serif;
+  }
+
+  input[type=submit] {
+    float: left;
+    display: block;
+    clear: both;
+    border-color: #fff;
+  }
+
+  .form-type-select, .field--widget-string-textarea, .form-item-phone {
+    float: left;
+    display: block;
+    clear: both;
+  }
+}
+
+.contact-message-feedback-form {
+  // float: left;
+//  @extend .layout-container;
+  padding: 0;
+
+  > .form-item {
+    @media all and (min-width: 767px) {
+      &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        float: left;
+        width: 503/1700*100%;
+        width: 503/1920*100vw;
+      }
+
+      &:nth-child(1) {
+        margin-right: 42/1700*100%;
+        margin-right: 42/1920*100vw;
+      }
+    }
+  }
+}
+
+.region--content {
+  margin-bottom: 0;
+}

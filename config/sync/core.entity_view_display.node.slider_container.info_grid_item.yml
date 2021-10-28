@@ -1,0 +1,86 @@
+uuid: a21bbe06-7357-4d18-ba62-e3e8b3b30bd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.info_grid_item
+    - field.field.node.slider_container.body
+    - field.field.node.slider_container.field_arrows
+    - field.field.node.slider_container.field_autoplay
+    - field.field.node.slider_container.field_display_image_credits
+    - field.field.node.slider_container.field_display_location
+    - field.field.node.slider_container.field_display_on_front
+    - field.field.node.slider_container.field_display_slide_date_ti
+    - field.field.node.slider_container.field_display_slide_descrip
+    - field.field.node.slider_container.field_display_slide_titles
+    - field.field.node.slider_container.field_display_slider_descri
+    - field.field.node.slider_container.field_display_title
+    - field.field.node.slider_container.field_image
+    - field.field.node.slider_container.field_pager
+    - field.field.node.slider_container.field_show_title
+    - field.field.node.slider_container.field_slide_container_class
+    - field.field.node.slider_container.field_slide_container_place
+    - field.field.node.slider_container.field_slide_timer
+    - field.field.node.slider_container.field_slider_background_col
+    - field.field.node.slider_container.field_slider_items
+    - field.field.node.slider_container.field_slider_transitions
+    - field.field.node.slider_container.field_slider_type
+    - field.field.node.slider_container.field_slider_width
+    - node.type.slider_container
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.slider_container.info_grid_item
+targetEntityType: node
+bundle: slider_container
+mode: info_grid_item
+content:
+  field_display_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: card_image
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_arrows: true
+  field_autoplay: true
+  field_display_image_credits: true
+  field_display_location: true
+  field_display_on_front: true
+  field_display_slide_date_ti: true
+  field_display_slide_descrip: true
+  field_display_slide_titles: true
+  field_display_slider_descri: true
+  field_pager: true
+  field_show_title: true
+  field_slide_container_class: true
+  field_slide_container_place: true
+  field_slide_timer: true
+  field_slider_background_col: true
+  field_slider_items: true
+  field_slider_transitions: true
+  field_slider_type: true
+  field_slider_width: true
+  search_api_excerpt: true

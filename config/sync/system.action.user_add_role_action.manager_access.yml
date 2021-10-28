@@ -1,0 +1,14 @@
+uuid: 6d9b3a67-7781-4274-8538-d8f03544efa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.manager_access
+  module:
+    - user
+id: user_add_role_action.manager_access
+label: 'Add the Manager Access role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: manager_access

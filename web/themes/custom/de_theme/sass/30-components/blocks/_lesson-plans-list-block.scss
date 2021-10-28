@@ -1,0 +1,192 @@
+/* 30-components/block/_lesson-plans-list-block.scss*/
+// contains the styling of lesson plans blocks
+
+
+
+#edit-sumbit-lesson-plans{display: none;}
+
+
+#block-views-block-lesson-plans-lesson-plans {
+  display: block;
+  margin: 0 0 ms(2) 0;
+  // @include divider-line;
+  h2 {
+    float: left;
+    clear: left;
+    display: inline-block;
+  }
+  .form-item{margin-right: 0;}
+  .js-form-item{
+    width: 100%;
+    @include breakpoint (narrow-screen){
+    width: auto;
+    }
+    min-width: 200px;}
+  .view-filters {
+    float: left;
+    clear: left;
+    display: inline-block;
+    position: relative;
+    margin-top: 0;
+    width: 100%;
+    @include breakpoint ($narrow-screen) {
+      float: right;
+      clear: right;
+      width: auto;
+    }
+    label {
+      font-weight: $normal;
+      float: left;
+      margin-bottom: ms(-5);
+      @include breakpoint (340px) {
+       // float: right;
+      }
+    }
+    select {
+      clear: both;
+      display: inline-block;
+      width: 100%;
+      float: right;
+      height: 38px;
+      margin-top: 3px;
+      margin-right: 0;
+      background-size: 9%;
+      @include breakpoint ($narrow-screen) {
+      
+        background-size: 15%;
+      }
+      // padding: ms(-3) ms();
+    }
+    .form-item-field-grade-target-id {
+      float: left;
+      display: inline-block;
+      width: 100%;
+    }
+    .form-actions {
+      display: none;
+      float: left;
+      clear: left;
+      margin-top: 0;
+      @include breakpoint (340px) {
+        margin-top: ms(3);
+        float: right;
+        clear: right;
+      }
+    }
+
+  }
+  .view-empty{
+    clear: left;
+    display: block;
+  }
+  .view-content {
+    position: relative;
+    clear: both;
+    .views-row {
+      display: inline-block;
+      position: relative;
+     // @include divider-line;
+     // padding-top: ms();
+      &:last-child {
+        border-bottom: none;
+      }
+      @include breakpoint ($narrow-screen) {
+      //  padding-top: ms(3);
+      }
+      .views-field-field-image {
+        @include float-span(12);
+        margin-right: 0;
+        margin-bottom: ms(1);
+        @include breakpoint ($small-screen) {
+          @include float-span(5);
+          // min-height: 300px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      .view-wrapper {
+        @include float-span(12);
+        @include breakpoint ($small-screen) {
+          @include float-span(6,7);
+          width: 52%;
+        }
+      }
+      .views-field-title {
+        a {
+          text-decoration: none;
+          font-size: ms();
+          @include breakpoint ($weird-screen) {
+            font-size: ms();
+          }
+          &:hover, &:active, &:focus {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .views-field-field-grade {
+        font-weight: $medium;
+        padding-bottom: ms(-2);
+        font-family: $font-set-2;
+      }
+      .read-more {
+        float: left;
+        a {
+          @include btn;
+          @include btn-red;
+        }
+      }
+      .download {
+        a {
+          @include btn;
+          @include btn-black;
+          text-transform: capitalize;
+          font-family: $font-set-2;
+          font-size: ms();
+          padding: ms(-2) ms() !important;
+        }
+      }
+      .file--application-pdf {
+        background: none;
+      }
+    }
+  }
+}
+
+
+  //Sidebar
+  #block-teacherandstudentsresourceslinks {
+    @include clearfix;
+    @include breakpoint (max-width $medium-screen) {
+      margin-bottom: ms(1);
+    }
+    ul.anchor-nav {
+      padding-left: 0;
+      li {
+        list-style-type: none;
+        list-style: none;
+        margin: 0;
+        a {
+          width: 100%;
+          color: white;
+          background-color: $red;
+          text-decoration: none;
+          padding: ms(-1) ms();
+          transition: all .3s ease-out;
+          display: inline-block;
+          font-weight: $bold;
+          border-bottom: 2px solid white;
+          font-family: $font-set-2;
+          @include breakpoint ($medium-screen) {
+            border-bottom: 1px solid white;
+          }
+          &:hover, &:active, &:focus {
+            background-color: black;
+          }
+        }
+      }
+    }
+  }
+
+

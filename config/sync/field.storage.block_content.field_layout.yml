@@ -1,0 +1,39 @@
+uuid: 8aa6e3e2-09d5-4e05-9aab-15a7b4564a4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_layout
+field_name: field_layout
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: one
+      label: '1 Column'
+    -
+      value: two
+      label: '2 Columns'
+    -
+      value: three
+      label: '3 Columns'
+    -
+      value: four
+      label: '4 Columns'
+    -
+      value: five
+      label: '5 Columns'
+    -
+      value: six
+      label: '6 Columns'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

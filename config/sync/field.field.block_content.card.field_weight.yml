@@ -1,0 +1,24 @@
+uuid: 3c59c684-ee01-4c94-bab4-6191b60a5c17
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.storage.block_content.field_weight
+  module:
+    - weight
+id: block_content.card.field_weight
+field_name: field_weight
+entity_type: block_content
+bundle: card
+label: Weight
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  range: '20'
+field_type: weight

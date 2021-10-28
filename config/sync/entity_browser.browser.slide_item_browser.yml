@@ -1,0 +1,42 @@
+uuid: 2b2b3700-7088-42b6-9611-4c93a723496e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.content_browsers
+  module:
+    - entity_browser_entity_form
+    - views
+name: slide_item_browser
+label: 'Slide Item Browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Add New / Select Slides'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  844a00a5-f14c-463a-8677-2f164149ee8c:
+    settings:
+      entity_type: node
+      bundle: slider_item
+      form_mode: inline_form_default
+      submit_text: 'Save Slide'
+    uuid: 844a00a5-f14c-463a-8677-2f164149ee8c
+    weight: -9
+    label: 'New Slide'
+    id: entity_form
+  e1d94a8b-e0ff-4442-a596-b46df61efb39:
+    settings:
+      view: content_browsers
+      view_display: slide_item_browser
+      submit_text: 'Select Slides'
+      auto_select: false
+    uuid: e1d94a8b-e0ff-4442-a596-b46df61efb39
+    weight: -10
+    label: 'Select Slides'
+    id: view

@@ -1,0 +1,23 @@
+.section-content {
+  > #page-content-prefix {
+    #back-to-exhibitions {
+      padding-top: 2.25em;
+      padding-bottom: ms(1);
+      position: relative;
+      padding-left: 24px;
+      a {
+        &:before {
+          content: '\e5c4';
+          display: inline-block;
+          padding-right: 13px;
+          font-family: 'Material Icons';
+          font-size: 20px;
+          // top: 7px;
+          left: 0;
+          // padding: 0;
+          position: absolute;
+        }
+      }
+    }
+  }
+}

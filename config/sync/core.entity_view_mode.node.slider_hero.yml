@@ -1,0 +1,10 @@
+uuid: 39eb46fa-5829-4f8e-bd56-639dcd892403
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.slider_hero
+label: 'Slider Hero'
+targetEntityType: node
+cache: true

@@ -1,0 +1,63 @@
+uuid: 36a03914-0724-4303-ba6f-db11a54e65ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - core.entity_view_mode.block_content.info_grid
+    - field.field.block_content.card.body
+    - field.field.block_content.card.field_image
+    - field.field.block_content.card.field_link
+    - field.field.block_content.card.field_page_to_appear_view
+    - field.field.block_content.card.field_title_display
+    - field.field.block_content.card.field_view_mode
+    - field.field.block_content.card.field_weight
+    - image.style.info_card
+  module:
+    - layout_builder
+    - link
+    - media
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: block_content.card.info_grid
+targetEntityType: block_content
+bundle: card
+mode: info_grid
+content:
+  body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    type: media_thumbnail
+    weight: 0
+    label: hidden
+    settings:
+      image_style: info_card
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_link:
+    type: link
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+hidden:
+  field_page_to_appear_view: true
+  field_title_display: true
+  field_view_mode: true
+  field_weight: true
+  search_api_excerpt: true

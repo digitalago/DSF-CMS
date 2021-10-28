@@ -1,0 +1,22 @@
+uuid: 8599bb05-fb9a-40e7-9906-41f9d0c28f35
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: blog
+label: Blog
+type: 'canonical_entities:node'
+pattern: '/agoinsider/[node:title]'
+selection_criteria:
+  b57848e4-a6bc-4932-aab3-8a318f3586a3:
+    id: node_type
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b57848e4-a6bc-4932-aab3-8a318f3586a3
+selection_logic: and
+weight: -5
+relationships: {  }

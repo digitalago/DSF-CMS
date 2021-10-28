@@ -1,0 +1,13 @@
+/* _components.scss */
+// @imports all SASS partials from the /components folder.
+// contains styles for components constructed from objects and
+// their extensions, or detailed page design. eg. a sidebar call
+// to action that is styled specifically for events
+
+@import '30-components/blocks/index';
+@import '30-components/brand';
+@import '30-components/banner';
+@import '30-components/layout/index';
+@import '30-components/navigation/index';
+@import '30-components/iframe';
+@import '30-components/dags-component';

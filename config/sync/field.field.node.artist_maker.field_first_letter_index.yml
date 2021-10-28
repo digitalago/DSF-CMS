@@ -1,0 +1,19 @@
+uuid: 7f3e750e-86b7-44f0-a4c5-4f36d2cc767b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_first_letter_index
+    - node.type.artist_maker
+id: node.artist_maker.field_first_letter_index
+field_name: field_first_letter_index
+entity_type: node
+bundle: artist_maker
+label: 'First Letter Index'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

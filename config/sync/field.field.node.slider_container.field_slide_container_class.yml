@@ -1,0 +1,19 @@
+uuid: ce0485b9-65e2-46ee-abed-e0ae14099915
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide_container_class
+    - node.type.slider_container
+id: node.slider_container.field_slide_container_class
+field_name: field_slide_container_class
+entity_type: node
+bundle: slider_container
+label: 'Slide Container Class'
+description: 'This field is for Designers if they need a special class to make the container Unique'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

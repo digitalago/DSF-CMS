@@ -1,0 +1,78 @@
+//Style for event views -- boxwood?
+
+.view-events {
+  @include clearfix;
+  h1.page-title {
+    margin-bottom: ms(-5);
+  }
+  .views-row {
+    position: relative;
+    width: 100%;
+    margin-right: 0;
+    float: left;
+    padding: ms(2) 0 !important;
+    &:last-child {
+      border-bottom: none;
+    }
+    @include divider-line;
+    .views-field {
+      margin-bottom: ms();
+      margin-right: 0 !important;
+      margin-top: ms(-3);
+      width: 100%;
+      @include breakpoint ($narrow-screen) {
+        @include float-span(8);
+      }
+      // @include breakpoint ($weird-screen) {
+      //   margin-top: ms(-2);
+      // }
+    }
+    .views-field-field-image {
+      width: 100%;
+      display: inline-block;
+      position: relative;
+      max-width: 300px;
+      @include breakpoint ($narrow-screen) {
+        @include float-span(4);
+      }
+      img {
+        width: 100%;
+        // position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+
+    .views-field-title {
+      @include view-title;
+    }
+  }
+}
+
+
+
+
+.view-display-id-related_essays {
+  @include clearfix;
+  // h1.page-title {
+  //   margin-bottom: ms();
+  // }
+  .views-row {
+    @include divider-line;
+    width: 100%;
+    padding: ms(1) 0;
+    &:last-child {
+      border-bottom: none;
+    }
+    .views-field-title {
+      @include view-title;
+      margin-bottom: ms();
+    }
+    .views-field-view-node a {
+      @include btn-red;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+}

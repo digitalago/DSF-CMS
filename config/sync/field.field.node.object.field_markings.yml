@@ -1,0 +1,19 @@
+uuid: fced5499-1f7d-4c46-bc26-b22b2dd22bc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_markings
+    - node.type.object
+id: node.object.field_markings
+field_name: field_markings
+entity_type: node
+bundle: object
+label: Markings
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display AGO Mobile menu.
+ *
+ * Available variables:
+ * - menu_block: Main menu block.
+ * - btns: Search and buy tickets buttons
+ * - subsite_menu: menu of the subsites
+ * - header: header block that contains close button and AGO logo
+ *
+ * @see template_preprocess_ago_menu_mobile_menu_block().
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'main-menu-wrapper',
+  ]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="menu-block">
+    {{ menu_block }}
+  </div>
+  <div>
+  </div>
+</div>

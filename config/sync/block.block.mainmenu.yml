@@ -1,0 +1,26 @@
+uuid: 098e7906-8e33-41a4-aaca-c0decf5b1629
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu
+    - system
+  theme:
+    - de_theme
+id: mainmenu
+theme: de_theme
+region: navigation_primary
+weight: -22
+provider: null
+plugin: main_menu
+settings:
+  id: main_menu
+  label: 'Main menu'
+  provider: menu
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /events
+    negate: true
+    context_mapping: {  }

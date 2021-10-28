@@ -1,0 +1,10 @@
+/* 20-patterns/vendors/_index.scss */
+// echidna overrides for vendor libraries (eg. slick, tablesaw)
+// follow directory examples as below
+// use same file name for partials as exisiting vendor stylesheet file name
+
+@import 'slick.js/slick-theme';
+@import "opentable";
+
+
+

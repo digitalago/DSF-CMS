@@ -1,0 +1,21 @@
+uuid: 34f6bb4e-d8c2-4f36-aa42-be85fa853f50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_description
+    - node.type.person
+  module:
+    - text
+id: node.person.field_person_description
+field_name: field_person_description
+entity_type: node
+bundle: person
+label: 'Person Description'
+description: 'This content is shown on detail displays (such as a dedicated page for this person).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

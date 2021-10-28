@@ -1,0 +1,21 @@
+uuid: cbd5a5ff-da82-4281-b582-649a62e9a948
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_artist_name
+field_name: field_artist_name
+entity_type: media
+type: string
+settings:
+  max_length: 500
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

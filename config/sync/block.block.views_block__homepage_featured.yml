@@ -1,0 +1,30 @@
+uuid: 5555c5d2-e557-4193-953e-faaee326397e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.homepage
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: views_block__homepage_featured
+theme: de_theme
+region: dags_top
+weight: -39
+provider: null
+plugin: 'views_block:homepage-block_homepage_featured'
+settings:
+  id: 'views_block:homepage-block_homepage_featured'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: '1'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

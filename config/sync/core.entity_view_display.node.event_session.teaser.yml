@@ -1,0 +1,46 @@
+uuid: e5ad3e2b-d48b-474e-a990-a9f8b81df14e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event_session.body
+    - field.field.node.event_session.field_end_date
+    - field.field.node.event_session.field_end_time
+    - field.field.node.event_session.field_start_date
+    - field.field.node.event_session.field_start_time
+    - field.field.node.event_session.field_ticket_link
+    - field.field.node.event_session.field_ticketing_status
+    - node.type.event_session
+  module:
+    - text
+    - user
+id: node.event_session.teaser
+targetEntityType: node
+bundle: event_session
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ticketing_status:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_end_date: true
+  field_end_time: true
+  field_start_date: true
+  field_start_time: true
+  field_ticket_link: true
+  links: true
+  search_api_excerpt: true

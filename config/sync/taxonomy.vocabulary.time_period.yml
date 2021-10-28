@@ -1,0 +1,8 @@
+uuid: 7761811b-904e-4506-9dcd-ac70b3a0ec87
+langcode: en
+status: true
+dependencies: {  }
+name: 'Time Period'
+vid: time_period
+description: 'Time period related to the object.'
+weight: 0

@@ -1,0 +1,25 @@
+uuid: 288bf224-987a-4d11-a595-00d9269c0c57
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.square_crop
+  module:
+    - crop
+name: ago_card
+label: 'AGO Card'
+effects:
+  9938bdb6-2488-4567-af8c-433b45b5ddc2:
+    uuid: 9938bdb6-2488-4567-af8c-433b45b5ddc2
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: square_crop
+  9458a513-0b28-4d36-8159-bbaa54b51b7d:
+    uuid: 9458a513-0b28-4d36-8159-bbaa54b51b7d
+    id: image_scale
+    weight: 2
+    data:
+      width: 280
+      height: 280
+      upscale: true

@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a formatted mirador image.
+ *
+ * Available variables:
+ * - manifest: Name of the manifest file.
+ *
+ * @see template_preprocess_mirador_main_formatter()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'mirador'
+  ]
+%}
+<div {{ attributes.addClass(classes).setAttribute('id', manifest.id) }} ></div>

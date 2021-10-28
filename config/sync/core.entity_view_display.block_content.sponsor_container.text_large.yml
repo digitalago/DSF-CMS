@@ -1,0 +1,30 @@
+uuid: 163922c9-1a67-4268-9c47-bf2dd2cbcffb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsor_container
+    - core.entity_view_mode.block_content.text_large
+    - field.field.block_content.sponsor_container.field_sponsors
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: block_content.sponsor_container.text_large
+targetEntityType: block_content
+bundle: sponsor_container
+mode: text_large
+content:
+  field_sponsors:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: text_large
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  search_api_excerpt: true

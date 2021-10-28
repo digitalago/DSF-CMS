@@ -1,0 +1,125 @@
+// +++ Theming Collection CT highlights blocks
+
+.layout--onecol {
+	.block-collection-resources {
+		.right-column {
+			h3 {
+				padding-top: 0;
+			}
+		}
+	}
+}
+
+.layout--threecol-section,
+.layout--twocol-section {
+	.layout__region {
+		.node--view-mode-object-card-view {
+			margin-right: 1.5em;
+			// === text and image wrapper
+			.card-details-wrapper {
+				padding-bottom: 0;
+			}
+			// === Image info wrapper
+			.twig-hidden {
+				padding: 0 1em 0.79012em;
+			}
+		}
+		// === Removing margin from every third item
+		@include breakpoint($narrow-screen) {
+			&:nth-child(3n) {
+				.node--view-mode-object-card-view {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+// ++ Theming collection Resources blocks
+.layout--fourcol-section,
+.layout--threecol-section {
+	.block-collection-resources {
+		@include breakpoint($small-screen) {
+			display: flex;
+			flex-direction: column !important;
+			padding-top: 0;
+
+			.image-group {
+				width: 100%;
+				margin: 0;
+
+				.field--name-field-managed-image {
+					position: relative;
+					background: $light-grey;
+					height: 375px;
+					@include breakpoint ($small-screen) {
+						height: 232px;
+					}
+					@include breakpoint ($standard-screen) {
+						height: 314px;
+					}
+					@include breakpoint ($wide-screen) {
+						height: 370px;
+					}
+					@include breakpoint (max-width $small-screen) {
+						text-align: center;
+					}
+
+					img {
+						// remove this after confirm image style from ago
+						margin: auto;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						max-height: 100%;
+						max-width: 100%;
+						display: block;
+						@include breakpoint ($wide-screen) {
+							top: -2px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.layout--twocol-section {
+	.block-collection-resources {
+		@include breakpoint($small-screen) {
+			padding-top: 0;
+		}
+	}
+}
+
+.block-collection-resources {
+	display: flex;
+	flex-direction: column;
+	// padding: 1.26562em 0;
+	padding-bottom: 2em;
+	@include breakpoint($small-screen) {
+		flex-direction: row;
+	}
+
+	.right-column {
+		h3 {
+			// margin-bottom: 0;
+			padding: 10px 0 5px;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.field--name-field-link {
+		a {
+			@include btn-flat;
+			font-family: $font-set-2;
+			font-weight: $normal;
+		}
+		.field__item {
+			display: inline-block;
+		}
+	}
+}

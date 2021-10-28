@@ -1,0 +1,30 @@
+uuid: b2a8e881-0543-4d27-8569-f92a824e88c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blogs
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: views_block__blogs_block_featured_homepage
+theme: de_theme
+region: middle_content
+weight: 0
+provider: null
+plugin: 'views_block:blogs-block_featured_homepage'
+settings:
+  id: 'views_block:blogs-block_featured_homepage'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

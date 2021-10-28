@@ -1,0 +1,19 @@
+uuid: 42522369-e020-42f3-b138-2985b838decf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_isbn_number
+    - node.type.publication
+id: node.publication.field_isbn_number
+field_name: field_isbn_number
+entity_type: node
+bundle: publication
+label: 'ISBN number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

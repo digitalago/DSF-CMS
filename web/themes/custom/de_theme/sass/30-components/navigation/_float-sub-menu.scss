@@ -1,0 +1,89 @@
+/* 30-components/navigation/_float-sub-menu.scss */
+div[id^="block-floatsubmenu"] {
+  display: none;
+  @include breakpoint($narrow-screen) {
+    display: block;
+    border-bottom: 1px solid $almostblack;
+
+    .field__item {
+      display: inline-block;
+      padding: ms(-1) 7% ms(-1) 5px;
+      font-size: ms(2);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      a {
+        text-decoration: none;
+
+        &.active {
+          &:after {
+            content: '';
+            display: block;
+            margin: auto;
+            height: 3px;
+            width: 0;
+            background: transparent;
+            transition: width 0.5s ease, background-color 0.5s ease;
+            text-decoration: underline;
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+.float-menu {
+  margin-bottom: 1.25rem;
+}
+
+.floatmenufixed {
+  display: none;
+  @include breakpoint($narrow-screen) {
+    display: block;
+  }
+  background: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000000;
+  width: 100%;
+  border-bottom: 1px solid $almostblack;
+
+  .field--name-field-link {
+    max-width: $wide-screen;
+    margin: 0 auto;
+    padding: 0 ms(-1);
+  }
+}
+
+.mini-menu {
+  padding: 20px 0;
+  border-bottom: 0;
+
+  .field__item {
+    font-size: ms(2);
+    padding-right: 5px !important;
+    display: inline;
+
+    a {
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        color: $red;
+      }
+    }
+
+    &:after {
+      content: '|';
+      padding-left: 7px;
+    }
+
+    &:last-child {
+      &:after {
+        content: '';
+      }
+    }
+  }
+}

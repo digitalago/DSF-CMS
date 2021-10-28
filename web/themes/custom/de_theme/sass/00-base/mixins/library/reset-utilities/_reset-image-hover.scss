@@ -1,0 +1,10 @@
+// use this mixin if your image looks jagged. Opacity reduction still works
+@mixin reset-image-hover {
+  img{
+    transition: none;
+  }
+  a img{
+    transform: none;
+   -webkit-backface-visibility: visible;
+  }
+}

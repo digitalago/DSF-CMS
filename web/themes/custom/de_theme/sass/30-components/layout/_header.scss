@@ -1,0 +1,91 @@
+/* 30-components/layout/_header.scss */
+/* @header section */
+//#header{
+//  background: $light-grey;
+//}
+
+#masthead {
+  padding: ms(-1) 0;
+  width: 100%;
+  @include breakpoint ($weird-screen) {
+    background-color: white;
+  }
+
+  .site-name a {
+    color: $almostblack;
+    font-size: ms(2);
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .layout-container {
+    // display: flex;
+    display: block;
+  }
+
+  .region--masthead-primary,
+  .region--masthead-secondary {
+    // flex: 1;
+    @include float-span(12);
+    @include breakpoint ($weird-screen) {
+      @include float-span(6);
+      margin-right: 0;
+    }
+  }
+
+  .region--masthead-secondary {
+    margin-left: 0;
+    @include breakpoint ($medium-screen) {
+      margin-left: ms();
+    }
+  }
+}
+
+.region--navigation-primary {
+  display: none !important;
+  @include breakpoint ($standard-screen) {
+    display: block !important;
+  }
+  border-bottom: none !important;
+  background-color: $red;
+
+  a {
+    color: white;
+  }
+}
+
+.region--branding {
+  overflow-x: hidden;
+}
+
+#branding .site-name a,
+.site-name {
+  display: none !important;
+}
+/* hide wordmark from logo - brand change Feb 2019 */
+//If alert visible
+
+.layout-header.alert-branding-desktop {
+  @include breakpoint($weird-screen) {
+    // margin-top: 85px;
+  }
+}
+
+.layout-header.alert-branding-mobile {
+  // margin-top: 120px;
+  @include breakpoint($weird-screen) {
+    margin-top: 0;
+  }
+}
+
+.layout-header.alert-branding-hidden {
+  margin-top: 0px;
+}
+
+.layout-header.alert-branding-visible {
+  // margin-top: 120px;
+  @include breakpoint($weird-screen) {
+    // margin-top: 85px;
+  }
+}

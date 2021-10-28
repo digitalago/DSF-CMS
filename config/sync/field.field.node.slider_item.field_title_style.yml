@@ -1,0 +1,21 @@
+uuid: 62d55ed3-c605-4c3c-8d20-394827f3aa5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_style
+    - node.type.slider_item
+  module:
+    - options
+id: node.slider_item.field_title_style
+field_name: field_title_style
+entity_type: node
+bundle: slider_item
+label: 'Title Colour'
+description: 'This is an override. Default styles are in place.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

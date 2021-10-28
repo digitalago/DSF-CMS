@@ -1,0 +1,18 @@
+settings:
+  library_url: ''
+  css_url: ''
+  crop_preview_image_style: crop_thumbnail
+  crop_list:
+    '16_9': '16_9'
+    free_crop_region: free_crop_region
+    hero_slide_crop: hero_slide_crop
+    hero_thin_crop: hero_thin_crop
+    homepage_slider_custom_crop: homepage_slider_custom_crop
+    slider_image: slider_image
+    square_crop: square_crop
+  crop_types_required: {  }
+  warn_multiple_usages: false
+  show_default_crop: true
+  show_crop_area: true
+_core:
+  default_config_hash: JTiHOl3PIo9Nyv7j53xwY5OwbwJWwCItksgv_X-NcbE

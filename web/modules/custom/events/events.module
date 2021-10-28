@@ -1,0 +1,98 @@
+<?php
+/**
+ * @file
+ * Contains hooks for the events module
+ */
+
+
+use \Drupal\views\ViewExecutable;
+use \Drupal\views\Plugin\views\query\QueryPluginBase;
+use \Drupal\Core\Form\FormStateInterface;
+use \Drupal\Core\StringTranslation\TranslatableMarkup;
+use \Drupal\Core\Url;
+use \Drupal\user\Entity\User;
+use \Drupal\Core\Entity\Query\QueryFactory;
+use \Drupal\Core\Block\BlockPluginInterface;
+
+
+/**
+ * Implements hook_theme().
+ */
+
+function events_theme() {
+  return [
+    'events_calendar_block' => [
+      'variables' => [],
+    ],
+    'calendar_browse_block' => [
+      'variables' => [],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function events_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] == 'views-exposed-form-events-search-whats-on-list-view') {
+    $form['field_start_date']['#access'] = FALSE;
+    $form['field_end_date_1']['#access'] = FALSE;
+    $date = (new \DateTime())->format('Y-m-d');
+    $form['event_date'] = array(
+      '#type' => 'date',
+      '#default_value' => $date,
+      '#prefix' => '<div class="element-invisible">',
+      '#suffix' => '</div>',
+    );
+    // $form['actions']['#prefix'] = '<div class="element-invisible">';
+    // $form['actions']['#suffix'] = '</div>';
+    $form['#validate'][] = 'events_validate';
+  }
+}
+
+/**
+ * Validation callback for views exposed form.
+ *
+ * @see ago_whats_on_form_alter.
+ */
+function events_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $values = $form_state->getValues();
+  if (isset($values['event_date']) && !empty($values['event_date'])) {
+    $values['field_start_date'] = $values['event_date'];
+    // Site built on UTC timezone, and timezone difference causing discrepancies
+    $values['field_start_date'] = date('Y-m-d', strtotime($values['field_start_date'] .' +1 day'));
+    $values['field_end_date_1'] = $values['event_date'];
+  }
+  $form_state->setValues($values);
+}
+
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function events_preprocess_node(&$variables) {
+  if ($variables['node']->bundle() == 'event') {
+    $block = \Drupal\block\Entity\Block::load('views_block__whats_on_ticketing');
+    $block_content = \Drupal::entityTypeManager()
+      ->getViewBuilder('block')
+      ->view($block);
+    $variables['tickets'] = $block_content;
+  }
+}
+
+/**
+* Implements hook_views_pre_view.
+*/
+function events_views_pre_render($view) {
+  if($view->id() == 'whats_on'){
+    $displays = ['block_2', 'past_event_tags'];
+    if(in_array($view->current_display, $displays, '==')) {
+      $node = \Drupal::routeMatch()->getParameter('node');
+      // if ($node->getType() == 'page') {
+        if(isset($view->exposed_widgets)) {
+          $view->exposed_widgets = FALSE;
+        }
+      // }
+    }
+  }
+}

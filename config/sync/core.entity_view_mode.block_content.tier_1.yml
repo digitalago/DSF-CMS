@@ -1,0 +1,10 @@
+uuid: edfdf186-3365-4aed-b16f-a793dcbe8bc8
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.tier_1
+label: 'Tier 1'
+targetEntityType: block_content
+cache: true

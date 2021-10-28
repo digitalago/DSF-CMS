@@ -1,0 +1,21 @@
+uuid: 3803f1b2-d8db-4d03-a772-b8a3d5b1ce8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tagline
+    - node.type.course
+  module:
+    - text
+id: node.course.field_tagline
+field_name: field_tagline
+entity_type: node
+bundle: course
+label: 'Post Summary'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

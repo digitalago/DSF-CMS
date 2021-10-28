@@ -1,0 +1,23 @@
+uuid: e350a7cb-235e-4997-8e85-e09dbc803b25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider_width
+    - node.type.slider_container
+  module:
+    - options
+id: node.slider_container.field_slider_width
+field_name: field_slider_width
+entity_type: node
+bundle: slider_container
+label: 'Slider Width'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: slider-container-width
+default_value_callback: ''
+settings: {  }
+field_type: list_string

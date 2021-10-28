@@ -1,0 +1,31 @@
+uuid: 5094c487-c94b-450b-89a9-7ca9e2a89ed5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a2f5fb27-4821-42e0-ab69-b435ebd4a1da'
+  module:
+    - block_content
+    - system
+  theme:
+    - de_theme
+id: homepagehowtogetheredesktop
+theme: de_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:a2f5fb27-4821-42e0-ab69-b435ebd4a1da'
+settings:
+  id: 'block_content:a2f5fb27-4821-42e0-ab69-b435ebd4a1da'
+  label: 'Homepage How to get here - Desktop'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

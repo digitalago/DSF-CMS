@@ -1,0 +1,26 @@
+//faq accordion section on courses and event detail pages
+
+.block-views-blockagoc-courses-view-faq-block,
+.block-views-blockwhat-s-on-ago-faq-block {
+  margin: ms(6) 0;
+  display: inline-block;
+  width: 100%;
+  h2 {
+    cursor: pointer;
+    position:relative;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $almostblack;
+    &:after {
+      font-family: 'Material Icons';
+      content: '\e145';
+      position: absolute;
+      right: 0;
+      font-size: 30px;
+      font-weight: normal;
+    }
+  }
+
+ .view-agoc-courses-view {
+    display: none;
+  }
+}

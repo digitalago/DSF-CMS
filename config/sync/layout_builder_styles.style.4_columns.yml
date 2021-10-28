@@ -1,0 +1,14 @@
+uuid: 4467daf7-d013-417a-9c85-75e1fa485e09
+langcode: en
+status: true
+dependencies: {  }
+id: 4_columns
+label: '4 Columns'
+classes: "four-cols\r\nfour-columns"
+type: component
+weight: 0
+block_restrictions:
+  - 'inline_block:card_container'
+  - 'views_block:whats_on-block_2'
+  - 'views_block:whats_on-past_event_tags'
+layout_restrictions: {  }

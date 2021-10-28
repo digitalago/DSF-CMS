@@ -1,0 +1,23 @@
+uuid: 0da3f3ad-9edf-449b-b210-259798fed540
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ticket_link
+    - node.type.course_session
+  module:
+    - link
+id: node.course_session.field_ticket_link
+field_name: field_ticket_link
+entity_type: node
+bundle: course_session
+label: 'Ticket Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

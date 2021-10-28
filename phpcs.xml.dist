@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Echidna Coding Standards">
+  <!-- Set ignore extensions. -->
+  <!-- @see https://www.drupal.org/node/2867601#comment-12075633 -->
+  <arg name="ignore" value="*.css,*.md,*.txt,*.png,*.gif,*.jpeg,*.jpg,*.svg"/>
+
+  <!-- Use colors in output. -->
+  <arg name="colors"/>
+  <!-- Show progress. -->
+  <arg value="p"/>
+
+  <rule ref="Drupal"/>
+  <rule ref="DrupalPractice"/>
+
+  <file>./docroot/modules/custom</file>
+  <file>./docroot/themes/custom</file>
+
+  <!-- Code in the repo that we do not maintain. -->
+  <exclude-pattern>/docroot/autoload.php</exclude-pattern>
+  <exclude-pattern>/drush/policy.drush.inc</exclude-pattern>
+  <exclude-pattern>/scripts/composer/ScriptHandler.php</exclude-pattern>
+
+  <!-- Generated code. -->
+  <exclude-pattern>/docroot/themes/custom/de_theme/dist</exclude-pattern>
+  <exclude-pattern>*/bower_components/*</exclude-pattern>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+</ruleset>

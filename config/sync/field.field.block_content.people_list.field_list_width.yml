@@ -1,0 +1,21 @@
+uuid: 2159523a-460e-449e-a85d-332a39496dd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.people_list
+    - field.storage.block_content.field_list_width
+  module:
+    - options
+id: block_content.people_list.field_list_width
+field_name: field_list_width
+entity_type: block_content
+bundle: people_list
+label: 'List Width'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

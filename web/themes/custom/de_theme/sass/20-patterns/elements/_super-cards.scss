@@ -1,0 +1,312 @@
+// /* super cards */
+//
+//
+// /* grid colours */
+// .node--type-agoc-super-card.grid-grey {
+//     background-color: $light-grey;
+//     color: $almostblack;
+//     h3 a {
+//       color: $almostblack;
+//       text-decoration:none;
+//
+//     }
+//     .grid-text, .role{
+//       color: $almostblack;
+//     }
+// }
+//
+// .node--type-agoc-super-card.grid-black {
+//     background: $almostblack;
+//     color: $white;
+// }
+//
+// .node--type-agoc-super-card.grid-white {
+//     background: $white;
+//     color: $almostblack;
+// }
+//
+//
+//
+// .node--type-agoc-super-card {
+//
+//     padding:  20px 0px;
+//     overflow:hidden;
+//     @include clearfix;
+//
+//     .super-card-content {
+//         padding-top:ms(1);
+//         padding-bottom:ms(1);
+//         overflow:hidden;
+//
+//         h3 {
+//             @include knockout-48;
+//             font-size: ms(9);
+//             line-height:ms(-1);
+//             margin-bottom: 0.25em;
+//             a {
+//                 color: inherit;
+//                 text-decoration: none;
+//               }
+//         }
+//
+//     }
+//
+// }
+//
+//
+// .node--type-agoc-super-card.grid-container-width{
+//     max-width: 100%;
+//     .node__content {
+//         position: relative;
+//         max-width:  $wide-screen;
+//         margin:  0 auto;
+//          @include breakpoint($narrow-screen $weird-screen-max) {
+//           padding: 0;
+//         }
+//         @include breakpoint($medium-screen) {
+//           padding:  0;
+//         }
+//         @include breakpoint ($wide-screen) {
+//           padding:  0;
+//         }
+//     }
+//
+//     .gridheader {
+//         padding-right: 1em;
+//         padding-left:  1em;
+//
+//     }
+//     .node--type-agoc-super-card-item{
+//         position: relative;
+//         max-width:  $wide-screen;
+//         margin: ms(0) ms(0) ms(0) ms(0);
+//         @include clearfix;
+//
+//     h2{
+//       max-width:  $wide-screen;
+//       margin: 0 auto;
+//       margin-bottom:0.2em;
+//
+//     }
+//
+// }
+// }
+//
+//
+// .node--type-agoc-super-card.grid-full-width{
+//     margin: 0 0 0 0;
+//     .gridheader {
+//         padding-right: ms(5);
+//         padding-left:  ms(5);
+//     }
+//
+//     margin:  inherit 0;
+//     padding:  inherit 0;
+//     @include clearfix;
+//
+//     h2{
+//       max-width:  100%;
+//       margin:  0;
+//       margin-bottom:0.2em;
+//       padding: 0;
+//       @include breakpoint($narrow-screen $weird-screen-max) {
+//         padding: 0;
+//       }
+//       @include breakpoint($medium-screen) {
+//         padding:  0;
+//       }
+//       @include breakpoint ($wide-screen) {
+//         padding:  0;
+//       }
+//     }
+//     .node__content {
+//     width:100%;
+//       position: relative;
+//       max-width:  100%;
+//       margin:  0;
+//       padding:0;
+//
+//     }
+// }
+//
+//
+// .node--type-agoc-super-card.grid-full-width.grid-black {
+//     padding:  0 0 0 0 !important;
+//     .agoc-info-grid-title{
+//         padding-top: ms(1);
+//     }
+// }
+//
+//
+// .node--type-agoc-super-card-item {
+//
+//     overflow:hidden;
+// }
+//
+//
+// //borders
+//
+// .node--type-agoc-super-card.border-solid-grey, .node--type-agoc-super-card.grid-container-width.border-solid-grey {
+//
+//
+//     .node--type-agoc-super-card-item {
+//         border: 1px solid $neutral-grey;
+//
+//         p,ul {
+//             color:$neutral-grey;
+//         }
+//     }
+// }
+//
+// .node--type-agoc-super-card.grid-full-width.border-solid-grey {
+//
+//     padding:ms(1);
+//
+//
+//     .node--type-agoc-super-card-item {
+//         border: 1px solid $neutral-grey;
+//         background-color:$white;
+//
+//         p {
+//             color:$neutral-grey;
+//         }
+//     }
+// }
+//
+// //?
+// .node--type-agoc-super-card.border-solid-grey {
+//     .super-card-no-image {
+//
+//         .super-card-content  {
+//             padding-left: ms(5);
+//             padding-right: ms(5);
+//             padding-top:ms(3);
+//             padding-bottom:ms(3);
+//         }
+//     }
+// }
+//
+// //image
+//
+//
+// .super-card-image {
+//     @include float-span(12);
+//
+//     margin-right:0;
+//     text-align:center;
+//
+//     @include breakpoint($weird-screen) {
+//         margin-bottom:0;
+//         @include float-span(4,1);
+//     }
+//
+//     img {
+//         display:block;
+//         margin:auto;
+//         max-width:100%;
+//         max-height:500px;
+//         @include breakpoint($weird-screen) {
+//             max-height:100%;
+//             height:auto;
+//         }
+//     }
+// }
+//
+//
+// .super-card-image-right {
+//
+//     .super-card-image {
+//         @include breakpoint($weird-screen) {
+//             @include float-span(4,1);
+//                 float:right !important;
+//                 margin-left: ms(1) !important;
+//                 margin-right:0 !important;
+//
+//         }
+//     }
+//
+//     .super-card-content {
+//
+//         padding-left: ms(1);
+//         padding-right:ms(1);
+//         padding-top:ms(1);
+//         @include breakpoint ($wide-screen){
+//             padding-top: ms(6);
+//             padding-left: ms(5);
+//         }
+//
+//     }
+// }
+//
+// .super-card-image-left {
+//
+//     .super-card-image {
+//         @include breakpoint($weird-screen) {
+//             @include float-span(4,1);
+//             float:left !important;
+//             margin-right: ms(1) !important;
+//             margin-left:0 !important;
+//
+//         }
+//     }
+//
+//     .super-card-content {
+//         p {
+//             line-height: 1.3em;
+//         }
+//         padding-left: ms(1);
+//         padding-right:ms(1);
+//         padding-top:ms(1);
+//         @include breakpoint ($wide-screen){
+//             padding-top: ms(6);
+//             padding-right:ms(5);
+//         }
+//
+//     }
+// }
+//
+//
+// .super-card-image-left.super-card-image-width-half, .super-card-image-right.super-card-image-width-half {
+//
+//     .super-card-image {
+//         @include breakpoint($weird-screen) {
+//
+//             width:50%;
+//
+//         }
+//     }
+// }
+//
+// .super-card-image-left.super-card-image-width-quarter, .super-card-image-right.super-card-image-width-quarter {
+//
+//     .super-card-image {
+//         @include breakpoint($weird-screen) {
+//
+//             @include float-span(3,1);
+//         }
+//     }
+// }
+//
+// //super card item colours
+//
+// .super-card-white {
+//     background-color:$white;
+//     color:$almostblack;
+// }
+//
+// .super-card-grey {
+//     background-color:$light-grey;
+//     color:$almostblack;
+// }
+//
+// .super-card-black {
+//     background-color:$almostblack;
+//     color:$white;
+// }
+//
+// .super-card-content .btn {
+//     &:hover {
+//         border:1px solid $white;
+//     }
+//
+// }

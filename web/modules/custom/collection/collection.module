@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * Contains hooks for collection module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function collection_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] == 'views-exposed-form-collection-search-collection-browse-page') {
+    $form['reset'] = array(
+      '#type' => 'markup',
+      '#markup' => '<a href="/collection/browse" class="button form-submit" data-drupal-selector="edit-reset" id="edit-reset">Reset</a>',
+    );
+  }
+}

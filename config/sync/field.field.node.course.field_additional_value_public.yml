@@ -1,0 +1,19 @@
+uuid: ff36692c-8d5b-419b-83ef-f9c706d604d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_value_public
+    - node.type.course
+id: node.course.field_additional_value_public
+field_name: field_additional_value_public
+entity_type: node
+bundle: course
+label: 'Additional Value $/% (Public)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

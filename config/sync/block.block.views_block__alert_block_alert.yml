@@ -1,0 +1,31 @@
+uuid: 27b18c83-773c-49d0-905c-a28fcafe8adb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.alert
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: views_block__alert_block_alert
+theme: de_theme
+region: branding
+weight: -35
+provider: null
+plugin: 'views_block:alert-block_alert'
+settings:
+  id: 'views_block:alert-block_alert'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

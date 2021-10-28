@@ -1,0 +1,79 @@
+uuid: 8a97bd5b-ec6d-4972-bafb-e3b85d5a7803
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.file
+    - media.type.image
+    - views.view.inline_media_browser
+  module:
+    - dropzonejs_eb_widget
+    - media
+    - views
+name: inline_media_browser
+label: 'Inline Media Browser'
+display: iframe
+display_configuration:
+  width: 100%
+  height: '640'
+  link_text: 'Select entities'
+  auto_open: true
+selection_display: multi_step_display
+selection_display_configuration:
+  entity_type: media
+  display: rendered_entity
+  display_settings:
+    view_mode: thumbnail
+  select_text: 'Use selected'
+  selection_hidden: false
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  f715deaa-0c4d-4fcc-8ab6-235aca352219:
+    settings:
+      view: inline_media_browser
+      view_display: entity_browser_1
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: f715deaa-0c4d-4fcc-8ab6-235aca352219
+    weight: 1
+    label: 'Select existing'
+    id: view
+  68e0b05a-60dd-43f7-9317-29b6658e3624:
+    settings:
+      form_mode: default
+      media_type: image
+      upload_location: 'public://images/[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 128M
+      extensions: 'jpg jpeg gif png'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Select entities'
+    uuid: 68e0b05a-60dd-43f7-9317-29b6658e3624
+    weight: 2
+    label: 'Upload image'
+    id: dropzonejs_media_entity_inline_entity_form
+  873151b4-42f3-43f3-8ddf-517c1015e76f:
+    settings:
+      form_mode: default
+      media_type: file
+      upload_location: 'public://documents/[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 128M
+      extensions: 'txt doc xls pdf ppt pps odt ods odp'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Select entities'
+    uuid: 873151b4-42f3-43f3-8ddf-517c1015e76f
+    weight: 3
+    label: 'Upload file'
+    id: dropzonejs_media_entity_inline_entity_form

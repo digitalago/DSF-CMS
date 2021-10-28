@@ -1,0 +1,29 @@
+uuid: 79d3f9bc-79a6-4ae3-8904-ce6a2f56676a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year_filter
+    - node.type.event
+    - taxonomy.vocabulary.year
+id: node.event.field_year_filter
+field_name: field_year_filter
+entity_type: node
+bundle: event
+label: 'Event Year'
+description: 'The year in which the event occurs, usually the current year (for the archives).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      year: year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

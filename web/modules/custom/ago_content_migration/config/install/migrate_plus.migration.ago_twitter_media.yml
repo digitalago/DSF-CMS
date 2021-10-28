@@ -1,0 +1,38 @@
+id: ago_twitter_media
+label: AGO Twitter Media
+migration_group: ago
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: media
+  bundle: ago_twitter
+  constants:
+    bundle: twitter
+destination:
+  plugin: entity:media
+  default_bundle: twitter
+process:
+  bundle: 'constants/bundle'
+  name: name
+  uri: uri
+  uuid: uuid
+  langcode: langcode
+  filemime: filemime
+  field_media_twitter: 'field_tweet_url/0/uri'
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+  status: status
+  created: created
+  changed: changed
+migration_dependencies:
+  required:
+    - user
+    - file
+  optional: {  }
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

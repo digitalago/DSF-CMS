@@ -1,0 +1,15 @@
+uuid: 4c9ba978-2868-4000-8cb0-3884a38fec19
+name: 'Art Gallery of Ontario'
+mail: support@echidna.ca
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/4336
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

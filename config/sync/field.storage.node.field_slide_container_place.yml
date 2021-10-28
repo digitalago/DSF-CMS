@@ -1,0 +1,30 @@
+uuid: f619d480-ff72-476c-a83f-d255ab33742f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_slide_container_place
+field_name: field_slide_container_place
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: homepage-hero-slider
+      label: 'Homepage Hero'
+    -
+      value: side-bar-slider
+      label: 'Side Bar'
+    -
+      value: content-slider
+      label: 'In Content'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

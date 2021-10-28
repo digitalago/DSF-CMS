@@ -1,0 +1,10 @@
+uuid: e4438ba5-ebca-44bd-aa4e-4f5dd469c4d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_slider
+label: 'Image Slider'
+targetEntityType: media
+cache: true

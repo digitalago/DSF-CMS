@@ -1,0 +1,8 @@
+uuid: 453ed151-42ab-42d5-8fb4-f90d21959d19
+langcode: en
+status: true
+dependencies: {  }
+name: 'Global Collection'
+vid: global_collection
+description: 'Tags for Global Collection reference such as Boxwood, etc.'
+weight: 0

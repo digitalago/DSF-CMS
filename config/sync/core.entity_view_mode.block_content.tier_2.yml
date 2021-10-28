@@ -1,0 +1,10 @@
+uuid: 21b09ee4-452b-4be2-8c75-8e8a98b4cc84
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.tier_2
+label: 'Tier 2'
+targetEntityType: block_content
+cache: true

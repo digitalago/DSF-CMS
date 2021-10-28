@@ -1,0 +1,12 @@
+uuid: ee2db38d-29bc-419c-a3a1-a29f48bcd5d7
+langcode: en
+status: true
+dependencies: {  }
+label: 'Free Crop Region'
+id: free_crop_region
+description: ''
+aspect_ratio: ''
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

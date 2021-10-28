@@ -1,0 +1,8 @@
+uuid: b4e0b313-3b0d-4ffa-87b5-644f5e6806aa
+langcode: en
+status: true
+dependencies: {  }
+id: object_container
+label: 'Object Container'
+revision: 0
+description: ''

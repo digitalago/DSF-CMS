@@ -1,0 +1,21 @@
+uuid: ca48ae2c-7215-44e9-b9bf-ddf457d91081
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_custom_script
+    - node.type.menu
+  module:
+    - text
+id: node.menu.field_custom_script
+field_name: field_custom_script
+entity_type: node
+bundle: menu
+label: 'Menu Embed'
+description: 'Insert code from single platform (as html, not as iframe).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

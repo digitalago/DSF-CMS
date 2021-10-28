@@ -1,0 +1,11 @@
+// removes shadow and border radius on form fields on iOS
+@mixin reset-form-field{
+  // -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  &:focus{
+    outline: 0;
+  }
+}

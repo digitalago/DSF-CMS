@@ -1,0 +1,10 @@
+uuid: c8861a51-0b60-4621-a409-7140136cf7e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.small_image_and_credit
+label: 'Image and Credit: Small'
+targetEntityType: media
+cache: true

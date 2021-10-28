@@ -1,0 +1,14 @@
+uuid: 644ff597-690e-4ff9-804a-2b927e99216c
+langcode: en
+status: true
+dependencies: {  }
+id: 3_columns
+label: '3 Columns'
+classes: "three-cols\r\nthree-columns"
+type: component
+weight: 0
+block_restrictions:
+  - 'inline_block:card_container'
+  - 'views_block:whats_on-block_2'
+  - 'views_block:whats_on-past_event_tags'
+layout_restrictions: {  }

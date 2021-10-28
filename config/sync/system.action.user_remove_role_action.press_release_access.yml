@@ -1,0 +1,14 @@
+uuid: 8a2043b8-5cb7-42dc-8ac0-79a61661e52a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.press_release_access
+  module:
+    - user
+id: user_remove_role_action.press_release_access
+label: 'Remove the Communications Access role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: press_release_access

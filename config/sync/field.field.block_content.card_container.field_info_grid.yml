@@ -1,0 +1,30 @@
+uuid: 353e336b-6f64-4289-a1eb-9f2e636b6c8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - block_content.type.card_container
+    - block_content.type.super_card
+    - field.storage.block_content.field_info_grid
+id: block_content.card_container.field_info_grid
+field_name: field_info_grid
+entity_type: block_content
+bundle: card_container
+label: 'Info Grid'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      card: card
+      super_card: super_card
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: card
+field_type: entity_reference

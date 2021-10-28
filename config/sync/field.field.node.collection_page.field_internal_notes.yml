@@ -1,0 +1,21 @@
+uuid: 04155299-d776-4140-9a27-5fac7ac16bad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_internal_notes
+    - node.type.collection_page
+  module:
+    - text
+id: node.collection_page.field_internal_notes
+field_name: field_internal_notes
+entity_type: node
+bundle: collection_page
+label: 'Internal Notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

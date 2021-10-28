@@ -1,0 +1,10 @@
+uuid: 1354f735-ab2d-4a4a-91d3-fe6c7d861a12
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.tier_3b
+label: 'Tier 3b'
+targetEntityType: block_content
+cache: true

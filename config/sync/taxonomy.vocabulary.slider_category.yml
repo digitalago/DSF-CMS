@@ -1,0 +1,8 @@
+uuid: 5a14acd2-b958-4175-9acd-f9240dbd681f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Slider Category'
+vid: slider_category
+description: 'Home slider category'
+weight: 0

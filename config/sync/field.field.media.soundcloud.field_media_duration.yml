@@ -1,0 +1,19 @@
+uuid: 84f8349d-c4a8-454e-a870-144e9ee0358c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_duration
+    - media.type.soundcloud
+id: media.soundcloud.field_media_duration
+field_name: field_media_duration
+entity_type: media
+bundle: soundcloud
+label: 'Media duration'
+description: 'The approximate length of the audio. ie: 3 minutes OR 1 hour, or 1 hour 15 minutes.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

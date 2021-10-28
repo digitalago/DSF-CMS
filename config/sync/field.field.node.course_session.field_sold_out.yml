@@ -1,0 +1,23 @@
+uuid: 2e649b0a-f8ad-40e5-9b79-48424ea3cd1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sold_out
+    - node.type.course_session
+id: node.course_session.field_sold_out
+field_name: field_sold_out
+entity_type: node
+bundle: course_session
+label: 'Sold Out'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

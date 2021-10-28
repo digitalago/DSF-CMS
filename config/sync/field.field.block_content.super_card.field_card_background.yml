@@ -1,0 +1,23 @@
+uuid: 5cf3de77-9de1-4467-bb52-282867c37d02
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.super_card
+    - field.storage.block_content.field_card_background
+  module:
+    - options
+id: block_content.super_card.field_card_background
+field_name: field_card_background
+entity_type: block_content
+bundle: super_card
+label: 'Card Background'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

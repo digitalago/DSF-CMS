@@ -1,0 +1,30 @@
+uuid: a42447c0-a02c-4005-ac2c-34fd69358d00
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.homepage
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: views_block__homepage_today
+theme: de_theme
+region: dags_top
+weight: -38
+provider: null
+plugin: 'views_block:homepage-block_homepage_today'
+settings:
+  id: 'views_block:homepage-block_homepage_today'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: '1'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

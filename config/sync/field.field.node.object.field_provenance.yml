@@ -1,0 +1,19 @@
+uuid: 37f0c1bf-7094-4183-b054-0c238d5f5585
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provenance
+    - node.type.object
+id: node.object.field_provenance
+field_name: field_provenance
+entity_type: node
+bundle: object
+label: Provenance
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

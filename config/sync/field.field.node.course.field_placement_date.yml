@@ -1,0 +1,21 @@
+uuid: 949f23cd-58dc-41be-89dd-0ecc13af039c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_placement_date
+    - node.type.course
+  module:
+    - datetime
+id: node.course.field_placement_date
+field_name: field_placement_date
+entity_type: node
+bundle: course
+label: 'Placement Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

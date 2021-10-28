@@ -1,0 +1,361 @@
+
+.list-full-width {
+  border-bottom: 2px solid $grey-bg;
+  margin-bottom: ms();
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  .views-field-title a {
+    @include card-title;
+    line-height: ms();
+    margin-bottom: ms(-7);
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+.view-display-id-whats_on_list_view {
+  .ago-list-view {
+    border-bottom: 1px solid $contrastgrey;
+  &:first-child{
+    padding-top:0em;
+  }
+  }
+}
+
+#views-exposed-form-blog-search-page-all {
+  .button {
+    height: 40px !important;
+
+    @include breakpoint($narrow-screen) {
+      height: 45px !important;
+    }
+  }
+}
+
+#views-exposed-form-events-search-whats-on-list-view,
+#block-exposedformevents-search-whats-on-card,
+#views-exposed-form-blog-search-page-all {
+  .form--inline {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .form-type-textfield {
+    margin-right: 0;
+  }
+
+  .form-actions {
+    margin-top: 0.6243em;
+
+    .button {
+      margin: 0;
+      height: 42.48px;
+      border-left: 0;
+
+      @include breakpoint($narrow-screen) {
+        height: 47.8px;
+      }
+    }
+  }
+}
+
+// AGO insider views row theming
+// .path-agoinsider {
+  .view-blog-search {
+    .views-row {
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint ($small-screen) {
+        flex-direction: row;
+      }
+
+      h3 {
+        margin-top: 0.30795em;
+        margin-bottom: 0.49327em;
+
+        a{
+          text-decoration: none;
+        }
+      }
+
+      .views-field-field-main-image {
+        width: 100%;
+        height: auto;
+        position: relative;
+
+        @include breakpoint ($small-screen) {
+          margin-right: 2.12766%;
+          flex: 0 1 40%;
+          max-width: 40%;
+        }
+      }
+
+      .views-field-nothing {
+        width: 100%;
+        margin-right: 0 !important;
+        float: none !important;
+        clear: none !important;
+
+        @include breakpoint ($small-screen) {
+          flex: 0 1 60%;
+          max-width: calc(60% - 2.12766%);
+        }
+
+        p {
+          margin-bottom: 0.49327em;
+          font-size: 1.26562em;
+          line-height: 1.125em;
+          color: $contrastgrey;
+          font-family: $font-set-2;
+          font-weight: $normal;
+        }
+
+        .datetime {
+          display: block;
+          margin-top: 0.49327em;
+          font-family: $font-set-2;
+          font-size: 0.88889em;
+          font-weight: $normal;
+          letter-spacing: 0;
+        }
+
+        .btn-readmore {
+          a {
+            @include btn;
+            @include btn-red;
+            padding: 10px 15px 10px 15px;
+            text-transform: none;
+            font-size: 1em;
+            font-family: $font-set-2;
+            margin-top: 0.79012em;
+            margin-bottom: 0;
+            font-weight: $normal;
+          }
+        }
+      }
+    }
+  }
+
+  #views-exposed-form-blog-search-page-all,
+  #views-exposed-form-events-search-whats-on-card {
+    margin-bottom: 0.6243em;
+  }
+
+  .block-facets {
+    h3 {
+      font-size: 1.42383em;
+      text-transform: uppercase;
+      margin-bottom: 0.70233em;
+      letter-spacing: 1px;
+    }
+
+    .facets-widget-dropdown {
+      margin-bottom: 1em;
+    }
+
+    .facets-dropdown {
+      width: 100%;
+      display: inline-block;
+      margin: ms(-2) 0;
+      border: none;
+      padding: 16px 10px 12px 10px;
+      background-color: $light-grey;
+      background-size: 7%;
+      @include breakpoint ($small-screen) {
+        background-size: 4%;
+      }
+      @include breakpoint ($medium-screen) {
+        background-size: 12%;
+      }
+
+      &:after {
+        content: '\F140';
+        font-size: 10px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 20px;
+        color: $almostblack;
+      }
+
+      //  === Visually hidding label for accessibility
+      label {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        white-space: nowrap;
+      }
+    }
+
+    .facets-widget-checkbox {
+      ul {
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+
+      li {
+        list-style: none;
+        margin-bottom: 1em;
+
+        .facet-item__value {
+          margin-bottom: 0.79012em;
+          font-family: $font-set-2;
+          font-weight: $normal;
+          font-size: 1em;
+          text-transform: none;
+        }
+      }
+
+      .facets-checkbox {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        white-space: nowrap;
+      }
+    }
+  }
+// }
+
+
+.ago-list-view,
+.view-display-id-whats_on_list_view {
+  padding: ms(2) 0;
+  .views-field-field-agoc-image,
+  .field--name-field-person-image {
+    width: 100%;
+    @include breakpoint ($small-screen) {
+      @include float-span(4);
+    }
+
+  .view-mode-preview-thumbnail {
+    width: 100% !important;
+    margin-right: 0 !important;
+    @include breakpoint (max-width $small-screen) {
+        margin: ms() 0;
+      }
+    }
+  }
+  .field-content .date-time-info {
+    font-size: 1.8em;
+  }
+  .views-field-nothing {
+    width: 100%;
+    margin-right: 0 !important;
+    @include breakpoint (500px) {
+      @include float-span(8);
+    }
+    .views-field-title {
+      margin-top: 3px;
+    }
+  }
+}
+
+.grid-list, .block-list {
+
+
+  .field--name-field-agoc-image, .field--name-field-person-image {
+    width: 100%;
+  // @include breakpoint ($small-screen) {
+  //    @include float-span(4);
+    }
+
+
+  .field-content .date-time-info {
+    font-size: 1em;
+    @include breakpoint ($small-screen) {
+      font-size: 1.4em;
+    }
+
+  }
+
+  .image-group{
+    width: 100%;
+    @include breakpoint ($small-screen) {
+      @include float-span(6);
+    }
+    @include breakpoint ($narrow-screen) {
+      @include float-span(4);
+    }
+  }
+    .text-group{
+      width: 100%;
+      @include breakpoint ($small-screen) {
+        @include float-span(6,6);
+      }
+      @include breakpoint ($narrow-screen) {
+        @include float-span(8,5);
+      }
+    }
+
+
+}
+
+.grid-list-small, .block-small-list {
+  .field--name-field-agoc-image, .field--name-field-person-image {
+    width: 100%;
+  // @include breakpoint ($small-screen) {
+  //    @include float-span(4);
+    }
+
+
+  .field-content .date-time-info {
+    font-size: 1em;
+    @include breakpoint ($small-screen) {
+      font-size: 1.4em;
+    }
+
+  }
+
+  .image-group{
+    width: 100%;
+    @include breakpoint ($small-screen) {
+      @include float-span(6);
+    }
+    @include breakpoint ($narrow-screen) {
+      @include float-span(3);
+    }
+  }
+    .text-group{
+      width: 100%;
+      // @include breakpoint ($small-screen) {
+      //   @include float-span(6,6);
+      // }
+      @include breakpoint ($narrow-screen) {
+        @include float-span(9,4);
+      }
+    }
+
+   }
+
+
+    .field-content .date-time-info {
+      font-size: 1.8em;
+    }
+
+
+    .grid-button{
+      @include btn-white-nimbus;
+    }
+
+//hides the buttons when selected
+
+    .hide-button{
+     .grid-button-wrapper{
+       display: none;
+     }
+   }
+
+
+   .node--type-dags-person.node--view-mode-info-grid-item {
+    padding-bottom: 25px;
+    clear: both;
+    overflow: hidden;
+  }

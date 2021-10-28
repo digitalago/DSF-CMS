@@ -1,0 +1,12 @@
+uuid: 9a1883c1-0070-4c81-a122-16f72947403d
+langcode: en
+status: true
+dependencies: {  }
+id: 1_column
+label: '1 Column'
+classes: one-column
+type: component
+weight: 0
+block_restrictions:
+  - 'inline_block:card_container'
+layout_restrictions: {  }

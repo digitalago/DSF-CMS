@@ -1,0 +1,23 @@
+uuid: 9486f647-8506-4911-afde-d733c149e356
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_big_feature
+    - node.type.event
+id: node.event.field_big_feature
+field_name: field_big_feature
+entity_type: node
+bundle: event
+label: 'This item is a big feature'
+description: 'This will show up in places as a primary feature.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: 5dad997a-2209-46a4-b1a8-7ef6e1899e50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inscription
+    - node.type.object
+id: node.object.field_inscription
+field_name: field_inscription
+entity_type: node
+bundle: object
+label: Inscription
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

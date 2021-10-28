@@ -1,0 +1,46 @@
+view_list_grid:
+  version: VERSION
+  js:
+    js/view_list_grid.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+compare_objects:
+  version: VERSION
+  js:
+    js/compare_objects.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+facet_accordion:
+  version: VERSION
+  js:
+    js/facet_accordion.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+facet_modal:
+  version: VERSION
+  header: true
+  js:
+    js/facet_modal.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - collection_blocks/colorbox
+colorbox:
+  js:
+    colorbox/jquery.colorbox-min.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+return_to_collection:
+  version: VERSION
+  js:
+    js/return_to_collection.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

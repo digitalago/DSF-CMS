@@ -1,0 +1,43 @@
+// ********************
+//  MIXINS
+// ********************
+
+// *****
+//  no-svg
+
+// modernizr adds .no-svg - this will be the fallback
+@mixin no-svg {
+    .no-svg & { @content }
+}
+
+
+@mixin svg-bg($width, $height, $image) {
+
+  $png: '#{$image}.png';
+  $svg: '#{$image}.svg';
+
+  // container size
+  width: $width;
+  height: $height;
+  display: inline-block;
+
+  // output the svg
+  background-size: contain;
+  background-image: none, url($svg);
+  background-repeat: no-repeat;
+
+  // output the png
+  @include no-svg { background-image: image-url($png);}
+}
+
+
+
+
+
+// ********************
+//  USAGE
+// ********************
+
+// .logo {
+//     @include text-replace(100px, 100px, '/img/logo');
+// }

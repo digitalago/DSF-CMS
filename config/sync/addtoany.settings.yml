@@ -1,0 +1,27 @@
+buttons_size: 28
+additional_html: "<div class=\"share-label\">Share</div>\r\n<a class=\"a2a_button_facebook\"></a>\r\n<a class=\"a2a_button_twitter\"></a>\r\n<a class=\"a2a_button_copy_link\"></a>\r\n"
+additional_css: ''
+additional_js: 'a2a_config.icon_color = "transparent";'
+universal_button: none
+custom_universal_button: ''
+universal_button_placement: before
+no_3p: true
+entities:
+  media: 0
+  node: 1
+  comment: 0
+  block_content: 0
+  contact_message: 0
+  content_moderation_state: 0
+  crop: 0
+  entity_embed_fake_entity: 0
+  file: 0
+  redirect: 0
+  search_api_task: 0
+  shortcut: 0
+  taxonomy_term: 0
+  user: 0
+  webform_submission: 0
+  menu_link_content: 0
+_core:
+  default_config_hash: 9YPlBuinIKLe5jVEf-aIhZvKFn77i18yD4CrNR0BbVQ

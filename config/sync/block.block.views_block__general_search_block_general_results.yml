@@ -1,0 +1,31 @@
+uuid: e146098d-547c-4c0d-b29a-d4e49773b0f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.general_search
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: views_block__general_search_block_general_results
+theme: de_theme
+region: content
+weight: -16
+provider: null
+plugin: 'views_block:general_search-block_general_results'
+settings:
+  id: 'views_block:general_search-block_general_results'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  exposed: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /search-results
+    negate: false
+    context_mapping: {  }

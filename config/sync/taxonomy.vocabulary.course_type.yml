@@ -1,0 +1,8 @@
+uuid: e377e70a-b8bf-4dfc-a340-5cb34cc92c93
+langcode: en
+status: true
+dependencies: {  }
+name: 'Course Type'
+vid: course_type
+description: 'Course Type - Used in Course Pages.'
+weight: 0

@@ -1,0 +1,8 @@
+uuid: 8a8c4e46-63d5-495c-8fec-c47f5852b33a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Object Category'
+vid: object_category
+description: ''
+weight: 0

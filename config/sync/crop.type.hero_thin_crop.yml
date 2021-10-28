@@ -1,0 +1,12 @@
+uuid: 558f0e18-9935-480d-b0cf-aad80b5b2143
+langcode: en
+status: true
+dependencies: {  }
+id: hero_thin_crop
+label: 'Hero thin crop'
+description: ''
+aspect_ratio: '32:6'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

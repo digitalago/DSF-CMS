@@ -1,0 +1,24 @@
+/* 20-patterns/elements/_responsive-tables.scss */
+
+// Responsive tables - added via javascript to tables in the body field
+.table-responsive{
+  overflow-y: hidden;
+  cursor: ew-resize;
+}
+
+.table-controls{
+  text-align: right;
+  border-bottom: 1px solid $light-grey;
+  padding-bottom: ms(-6);
+  .instruction{
+    color: $neutral-grey;
+    text-transform: uppercase;
+    font-size: ms(-1);
+    margin-right: ms(-1);
+  }
+  .material-icons{
+    vertical-align: middle;
+    @include md-18;
+    margin-right: ms(-9);
+  }
+}

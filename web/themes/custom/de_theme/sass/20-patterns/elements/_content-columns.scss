@@ -1,0 +1,165 @@
+
+// in content column widths
+
+
+.column-1-left{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(1,1);
+  }
+}
+
+.column-1-right{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(1,12);
+  }
+}
+
+.column-2-left{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(2,1);
+  }
+}
+
+.column-2-right{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(2,11);
+  }
+}
+
+.column-3-right{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(3,10);
+  }
+}
+
+.column-3-left{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(3,1);
+  }
+}
+
+.column-3-right{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(3,10);
+  }
+}
+
+.column-4-left{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(4,1);
+  }
+}
+
+.column-4-right{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(4,9);
+  }
+}
+
+.column-5-left{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(5,1);
+  }
+}
+
+.column-5-right{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(5,8);
+  }
+}
+
+.column-6-left{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(6,1);
+  }
+}
+
+.column-6-right{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(6,7);
+  }
+}
+
+.column-7-left{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(7,1);
+  }
+}
+
+.column-7-right{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(7,6);
+  }
+}
+
+.column-8-left{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(8,1);
+  }
+}
+.column-8-right{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(8,5);
+  }
+}
+
+.column-9-left{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(9,1);
+  }
+}
+.column-9-right{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(9,4);
+  }
+}
+
+.column-10-left{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(10,1);
+  }
+}
+.column-10-right{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(10,3);
+  }
+}
+
+.column-11-left{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(11,1);
+  }
+}
+.column-11-right{
+  @include float-span(12);
+  @include breakpoint($narrow-screen){
+  @include float-span(11,2);
+  }
+}
+
+
+
+
+

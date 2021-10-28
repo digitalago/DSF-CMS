@@ -1,0 +1,29 @@
+uuid: 9d82bb39-4392-4e6f-974f-b5ba6c123a3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year_filter
+    - node.type.blog
+    - taxonomy.vocabulary.year
+id: node.blog.field_year_filter
+field_name: field_year_filter
+entity_type: node
+bundle: blog
+label: 'Blog Year'
+description: 'the year the post was published.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      year: year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

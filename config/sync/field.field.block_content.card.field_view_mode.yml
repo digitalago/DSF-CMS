@@ -1,0 +1,27 @@
+uuid: 5821b7a1-f951-45b3-8961-0cf176e22a7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.storage.block_content.field_view_mode
+  module:
+    - entity_reference_display
+id: block_content.card.field_view_mode
+field_name: field_view_mode
+entity_type: block_content
+bundle: card
+label: Type
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  exclude:
+    grid_no_description: grid_no_description
+    grid_no_links: grid_no_links
+    grid_with_buttons: grid_with_buttons
+    info_grid: info_grid
+  negate: 1
+field_type: entity_reference_display

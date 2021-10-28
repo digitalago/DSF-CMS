@@ -1,0 +1,10 @@
+uuid: 44ad4ba3-dfa5-4feb-a80f-a35aea2d8a0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.text_large
+label: 'Text Large'
+targetEntityType: node
+cache: true

@@ -1,0 +1,25 @@
+
+// remove partial declaration and grab new class when ready. 
+// add @import into tickets.
+// controls ticket site css
+.gr__tickets-dev_ago_ca {
+  #header {font-family: "Knockout 28 A", "Knockout 28 B", "Alternate Gothic No3 D Regular", sans-serif; -webkit-font-smoothing: antialiased;}  
+  #block-sitebranding {padding-bottom: 20px !important;}
+  #branding .site-name a {font-size: 37px !important; top: 37px;}
+  .tickets-menu-toggle {padding: 10px 0px;} 
+  .tickets-menu-toggle .btn-red-big{border: 1px solid white; font-size: 24px !important; font-family: "Knockout 28 A", "Knockout 28 B", "Alternate Gothic No3 D Regular", sans-serif; -webkit-font-smoothing: antialiased;}
+  .tickets-menu-toggle a:hover, .tickets-menu-toggle a:focus{color: #e02626; background-color: white; border: 1px solid #e02626;}
+  .tickets-menu-toggle a:hover .label, .tickets-menu-toggle a:focus .label{color: #e02626;} 
+  .tickets-menu-toggle a .icon{padding-right: 3px;} 
+  #block-agomobilemenutoggle {float: right;}  
+
+  .region--footer {padding-top: 50px;}
+  .contact-info {float: left} 
+  .contact-info h3 {font-size: 30px; margin-bottom: 10px;} 
+  .contact-info p span {display: block; font-family: "Knockout 28 A", "Knockout 28 B", "Alternate Gothic No3 D Regular", sans-serif; font-size: 20px; line-height: normal; -webkit-font-smoothing: antialiased; } 
+  #block-de-theme-footer{clear: both;}
+  .menu--footer {padding-top: 10px;}
+  .menu--footer ul.menu li a {font-size: 20px; -webkit-font-smoothing: antialiased;}
+  #block-footersocialmedia a {position: relative; top: 4px;}
+}  
+ 

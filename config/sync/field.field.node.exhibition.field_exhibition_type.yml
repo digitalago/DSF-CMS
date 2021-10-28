@@ -1,0 +1,29 @@
+uuid: 932cd3bf-c33d-44b6-bdf5-0c1e0e84d4ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exhibition_type
+    - node.type.exhibition
+    - taxonomy.vocabulary.exhibition_type
+id: node.exhibition.field_exhibition_type
+field_name: field_exhibition_type
+entity_type: node
+bundle: exhibition
+label: 'Exhibition Type'
+description: 'This determines where the exhibition appears in upcoming exhibitions.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      exhibition_type: exhibition_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,1000 @@
+/* info grid styles  */
+
+//move this, it's more structural
+.block-views-blockdags-top-reference-dags-bottom {
+  padding: 10px 0px 0px 0px; //.view-content{padding-bottom: 20px;}
+}
+
+//
+.node--type-ago-info-grid {
+  .node--type-agoc-grid-item {
+    // padding-bottom: 10px;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 7px;
+  }
+
+  h3 {
+    padding: 10px 0px 5px 0px;
+    margin-bottom: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .role {
+    font-size: ms(0);
+    @include nimbus-bold-reg;
+    -webkit-font-smoothing: subpixel-antialiased;
+    letter-spacing: 1px;
+    display: block;
+    padding: 0 0 5px 0;
+  }
+}
+
+.hide-info-grid-title {
+  .agoc-info-grid-title {
+    display: none;
+  }
+}
+
+.grid-show-details .grid-description-text {
+  display: block;
+  padding-bottom: 10px; //@include clearfix;
+
+  p {
+    line-height: 1.3em;
+    color: $almostblack;
+  }
+}
+
+.grid-hide-details .grid-description-text,
+.grid-hide-details .grid-button-wrapper,
+.removelinks .grid-button-wrapper {
+  display: none;
+}
+
+
+.grid-white {
+  background: $white;
+  color: $almostblack;
+
+  h3 a {
+    color: $almostblack;
+    text-decoration: none;
+  }
+
+  .grid-text,
+  .role {
+    color: $almostblack;
+  }
+}
+
+.grid-grey {
+  background: $light-grey;
+
+  h3 a {
+    color: $almostblack;
+    text-decoration: none;
+  }
+
+  .grid-text,
+  .role {
+    color: $almostblack;
+  }
+
+  .field--name-field-managed-image {
+    background: #dedede !important;
+  }
+}
+
+.grid-black {
+  background: $almostblack;
+  color: $white;
+  padding: ms(1) ms(-1) !important;
+
+  h3 a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  .grid-text,
+  .role {
+    color: $white;
+  }
+
+  .grid-description-text {
+    p {
+      color: $white;
+    }
+  }
+
+  .field--name-field-managed-image {
+    background: $footer-bg !important;
+  }
+}
+
+.grid-red {
+  background: $red;
+  color: $white;
+
+  h3 a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  .grid-text,
+  .role {
+    color: $white;
+  }
+}
+
+.grid-black.grid-container-width,
+.grid-red.grid-container-width {
+  h2 {}
+
+  padding:10px;
+}
+
+.grid-circle-image.grid-list,
+.grid-list-small.grid-circle-image {
+
+  h3,
+  .role {
+    text-align: left;
+  }
+
+  .text-group {
+    padding-top: 10px;
+  }
+}
+
+.grid-circle-image {
+
+  h3,
+  .role {
+    text-align: center;
+  }
+
+  img {
+    border-radius: 50%; //padding-top: 10px;
+  }
+
+  .field--name-field-managed-image {
+    background: $white !important;
+  }
+}
+
+.grid-container-width,
+.grid-container-width .field--name-field-object {
+  position: relative;
+  max-width: $wide-screen;
+  margin: 0 auto;
+  padding: 10px ms(2); //   @include clearfix;
+
+  @include breakpoint($medium-screen) {
+    padding: 20px ms(2);
+  }
+
+  @include breakpoint ($wide-screen) {
+    padding: 20px ms(-1);
+  }
+}
+
+.grid-container-width>.node__content>.field--name-body {
+  max-width: $wide-screen;
+  margin: 0 auto;
+  padding: 0 ms(2); //  @include clearfix;
+
+  @include breakpoint($medium-screen) {
+    padding: 0 ms(2);
+  }
+
+  @include breakpoint ($wide-screen) {
+    padding: 0 ms(-1);
+  }
+}
+
+.grid-full-width {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+
+
+  h2 {
+    max-width: $wide-screen;
+    margin: 0 auto;
+    margin-bottom: 0;
+    padding: ms(-1) ms(-6) 0 ms(-6);
+
+  }
+}
+
+.grid-full-width>.node__content {
+  position: relative;
+  max-width: $wide-screen;
+  margin: 0 auto;
+  padding: ms(-1);
+
+}
+
+.grid-2-columns {
+  .field--name-field-agoc-grid-item>div.field__item {
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    @include clearfix;
+
+    @include breakpoint ($small-screen) {
+      @include float-span(6);
+
+      &:nth-child(2n) {
+        @include float-span(6, last);
+      }
+    }
+  }
+}
+
+.grid-3-columns {
+  .field--name-field-agoc-grid-item>div.field__item {
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    @include clearfix;
+
+    @include breakpoint ($small-screen) {
+      @include float-span(6);
+
+      &:nth-child(2n) {
+        @include float-span(6, last);
+      }
+    }
+
+    @include breakpoint ($weird-screen) {
+      @include float-span(4);
+
+      &:nth-child(2n) {
+        @include float-span(4);
+      }
+
+      &:nth-child(3n) {
+        @include float-span(4, last);
+      }
+
+      &:nth-child(3n+1) {
+        clear: both;
+      }
+    }
+  }
+}
+
+.grid-4-columns {
+  .field--name-field-agoc-grid-item,
+  .view-content
+
+  >div.field__item,
+  >div.views-row {
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    @include clearfix;
+
+    @include breakpoint ($small-screen) {
+      @include float-span(6);
+
+      &:nth-child(2n) {
+        @include float-span(6, last);
+      }
+    }
+
+    @include breakpoint ($weird-screen) {
+      @include float-span(3);
+
+      &:nth-child(2n) {
+        @include float-span(3);
+      }
+
+      &:nth-child(4n) {
+        @include float-span(3, last);
+      }
+
+      &:nth-child(4n+1) {
+        clear: both;
+      }
+    }
+  }
+}
+
+.grid-6-columns {
+  .field--name-field-agoc-grid-item>div.field__item {
+    width: 50%;
+    height: auto;
+    margin-top: 5px;
+    font-size: ms(-1);
+    @include clearfix;
+    @include float-span(6);
+
+    &:nth-child(2n) {
+      @include float-span(6, last);
+    }
+
+    @include breakpoint ($narrow-screen) {
+      width: 100%;
+      @include float-span(4);
+
+      &:nth-child(2n) {
+        @include float-span(4);
+      }
+
+      &:nth-child(3n) {
+        @include float-span(4, last);
+      }
+
+      &:nth-child(3n+1) {
+        clear: both;
+      }
+    }
+
+    @include breakpoint ($weird-screen) {
+      width: 100%;
+      @include float-span(2);
+
+      /* override $narrow-screen styles above */
+      &:nth-child(3n) {
+        @include float-span(2);
+      }
+
+      &:nth-child(3n+1) {
+        clear: none;
+      }
+
+      /*end override*/
+      &:nth-child(2n) {
+        @include float-span(2);
+      }
+
+      &:nth-child(6n) {
+        @include float-span(2, last);
+      }
+
+      &:nth-child(6n+1) {
+        clear: both;
+      }
+    }
+  }
+}
+
+.node--type-agoc-exhibition.node--view-mode-info-grid-item {
+  .event-date-time {
+    @include nimbus-bold-reg;
+    font-size: ms(1);
+    padding: 20px 0px 5px 0px;
+    clear: both;
+  }
+}
+
+.grid-container-width.grid-2-columns {
+  .node--view-mode-info-grid-item {
+    padding: ms(0) 0;
+
+    .event-date-time {
+      @include nimbus-bold-reg;
+      font-size: ms(1);
+      padding: 20px 0px 5px 0px;
+      clear: both;
+    }
+
+    .field--name-field-managed-image {
+      position: relative;
+      background: $light-grey;
+      height: 375px;
+
+      @include breakpoint ($small-screen) {
+        height: 232px;
+      }
+
+      @include breakpoint ($standard-screen) {
+        height: 380px;
+      }
+
+      @include breakpoint ($wide-screen) {
+        height: 380px;
+      }
+
+      @include breakpoint (max-width $small-screen) {
+        text-align: center;
+      }
+
+      img {
+        // remove this after confirm image style from ago
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+
+        @include breakpoint ($wide-screen) {
+         // top: -2px;
+        }
+      }
+    }
+  }
+}
+
+.grid-container-width.grid-3-columns {
+  .node--view-mode-info-grid-item {
+    padding: ms(0) 0;
+
+    .event-date-time {
+      @include nimbus-bold-reg;
+      font-size: ms(1);
+      padding: 20px 0px 5px 0px;
+      clear: both;
+    }
+
+    .field--name-field-managed-image {
+      position: relative;
+      background: $light-grey;
+      height: 375px;
+
+      @include breakpoint ($small-screen) {
+        height: 232px;
+      }
+
+      @include breakpoint ($standard-screen) {
+        height: 314px;
+      }
+
+      @include breakpoint ($wide-screen) {
+        height: 370px;
+      }
+
+      @include breakpoint (max-width $small-screen) {
+        text-align: center;
+      }
+
+      img {
+        // remove this after confirm image style from ago
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+
+        @include breakpoint ($wide-screen) {
+          top: -2px;
+        }
+      }
+    }
+  }
+}
+
+.grid-container-width.grid-4-columns {
+  .node--view-mode-info-grid-item {
+    padding: ms(0) 0;
+
+    .event-date-time {
+      @include nimbus-bold-reg;
+      font-size: ms(1);
+      padding: 20px 0px 5px 0px;
+      clear: both;
+    }
+
+    .field--name-field-managed-image {
+      position: relative;
+      background: $light-grey;
+      height: 375px;
+
+      @include breakpoint ($small-screen) {
+        height: 170px;
+      }
+
+      @include breakpoint ($standard-screen) {
+        height: 230px;
+      }
+
+      @include breakpoint ($wide-screen) {
+        height: 271px;
+      }
+
+      @include breakpoint (max-width $small-screen) {
+        text-align: center;
+      }
+
+      img {
+        // remove this after confirm image style from ago
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+
+        @include breakpoint ($wide-screen) {
+          top: -2px;
+        }
+      }
+    }
+  }
+}
+
+.grid-container-width.grid-6-columns {
+  .node--view-mode-info-grid-item {
+    padding: ms(0) 0;
+
+    .event-date-time {
+      @include nimbus-bold-reg;
+      font-size: ms(1);
+      padding: 20px 0px 5px 0px;
+      clear: both;
+    }
+
+    .field--name-field-managed-image {
+      position: relative;
+      background: $light-grey;
+      height: 166px;
+
+      @include breakpoint ($small-screen) {
+        height: 166px;
+      }
+
+      @include breakpoint ($standard-screen) {
+        height: 146px;
+      }
+
+      @include breakpoint ($wide-screen) {
+        height: 173px;
+      }
+
+      @include breakpoint (max-width $small-screen) {
+        text-align: center;
+      }
+
+      img {
+        // remove this after confirm image style from ago
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+
+        @include breakpoint ($wide-screen) {
+          top: -2px;
+        }
+      }
+    }
+  }
+}
+
+
+.grid-container-width.grid-list,
+.grid-full-width.grid-list {
+  .node--view-mode-info-grid-item {
+    padding: ms(2) 0;
+    clear: both;
+    overflow: hidden;
+
+    .event-date-time {
+      @include nimbus-bold-reg;
+      font-size: ms(1);
+      padding: 20px 0px 5px 0px;
+      clear: both;
+    }
+
+    .field--name-field-managed-image {
+      position: relative;
+      background: $light-grey;
+      height: 350px;
+
+      @include breakpoint ($small-screen) {
+        height: 236px;
+      }
+
+      @include breakpoint ($standard-screen) {
+        height: 317px;
+      }
+
+      @include breakpoint ($wide-screen) {
+        height: 370px;
+
+      }
+
+      @include breakpoint (max-width $small-screen) {
+        text-align: center;
+      }
+
+      img {
+        // remove this after confirm image style from ago
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+
+        @include breakpoint ($wide-screen) {
+          top: -2px;
+        }
+      }
+    }
+  }
+}
+
+.grid-container-width.grid-list-small,
+.grid-full-width.grid-list-small {
+  .node--view-mode-info-grid-item {
+    padding: ms(2) 0;
+    clear: both;
+    overflow: hidden;
+
+    .event-date-time {
+      @include nimbus-bold-reg;
+      font-size: ms(1);
+      padding: 20px 0px 5px 0px;
+      clear: both;
+    }
+
+    .field--name-field-managed-image {
+      position: relative;
+      background: $light-grey;
+      height: 340px;
+
+      @include breakpoint ($small-screen) {
+        height: 173px;
+      }
+
+      @include breakpoint ($standard-screen) {
+        height: 230px;
+      }
+
+      @include breakpoint ($wide-screen) {
+        height: 271px;
+
+      }
+
+      @include breakpoint (max-width $small-screen) {
+        text-align: center;
+      }
+
+      img {
+        // remove this after confirm image style from ago
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+
+        @include breakpoint ($wide-screen) {
+          top: -2px;
+        }
+      }
+    }
+  }
+}
+
+
+// full width
+
+.grid-full-width.grid-2-columns {
+  .node--view-mode-info-grid-item {
+    padding: ms(0) 0;
+
+    .event-date-time {
+      @include nimbus-bold-reg;
+      font-size: ms(1);
+      padding: 20px 0px 5px 0px;
+      clear: both;
+    }
+
+    .field--name-field-managed-image {
+      position: relative;
+      background: $light-grey;
+      height: 375px;
+
+      @include breakpoint ($small-screen) {
+        height: 232px;
+      }
+
+      @include breakpoint ($standard-screen) {
+        height: 380px;
+      }
+
+      @include breakpoint ($wide-screen) {
+        height: 380px;
+      }
+
+      @include breakpoint (max-width $small-screen) {
+        text-align: center;
+      }
+
+      img {
+        // remove this after confirm image style from ago
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+
+        @include breakpoint ($wide-screen) {
+          top: -2px;
+        }
+      }
+    }
+  }
+}
+
+.grid-full-width.grid-3-columns {
+  .node--view-mode-info-grid-item {
+    padding: ms(0) 0;
+
+    .event-date-time {
+      @include nimbus-bold-reg;
+      font-size: ms(1);
+      padding: 20px 0px 5px 0px;
+      clear: both;
+    }
+
+    .field--name-field-managed-image {
+      position: relative;
+      background: $light-grey;
+      height: 375px;
+
+      @include breakpoint ($small-screen) {
+        height: 232px;
+      }
+
+      @include breakpoint ($standard-screen) {
+        height: 314px;
+      }
+
+      @include breakpoint ($wide-screen) {
+        height: 370px;
+      }
+
+      @include breakpoint (max-width $small-screen) {
+        text-align: center;
+      }
+
+      img {
+        // remove this after confirm image style from ago
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+
+        @include breakpoint ($wide-screen) {
+          top: -2px;
+        }
+      }
+    }
+  }
+}
+
+.grid-full-width.grid-4-columns {
+  padding: ms(0) 0;
+
+  .node--view-mode-info-grid-item {
+    .event-date-time {
+      @include nimbus-bold-reg;
+      font-size: ms(1);
+      padding: 20px 0px 5px 0px;
+      clear: both;
+    }
+
+    .field--name-field-managed-image {
+      position: relative;
+      background: $light-grey;
+      height: 375px;
+
+      @include breakpoint ($small-screen) {
+        height: 170px;
+      }
+
+      @include breakpoint ($standard-screen) {
+        height: 230px;
+      }
+
+      @include breakpoint ($wide-screen) {
+        height: 271px;
+      }
+
+      @include breakpoint (max-width $small-screen) {
+        text-align: center;
+      }
+
+      img {
+        // remove this after confirm image style from ago
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+
+        @include breakpoint ($wide-screen) {
+          top: -2px;
+        }
+      }
+    }
+  }
+}
+
+.grid-full-width.grid-6-columns {
+  .node--view-mode-info-grid-item {
+    padding: ms(0) 0;
+
+    .event-date-time {
+      @include nimbus-bold-reg;
+      font-size: ms(1);
+      padding: 20px 0px 5px 0px;
+      clear: both;
+    }
+
+    .field--name-field-managed-image {
+      position: relative;
+      background: $light-grey;
+      height: 166px;
+
+      @include breakpoint ($small-screen) {
+        height: 166px;
+      }
+
+      @include breakpoint ($standard-screen) {
+        height: 146px;
+      }
+
+      @include breakpoint ($wide-screen) {
+        height: 173px;
+      }
+
+      @include breakpoint (max-width $small-screen) {
+        text-align: center;
+      }
+
+      img {
+        // remove this after confirm image style from ago
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+
+        @include breakpoint ($wide-screen) {
+          top: -2px;
+        }
+      }
+    }
+  }
+}
+
+
+.grid-list.grid-basic-keylines,
+.grid-list-small.grid-basic-keylines {
+  .node--view-mode-info-grid-item {
+    border-bottom: 1px solid $contrastgrey;
+  }
+}
+
+.grid-list.grid-basic-keylines,
+.grid-list-small.grid-light-keylines {
+  .node--view-mode-info-grid-item {
+    border-bottom: 1px solid $hr-color;
+  }
+}
+
+
+.grid-list.no-keylines,
+.grid-list-small.grid-no-keylines {
+  .node--view-mode-info-grid-item {
+    border-bottom: 1px solid transparent;
+  }
+}
+
+//seamless images only
+
+.grid-4-seamless{
+ 
+  .field--name-field-agoc-grid-item{
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .text-group{
+    display: none;
+  }
+  .grid-text{display: none;}
+  
+  .field--type-image, .image-group{
+  img{width: 100%;}
+  }
+
+  .agoc-info-grid-title{
+    padding-bottom: ms(1);
+  }
+ 
+  .field--name-field-agoc-grid-item>div.field__item {
+    position: relative;
+    flex-basis: calc(100% - 0px);
+    box-sizing: border-box;
+    h2{
+      display: none;
+    }
+  }
+  @include breakpoint ($narrow-screen) {
+    .field--name-field-agoc-grid-item>div.field__item {
+    position: relative;
+    flex-basis: calc(50% - 0px);
+    box-sizing: border-box;
+    }
+  }
+  @include breakpoint ($standard-screen) {
+  .field--name-field-agoc-grid-item>div.field__item {
+    position: relative;
+  flex-basis: calc(25% - 0px);
+  box-sizing: border-box;
+  }
+  }
+
+}
+
+.grid-width-seamless{
+  .node__content{
+    width: 100%;
+    padding: 0 !important;
+  }
+}
+
+.grid-width-seamless.grid-black{
+  padding: ms(6) 0 !important;
+  .agoc-info-grid-title{
+    max-width: 1188px;
+    margin: 0px auto;
+    padding: ms(1);
+    @include breakpoint ($narrow-screen) {
+    padding: ms(1) 0;  
+    }
+  }
+}

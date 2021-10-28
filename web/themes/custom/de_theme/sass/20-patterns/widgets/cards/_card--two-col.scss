@@ -1,0 +1,34 @@
+/* 20-patterns/widgets/cards/_card--two-col.scss */
+
+.card--two-col{
+  .card__column-container{
+    @include breakpoint($narrow-screen) {
+      display: flex;
+    }
+  }
+
+  .card__column{
+    @include breakpoint($narrow-screen) {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .card__inner{
+    @include breakpoint($narrow-screen) {
+      flex: 1;
+    }
+  }
+
+  .card__supporting-text{
+    border-bottom: none;
+  }
+
+  .card__actions{
+    border-top: 1px solid $light-grey;
+    @include breakpoint($narrow-screen) {
+      text-align: right;
+    }
+  }
+}

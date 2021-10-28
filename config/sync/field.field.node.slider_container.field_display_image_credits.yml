@@ -1,0 +1,23 @@
+uuid: bb92cc7b-4052-4079-8266-bb7b69015271
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_image_credits
+    - node.type.slider_container
+id: node.slider_container.field_display_image_credits
+field_name: field_display_image_credits
+entity_type: node
+bundle: slider_container
+label: 'Hide Image Credits'
+description: 'Check this to hide image credits'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

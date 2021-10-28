@@ -1,0 +1,33 @@
+uuid: eb706f0e-8dd7-4c9b-85c1-7849dd4a1691
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_style_options
+field_name: field_style_options
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: white-black
+      label: 'Black Text/White Background'
+    -
+      value: grey-background
+      label: 'Grey Background'
+    -
+      value: white-background
+      label: 'White Background'
+    -
+      value: black-white
+      label: 'White Text/Black Background'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

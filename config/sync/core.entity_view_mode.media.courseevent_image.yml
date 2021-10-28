@@ -1,0 +1,10 @@
+uuid: 429165ee-ba14-4a03-85d2-18a759bbd757
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.courseevent_image
+label: 'CourseEvent Image'
+targetEntityType: media
+cache: true

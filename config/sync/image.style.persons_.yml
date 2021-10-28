@@ -1,0 +1,17 @@
+uuid: 151a5a5a-f643-403a-8ef9-85e5b4413d11
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: persons_
+label: 'Persons Image'
+effects:
+  0daa5f3b-bc9a-441a-997f-264364ba5ef5:
+    uuid: 0daa5f3b-bc9a-441a-997f-264364ba5ef5
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 560
+      height: 750
+      crop_type: focal_point

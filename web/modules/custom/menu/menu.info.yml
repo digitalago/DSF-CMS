@@ -1,0 +1,5 @@
+name: Menu
+description: Menu modifications
+package: Custom
+type: module
+core: 8.x

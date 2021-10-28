@@ -1,0 +1,10 @@
+uuid: 43313f79-b499-48dd-aac0-36dbbe95b1c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.tier_3a
+label: 'Tier 3a'
+targetEntityType: node
+cache: true

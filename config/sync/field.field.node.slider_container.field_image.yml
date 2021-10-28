@@ -1,0 +1,28 @@
+uuid: fab85801-3005-4ca1-9b4e-3a2374f9344f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media.type.image
+    - node.type.slider_container
+id: node.slider_container.field_image
+field_name: field_image
+entity_type: node
+bundle: slider_container
+label: 'Featured Image'
+description: 'This only shows up in grids and views'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

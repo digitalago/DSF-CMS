@@ -1,0 +1,43 @@
+uuid: 82b89ea4-f825-4f80-a0ee-4bea5f44d250
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+  theme:
+    - de_theme
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: de_theme_page_title
+theme: de_theme
+region: content
+weight: -26
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      blog: blog
+      collection_page: collection_page
+      course: course
+      event: event
+      exhibition: exhibition
+      menu: menu
+      object: object
+      person: person
+      publication: publication
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/ago-live\r\n/learn/courses\r\n/host-your-event"
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,23 @@
+uuid: 46a32211-aec4-4819-a9ee-ac982630f33a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_slide_titles
+    - node.type.slider_container
+id: node.slider_container.field_display_slide_titles
+field_name: field_display_slide_titles
+entity_type: node
+bundle: slider_container
+label: 'Hide Slide Titles'
+description: 'Check this to hide individual slide titles '
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

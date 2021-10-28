@@ -1,0 +1,157 @@
+<?php
+
+use \Drupal\file\Entity\File;
+use \Drupal\Core\StringTranslation\TranslatableMarkup;
+use \Drupal\Core\Url;
+
+/**
+ * @file
+ * Functions to support theming in de_theme.
+ */
+
+
+/**
+ * Implements hook_theme().
+ */
+function de_theme_theme() {
+  return [
+    'contact_message_feedback_form' => [
+      'render element' => 'form',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds body classes if certain regions have content.
+ */
+function de_theme_preprocess_html(&$variables) {
+  // Add information about the number of sidebars.
+  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_secondary'])) {
+    $variables['attributes']['class'][] = 'layout-two-sidebars-display';
+  }
+  elseif (!empty($variables['page']['sidebar_first'])) {
+    $variables['attributes']['class'][] = 'layout-one-sidebar-display';
+    $variables['attributes']['class'][] = 'layout-sidebar-first-display';
+  }
+
+  elseif (!empty($variables['page']['sidebar_second'])) {
+    $variables['attributes']['class'][] = 'layout-one-sidebar-display';
+    $variables['attributes']['class'][] = 'layout-sidebar-second-display';
+  }
+  else {
+    $variables['attributes']['class'][] = 'layout-no-sidebars-display';
+  }
+
+  // Checking if the user is logged in.
+  $account = \Drupal::currentUser();
+  if (isset($account) && $account->id() === 0) {
+    $variables['attributes']['class'][] = 'anonymous';
+  }
+  $node_current = \Drupal::routeMatch()->getParameter('node');
+  if (isset($node_current) && isset($node_current->field_page_category)) {
+    $target_id = $node_current->field_page_category->getValue();
+    if (isset($target_id[0]['target_id'])) {
+      $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($target_id[0]['target_id']);
+      if (isset($term)) {
+        $variables['attributes']['class'][] = 'context-' . $term->getName();
+      }
+    }
+  }
+  elseif (!isset($node_current)) {
+    // it's a view
+    $parameters = \Drupal::routeMatch()->getParameters();
+    if (isset($parameters)) {
+      $params = $parameters->all();
+      if (isset($params) && !empty($params)) {
+        $class_name = 'context';
+        foreach ($params as $key => $p) {
+          if (is_string($p)) {
+            $class_name .= '-' . $p;
+          }
+
+        }
+        $variables['attributes']['class'][] = $class_name;
+      }
+    }
+  }
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ *
+ * Adds background image url to the page.
+ */
+function de_theme_preprocess_page(&$variables) {
+  if (isset($variables['node']) && is_object($variables['node'])) {
+    // check if node has hero image field defined.
+    $fields = $variables['node']->getFields();
+    if (!isset($fields['field_hero_image'])) {
+      // node doesn't have this field.
+      return;
+    }
+    $value = $variables['node']->get('field_hero_image')->getValue();
+    if (isset($value) && isset(reset($value)['target_id'])) {
+      $file = \Drupal\file\Entity\File::load($value[0]['target_id']);
+      if (isset($file) && is_object($file)) {
+        $uri = $file->getFileUri();
+        if (isset($uri)) {
+          $url = file_create_url($uri);
+          $variables['bg_url'] = $url;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ *
+ * Adds class if hidden.
+ */
+function de_theme_preprocess_block(&$variables) {
+  if(isset($variables['content']['#display_id']) && $variables['content']['#display_id'] == 'block_alert') {
+    if(isset($variables['content']['#view_id']) && $variables['content']['#view_id'] == 'alert') {
+      if(isset($variables['content']['view_build']['#rows'][0]['#rows'][0]['body']['#object'])
+      && $variables['content']['view_build']['#rows'][0]['#rows'][0]['body']['#object']->hasField('field_hide_on_mobile')
+      && $variables['content']['view_build']['#rows'][0]['#rows'][0]['body']['#object']->hasField('field_hide_on_desktop')) {
+        $hide_mobile = $variables['content']['view_build']['#rows'][0]['#rows'][0]['body']['#object']->get('field_hide_on_mobile')->getString();
+        $hide_desktop = $variables['content']['view_build']['#rows'][0]['#rows'][0]['body']['#object']->get('field_hide_on_desktop')->getString();
+        if(!empty($hide_desktop) && $hide_desktop == 1) {
+          $variables['attributes']['class'] = 'hide-desktop';
+        }
+        if(!empty($hide_mobile) && $hide_mobile == 1) {
+          $variables['attributes']['class'] = 'hide-mobile';
+        }
+        if(!empty($hide_mobile) && !empty($hide_desktop) && $hide_mobile == 1 && $hide_desktop == 1 ) {
+          $variables['attributes']['class'] = 'hide-both';
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Add placeholder for exposed form of collection search area.
+ */
+function de_theme_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'views_exposed_form' && $form['#id'] == 'block-exposedformthe-collectionpage-1') {
+    if (isset($form['keys'])) {
+       $form['keys']['#attributes'] = array('placeholder'=> array(t('Search')));
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_block_alter().
+ *
+ */
+function de_theme_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__block__' . $variables['elements']['content']['#block_content']->bundle() . '__' . $variables['elements']['content']['#view_mode']);
+  }
+}

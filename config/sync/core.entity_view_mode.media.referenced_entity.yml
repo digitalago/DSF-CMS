@@ -1,0 +1,10 @@
+uuid: 13ed701e-65fe-40cf-af8c-4788a202a39a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.referenced_entity
+label: 'Media referenced entity'
+targetEntityType: media
+cache: true

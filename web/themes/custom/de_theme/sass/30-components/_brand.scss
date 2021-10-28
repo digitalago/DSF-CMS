@@ -1,0 +1,65 @@
+/* components/_brand.scss */
+
+// brand
+#logo{
+  display: block;
+  a{
+    display: block;
+    line-height: 0;
+  }
+}
+
+//Branding region styling
+#branding {
+  #block-de-theme-branding {
+    .site-logo{
+      text-decoration: none;
+      img{
+        padding-top: 8px;
+        @include breakpoint($small-screen){
+        width: 100px;
+        padding-top: 15px;
+        }
+        width: 80px;
+        display: inline-block;
+        }
+      }
+      float: left;
+      padding: 0;
+
+  }
+  .site-name{
+    @include breakpoint($small-screen){
+    display: inline-block;
+    a{
+      font-size: ms(7);
+      color: $white;
+      text-decoration: none;
+      position: relative;
+      top: -1px;
+      padding-left: 5px;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+  display: none;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
+#branding {
+  background-color: $red;
+  border-bottom: 1px solid $white;
+}
+
+
+.node--type-dags-landing-page #branding {
+  background-color: $almostblack;
+  border-bottom: 1px solid $white;
+}
+
+.path-frontpage #branding {
+  background-color: $red;
+}

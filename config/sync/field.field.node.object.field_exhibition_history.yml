@@ -1,0 +1,19 @@
+uuid: 7ec3ad54-8aa5-4923-a7b0-752624482ad9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exhibition_history
+    - node.type.object
+id: node.object.field_exhibition_history
+field_name: field_exhibition_history
+entity_type: node
+bundle: object
+label: 'Exhibition History'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,5 @@
+name: Render Entity Reference Block - Formatter
+type: module
+description: 'A formatter to render block when entity refereneced'
+package: Custom
+core: 8.x

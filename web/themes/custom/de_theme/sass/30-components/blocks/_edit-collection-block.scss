@@ -1,0 +1,41 @@
+.block-edit-collection-block {
+  display: none;
+}
+
+
+#colorbox .block-edit-collection-block {
+  display: block;
+  @include clearfix;
+}
+
+// checkbox of my collections dropdown
+fieldset#edit-my-collections--wrapper {
+
+}
+
+.edit-collection-btn {
+  // text-indent: 9999;
+  padding-left: ms();
+  &:after {
+    content: '\f040';
+    font-family: "Font Awesome 5 Free";
+    font-size: 15px;
+    display: inline-block;
+  }
+}
+
+// Add new collection button
+.new-collection {
+  display: inline-block;
+  position: relative;
+  margin-bottom: ms();
+  text-transform: lowercase;
+  font-family: $font-set-2;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  .fa {
+    font-size: 12px;
+  }
+}

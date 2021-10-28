@@ -1,0 +1,19 @@
+uuid: acfc1167-876a-4dba-889e-40156c43861e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_first_name
+    - node.type.artist_maker
+id: node.artist_maker.field_first_name
+field_name: field_first_name
+entity_type: node
+bundle: artist_maker
+label: 'First Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

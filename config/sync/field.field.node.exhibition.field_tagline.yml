@@ -1,0 +1,21 @@
+uuid: 84135437-5c92-4ab6-a7f4-4d90162e92e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tagline
+    - node.type.exhibition
+  module:
+    - text
+id: node.exhibition.field_tagline
+field_name: field_tagline
+entity_type: node
+bundle: exhibition
+label: 'Post Summary'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

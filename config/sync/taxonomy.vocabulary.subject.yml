@@ -1,0 +1,8 @@
+uuid: d5fa0c8c-277e-41f8-be28-79c789cab4c5
+langcode: en
+status: true
+dependencies: {  }
+name: Subject
+vid: subject
+description: ''
+weight: 0

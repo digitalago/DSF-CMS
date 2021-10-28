@@ -1,0 +1,7 @@
+// http://compass-style.org/reference/compass/typography/text/replacement/#mixin-squish-text
+
+@mixin squish-text {
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+}

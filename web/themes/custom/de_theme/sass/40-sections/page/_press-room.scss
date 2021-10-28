@@ -1,0 +1,80 @@
+  .press-release{
+      padding: 20px 0px;
+      border-bottom: 1px solid $hr-color;
+      display: block !important;
+      clear: both;
+      .date-time-info{
+        @include nimbus-bold-reg;
+        color: $neutral-grey;
+        font-size: 16px;
+        font-size: 1rem;
+        padding-bottom: 3px;
+      }
+  }
+
+
+  //press releases list
+
+  #block-views-block-ago-press-releases-view-block-1{
+    h2 {
+      display: block;
+      margin-bottom: 0em;
+    }
+    .view-filters{
+      width: 100%;
+      @include breakpoint ($medium-screen){
+        @include grid-span(2, 11);
+      }
+    }
+    .view-content{
+      width: 100%;
+      @include breakpoint ($medium-screen){
+        @include grid-span(10, 1);
+      }
+    }
+    label {
+      font-weight: $normal;
+      float: left;
+      margin-bottom: ms(-5);
+      @include breakpoint (340px) {
+       // float: right;
+      }
+    }
+    select {
+      clear: both;
+      display: inline-block;
+      width: 100%;
+      float: right;
+      margin-top: 3px;
+      margin-right: 0;
+      background-size: 4%;
+      height: 38px;
+      @include breakpoint ($medium-screen) {
+      
+        background-size: 15%;
+      }
+      // padding: ms(-3) ms();
+    }
+    .form-item {
+      float: left;
+      display: inline-block;
+      width: 100%;
+      @include breakpoint ($narrow-screen) {
+        width: 100%;
+        margin: 0;
+      }
+    }
+    .form-actions {
+      display: none;
+      float: left;
+      clear: left;
+      margin-top: 0;
+      @include breakpoint (340px) {
+        margin-top: ms(3);
+        float: right;
+        clear: right;
+      }
+    }
+    .pager ul{ text-align: left;}
+
+    }

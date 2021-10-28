@@ -1,0 +1,76 @@
+id: agoc_course_sections
+label: AGO Course Sessions
+migration_group: ago
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: node
+  bundle: agoc_course_sections
+destination:
+  plugin: entity:node
+  default_bundle: course_session
+process:
+  title: title
+  created: created
+  changed: changed
+  'body/value': 'body/0/value'
+  'body/summary': 'body/0/summary'
+  'body/format':
+    -
+      plugin: static_map
+      source: body/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: 'full_html'
+  status: status
+  field_cancelled: field_agoc_cancelled
+  field_on_sale: field_agoc_on_sale
+  field_sold_out: field_agoc_sold_out
+  field_day_of_the_week:
+    -
+      plugin: sub_process
+      source: field_agoc_day_of_the_week
+      process:
+        target_id:
+          plugin: static_map
+          source: target_id
+          map:
+            892: 778
+            893: 779
+            894: 780
+            895: 781
+            896: 782
+            897: 783
+            898: 784
+          default_value: null
+  field_course_day_end: field_agoc_course_day_end
+  field_course_day_start: field_agoc_course_day_start
+  field_duration_in_weeks: field_duration_in_weeks
+  field_start_time: field_agoc_start_time
+  field_end_time: field_agoc_end_time
+  field_seasons: field_agoc_seasons
+  field_ticket_link: field_agoc_ticket_link
+  field_location_reference:
+    -
+      plugin: migration_lookup
+      migration: ago_locations
+      source: field_agoc_location/0/target_id
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+migration_dependencies:
+  required:
+    - user
+    - ago_locations
+  optional: {  }
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

@@ -1,0 +1,266 @@
+uuid: 89be5b42-cb38-4a4c-b678-6944d5f81648
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration
+id: agoc_event
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: ago
+label: 'AGO Event'
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: node
+  bundle: agoc_event
+process:
+  title: title
+  created: created
+  changed: changed
+  body/value: body/0/value
+  body/summary: body/0/summary
+  body/format:
+    -
+      plugin: static_map
+      source: body/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: full_html
+  status: status
+  field_accessible: field_agoc_accessible
+  field_additional_gl_code: field_agoc_additional_gl_code
+  field_additional_value_member: field_agoc_additional_value_memb
+  field_additional_value_public: field_agoc_additional_value_allo
+  field_audience:
+    -
+      plugin: sub_process
+      source: field_agoc_audience
+      process:
+        target_id:
+          plugin: static_map
+          source: target_id
+          map:
+            915: 790
+            917: 791
+          default_value: null
+  field_capacity: field_agoc_capacity
+  field_date_time_description: field_date_time_description
+  field_event_category:
+    -
+      plugin: sub_process
+      source: field_agoc_event_category
+      process:
+        target_id:
+          plugin: static_map
+          source: target_id
+          map:
+            2947: 794
+            3309: 795
+            955: 796
+            2948: 797
+            923: 798
+            924: 799
+            922: 800
+            925: 801
+            926: 802
+            927: 803
+            928: 804
+            929: 805
+            2512: 806
+          default_value: null
+  field_event_session:
+    -
+      plugin: sub_process
+      source: field_agoc_event_session
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: agoc_event_sessions
+  field_year_filter:
+    -
+      plugin: sub_process
+      source: field_agoc_year_filter
+      process:
+        target_id:
+          plugin: static_map
+          source: target_id
+          map:
+            3647: 807
+            3506: 808
+            3380: 809
+            3381: 810
+            3382: 811
+            3383: 812
+            3384: 813
+            3385: 814
+            3386: 815
+            3387: 816
+            3484: 817
+            3485: 818
+            3629: 819
+          default_value: null
+  field_featured_event_image:
+    -
+      plugin: sub_process
+      source: field_agoc_featured_event_image
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: image_media
+  field_featured_filters:
+    -
+      plugin: sub_process
+      source: field_featured_filters
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: featured_filters_taxonomy
+  field_is_featured: field_ago_is_featured
+  field_free: field_agoc_free
+  field_gl_code_events: field_agoc_gl_code_events
+  field_hide_ticketing: field_agoc_hide_ticketing
+  field_main_image:
+    -
+      plugin: sub_process
+      source: field_agoc_image
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: image_media
+  field_internal_notes/value: field_agoc_internal_notes/0/value
+  field_internal_notes/format:
+    -
+      plugin: static_map
+      source: field_agoc_internal_notes/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: full_html
+  field_location_reference:
+    -
+      plugin: sub_process
+      source: field_agoc_location
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: ago_locations
+  field_marketing_flag:
+    -
+      plugin: sub_process
+      source: field_marketing_flag
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: agoc_marketing_flag_taxonomy
+  field_media_container:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_ago_media_container/0/target_id
+    -
+      plugin: media_container
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration:
+            - image_media
+            - ago_soundcloud_media
+            - ago_video_media
+  field_member_price: field_agoc_member_price
+  field_members_message/value: field_agoc_members_message/0/value
+  field_members_message/format:
+    -
+      plugin: static_map
+      source: field_agoc_members_message/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: full_html
+  field_meta_tags/value: field_metatags/0/value
+  field_price_notes/value: field_agoc_price_notes/0/value
+  field_price_notes/format:
+    -
+      plugin: static_map
+      source: field_agoc_price_notes/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: full_html
+  field_public_price: field_agoc_price
+  field_short_description/value: field_agoc_short_description/0/value
+  field_short_description/format:
+    -
+      plugin: static_map
+      source: field_agoc_short_description/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: full_html
+  field_student_price: field_agoc_student_price
+  field_tags:
+    -
+      plugin: sub_process
+      source: field_tags
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: tags_taxonomy
+  field_big_feature: field_ago_big_feature
+  field_value_member: field_agoc_value_member
+  field_value_allocation: field_agoc_value_allocation
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+destination:
+  plugin: 'entity:node'
+  default_bundle: event
+migration_dependencies:
+  required:
+    - user
+    - file
+    - image_media
+    - ago_soundcloud_media
+    - ago_video_media
+    - featured_filters_taxonomy
+    - ago_locations
+    - agoc_marketing_flag_taxonomy
+    - tags_taxonomy
+    - agoc_event_sessions
+  optional: {  }

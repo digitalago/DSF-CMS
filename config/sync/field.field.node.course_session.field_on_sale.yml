@@ -1,0 +1,23 @@
+uuid: 1bd9a988-8cfc-452a-a606-5d4b9aac218f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_on_sale
+    - node.type.course_session
+id: node.course_session.field_on_sale
+field_name: field_on_sale
+entity_type: node
+bundle: course_session
+label: 'On Sale'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

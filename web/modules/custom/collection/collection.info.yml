@@ -1,0 +1,5 @@
+name: 'Collection'
+type: module
+description: 'Collection related custom functionality'
+core: 8.x
+package: Custom

@@ -1,0 +1,44 @@
+/* Button styling for return to landing page*/
+
+//Return to the collection page button on content prefix region
+#block-returntothecollection, #block-returntopublicationlandingpage,
+.view-object-buttons .views-row, #block-returntolessonplan, #block-backtocourses {
+  i.fa-step-backward {
+    padding-right: 5px !important;
+  }
+  // span {
+  //   display: block;
+  //   @include breakpoint ($small-screen) {
+  //     display: none;
+  //   }
+  // }
+  i.fa {
+    padding-right: 0;
+    vertical-align: middle;
+    font-size: 14px;
+    top: -2px;
+    position: relative;
+    @include breakpoint ($narrow-screen) {
+      padding-right: 10px;
+    }
+  }
+  a {
+    //text-decoration: none;
+    //display: inline-block;
+   // position: relative;
+   // @include btn-flat;
+   // font-family: $font-set-2;
+   // padding: 7px 12px 3px 36px;
+  //  position: relative;
+    
+    
+  }
+}
+
+.view-object-buttons {
+  
+}
+
+#block-returntopublicationlandingpage {
+  float: left;
+}

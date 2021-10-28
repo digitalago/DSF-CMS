@@ -1,0 +1,31 @@
+uuid: 7daf347a-a242-4550-9dd5-9d65c1b0ef16
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6ae46976-5aba-4004-ad13-28c014b8644b'
+  module:
+    - block_content
+    - system
+  theme:
+    - de_theme
+id: findacoursedescription
+theme: de_theme
+region: content_prefix
+weight: -27
+provider: null
+plugin: 'block_content:6ae46976-5aba-4004-ad13-28c014b8644b'
+settings:
+  id: 'block_content:6ae46976-5aba-4004-ad13-28c014b8644b'
+  label: 'Find a course description'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /learn/courses
+    negate: false
+    context_mapping: {  }

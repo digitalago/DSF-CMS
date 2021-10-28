@@ -1,0 +1,12 @@
+uuid: 70412932-1f39-470d-85c6-14496eb0ddb6
+langcode: en
+status: true
+dependencies: {  }
+id: 6_columns
+label: '6 Columns'
+classes: six-columns
+type: component
+weight: 0
+block_restrictions:
+  - 'inline_block:card_container'
+layout_restrictions: {  }

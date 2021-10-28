@@ -1,0 +1,30 @@
+uuid: 82069379-ac9f-470d-a239-50501300cd0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsor_container
+    - core.entity_view_mode.block_content.text
+    - field.field.block_content.sponsor_container.field_sponsors
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: block_content.sponsor_container.text
+targetEntityType: block_content
+bundle: sponsor_container
+mode: text
+content:
+  field_sponsors:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: text
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  search_api_excerpt: true

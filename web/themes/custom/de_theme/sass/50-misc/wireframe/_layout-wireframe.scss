@@ -1,0 +1,86 @@
+/* wireframe/_layout-wireframe.scss */
+// contains aesthetic styles for the wireframe for pre-development
+
+//body{
+  //background-color: $dark-grey;
+//}
+
+#masthead{
+  // background-color: $neutral-grey;
+}
+
+.section-header{
+
+}
+
+.region--navigation-primary{
+ // background-color: white;
+  padding-top: ms(-3);
+  padding-bottom: ms(-3);
+  //border-bottom: 1px solid shade($light-grey,5);
+  .menu{
+    a{
+
+      font-size: ms(-1);
+      text-transform: uppercase;
+    }
+  }
+}
+
+.section-content{
+  // background-color: $light-grey;
+  background-color: white;
+  // padding-top: ms();
+  // padding-bottom: ms();
+  > #page-content-prefix {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.layout-sidebar-first{
+  @include breakpoint($medium-screen) {
+    margin-right: ms();
+  }
+}
+
+.layout-sidebar-second{
+  @include breakpoint($medium-screen) {
+    margin-left: ms();
+  }
+}
+
+#main,
+.layout-sidebar-first,
+.layout-sidebar-second{
+  background-color: white;
+  // @include z-depth-1;
+  // padding: ms(1);
+}
+
+.block-views-blockdags-top-reference-dags-bottom {
+  .view-content{
+    .views-row:last-child .views-field .field-content > article {padding-bottom: 40px;}
+  }
+}
+
+// .region--content-prefix, #banner{
+//   border-bottom: 1px solid shade($light-grey,5);
+//   padding-top: ms(-2);
+//   padding-bottom: ms(-2);
+//   margin-bottom: ms();
+// }
+
+// .region--content-suffix{
+//   border-top: 1px solid shade($light-grey,5);
+//   padding-top: ms(-2);
+//   padding-bottom: ms(-2);
+//   margin-top: ms(1);
+// }
+
+#footer{
+  // color: #fff;
+  // a{
+  //   color: #fff;
+  // }
+}

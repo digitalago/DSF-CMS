@@ -1,0 +1,42 @@
+// ----------
+// Free Style
+// ----------
+
+
+.free-style {
+  h3 {
+    font-size: ms(4);
+  }
+  h4 {
+    font-size: ms(3);
+  }
+  ul {
+    padding-left: 0;
+  }
+
+  .row {
+    @include grid-span(12);
+    li {
+      width: 100%;
+      list-style: none;
+      // margin-right: 0 !important;
+      p {
+        line-height: 1.6em;
+      }
+       
+  @include breakpoint ($weird-screen){
+  @include float-span(4);
+    &:last-child {
+    @include float-span(4, last);
+  }
+  }
+ //     @include breakpoint($standard-screen) {
+   //     @include float-span(4);
+   //     &:nth-child(3n+3) {
+   //       @include float-span(4,'last');
+   //     }
+        // margin-right: 20px !important;
+   //   }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+uuid: 379b9101-6f40-4cc1-af84-655b193c12cd
+langcode: en
+status: true
+dependencies: {  }
+id: subsite-menu
+label: 'Subsite Menu'
+description: 'Subsite Menu'
+locked: false

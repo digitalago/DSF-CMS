@@ -1,0 +1,8 @@
+uuid: e9b244eb-34c1-4cee-ba73-78a4bbb213f2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Featured Filters Courses'
+vid: featured_filters_courses
+description: 'Quick filters for courses.'
+weight: 0

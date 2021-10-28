@@ -1,0 +1,5 @@
+name: Instagram Integration
+description: Instagram integration for AGO
+package: Custom
+type: module
+core: 8.x

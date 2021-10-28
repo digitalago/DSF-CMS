@@ -1,0 +1,120 @@
+/* 10-drupal/system/_tabs.scss */
+// reset some default drupal styling
+
+
+ul.tabs{
+  width: 100%;
+  @include navigation-list;
+  margin-bottom: ms(1);
+  margin-top: ms(1);
+  @include breakpoint ($small-screen) {
+    border-bottom: 5px solid $red;
+  }
+  li{
+    @include reset;
+    &:first-of-type a {
+      @include breakpoint ($small-screen) {
+        border-top-left-radius: ms(-1);
+      }
+
+    }
+    &:last-of-type a {
+      @include breakpoint ($small-screen) {
+        border-top-right-radius: ms(-1);
+      }
+    }
+    @include breakpoint (max-width $small-screen) {
+      width: 100%;
+    }
+  }
+  a{
+    background-color: $footer-bg;
+    color: white;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-out;
+    display: block;
+    float: left;
+    color: white;
+    font-weight: $bold;
+    font-size: ms(-1);
+    padding: ms(-4) ms(4);
+    text-decoration: none;
+    width: 100%;
+    font-family: $font-set-2;
+    @include breakpoint ($small-screen) {
+      padding: ms(-4) ms(2);
+      width: auto;
+    }
+    @include breakpoint ($weird-screen) {
+      padding: ms(-2) ms(5) ms(-5);
+    }
+    @include breakpoint ($medium-screen) {
+      padding: ms(-2) ms(6) ms(-6);
+    }
+    &.active{
+      background-color: $red;
+    }
+    &:hover{
+      background-color: $red;
+    }
+    &:active{
+      background-color: $red;
+    }
+  }
+  li:last-child a{
+    margin-right: 0;
+  }
+  .is-active {
+    a {
+      background-color: $red;
+      color: white;
+    }
+  }
+}
+
+
+
+// ul.tabs.primary{
+//   @include no-bullets;
+//   @include reset;
+//   display: flex;
+//   margin-bottom: ms(1);
+//   margin-top: ms(1);
+//   border-bottom: 5px solid black;
+//   li{
+//     @include reset;
+//     flex: 0 1 auto;
+//     margin-right: ms(-6);
+//   }
+//   a{
+//     background-color: gray;
+//     color: white;
+//     text-transform: uppercase;
+//     transition: background-color 0.3s ease-out;
+//     display: block;
+//     font-weight: $bold;
+//     font-size: ms(-1);
+//     padding-top: ms(-6);
+//     padding-left: ms();
+//     padding-right: ms();
+//     text-decoration: none;
+//     @include breakpoint(max-width $weird-screen-max) {
+//       line-height: ms(2);
+//     }
+//     &.is-active{
+//       background-color: black;
+//       color: white;
+//     }
+//     &:hover{
+//       background-color: #eee;
+//       color: black;
+//     }
+//     &:active{
+//       background-color: black;
+//       color: white;
+//     }
+//   }
+//   li:last-child a{
+//     margin-right: 0;
+//   }
+// }

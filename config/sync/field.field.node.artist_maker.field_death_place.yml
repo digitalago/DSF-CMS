@@ -1,0 +1,19 @@
+uuid: dd9d04d9-7dca-417d-9487-7a4c35c40500
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_death_place
+    - node.type.artist_maker
+id: node.artist_maker.field_death_place
+field_name: field_death_place
+entity_type: node
+bundle: artist_maker
+label: 'Death Place'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,21 @@
+uuid: 19c51d4e-cbf7-4d65-952b-a77103b267d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_date_time_short_descriptio
+field_name: field_date_time_short_descriptio
+entity_type: node
+type: string
+settings:
+  max_length: 512
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

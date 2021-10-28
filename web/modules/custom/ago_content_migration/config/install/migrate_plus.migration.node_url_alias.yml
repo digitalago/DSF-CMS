@@ -1,0 +1,55 @@
+id: node_url_alias
+label: AGO Node Url Alias
+migration_group: ago
+source:
+  plugin: node_pathauto_state
+  key: migrate
+  constants:
+      slash: '/'
+destination:
+  plugin: entity:path_alias
+process:
+  _node:
+    -
+      plugin: migration_lookup
+      source: name
+      migration:
+        - ago_publication
+        - agoc_courses
+        - ago_blog
+        - ago_locations
+        - ago_publication
+        - agoc_event
+    -
+      plugin: skip_on_empty
+      method: row
+    -
+      plugin: pathauto_state_migration
+  alias:
+    -
+      plugin: url_alias_migration
+      source: name
+  langcode:
+    plugin: default_value
+    default_value: 'en'
+  path:
+    plugin: concat
+    source:
+      - constants/slash
+      - entity_type
+      - constants/slash
+      - '@_node'
+  status: status
+migration_dependencies:
+  required:
+    - ago_publication
+    - agoc_courses
+    - ago_blog
+    - ago_locations
+    - ago_publication
+    - agoc_event
+  optional: {  }
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

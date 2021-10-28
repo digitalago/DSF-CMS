@@ -1,0 +1,25 @@
+uuid: d481f30f-a62d-4f2f-b098-82366ae99675
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.homepage_slider_custom_crop
+  module:
+    - crop
+name: featured_extended_slider
+label: 'Featured Extended Slider (Homepage)'
+effects:
+  0d529dce-6984-4d61-a3c4-b5fe0c4402bc:
+    uuid: 0d529dce-6984-4d61-a3c4-b5fe0c4402bc
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: homepage_slider_custom_crop
+  bb964d9b-20b6-4f50-85d6-4eb61523982b:
+    uuid: bb964d9b-20b6-4f50-85d6-4eb61523982b
+    id: image_scale
+    weight: 2
+    data:
+      width: 765
+      height: 550
+      upscale: true

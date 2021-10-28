@@ -1,0 +1,8 @@
+uuid: 74b3a5d4-4492-490a-ab48-a59b460beeda
+langcode: en
+status: true
+dependencies: {  }
+name: 'Image Tags'
+vid: image_tags
+description: 'These are the tags that will be used to filter images'
+weight: 0

@@ -1,0 +1,12 @@
+uuid: 87fc0882-f032-4c9f-9aac-e87a9e0c5382
+langcode: en
+status: true
+dependencies: {  }
+label: 'Homepage slider custom crop'
+id: homepage_slider_custom_crop
+description: ''
+aspect_ratio: '153:110'
+soft_limit_width: 765
+soft_limit_height: 550
+hard_limit_width: null
+hard_limit_height: null

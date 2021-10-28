@@ -1,0 +1,36 @@
+uuid: 6c5dac5c-5bcf-405e-958f-c7e8bcd792e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.top-right-header-menu
+  module:
+    - menu_block
+    - system
+  theme:
+    - de_theme
+id: toprightheadermenu
+theme: de_theme
+region: branding
+weight: -32
+provider: null
+plugin: 'menu_block:top-right-header-menu'
+settings:
+  id: 'menu_block:top-right-header-menu'
+  label: 'Top Right Header Menu'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 1
+  expand: false
+  parent: 'top-right-header-menu:'
+  suggestion: top_right_header_menu
+  label_type: block
+visibility:
+  request_path:
+    id: request_path
+    pages: "/ago\r\n/gallery/*"
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,25 @@
+uuid: 368d010b-1020-45be-b58b-4a4ea075ab93
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.16_9
+  module:
+    - crop
+name: media_card
+label: 'Media Card'
+effects:
+  c14cbef6-b80d-47d3-8c72-3ae1fd40c230:
+    uuid: c14cbef6-b80d-47d3-8c72-3ae1fd40c230
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: '16_9'
+  7a406c13-bda2-4b3a-a411-da5e50711c9a:
+    uuid: 7a406c13-bda2-4b3a-a411-da5e50711c9a
+    id: image_scale
+    weight: 2
+    data:
+      width: 280
+      height: 158
+      upscale: true

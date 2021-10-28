@@ -1,0 +1,21 @@
+/* de_editor.scss */
+
+// This file is used to bring in theme styles to
+// the Drupal backened for a more consistent editor experience.
+// You can include the _objects.scss partial if more specific
+// styles are requested to be shown while editing.
+
+// box sizing
+    @import '../bower_components/inuit-box-sizing/generic.box-sizing';
+// import commons
+    @import '00-base/imports/theme-commons';
+
+// @authors unclassed element styles
+  // _elements.scss contains authors unclassed HTML element styles such as h1, h2, table, etc
+    @import '20-patterns/elements/elements';
+
+// bring in authors content wysiwyg styles from objects/_content-styles.scss
+    @import '20-patterns/elements/content-styles';
+
+// This file adjusts element styles that appear in the wysiwyg area
+    // @import '50-misc/wysiwyg/wysiwyg-overrides';

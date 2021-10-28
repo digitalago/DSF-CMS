@@ -1,0 +1,29 @@
+uuid: 9eee1ddd-9a38-4d12-83ef-ecaa143f8559
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.post_includes_media
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: blog_includes_media
+theme: de_theme
+region: sidebar_first
+weight: -12
+provider: null
+plugin: 'facet_block:post_includes_media'
+settings:
+  id: 'facet_block:post_includes_media'
+  label: 'Includes Audio / Video'
+  provider: facets
+  label_display: '0'
+  block_id: blog_includes_media
+visibility:
+  request_path:
+    id: request_path
+    pages: /agoinsider/results
+    negate: false
+    context_mapping: {  }

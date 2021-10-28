@@ -1,0 +1,19 @@
+uuid: 4806e850-d1e7-4fe3-87e0-c973fb07bf77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_speaker_name
+    - media.type.soundcloud
+id: media.soundcloud.field_speaker_name
+field_name: field_speaker_name
+entity_type: media
+bundle: soundcloud
+label: 'Speaker Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

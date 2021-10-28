@@ -1,0 +1,30 @@
+uuid: 21a219f2-11f6-415f-af4f-56ccbf15497f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: fieldset
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Slider Item'
+type: slider_item
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

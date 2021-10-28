@@ -1,0 +1,29 @@
+uuid: 2b196738-1a99-47af-b767-62741ad1ba17
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.featured_filters_for_courses
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: featured_filters_for_courses
+theme: de_theme
+region: sidebar_first
+weight: -31
+provider: null
+plugin: 'facet_block:featured_filters_for_courses'
+settings:
+  id: 'facet_block:featured_filters_for_courses'
+  label: 'Featured Filters for courses'
+  provider: facets
+  label_display: '0'
+  block_id: featured_filters_for_courses
+visibility:
+  request_path:
+    id: request_path
+    pages: /learn/courses
+    negate: false
+    context_mapping: {  }

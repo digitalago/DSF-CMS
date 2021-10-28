@@ -1,0 +1,21 @@
+uuid: 497cfe90-dff6-4951-9297-40cc4044e959
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_placement_date
+    - node.type.event
+  module:
+    - datetime
+id: node.event.field_placement_date
+field_name: field_placement_date
+entity_type: node
+bundle: event
+label: 'Placement Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

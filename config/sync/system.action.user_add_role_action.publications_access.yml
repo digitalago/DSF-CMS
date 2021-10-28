@@ -1,0 +1,14 @@
+uuid: 13208198-39ae-45e3-b431-757b28ff8e3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.publications_access
+  module:
+    - user
+id: user_add_role_action.publications_access
+label: 'Add the Publications Access role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: publications_access

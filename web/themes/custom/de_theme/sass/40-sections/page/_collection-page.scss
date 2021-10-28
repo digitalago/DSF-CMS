@@ -1,0 +1,256 @@
+//collection page styles
+
+//collection page
+
+.block-return-to-collection-link-block {
+  .btn-back {
+    font-weight: 100;
+    margin-bottom: 1em;
+  }
+}
+
+.banner-wrapper{
+    .block-page-title-block{
+        padding-top: 40px;
+        @include clearfix;
+        h1{
+        text-align: center;
+        height: 100%;
+        margin: 0 auto;
+        top: 25%;
+        text-shadow: 0px 0px 15px rgba(0,0,0,0.7);
+        font-size: ms(11);
+        color: $white;
+        span{
+            margin: 30px auto;
+            text-align: center;
+            display: block;
+            line-height: 0.889em;
+        }
+        @include breakpoint($medium-screen) {
+            font-size: ms(15);
+        }
+        @include breakpoint ($wide-screen) {
+            font-size: ms(18);
+        }
+        }
+    }
+    .top-collection-search-block-form{
+        @include clearfix;
+        padding-bottom: 40px;
+        .form-item, .form-actions {
+        display: inline-block;
+        }
+        .search-wrap{
+        margin: 0px auto;
+        width: 90%;
+        display: flex;
+        position: relative;
+        @include breakpoint ($narrow-screen){
+            width: 70%;
+        }
+        @include breakpoint ($standard-screen){
+            width: 60%;
+            max-width: 1180px;
+        }
+
+            .form-item{
+            width: 100%;
+            display: inline-block;
+            }
+
+            #edit-submit--2{
+            @include btn-big;
+            @include breakpoint ($standard-screen){
+                @include btn-really-big;
+            }
+            &:hover{
+                color: $white !important;
+                background-color: $almostblack !important;
+            }
+            background-color: #fff;
+            color: #222222;
+            text-transform: uppercase;
+            font-family: $font-set-1;
+            @include antialiased;
+            letter-spacing: 1px;
+            text-decoration: none;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            display: inline-block;
+            margin-right: 0;
+            vertical-align: top;
+            width: 100%;
+            }
+            .form-search{
+            box-sizing: border-box;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            display: inline-block;
+            position: relative;
+            font-family: "nimbus-sans",Helvetica,Arial,sans-serif;
+            font-weight: 300;
+            font-size: 1em;
+            border: 1px solid #222222;
+            vertical-align: top;
+            height: 46px;
+            @include breakpoint($narrow-screen){
+            height: 49px;
+            }
+            @include breakpoint($standard-screen){
+            height: 57px;
+            }
+            width: 100%;
+            padding: 9px 10px 7px 15px;
+            }
+
+        }
+
+    .form-submit{
+    @include antialiased;
+    vertical-align: top;
+
+    @include btn-big;
+    @include breakpoint ($standard-screen){
+        @include btn-really-big;
+    }
+
+    }
+    .browse-wrap{
+    margin: 0px auto;
+    max-width: 192px;
+    @include breakpoint ($standard-screen){
+        max-width: 212px;
+    }
+    @include breakpoint ($standard-screen){
+        max-width: 253px;
+    }
+    }
+
+    }
+}
+
+
+//collection area pages
+.block-field-blocknodecollection-pagetitle {
+  padding: 20px 0;
+}
+
+.collection-search-block-form{
+  display: block;
+
+    @include breakpoint ($narrow-screen) {
+      display: flex;
+      position: relative;
+    }
+
+    .form-item, 
+    .form-actions {
+      display: inline-block;
+    }
+
+    .form-item{
+      width: 100%;
+    }
+
+.search-wrap{
+    display: block;
+    @include breakpoint ($narrow-screen){
+    display: flex;
+    }
+    position: relative;
+    width: 100%;
+
+        #edit-browse{
+        overflow: visible;
+        @include breakpoint ($narrow-screen){
+        width: auto;
+        -webkit-appearance: none;
+        }
+        width: 100%;
+        }
+        #edit-submit {
+        @include btn-big;
+        @include breakpoint ($standard-screen){
+            @include btn-really-big;
+        }
+        background-color: #fff;
+        color: #222222;
+        text-transform: uppercase;
+        font-family: $font-set-1;
+        @include antialiased;
+        letter-spacing: 1px;
+        text-decoration: none;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        margin-right: 0;
+        vertical-align: top;
+        -webkit-appearance: none;
+        }
+        .form-search{
+
+        box-sizing: border-box;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        display: inline-block;
+        position: relative;
+        font-family: $font-set-2;
+        font-weight: 300;
+        font-size: 1em;
+        border: 1px solid #222222;
+        vertical-align: top;
+        height: 46px;
+        width: 100%;
+        @include breakpoint($narrow-screen){
+        margin-left: 10px;
+        height: 49px;
+        }
+        @include breakpoint($standard-screen){
+        height: 57px;
+        }
+
+        padding: 9px 10px 7px 15px;
+        @include breakpoint ($narrow-screen){
+            padding: 10px 10px 9px 15px;
+
+
+        }
+    }
+
+}
+
+
+.form-submit{
+    overflow: visible;
+    @include antialiased;
+    vertical-align: top;
+    @include btn-big;
+    width: 100%;
+    display: block;
+    @include breakpoint ($narrow-screen){
+    width: auto;
+    -webkit-appearance: none;
+    }
+    @include breakpoint ($standard-screen){
+        @include btn-really-big;
+    }
+    }
+}
+
+#views-exposed-form-objects-page-1 .form-item input[type=checkbox]{
+    display: none;
+}
+
+
+//hide search filter for collection grid and object pages
+
+#edit-field-organization-inst-ref-target-id--wrapper, #views-exposed-form-objects-page-1 .form-item-field-organization-inst-ref-target-id {display:none;}
+#edit-az-artists-ph--wrapper {display:none;}
+#edit-field-subjects-target-id--wrapper {display:none;}
+#edit-field-object-type-reference-target-id--wrapper {display:none;}
+#edit-field-subjects--wrapper {display:none;}
+#edit-field-previous-owner-target-id--wrapper {display:none;}
+.field--name-field-object-type-reference {display:none !important;}
+#edit-field-category-target-id label.option {text-transform: capitalize;}
+
+.add-to-collection-button {display: none;}

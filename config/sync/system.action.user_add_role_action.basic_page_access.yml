@@ -1,0 +1,14 @@
+uuid: b55ac5a2-0f0c-4a75-9991-6da688cbbc21
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.basic_page_access
+  module:
+    - user
+id: user_add_role_action.basic_page_access
+label: 'Add the Basic Pages Access role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: basic_page_access

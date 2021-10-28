@@ -1,0 +1,89 @@
+
+
+// +++++ Menu CT Theming
+
+.node--type-menu {
+
+  /*
+  * Horizontal Rule
+  *
+  * Overriding margins so that left and right sides align with content.
+  */
+  hr {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+	.block-field-blocknodemenufield-main-image {
+		padding-bottom: 10px;
+	}
+
+	.block-field-blocknodemenutitle {
+		padding: 20px 0;
+
+		h1 {
+			margin-top: 10px;
+		}
+	}
+
+	.field--name-body {
+		h2 {
+			text-transform: uppercase;
+			margin-bottom: 0;
+		}
+	}
+
+	.block-info-grid {
+		padding: 7px 0;
+
+		.field--name-field-link {
+			padding: 10px 0px 5px 0px;
+
+			a {
+				text-decoration: none;
+				font-size: 1.80203em;
+				transition: color 0.3s ease-out;
+
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+	}
+
+  /*
+  * Info Grid <img>
+  *
+  * Overriding margins so that image is aligned with content
+  */
+  .block-info-grid .field--name-field-image img {
+    margin: 0;
+    position: static;
+    height: auto;
+    width: 100%;
+  }
+
+  /*
+  * Info Grid Image Container
+  *
+  * Overriding the set height so that the image can fill the width
+  */
+  .layout--fourcol-section .block-info-grid .field--name-field-image {
+    height: unset;
+    max-width: 270px;
+
+    @include breakpoint($narrow-screen) {
+      max-width: 100%;
+    }
+  }
+
+  /*
+  * Layout Region
+  *
+  * Add consistent padding
+  */
+  .layout__region {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

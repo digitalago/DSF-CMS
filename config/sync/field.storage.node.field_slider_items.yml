@@ -1,0 +1,19 @@
+uuid: c7f1c2fc-b499-4947-930c-1bf77593ba78
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_slider_items
+field_name: field_slider_items
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

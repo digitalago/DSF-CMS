@@ -1,0 +1,14 @@
+/* _sections.scss */
+// @imports all SASS partials from the /sections folder.
+// contains styles for main sections of a site, eg. the news or
+// events section. can contain specific components unique to that section
+
+// If adding new functionlaity that is specific to the project, create a new
+// SASS partial with the appropriate name and save it in the /sections folder.
+// eg. sections/members
+
+@import '40-sections/blog/index';
+@import '40-sections/events/index';
+@import '40-sections/news/index';
+@import '40-sections/page/index';
+@import '40-sections/collection/index';

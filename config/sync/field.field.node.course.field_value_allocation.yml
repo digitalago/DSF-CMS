@@ -1,0 +1,19 @@
+uuid: b5870d94-6357-4a0e-90eb-50ed9cc766ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_value_allocation
+    - node.type.course
+id: node.course.field_value_allocation
+field_name: field_value_allocation
+entity_type: node
+bundle: course
+label: 'Value $/% (Public)'
+description: 'Include $ or % beside value.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

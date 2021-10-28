@@ -1,0 +1,23 @@
+uuid: 85a4d3aa-304c-4340-9326-6b34248db47e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cancelled
+    - node.type.course_session
+id: node.course_session.field_cancelled
+field_name: field_cancelled
+entity_type: node
+bundle: course_session
+label: Cancelled
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

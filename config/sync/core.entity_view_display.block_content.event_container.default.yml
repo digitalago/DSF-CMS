@@ -1,0 +1,23 @@
+uuid: ed0ccf00-4d6c-488f-ad68-42367e00284e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.event_container
+    - field.field.block_content.event_container.field_event
+id: block_content.event_container.default
+targetEntityType: block_content
+bundle: event_container
+mode: default
+content:
+  field_event:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: event_card_view
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  search_api_excerpt: true

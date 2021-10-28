@@ -1,0 +1,142 @@
+################################################################################
+# Pantheon GitLab CI Integration
+#
+# This setup provides the following:
+#   - Automatic push of all branches to Pantheon
+#   - Linting of all custom code
+#   - Automated test of custom modules
+#   - Manual actions to deploy to test and live
+#   - Automatic multidev creation for valid branch names.
+#
+# This setup assumes the following:
+#   - The Pantheon environments are already set up.
+#   - Unlimited multidev is enabled for the site.
+#   - A terminus machine token for the drupal@echidna.ca user has been generated
+#     and added to the project variables as `TERMINUS_MACHINE_TOKEN`.
+#   - drupal@echidna.ca has appropriate access to deploy the site on Pantheon.
+#
+# Required secret variables
+#   - TERMINUS_MACHINE_TOKEN: A terminus machine token for drupal@echidna.ca
+#
+################################################################################
+
+image: registry.echidna.ca/ops/drupal_ci/php71:v2
+
+stages:
+  - lint
+  - sync
+  - security
+  - review
+  - integrate
+  - stage
+  - deploy
+
+# Environment variables.
+variables:
+  TERMINUS_SITE: ago-main
+
+# Authenticate.
+before_script:
+  - eval $(ssh-agent -s)
+  - init_env pantheon
+
+# Yaml templates.
+.restrict_multidev: &restrict_multidev
+  only:
+    - /^[a-z0-9][a-z0-9\-]{0,10}$/
+  except:
+    - master
+    - settings
+    - team
+    - support
+    - debug
+    - multidev
+    - files
+    - tags
+    - billing
+    - dev
+    - test
+
+# Push everything to Pantheon
+sync code:
+  stage: sync
+  script:
+    - git remote add pantheon $(terminus connection:info $TERMINUS_SITE.dev --format=string --fields=git_url) || true
+    - git push pantheon HEAD:refs/heads/$CI_BUILD_REF_NAME
+  only:
+    - branches
+
+# Security Updates (To activate, schedule this task on GitLab).
+security updates:
+  stage: security
+  services:
+    - mysql:latest
+  variables:
+    # Credentials for the temporary mysql database. This will only contain an
+    # empty, stock Drupal, so the secure password isn't too important.
+    MYSQL_DATABASE: temp
+    MYSQL_ROOT_PASSWORD: temp123
+  # Security updates call init_env with different credentials.
+  before_script:
+    - eval $(ssh-agent -s)
+  script:
+    - security_updates $CI_PROJECT_DIR/web mysql://root:$MYSQL_ROOT_PASSWORD@mysql/temp
+  only:
+    - schedules
+
+# Review sites.
+start review:
+  <<: *restrict_multidev
+  stage: review
+  script:
+    - terminus multidev:create -y -n $TERMINUS_SITE.dev $CI_BUILD_REF_NAME
+  environment:
+    name: review/$CI_BUILD_REF_NAME
+    url: http://$CI_BUILD_REF_NAME-$TERMINUS_SITE.pantheonsite.io/
+    on_stop: stop review
+
+stop review:
+  <<: *restrict_multidev
+  stage: review
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - terminus multidev:delete -y -n $TERMINUS_SITE.$CI_BUILD_REF_NAME --delete-branch
+  when: manual
+  environment:
+    name: review/$CI_BUILD_REF_NAME
+    action: stop
+
+# Standard deployments (You may need to substitue $TERMINUS_SITE manually).
+deploy to dev:
+  stage: integrate
+  script:
+    - echo "Logging auto-deploy to pantheon dev."
+    - terminus drush ago-main.dev -- cim -y
+  only:
+    - master
+  environment:
+    name: development
+    url: http://dev-$TERMINUS_SITE.pantheonsite.io/
+
+deploy to test:
+  stage: stage
+  script:
+    - terminus env:deploy $TERMINUS_SITE.test -y -n --cc --updatedb --note="Automated deploy of pipeline ${CI_PIPELINE_ID} by ${GITLAB_USER_EMAIL}."
+  only:
+    - master
+  when: manual
+  environment:
+    name: testing
+    url: http://test-$TERMINUS_SITE.pantheonsite.io/
+
+deploy to live:
+  stage: deploy
+  script:
+    - terminus env:deploy $TERMINUS_SITE.live -y -n --cc --updatedb --note="Automated deploy of pipeline ${CI_PIPELINE_ID} by ${GITLAB_USER_EMAIL}."
+  only:
+    - master
+  when: manual
+  environment:
+    name: production
+    url: http://live-$TERMINUS_SITE.pantheonsite.io/

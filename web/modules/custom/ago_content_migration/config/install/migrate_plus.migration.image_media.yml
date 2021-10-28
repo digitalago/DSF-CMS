@@ -1,0 +1,76 @@
+id: image_media
+label: AGO Image Media
+migration_group: ago
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: media
+  bundle: ago_images
+  constants:
+    bundle: image
+destination:
+  plugin: entity:media
+  default_bundle: image
+process:
+  bundle: 'constants/bundle'
+  name: name
+  uri: uri
+  uuid: uuid
+  langcode: langcode
+  filemime: filemime
+  'field_image_credit/value': 'field_image_credit/0/value'
+  'field_image_credit/format':
+    -
+      plugin: static_map
+      source: field_image_credit/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: 'basic_html'
+  field_image_height: field_image_height
+  field_image_mime_type: field_image_mime_type
+  field_image_tag:
+    -
+      plugin: sub_process
+      source: field_image_tag
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: image_tags_taxonomy
+  field_image_width: field_image_width
+  field_media_image:
+    -
+      plugin: sub_process
+      source: field_managed_image
+      process:
+        alt: alt
+        title: title
+        width: width
+        height: height
+        target_id:
+          plugin: migration_lookup
+          migration: file
+          source: target_id
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+  status: status
+  created: created
+  changed: changed
+migration_dependencies:
+  required:
+    - user
+    - file
+    - image_tags_taxonomy
+  optional: {  }
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

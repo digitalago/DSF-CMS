@@ -1,0 +1,6 @@
+{
+    "require": {
+        "neitanod/forceutf8": "dev-master",
+        "league/csv": "^8.0"
+    }
+}

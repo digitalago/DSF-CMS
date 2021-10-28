@@ -1,0 +1,39 @@
+id: file
+label: AGO Files
+migration_group: ago
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: file
+destination:
+  plugin: entity:file
+process:
+  filename: filename
+  temp_path:
+    -
+      plugin: str_replace
+      source: uri
+      search: public://
+      replace: public://migration_files/
+  uri:
+    plugin: custom_file_copy
+    source:
+      - '@temp_path'
+      - uri
+  filemime: filemime
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+  status: status
+  created: created
+  changed: changed
+migration_dependencies:
+  required:
+    - user
+  optional: {  }
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

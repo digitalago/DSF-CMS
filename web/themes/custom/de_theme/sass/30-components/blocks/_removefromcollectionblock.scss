@@ -1,0 +1,52 @@
+.block-remove-from-collection-block {
+  display: none;
+}
+
+#colorbox .block-remove-from-collection-block {
+  display: block;
+  .fieldset-wrapper {
+    position: relative;
+    margin-top: ms(-1);
+  }
+  form#remove-from-collection-form {
+    @include clearfix;
+    padding: 3.5em 1.5em 1.75em;
+    legend span{
+      // .fieldset-legend {
+        font-size: ms(4);
+        font-family: $font-set-1;
+        font-weight: $normal;
+      // }
+    }
+    .form-select {
+      width: 100%;
+      clear: both;
+      box-sizing: border-box;
+      background-size: 6%;
+      padding: 6px 10px;
+    }
+    .form-checkboxes {
+      position: relative;
+      overflow: hidden;
+      font-family: $font-set-2;
+      label {
+        overflow: hidden;
+        display: inline-block;
+        margin-right: ms();
+        &:before {
+          top: 0;
+        }
+      }
+    }
+
+    .form-submit {
+      margin: 0;
+      @include breakpoint (max-width $small-screen) {
+        margin: 0 ms() ms(-1) 0;
+        float: left;
+        clear: both;
+        display: inline-block;
+      }
+    }
+  }
+}

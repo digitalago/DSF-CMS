@@ -1,0 +1,29 @@
+uuid: fe052cf6-728f-42b6-b9d3-60ccb2645384
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero_slide_mobile
+    - image.style.hero_slide_wide
+  theme:
+    - de_theme
+id: hero_slide
+label: 'Hero Slide'
+image_style_mappings:
+  -
+    breakpoint_id: de_theme.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_slide_wide
+  -
+    breakpoint_id: de_theme.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_slide_mobile
+  -
+    breakpoint_id: de_theme.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_slide_mobile
+breakpoint_group: de_theme
+fallback_image_style: hero_slide_mobile

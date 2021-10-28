@@ -1,0 +1,29 @@
+uuid: 0b49c979-9be5-4f8e-86c9-c2373f747d64
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.event_type
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: event_type
+theme: de_theme
+region: sidebar_first
+weight: -21
+provider: null
+plugin: 'facet_block:event_type'
+settings:
+  id: 'facet_block:event_type'
+  label: 'Event Type'
+  provider: facets
+  label_display: '0'
+  block_id: event_type
+visibility:
+  request_path:
+    id: request_path
+    pages: /events/browse
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,238 @@
+// restyling wufoo forms
+// import commons
+@import '00-base/imports/theme-commons';
+
+
+#public {
+  background: $white;
+}
+
+
+#header {
+  background: transparent;
+  display: none;
+}
+
+.wufoo .info h2 {
+  display: none;
+}
+
+.wufoo input.text,
+.wufoo textarea.textarea,
+.wufoo select.select,
+  {
+  @include knockout-28;
+  // @include nimbus-bold-reg;
+  font-size: ms(1);
+  color: $almostblack;
+  // padding: 16px 10px 12px 15px;
+  margin-left: 2px;
+}
+
+.name-field .wufoo input.text {
+  min-width: 200px !important;
+}
+
+.wufoo label.choice {
+  font-size: 110% !important;
+  color: $almostblack;
+  padding: 0px 8px;
+}
+
+.wufoo input.text,
+.wufoo textarea.textarea {
+  box-sizing: border-box;
+}
+
+.wufoo label.desc,
+.wufoo legend.desc {
+  @include nimbus-bold-reg;
+  font-size: ms(1) !important;
+  color: $almostblack;
+  padding-bottom: 10px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.wufoo li span label {
+  @include nimbus-reg;
+  color: $almostblack;
+  text-align: left;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+form li.date span label,
+form li.time span label {
+  text-align: left;
+}
+
+form li div label,
+form li span label {
+  font-size: ms(-1);
+}
+
+form li.phone span label {
+  text-align: left;
+}
+
+form li div {
+  max-width: 95%;
+}
+
+.wufoo .focused {
+  background: $light-grey;
+}
+
+.wufoo input {
+  margin-right: 10px;
+}
+
+.wufoo li.focused label.desc,
+.wufoo li.focused legend.desc,
+.wufoo li.focused div,
+.wufoo li.focused span,
+.wufoo li.focused div label,
+.wufoo li.focused span label,
+.safari .wufoo li.focused input.file {
+  color: $black;
+}
+
+.wufoo li.focused {
+  background-color: $white
+}
+
+.wufoo select.select,
+.safari .wufoo select.select {
+  border-radius: 0 !important;
+  font-size: ms(2) !important;
+  color: $almostblack;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url('../../img/file_icons/arrow-down.png') no-repeat;
+  background-position: 97% 60%;
+  background-size: contain;
+  // background-size: 15%;
+  background-color: $light-grey;
+  padding: 16px 10px 10px 15px;
+  margin: 0;
+  font-family: "nimbus-sans", Helvetica, Arial, sans-serif;
+  border: 0px solid transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  min-width: 77px;
+  margin-left: 2px;
+}
+
+.wufoo select.select option {
+  @include nimbus-reg;
+  background-color: $white !important;
+  color: $almostblack;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  padding: 6px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+input.text,
+input.search,
+textarea.textarea {
+  border-top: 1px solid $contrastgrey;
+  border-left: 1px solid $contrastgrey;
+  border-right: 1px solid $contrastgrey;
+  border-bottom: 1px solid $contrastgrey;
+  padding: 10px;
+  background: transparent;
+}
+
+input.btTxt {
+  font-size: ms(3) !important;
+  padding: 10px 15px 10px 15px !important;
+  -webkit-border-radius: 0 !important;
+  border-radius: 0 !important;
+  border: 1px solid $red !important;
+  background-color: $red !important;
+  color: white !important;
+  text-transform: uppercase !important;
+  font-family: $font-set-3 !important;
+  letter-spacing: 1px !important;
+  text-decoration: none !important;
+  -webkit-border-radius: 0 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-appearance: none !important;
+  margin-left: 2px;
+
+  &:hover,
+  &:focus {
+    color: $red;
+    background-color: white;
+    border: 1px solid $red;
+
+  }
+}
+
+form li {
+  padding: 6px 0% 15px 0% !important;
+}
+
+form li.buttons {
+  padding: 10px 1% 10px 0% !important;
+}
+
+.cloak label {
+  color: $red;
+}
+
+input.radio {
+  margin: 7px 0px 0px 3px;
+}
+
+form li.section h3 {
+  @include heading-3;
+  padding: 12px 0% 0 0%;
+}
+
+.wufoo .section div {
+  font-size: 100%;
+  @include nimbus-reg;
+  line-height: normal;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+span.symbol {
+  padding: 8px 6px 0px 0px;
+}
+
+.pgStyle1 var,
+.pgStyle2 td {
+  border: 1px solid $contrastgrey;
+
+}
+
+.pgStyle2 td {
+  border-radius: 0px;
+}
+
+.pgStyle1 .selected var,
+.pgStyle2 var,
+.pgStyle2 var em {
+  background: $red;
+  border-radius: 0px;
+  color: $white;
+}
+
+button.link {
+  color: $red;
+
+  &:hover {
+    color: $almostblack;
+  }
+}
+
+div[id^="instruct"] {
+  padding: 0px !important;
+  font-size: ms(2) !important;
+}
+
+.wufoo a:-webkit-any-link {
+  color: $red;
+}
+
+// test adding select and radio styling later

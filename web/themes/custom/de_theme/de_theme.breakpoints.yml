@@ -1,0 +1,32 @@
+de_theme.small:
+  label: small
+  mediaQuery: '(max-width: 607px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+
+de_theme.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 608px) and (max-width: 991px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+
+de_theme.large:
+  label: large
+  mediaQuery: 'all and (min-width: 992px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+
+de_theme.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 1188px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+

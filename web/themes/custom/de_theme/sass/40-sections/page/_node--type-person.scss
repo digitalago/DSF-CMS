@@ -1,0 +1,139 @@
+// Persons CT theming
+
+.node--type-person {
+	.layout--twocol-section {
+		// justify-content: flex-start;
+		.layout__region--first {
+			@include breakpoint(640px) {
+				max-width: 26.5%;
+			}
+		}
+
+		.layout__region--second {
+			@include breakpoint(640px) {
+				max-width: 71.5%;
+				flex: 0 1 71.5%;
+			}
+		}
+	}
+
+	.block-field-blocknodepersontitle {
+		margin-bottom: ms(-9) !important;
+		font-weight: $normal;
+		font-family: $font-set-1;
+		@include heading-1;
+	}
+
+	.field--name-field-role-description {
+		@include category-label;
+		padding: 10px 0 20px;
+	}
+	// Large people list
+	&.block-people-list-large {
+		.node__content {
+			@include breakpoint($weird-screen) {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+		}
+
+		.person-image {
+			flex: 0 1 31%;
+
+			.field--name-field-managed-image {
+				position: relative;
+				height: 375px;
+				@include breakpoint ($small-screen) {
+					height: 232px;
+				}
+				@include breakpoint ($standard-screen) {
+					height: 380px;
+				}
+				@include breakpoint ($wide-screen) {
+					height: 380px;
+				}
+			}
+		}
+
+		.person-content {
+			flex: 0 1 65%;
+		}
+	}
+	// Medium People list
+	&.block-people-list-medium {
+		.node__content {
+			@include breakpoint($weird-screen) {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+		}
+
+		.person-image {
+			flex: 0 1 23%;
+
+			.field--name-field-managed-image {
+				position: relative;
+				height: 340px;
+				@include breakpoint ($small-screen) {
+					height: 173px;
+				}
+				@include breakpoint ($standard-screen) {
+					height: 230px;
+				}
+				@include breakpoint ($wide-screen) {
+					height: 271px;
+				}
+			}
+		}
+
+		.person-content {
+			flex: 0 1 74%;
+		}
+	}
+	// Small peopel list
+	&.block-people-list-small {
+		.person-image {
+			.field--name-field-managed-image {
+				position: relative;
+				height: 166px;
+				@include breakpoint ($small-screen) {
+					height: 166px;
+				}
+				@include breakpoint ($standard-screen) {
+					height: 146px;
+				}
+				@include breakpoint ($wide-screen) {
+					height: 173px;
+				}
+			}
+		}
+		.person-content {
+			text-align: center;
+		}
+	}
+
+	.node__content {
+		.person-content {
+			h3 {
+				padding: 10px 0 5px;
+				margin-bottom: 0;
+				display: inline-block;
+
+				> div {
+					display: inline-block;
+				}
+			}
+
+			.field--name-field-role-description {
+				text-transform: none;
+				font-size: 1em;
+				font-weight: 700;
+				letter-spacing: 1px;
+				display: block;
+				padding: 0 0 5px;
+			}
+		}
+	}
+}

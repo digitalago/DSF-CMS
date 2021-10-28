@@ -1,0 +1,12 @@
+uuid: cfceb5a5-b2ac-426e-9f0f-2008446e5b52
+langcode: en
+status: true
+dependencies: {  }
+label: 'Hero Slide Crop'
+id: hero_slide_crop
+description: ''
+aspect_ratio: '32:12'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

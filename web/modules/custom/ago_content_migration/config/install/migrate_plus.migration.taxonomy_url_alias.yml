@@ -1,0 +1,63 @@
+id: taxonomy_url_alias
+label: AGO Taxonomy Url Alias
+migration_group: ago
+source:
+  plugin: taxonomy_pathauto_state
+  key: migrate
+  constants:
+      slash: '/'
+destination:
+  plugin: entity:path_alias
+process:
+  _term:
+    -
+      plugin: migration_lookup
+      source: name
+      migration:
+        - agoc_marketing_flag_taxonomy
+        - associated_artists_taxonomy
+        - blog_categories_taxonomy
+        - blog_tags_taxonomy
+        - featured_filters_courses_taxonomy
+        - featured_filters_taxonomy
+        - image_tags_taxonomy
+        - media_category_taxonomy
+        - subject_area_taxonomy
+        - tags_taxonomy
+    -
+      plugin: skip_on_empty
+      method: row
+    -
+      plugin: pathauto_state_migration
+  alias:
+    -
+      plugin: url_alias_migration
+      source: name
+  langcode:
+    plugin: default_value
+    default_value: 'en'
+  path:
+    plugin: concat
+    source:
+      - constants/slash
+      - path
+      - constants/slash
+      - '@_term'
+  status: status
+migration_dependencies:
+  required:
+    - agoc_marketing_flag_taxonomy
+    - associated_artists_taxonomy
+    - blog_categories_taxonomy
+    - blog_tags_taxonomy
+    - featured_filters_courses_taxonomy
+    - featured_filters_taxonomy
+    - image_tags_taxonomy
+    - media_category_taxonomy
+    - subject_area_taxonomy
+    - tags_taxonomy
+  optional: {  }
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

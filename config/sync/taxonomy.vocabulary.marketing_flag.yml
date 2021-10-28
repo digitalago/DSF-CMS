@@ -1,0 +1,8 @@
+uuid: 87c6ab33-1732-44c2-b657-1ce176ce3b3a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Marketing Flag'
+vid: marketing_flag
+description: ''
+weight: 0

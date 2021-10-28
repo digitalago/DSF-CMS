@@ -1,0 +1,25 @@
+uuid: c87caabb-8e13-43b1-9c91-a68ae61cd84b
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.square_crop
+  module:
+    - crop
+name: slider_item
+label: 'Slider Item'
+effects:
+  0711aaec-ab99-499c-9077-323ac3c3a7c5:
+    uuid: 0711aaec-ab99-499c-9077-323ac3c3a7c5
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: square_crop
+  c85e6223-92c4-4ff8-9936-fe2a80f5c33d:
+    uuid: c85e6223-92c4-4ff8-9936-fe2a80f5c33d
+    id: image_scale
+    weight: 2
+    data:
+      width: 280
+      height: 280
+      upscale: false

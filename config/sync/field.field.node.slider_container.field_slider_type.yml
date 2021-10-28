@@ -1,0 +1,21 @@
+uuid: 50fa91d9-3af0-4937-b301-892aafc20e8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider_type
+    - node.type.slider_container
+  module:
+    - options
+id: node.slider_container.field_slider_type
+field_name: field_slider_type
+entity_type: node
+bundle: slider_container
+label: 'Slider Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

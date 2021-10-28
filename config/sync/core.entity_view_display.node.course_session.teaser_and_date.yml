@@ -1,0 +1,130 @@
+uuid: 368c5fe4-8507-4a60-aa21-7f127058b2cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_and_date
+    - field.field.node.course_session.body
+    - field.field.node.course_session.field_cancelled
+    - field.field.node.course_session.field_course_day_end
+    - field.field.node.course_session.field_course_day_start
+    - field.field.node.course_session.field_day_of_the_week
+    - field.field.node.course_session.field_duration_in_weeks
+    - field.field.node.course_session.field_end_time
+    - field.field.node.course_session.field_location_reference
+    - field.field.node.course_session.field_on_sale
+    - field.field.node.course_session.field_seasons
+    - field.field.node.course_session.field_sold_out
+    - field.field.node.course_session.field_start_time
+    - field.field.node.course_session.field_ticket_link
+    - node.type.course_session
+  module:
+    - datetime
+    - layout_builder
+    - options
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.course_session.teaser_and_date
+targetEntityType: node
+bundle: course_session
+mode: teaser_and_date
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_course_day_end:
+    weight: 3
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_course_day_start:
+    weight: 2
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_day_of_the_week:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_duration_in_weeks:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_end_time:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_location_reference:
+    weight: 7
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_on_sale:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_seasons:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_sold_out:
+    weight: 6
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_start_time:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  addtoany: true
+  field_cancelled: true
+  field_ticket_link: true
+  links: true
+  search_api_excerpt: true

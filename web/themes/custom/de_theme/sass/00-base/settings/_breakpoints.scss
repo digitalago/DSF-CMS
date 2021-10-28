@@ -1,0 +1,26 @@
+// @responsive breakpoints    ==============================================
+
+$small-screen: 464px; // 29em
+$small-screen-max: 607px;  // 37.9375em
+
+$narrow-screen: 608px; // 38em
+$narrow-screen-max: 767px; // 47.9375em
+
+$weird-screen: 768px; // 48em what else I call this?!?!?!
+$weird-screen-max : 895px; // 55.9375em
+
+$medium-screen: 896px; // 56em
+$medium-screen-max: 991px; // 61.9375em
+
+$standard-screen: 992px; // 62em - 992px = 1024 - (16px*2)
+$standard-screen-max: 1187px; // 74.1875em
+
+$wide-screen: 1188px; // 74.25em - 1188px = 1220px - (16px*2)
+$wide-screen-max: 1333px; // 83.3125em
+
+$wxga-screen: 1334px; // 83.375em - 1334px = 1366 - (16px*2)
+$wxga-screen-max: 1407px; // 87.9375em
+
+$super-wide-screen: 1441px; // 88em - 1408px = 1440px - (16px*2)
+
+

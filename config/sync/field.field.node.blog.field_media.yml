@@ -1,0 +1,32 @@
+uuid: 590ecbc3-2bba-4e9e-b629-721f79ee2591
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media
+    - media.type.image
+    - media.type.soundcloud
+    - media.type.video
+    - node.type.blog
+id: node.blog.field_media
+field_name: field_media
+entity_type: node
+bundle: blog
+label: Media
+description: 'Use this for containing media items such at groups of videos, images or audio to make a playlist.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      soundcloud: soundcloud
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: soundcloud
+field_type: entity_reference

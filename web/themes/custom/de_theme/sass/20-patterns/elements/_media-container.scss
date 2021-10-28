@@ -1,0 +1,28 @@
+/* 20-patterns/elements/_media-container.scss */
+
+
+.event-media-container, .modal-media-container{
+    padding: ms(0) 0;
+    .field--name-field-agoc-display-title{
+      @include heading-2;
+    }
+    .field--name-field-video-title, .field--name-name{
+      @include nimbus-bold-reg;
+      font-size: ms(1);
+      padding-bottom: 10px;
+    }
+    .field--name-field-agoc-media-duration{
+      @include nimbus-reg;
+    }
+    .field--name-field-description{
+      @include nimbus-reg;
+      padding-top:10px;
+      line-height: 1.6em;
+    }
+    .field--name-field-credits{
+      @include nimbus-reg;
+      padding-top:10px;
+      font-size: ms(-2);
+    }
+    
+  }

@@ -1,0 +1,73 @@
+uuid: 57f93fe9-b84f-4b9a-8fa6-4bf8d1a5e2da
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.referenced_entity
+    - field.field.node.course_session.body
+    - field.field.node.course_session.field_cancelled
+    - field.field.node.course_session.field_course_day_end
+    - field.field.node.course_session.field_course_day_start
+    - field.field.node.course_session.field_day_of_the_week
+    - field.field.node.course_session.field_duration_in_weeks
+    - field.field.node.course_session.field_end_time
+    - field.field.node.course_session.field_location_reference
+    - field.field.node.course_session.field_on_sale
+    - field.field.node.course_session.field_seasons
+    - field.field.node.course_session.field_sold_out
+    - field.field.node.course_session.field_start_time
+    - field.field.node.course_session.field_ticket_link
+    - node.type.course_session
+  module:
+    - layout_builder
+    - options
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.course_session.referenced_entity
+targetEntityType: node
+bundle: course_session
+mode: referenced_entity
+content:
+  field_day_of_the_week:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_end_time:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_start_time:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_cancelled: true
+  field_course_day_end: true
+  field_course_day_start: true
+  field_duration_in_weeks: true
+  field_location_reference: true
+  field_on_sale: true
+  field_seasons: true
+  field_sold_out: true
+  field_ticket_link: true
+  search_api_excerpt: true

@@ -1,0 +1,177 @@
+
+// restyling wufoo forms
+// import commons
+@import '00-base/imports/theme-commons';
+@import '20-patterns/elements/alerts';
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Oswald:300);
+
+
+.wufoo header#header{
+  display: none;
+}
+
+form.wufoo li {
+  padding-left:0;
+}
+
+.wufoo li label.desc {
+  font-family: "Knockout 28 A", "Knockout 28 B", 'Oswald', sans-serif;
+  font-weight:300;
+  font-size: ms(3);
+  text-transform: uppercase;
+}
+
+.wufoo li span label {
+  @include nimbus-reg;
+  font-size: ms(2);
+}
+
+
+
+.wufoo input.text, .wufoo textarea.textarea, .wufoo select.select, .wufoo label.choice{
+  @include nimbus-reg;
+  font-size: ms(2);
+  font-weight:normal;
+  color: $white;
+  background: $almostblack !important;  
+  border: 1px solid $white;
+  letter-spacing: 1px;
+  padding: 10px;
+  }
+
+  .wufoo select.select, .safari .wufoo select.select {
+    border-radius: 0 !important;
+    font-size: ms(2) !important;
+    background-color: $almostblack !important; 
+    color: $white;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+  }
+
+  .wufoo select.select option {
+    @include nimbus-reg;
+    background-color: $almostblack !important; 
+    color: $white;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+  }
+  
+
+  span.req {
+    color:$red;
+  }
+
+  /* focus */
+
+  .wufoo li.focused {
+    background-color: transparent !important; 
+    color:$white;
+  }
+
+  .wufoo li.focused label.desc, .wufoo li.focused span label {
+    color:$white;
+  }
+
+  .wufoo li.focused label.desc,
+  .wufoo li.focused legend.desc, 
+  .wufoo li.focused div, 
+  .wufoo li.focused span, 
+  .wufoo li.focused div label, 
+  .wufoo li.focused span label, 
+  .safari .wufoo li.focused input.file{
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  
+
+
+  input.btTxt{
+    @include btn-white;
+    @include btn-big;
+    font-family:  "Knockout 28 A", "Knockout 28 B",'Oswald', sans-serif;
+    &:hover{
+      border:1px solid $white;
+    }
+  }
+
+
+/* error handling */
+
+#errorLi {
+@extend .alerts;
+background-color: $light-pink !important;
+border-radius: 0 !important;
+text-align: left !important;
+border:none !important;
+
+h3#errorMsgLbl {
+@extend .alert-title;
+text-align: left !important;
+}
+
+
+}
+
+#errorMsg b {
+color:$almostblack !important;
+padding:0;
+border-radius: 0 !important;
+}
+
+form li.error label {
+color:$white !important;
+}
+
+form li.error {
+background-color:transparent !important;
+.wufoo label.desc, .wufoo li span label.desc {
+font-weight:normal !important;
+}
+}
+
+form li.error input.text, form li.error input.search, form li.error textarea.textarea, form li.error select.select {
+border:1px solid $red;
+}
+
+form li.error .desc {
+color:$white !important;
+font-weight:normal !important;
+}
+
+form p.error {
+@extend .alert-title;
+color:$white !important;
+font-weight:bold;
+line-height: ms(2);
+  &:before{
+  margin-left:0;
+  margin-right:5px;
+  color: $red;
+  content: '\E001';
+  font-family: 'Material Icons';
+  line-height: 10px !important;
+  font-size: ms(4);
+  font-weight:normal;
+  }
+
+}
+
+textarea.textarea{
+  min-width: 95% !important;
+}
+
+
+/* confirmation message */
+
+.confirm h2 {
+font-family:  "Knockout 28 A", "Knockout 28 B",'Oswald', sans-serif;
+color: $white !important;
+margin:0 !important;
+}
+
+.confirm .wufoo {
+text-align:left !important;
+}

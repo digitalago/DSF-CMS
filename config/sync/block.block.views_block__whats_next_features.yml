@@ -1,0 +1,30 @@
+uuid: 4c217246-62f0-4fbe-b90d-42cd6e03fddf
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.whats_next
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: views_block__whats_next_features
+theme: de_theme
+region: middle_sidebar
+weight: 0
+provider: null
+plugin: 'views_block:whats_next-features'
+settings:
+  id: 'views_block:whats_next-features'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/4336
+    negate: false
+    context_mapping: {  }

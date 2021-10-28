@@ -1,0 +1,25 @@
+/* mini menu */
+
+//not sure where this is used
+
+ul.page-mini-menu {
+  padding: 0;
+  li {
+    font-family: $font-set-1;
+    border-right: 2px solid $almostblack;
+    float: left;
+    padding:0 ms(-2);
+    list-style-type: none;
+    line-height: ms();
+    a {
+      font-size: ms();
+      text-transform: uppercase;
+      text-decoration: none;
+      position: relative;
+      color: $almostblack;
+      &:hover, &:active, &:focus {
+        color: $red;
+      }
+    }
+  }
+}

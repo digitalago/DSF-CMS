@@ -1,0 +1,14 @@
+uuid: d55e0de6-3c10-4dde-abf6-66d1ba8c9af4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.visitor_services
+  module:
+    - user
+id: user_add_role_action.visitor_services
+label: 'Add the Visitor Services Access role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: visitor_services

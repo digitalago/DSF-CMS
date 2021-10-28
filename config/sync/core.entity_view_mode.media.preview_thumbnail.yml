@@ -1,0 +1,10 @@
+uuid: 7e9c35ba-4fac-47aa-a312-8a205a477d62
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.preview_thumbnail
+label: 'Preview Thumbnail'
+targetEntityType: media
+cache: true

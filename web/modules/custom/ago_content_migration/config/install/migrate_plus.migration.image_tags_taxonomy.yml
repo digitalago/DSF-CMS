@@ -1,0 +1,44 @@
+id: image_tags_taxonomy
+label: AGO Image Tags Taxonomy
+migration_group: ago
+source:
+  plugin: custom_taxonomy_term
+  key: migrate
+  entity_type: taxonomy_term
+  bundle: image_tags
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: image_tags
+process:
+  name: name
+  langcode: langcode
+  weight: weight
+  'description/value': description__value
+  'description/format':
+    -
+      plugin: static_map
+      source: description/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: 'full_html'
+  parent:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration: image_tags_taxonomy
+      no_stub: true
+  status: status
+  created: created
+  changed: changed
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

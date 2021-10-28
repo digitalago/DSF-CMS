@@ -1,0 +1,36 @@
+uuid: e32a90f0-3ef1-4e60-818d-ea9de933eb0a
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+    - system
+  theme:
+    - de_theme
+id: de_theme_main_menu
+theme: de_theme
+region: branding
+weight: -30
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'main:'
+  suggestion: main
+  label_type: block
+visibility:
+  request_path:
+    id: request_path
+    pages: /events
+    negate: true
+    context_mapping: {  }

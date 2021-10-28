@@ -1,0 +1,31 @@
+/* 20-patterns/widgets/cards/_card--default.scss */
+
+.card--default{
+  background-color: white;
+  color: shade($light-grey,60%);
+  .card__supporting-text{
+    border-bottom: 1px solid $light-grey;
+  }
+
+  .card__supporting-text-image{
+    @include breakpoint($small-screen) {
+      &--left{
+        @include image-style-left;
+      }
+      &--right{
+        @include image-style-right;
+      }
+
+      &--center{
+        @include image-style-center;
+      }
+    }
+  }
+  .card__button{
+    color: #D32F2F;
+    &:hover,&:focus{
+      background-color: $light-grey;
+      color: $dark-grey;
+    }
+  }
+}

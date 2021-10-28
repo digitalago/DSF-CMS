@@ -1,0 +1,213 @@
+/* _print.scss */
+// contains default boilerplate print resets, echidna default theme specific
+// resets, and project theme specific rests.
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+// default
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: $black !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+        font-family: "Times"
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    // a[href]:after {
+        // content: " (" attr(href) ")";
+    // }
+
+    // abbr[title]:after {
+        // content: " (" attr(title) ")";
+    // }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+    // theme default ==================================
+
+    html,body{
+        @include reset-font;
+        font-family: Georgia, ‘Times New Roman’, serif;
+        font-size: 12pt;
+    }
+
+    body{
+        padding: 1em;
+    }
+
+    main,
+    .layout-container,
+    .region,
+    .block{
+        margin: 0 !important;
+        padding: 0 !important;
+        display:  block !important;
+    }
+
+    .site-name{
+      font-weight: $bold;
+      font-size: 18pt;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        @include reset-font;
+        @include reset;
+        text-indent: 0 !important;
+        margin-bottom: ms();
+        margin-top: ms();
+    }
+
+    ul,ol{
+      @include reset;
+      li{
+        list-style-position: inside;
+      }
+    }
+
+    ul li{
+      list-style-type: disc;
+    }
+
+    ol li{
+      list-style-type: decimal;
+    }
+
+    table th{
+      text-align: left;
+    }
+
+    h1{
+      font-weight: bold;
+      font-size: 24pt;
+    }
+
+    h2{
+      font-weight: bold;
+      font-size: 20pt;
+    }
+
+    h3{
+      font-weight: bold;
+      font-size: 18pt;
+    }
+
+    h4{
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    h5,h6{
+      font-weight: bold;
+    }
+
+    .site-logo,
+    .region--masthead-secondary,
+    .sidebar,
+    #block-de-theme-main-menu,
+    .region--content-prefix,
+    .region--content-suffix,
+    #footer {
+        display: none !important;
+    }
+
+    .highlight-box{
+      border: 1px solid $black;
+      border-radius: 0;
+    }
+
+
+    // theme specific ====================================
+    img {display:block;}
+    button, .people-featured .main-image, .dags-slider, .people-list .main-image,
+    .form-type-textfield, input, .form-type-textarea, .dags-photo-collection,
+    .form-type-checkbox, .close-link {
+      display: none !important;
+    }
+    .field--name-field-dags-photo-collection-desc {
+      margin-top: 6em;
+    }
+    .responsive-menu-toggle, #banner-wrapper, .views-field-view-node,
+    .region--navigation-primary, .block-boxwood-search, .path-collection, .figure-box,
+    .views-field-field-image, .tabs.primary {
+      display: none !important;
+    }
+    .add-to-my-collection, .pager, .views-exposed-form, .read-more, .download,
+    .file--application-pdf, .btn-secondary, .navigation-wrapper,
+    .thumb-image-wrapper, .view-the-collection .view-footer,
+    .node--type-object h3.accordion-item:after,
+    .node--type-object .accordion-open:after, .view-frontpage-featured-link-block, .views-field-field-preview-overview-image,
+    .views-field-field-hero-image {
+      display: none !important;
+    }
+    .field-group-format-wrapper{
+      display: block !important;
+    }
+    .node--type-object .field-group-accordion-active, .view-display-id-featured_publications_front{
+      border-top: none;
+      border-bottom: none;
+    }
+    #block-views-block-essays-listing-essays .view-content .views-row {
+      height: auto !important;
+    }
+    #block-views-block-lesson-plans-lesson-plans .views-row .view-wrapper {
+      width: 100% !important;
+    }
+}

@@ -1,0 +1,31 @@
+uuid: ad1a6a6a-6ce0-40fa-8085-d73fff144a87
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.artist_maker.body
+    - node.type.artist_maker
+  module:
+    - text
+    - user
+id: node.artist_maker.teaser
+targetEntityType: node
+bundle: artist_maker
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

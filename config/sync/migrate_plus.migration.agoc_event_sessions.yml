@@ -1,0 +1,70 @@
+uuid: 0e9c9c12-9d4c-4cb9-a80d-47ef3c158745
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration
+id: agoc_event_sessions
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: ago
+label: 'AGO Event Sessions'
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: node
+  bundle: agoc_event_sessions
+process:
+  title: title
+  created: created
+  changed: changed
+  body/value: body/0/value
+  body/summary: body/0/summary
+  body/format:
+    -
+      plugin: static_map
+      source: body/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: full_html
+  status: status
+  field_end_date: field_agoc_end_date
+  field_end_time: field_agoc_end_time
+  field_start_date: field_agoc_start_date
+  field_start_time: field_agoc_start_time
+  field_ticketing_status:
+    -
+      plugin: sub_process
+      source: field_ticketing_status
+      process:
+        target_id:
+          plugin: static_map
+          source: target_id
+          map:
+            936: 785
+            1213: 786
+            937: 787
+            938: 788
+            1218: 789
+          default_value: null
+  field_ticket_link: field_agoc_ticket_link
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+destination:
+  plugin: 'entity:node'
+  default_bundle: event_session
+migration_dependencies:
+  required:
+    - user
+  optional: {  }

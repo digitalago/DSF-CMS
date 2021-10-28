@@ -1,0 +1,14 @@
+uuid: afd557f9-8baf-4b10-9d1c-b0c8a908bbfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.basic_page_access
+  module:
+    - user
+id: user_remove_role_action.basic_page_access
+label: 'Remove the Basic Pages Access role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: basic_page_access

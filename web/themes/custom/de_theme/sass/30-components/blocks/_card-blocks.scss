@@ -1,0 +1,453 @@
+// +++++++ Card block theming
+
+.layout--onecol-section,
+.layout--twocol-section {
+	.block-info-grid {
+		.field--name-field-image {
+			height: 232px;
+			@include breakpoint($standard-screen) {
+				height: 380px;
+			}
+		}
+	}
+}
+
+.layout--fourcol-section,
+.layout--threecol-section {
+	.block-info-grid {
+		.field--name-field-image {
+			height: 375px;
+			@include breakpoint($weird-screen) {
+				height: 232px;
+			}
+			@include breakpoint($standard-screen) {
+				height: 230px;
+			}
+			@include breakpoint($wide-screen) {
+				height: 271px;
+			}
+		}
+	}
+}
+
+.block-info-grid {
+	padding: 1em 0;
+	margin-top: 5px;
+
+	.field--name-field-image {
+		position: relative;
+		background: $light-grey;
+		@include breakpoint($standard-screen) {
+			height: 230px;
+		}
+
+		img {
+			margin: auto;
+			position: absolute;
+			max-width: 100%;
+			max-height: 100%;
+			margin: auto;
+			top: 0;
+			left: 0;
+			right: 0;
+			display: block;
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	h3 {
+		padding: 10px 0 5px;
+		margin-bottom: 0;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.field--name-body {
+		display: block;
+		padding-bottom: 10px;
+	}
+
+	.field--name-field-link {
+		a {
+			@include btn-flat;
+			font-family: $font-set-2;
+			font-weight: $normal;
+		}
+
+		.field__item {
+			display: inline-block;
+		}
+	}
+}
+// +++++++ Super Card block theming
+
+.super-card {
+	margin: 1em 0;
+	width: 100%;
+	@include breakpoint ($weird-screen) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	@each $name, $color in $colours {
+		&.card-bg-#{$name} {
+			background: $color;
+		}
+
+		&.card-bg-white {
+			.super-card-image {
+				background: white !important;
+			}
+		}
+	}
+
+	&.border {
+		border: 1px solid $credit-grey;
+	}
+
+	&.divider {
+		padding: 1.125em 0;
+		border-bottom: 1px solid $credit-grey;
+	}
+
+	&.one_third {
+		.super-card-image {
+			flex: 0 1 30%;
+		}
+
+		.super-card-content {
+			flex: 0 1 70%;
+		}
+	}
+
+	&.half {
+		.super-card-image {
+			flex: 0 1 50%;
+		}
+
+		.super-card-content {
+			flex: 0 1 50%;
+		}
+	}
+
+	&.one_fourth {
+		.super-card-image {
+			flex: 0 1 25%;
+		}
+
+		.super-card-content {
+			flex: 0 1 75%;
+		}
+	}
+
+	.super-card-image {
+		position: relative;
+		background: $light-grey;
+
+		img {
+			margin: 0 auto;
+		}
+	}
+
+	.super-card-content {
+		padding: ms(4) ms(8);
+
+		h3 {
+			padding: 10px 0 5px;
+			margin-bottom: 0;
+			font-size: ms(9);
+
+			a {
+				text-decoration: none;
+			}
+		}
+
+		.field--name-body {
+			display: block;
+			padding-bottom: 10px;
+		}
+
+		.field--name-field-link-single {
+			a {
+				@include btn-flat;
+				font-family: $font-set-2;
+				font-weight: $normal;
+			}
+		}
+	}
+}
+// ++++++++++ Card container
+
+.block-card-container {
+	padding: 1.25rem 0 3rem;
+	background-color: transparent;
+	@each $name, $color, $image in $colours {
+		&.container-bg-#{$name} {
+			background-color: $color;
+			position: relative;
+			z-index: 1;
+
+			&:before {
+				background-color: $color;
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 50%;
+				margin-left: -50vw;
+				width: 100vw;
+				z-index: -1;
+				background-size: cover;
+			}
+
+			&:after {
+				background-color: $color;
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 50%;
+				margin-left: -50vw;
+				width: 100vw;
+				z-index: -1;
+				background-size: cover;
+			}
+
+			.block-info-grid {
+				.field--name-field-image {
+					@if $name == 'light-grey' {
+						background-color: $light-grey;
+					} @else
+					if $name == 'dark' {
+						background-color: $footer-bg;
+					} @else
+					if $name == 'grey' {
+						background-color: $grey-bg;
+					} @else {
+						background: $light-grey;
+					}
+				}
+
+				@if $name == 'dark' {
+					h3 {
+						color: $white;
+
+						a {
+							color: $white;
+						}
+					}
+
+					.field--name-body {
+						color: $white;
+					}
+				}
+			}
+
+			@if $name == 'dark' {
+				.super-card {
+					h3 {
+						color: $white;
+
+						a {
+							color: $white;
+						}
+					}
+
+					.field--name-body {
+						color: $white;
+					}
+
+					&.card-bg-white {
+						h3 {
+							color: $black;
+
+							a {
+								color: $black;
+							}
+						}
+
+						.field--name-body {
+							color: $black;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.field--name-field-info-grid {
+		@include breakpoint($weird-screen) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.field__item.info-grid-card {
+			@include breakpoint($standard-screen) {
+				// margin-right: 2%;
+				// flex-grow: 1;
+				// flex-shrink: 1;
+				// flex-basis: 0;
+			}
+			// &:last-child {
+			// 	margin-right: 0;
+			// }
+		}
+
+		.field__item.super-card {
+			@include breakpoint ($weird-screen) {
+				flex: 0 1 100%;
+			}
+			margin: 0;
+
+			.super-card {
+				margin: 0;
+			}
+		}
+	}
+
+	&.one-column {
+		.info-grid-card {
+			@include breakpoint($weird-screen) {
+				flex: 0 1 100%;
+			}
+		}
+	}
+
+	&.two-columns {
+		.info-grid-card {
+			@include breakpoint($weird-screen) {
+				flex: 0 1 48%;
+			}
+		}
+	}
+
+	&.three-columns {
+		.info-grid-card {
+			@include breakpoint($weird-screen) {
+				flex: 0 1 31%;
+			}
+		}
+	}
+
+	&.four-columns {
+		.info-grid-card {
+			@include breakpoint($weird-screen) {
+				flex: 0 1 48%;
+			}
+			@include breakpoint($standard-screen) {
+				flex: 0 1 23%;
+			}
+		}
+	}
+
+	&.five-columns {
+		.info-grid-card {
+			@include breakpoint($weird-screen) {
+				flex: 0 1 48%;
+			}
+			@include breakpoint($standard-screen) {
+				flex: 0 1 18%;
+			}
+		}
+	}
+
+	&.six-columns {
+		.info-grid-card {
+			@include breakpoint($weird-screen) {
+				flex: 0 1 31%;
+			}
+			@include breakpoint($standard-screen) {
+				flex: 0 1 14%;
+			}
+		}
+	}
+
+	&.four-columns {
+		.info-grid-card .field--name-field-image {
+			height: 170px;
+			@include breakpoint($standard-screen) {
+				height: 230px;
+			}
+			@include breakpoint($wide-screen) {
+				height: 271px;
+			}
+		}
+	}
+
+	&.one-column,
+	&.two-columns {
+		.field--name-field-image {
+			height: 232px;
+			@include breakpoint($standard-screen) {
+				height: 380px;
+			}
+		}
+	}
+	
+	&.three-columns,
+	&.four-columns {
+		.info-grid-card {
+			.field--name-field-image {
+				height: 375px;
+				@include breakpoint($weird-screen) {
+					height: 232px;
+				}
+				@include breakpoint($standard-screen) {
+					height: 230px;
+				}
+				@include breakpoint($wide-screen) {
+					height: 271px;
+				}
+			}
+		}
+	}
+
+	&.five-columns,
+	&.six-columns {
+		.info-grid-card .field--name-field-image {
+			height: 166px;
+			@include breakpoint($standard-screen) {
+				height: 146px;
+			}
+			@include breakpoint($wide-screen) {
+				height: 173px;
+			}
+		}
+	}
+
+	&.six-columns {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.field__item.info-grid-card {
+			flex: 0 1 48%;
+			@include breakpoint($standard-screen) {
+				margin-right: 2%;
+				flex-grow: 1;
+				flex-shrink: 1;
+				flex-basis: 0;
+			}
+		}
+
+		.field__item.super-card {
+			@include breakpoint ($weird-screen) {
+				flex: 0 1 100%;
+			}
+		}
+	}
+
+	&.full-width {
+		width: 100vw;
+		margin-left: calc(-50vw + 50%);
+		padding: 0;
+		// margin: 1.25rem 0 3rem 0;
+		margin-top: 1.25rem;
+		margin-bottom: 1.25rem;
+	}
+}

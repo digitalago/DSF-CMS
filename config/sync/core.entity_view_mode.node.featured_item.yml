@@ -1,0 +1,10 @@
+uuid: cdaf8046-b5ec-4bac-85b6-b150e06752d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.featured_item
+label: 'Featured Item'
+targetEntityType: node
+cache: true

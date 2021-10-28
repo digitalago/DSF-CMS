@@ -1,0 +1,10 @@
+uuid: 2e4c5ac5-c695-400a-ab43-2747eedd56e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_and_credit_large
+label: 'Image and Credit: Large'
+targetEntityType: media
+cache: true

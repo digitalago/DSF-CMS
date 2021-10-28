@@ -1,0 +1,10 @@
+uuid: 04662a0c-50b7-490a-b41c-690da691f720
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_and_caption_large
+label: 'Image and Caption: Large'
+targetEntityType: media
+cache: true

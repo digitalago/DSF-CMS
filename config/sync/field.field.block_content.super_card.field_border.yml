@@ -1,0 +1,21 @@
+uuid: 0e6d1f04-7646-4b8d-85f4-a4551c7cf03c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.super_card
+    - field.storage.block_content.field_border
+  module:
+    - options
+id: block_content.super_card.field_border
+field_name: field_border
+entity_type: block_content
+bundle: super_card
+label: Border
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

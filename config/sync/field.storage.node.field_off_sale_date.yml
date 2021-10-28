@@ -1,0 +1,20 @@
+uuid: ad9c664b-67dc-455e-9808-f2b2bf1047bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_off_sale_date
+field_name: field_off_sale_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: 2b3f41e3-f717-47d1-bec6-95a0819d3503
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.event_access
+  module:
+    - user
+id: user_remove_role_action.event_access
+label: 'Remove the Events Access role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: event_access

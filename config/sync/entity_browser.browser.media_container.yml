@@ -1,0 +1,89 @@
+uuid: c3487511-a76c-4dd1-ac20-dc845e893927
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.image_browser
+    - views.view.media_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: media_container
+label: 'Media Container'
+display: modal
+display_configuration:
+  width: '1245'
+  height: ''
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: multi_step_display
+selection_display_configuration:
+  entity_type: media
+  display: rendered_entity
+  display_settings:
+    view_mode: thumbnail
+  select_text: 'Use selected'
+  selection_hidden: false
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  8fae3bc7-161c-4efb-9cbc-26edc822e349:
+    settings:
+      view: image_browser
+      view_display: entity_browser_1
+      submit_text: 'Select Images'
+      auto_select: false
+    uuid: 8fae3bc7-161c-4efb-9cbc-26edc822e349
+    weight: -10
+    label: Images
+    id: view
+  e990af8d-d55d-45b2-9391-03d2cc320dda:
+    settings:
+      view: media_browser
+      view_display: soundcloud_browser
+      submit_text: 'Select Audio'
+      auto_select: false
+    uuid: e990af8d-d55d-45b2-9391-03d2cc320dda
+    weight: -9
+    label: Audio
+    id: view
+  6472bed2-fd30-4afb-b0f5-6a61ce0e041a:
+    settings:
+      entity_type: media
+      bundle: soundcloud
+      form_mode: default
+      submit_text: 'Save Audio'
+    uuid: 6472bed2-fd30-4afb-b0f5-6a61ce0e041a
+    weight: -5
+    label: 'Add Audio'
+    id: entity_form
+  c64078bc-5f69-49d1-892b-f51ab3428194:
+    settings:
+      view: media_browser
+      view_display: video_browser
+      submit_text: 'Select Video'
+      auto_select: false
+    uuid: c64078bc-5f69-49d1-892b-f51ab3428194
+    weight: -8
+    label: Video
+    id: view
+  3f4e9991-367c-4294-96fe-f4dda6f1bea2:
+    settings:
+      entity_type: media
+      bundle: video
+      form_mode: default
+      submit_text: 'Save Video'
+    uuid: 3f4e9991-367c-4294-96fe-f4dda6f1bea2
+    weight: -4
+    label: 'Add Video'
+    id: entity_form
+  46ff8ce8-9fec-4a4d-86fd-4c19dfb4ebd5:
+    settings:
+      entity_type: media
+      bundle: image
+      form_mode: default
+      submit_text: 'Save Image'
+    uuid: 46ff8ce8-9fec-4a4d-86fd-4c19dfb4ebd5
+    weight: -6
+    label: 'Add Image'
+    id: entity_form

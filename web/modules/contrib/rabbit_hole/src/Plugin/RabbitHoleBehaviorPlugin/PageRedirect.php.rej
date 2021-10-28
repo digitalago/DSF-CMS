@@ -1,0 +1,18 @@
+--- src/Plugin/RabbitHoleBehaviorPlugin/PageRedirect.php
++++ src/Plugin/RabbitHoleBehaviorPlugin/PageRedirect.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\rabbit_hole\Plugin\RabbitHoleBehaviorPlugin;
+ 
++use Drupal\Component\Render\PlainTextOutput;
+ use Drupal\Component\Utility\UrlHelper;
+ use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Url;
+@@ -157,6 +158,7 @@ class PageRedirect extends RabbitHoleBehaviorPluginBase implements ContainerFact
+           'langcode' => $langcode,
+         ], new BubbleableMetadata()
+       );
++      $target = PlainTextOutput::renderFromHtml($target);
+     }
+ 
+     if ($target === '<front>' || $target === '/<front>') {

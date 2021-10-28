@@ -1,0 +1,19 @@
+uuid: 995e34e6-24c1-45eb-bc47-58df85425c5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_object_name
+    - node.type.object
+id: node.object.field_object_name
+field_name: field_object_name
+entity_type: node
+bundle: object
+label: 'Object Name Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

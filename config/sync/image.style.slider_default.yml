@@ -1,0 +1,25 @@
+uuid: ddedce50-7a78-4b9c-93db-e951bcc547cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.slider_image
+  module:
+    - crop
+name: slider_default
+label: 'Slider default'
+effects:
+  eda84a5e-a69f-4130-90a8-2d85a00225ea:
+    uuid: eda84a5e-a69f-4130-90a8-2d85a00225ea
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: slider_image
+  9492bdac-4b19-4091-96a9-64e34f727a43:
+    uuid: 9492bdac-4b19-4091-96a9-64e34f727a43
+    id: image_scale
+    weight: 2
+    data:
+      width: 1140
+      height: 550
+      upscale: false

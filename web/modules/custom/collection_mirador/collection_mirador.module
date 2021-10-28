@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * Contains hooks for the Boxwood Mirador integration module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function collection_mirador_theme() {
+  return array(
+    'collection_mirador_thumb_formatter' => array(
+      'variables' => array('img_attributes' => NULL, 'url' => NULL),
+    ),
+    'collection_mirador_gallery_formatter' => array(
+      'variables' => array('img_attributes' => NULL, 'urls' => NULL, 'main_id' => NULL, 'credit' => NULL, 'artist_name' => NULL, 'title' => NULL, 'objNumber' => NULL,),
+    ),
+    'mirador_main_formatter' => array(
+      'variables' => array('manifest' => NULL),
+    ),
+  );
+}
+

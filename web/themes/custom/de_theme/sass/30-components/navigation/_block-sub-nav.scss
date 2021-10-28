@@ -1,0 +1,23 @@
+/* 30-components/navigation/_block-sub-nav.scss */
+.block-sub-nav{
+  .menu li{
+    @include reset;
+    @include reset-font;
+  }
+  .menu .expanded{
+    margin-bottom: 0;
+    .menu {
+      padding: ms(-2);
+      li{
+        a{
+          font-size: ms(-1);
+          line-height: ms(2);
+        }
+      }
+    }
+  }
+  .menu .last{
+    margin-bottom: 0;
+  }
+}
+

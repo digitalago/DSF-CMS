@@ -1,0 +1,21 @@
+uuid: 805429d3-648a-4571-81dd-f27e1f77f256
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editors
+    - node.type.publication
+  module:
+    - text
+id: node.publication.field_editors
+field_name: field_editors
+entity_type: node
+bundle: publication
+label: Editor(s)
+description: 'List the editor/s of the publication here'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

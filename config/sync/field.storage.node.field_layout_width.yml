@@ -1,0 +1,30 @@
+uuid: 2d69dc1a-f066-4b74-ae57-2b656e74e8d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_layout_width
+field_name: field_layout_width
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: grid-full-width
+      label: 'Full Page Width'
+    -
+      value: grid-container-width
+      label: 'Full Container Width'
+    -
+      value: grid-width-seamless
+      label: 'Full Width Seamless'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: bc7f0c2a-8bce-48bf-a18f-150ca00dadc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_marketing_flag
+    - node.type.event
+    - taxonomy.vocabulary.marketing_flag
+id: node.event.field_marketing_flag
+field_name: field_marketing_flag
+entity_type: node
+bundle: event
+label: 'Marketing Flag'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      marketing_flag: marketing_flag
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

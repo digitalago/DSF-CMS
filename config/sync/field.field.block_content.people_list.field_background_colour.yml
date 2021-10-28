@@ -1,0 +1,21 @@
+uuid: 0fb41e61-d3bb-4b1d-bc2c-11442c1abbd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.people_list
+    - field.storage.block_content.field_background_colour
+  module:
+    - options
+id: block_content.people_list.field_background_colour
+field_name: field_background_colour
+entity_type: block_content
+bundle: people_list
+label: 'Background Colour'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

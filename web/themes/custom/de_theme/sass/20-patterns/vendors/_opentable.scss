@@ -1,0 +1,151 @@
+/* Open Table restaurant system https://www.opentable.com/ */
+/* Override customizations for reservation widget and menu embeds in AGO Bistro pages */
+
+
+.reservation-box {
+    display:block;
+    border-top: 1px solid $ui-borders-color;
+    border-bottom: 1px solid $ui-borders-color;
+    overflow: hidden;
+    clear: both;
+    float: none;
+
+    padding-bottom:ms(); 
+    @include breakpoint ($medium-screen) { 
+        padding-bottom:0;
+    }
+}
+
+.reservation-box.menu-page {
+    
+    margin-bottom:ms(6);
+    
+    .reservation-box .widget-half {
+        text-align:right;
+    }
+}
+
+.reservation-box .text-half {
+    padding-top:ms();
+    padding-bottom:ms();
+
+    @include breakpoint ($medium-screen) { 
+        width:55%;
+        float:left;
+        
+    }
+}
+
+.reservation-box .text-half h3 {
+    text-transform: uppercase;
+}
+
+.reservation-box .widget-half {
+    text-align:center;
+    @include breakpoint ($medium-screen) { 
+        width:45%;
+        float:left;
+    }
+        
+    }
+
+    /* OT over rides */
+
+    .ot-dtp-picker {
+        margin-right:0 !important;
+    }
+
+    .ot-reservation-widget {
+        text-align:center;
+        }
+
+
+/* MENUS */
+
+#menusContainer #tabsouterouter {display: none !important;}
+
+#menusContainer {
+    max-width:100% !important;
+
+}
+
+#sp_main {max-width:100% !important;}
+
+#sp_main .sp_st.fn {text-align: left; padding: $ms-base 0 !important;}
+#sp_main .sp_menu, #sp_main .hproduct .fn, #sp_main .hproduct .sp_details, #sp_main .hproduct .sp_description, #sp_main #sp_menu_drop ul li.sp_menu_drop_down, #sp_main #sp_foot #sp_contact textarea, #sp_main #sp_foot #sp_contact input, #sp_main #specials_and_events, #sp_main .hproduct .detailsDiv, #sp_main #sp_foot #sp_contact select, #sp_main .es-nav, #sp_main #manage_top .sub_text, #sp_main #sp_foot .sp_dw, #sp_main #specials_and_events .sub_text, #sp_main #sp_menu_drop, #sp_main #tabsouterouter, #sp_main #specials_and_events, #sp_main #specials_and_events .sub_text, #sp_main #specials_and_events #sp_announcement, #sp_main #manage_top #sp_announcement, #sp_main .sp_md {
+    font-family: $font-set-2 !important;
+    font-size:$ms-base !important;
+    color:$almostblack !important;
+    font-weight:400;
+}
+
+#sp_main .sp_menu {
+    border-left:none !important;
+    border-right:none !important;
+}
+
+#sp_main .sp_st.fn {
+    text-align:left !important;
+}
+
+#sp_main .sp_sd {
+    font-family: $font-set-1 !important;
+    font-size:ms(4) !important;
+    color:$almostblack !important;
+    font-weight:400;
+
+    padding:0 !important;
+}
+
+#sp_main .sp_price {
+    font-family: $font-set-1 !important;
+    font-size:ms(3) !important;
+    font-weight:400 !important;
+}
+
+#sp_main .sp_md {
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+.sp_menu.hstorefrontcategory {
+
+    border:none !important;
+}
+
+
+#sp_main .hproduct .fn {
+    font-weight:bold;
+}
+
+#sp_main #sp_menu_drop .sp_menu_drop_down:hover, #sp_main #sp_menu_drop .sp_menu_drop_down .selectedMenu, #sp_main .sp_st.fn{
+    @include breakpoint($narrow-screen) {
+    background-color: transparent !important;
+    }
+}
+#sp_main .hproduct {
+	margin-left: 0 !important;	
+}
+#sp_main .sp_option ul {margin-left: 0 !important; }
+
+#sp_main .sp_mf {display: none;
+}
+#sp_main #sp_foot {
+    float:none; clear: both;
+    margin:2em 0;
+}
+
+
+
+.sp_st_section_title {
+@include heading-3;
+font-size: ms(5) !important;
+font-weight:normal;
+clear:both !important;
+float:none !important;
+margin-top:ms(2);
+}
+
+#sp_main .menuItemClosure {
+    border-bottom:none !important;
+}

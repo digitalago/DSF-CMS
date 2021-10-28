@@ -1,0 +1,93 @@
+uuid: 671d7f7a-9cd5-4281-954a-a31d95e0dc5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_image_caption
+    - field.field.media.image.field_image_credit
+    - field.field.media.image.field_image_height
+    - field.field.media.image.field_image_mime_type
+    - field.field.media.image.field_image_tag
+    - field.field.media.image.field_image_width
+    - field.field.media.image.field_media_image
+    - image.style.medium
+    - media.type.image
+  module:
+    - image_widget_crop
+    - path
+    - text
+_core:
+  default_config_hash: 6Yw_Qc7BjR5JTvdpHMYqAjhoE_I2Q8fRVYCZPjfsERs
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content:
+  field_image_caption:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image_credit:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image_tag:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_media_image:
+    settings:
+      show_crop_area: true
+      show_default_crop: true
+      warn_multiple_usages: true
+      preview_image_style: medium
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - '16_9'
+        - free_crop_region
+        - hero_slide_crop
+        - hero_thin_crop
+        - homepage_slider_custom_crop
+        - slider_image
+        - square_crop
+      progress_indicator: throbber
+      crop_types_required: {  }
+    third_party_settings: {  }
+    type: image_widget_crop
+    weight: 1
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_image_height: true
+  field_image_mime_type: true
+  field_image_width: true
+  status: true
+  uid: true

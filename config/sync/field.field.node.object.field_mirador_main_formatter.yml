@@ -1,0 +1,19 @@
+uuid: 3eba4b35-29da-4955-a60b-48473101e772
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mirador_main_formatter
+    - node.type.object
+id: node.object.field_mirador_main_formatter
+field_name: field_mirador_main_formatter
+entity_type: node
+bundle: object
+label: 'Mirador Main Formatter'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

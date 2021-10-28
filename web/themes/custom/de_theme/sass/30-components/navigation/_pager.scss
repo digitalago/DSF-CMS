@@ -1,0 +1,70 @@
+/* 30-components/navigation/_pager.scss */
+
+.pager{
+  @include clearfix;
+ 
+  margin-top: ms();
+  @include no-bullets;
+  ul {
+    @include nimbus-reg;
+    padding-top: 30px;
+    padding-left: 0;
+    text-align: right;
+    @include clearfix;
+    li{
+      float: left;
+      padding: 3px;
+      @include breakpoint (550px) {
+        margin: ms(1) 0;
+        float: none;
+        line-height: ms(5);
+      }
+    }
+  }
+
+
+  .pager-current{
+    padding: ms(-4) ms(-1);
+  }
+
+  .pager-ellipsis{
+    margin-right: ms();
+  }
+
+  .is-active {
+    a {
+      color: $white;
+      background-color: $red;
+      text-decoration: none;
+    }
+  }
+
+  a{
+    margin-right: 0;
+    padding: 3px 3px 2px 3px;
+    border-radius: 0;
+    color: $almostblack;
+    transition: all .3s ease-out;
+    letter-spacing: 1px;
+    line-height: ms();
+    &:hover {
+      color: $white;
+      background-color: $black;
+    }
+  }
+
+  .pager-next{
+    clear: left;
+    @include breakpoint($small-screen) {
+      clear: none;
+    }
+  }
+
+
+  .pager-next,.pager-last{
+    margin-top: ms(-1);
+    @include breakpoint($small-screen) {
+      margin-top: 0;
+    }
+  }
+}

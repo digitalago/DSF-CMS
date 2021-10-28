@@ -1,0 +1,21 @@
+uuid: 2fb8864c-df06-426e-ace1-263232e7aa01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_off_sale_date
+    - node.type.exhibition
+  module:
+    - datetime
+id: node.exhibition.field_off_sale_date
+field_name: field_off_sale_date
+entity_type: node
+bundle: exhibition
+label: 'Off Sale Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,5 @@
+name: Collection Import
+core: 8.x
+description: Provides TMS and Portfolio import integration with Drupal Object content type.
+package: Custom
+type: module

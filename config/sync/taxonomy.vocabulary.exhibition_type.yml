@@ -1,0 +1,8 @@
+uuid: 90e5869c-5dcc-42a2-b402-8eb5ee7fca0a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Exhibition Type'
+vid: exhibition_type
+description: 'Internal Exhibitions Sorting'
+weight: 0

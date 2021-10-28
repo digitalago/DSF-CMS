@@ -1,0 +1,15 @@
+/* _theme-init.scss */
+// _theme-init.scss contains 3rd party imports, custom mixins and settings
+// import this file if you need to create another standalone stylesheet for
+// for the theme so you can utilize all tools and settings
+
+// import once
+    // box sizing
+        @import '../bower_components/inuit-box-sizing/generic.box-sizing';
+
+// import commons
+    @import 'theme-commons';
+
+// @authors unclassed element styles
+    // _elements.scss contains authors unclassed HTML element styles such as h1, h2, table, etc
+      @import '../../20-patterns/elements/elements';

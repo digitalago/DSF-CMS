@@ -1,0 +1,49 @@
+name: de_theme
+type: theme
+base theme: classy
+description: de_theme theme based on the classy base theme.
+# Digital Echidna default theme wiki: https://bitbucket.org/digitalechidna/digital-echidna-default-theme-v2/wiki/Home
+version: 0.0.1
+core: 8.x
+libraries:
+  - de_theme/base
+libraries-override:
+  classy/base:
+    css:
+      component:
+        css/components/menu.css: false
+        css/components/tabs.css: false
+  core/modernizr:
+    js:
+      assets/vendor/modernizr/modernizr.min.js: dist/js/vendor/modernizr.min.js
+ckeditor_stylesheets:
+  - dist/css/de_editor.css
+  # - css/base/elements.css
+  # - css/components/captions.css
+  # - css/components/table.css
+regions:
+    page_top: Page Top
+    branding: Branding
+    masthead_primary: Masthead primary
+    masthead_secondary: Masthead secondary
+
+    navigation_primary: Navigation primary
+    banner: Banner
+
+    dags_top: DAGS TOP ONLY
+
+    content_prefix: Content prefix
+    content: Content
+    content_suffix: Content suffix
+
+    sidebar_first: Sidebar first
+    sidebar_second: Sidebar second
+
+    middle_content: Middle area content
+    middle_sidebar: Middle sidebar
+    middle_full_width: Middle suffix full width
+
+    footer: Footer
+    page_bottom: Page Bottom
+
+    no_show_region: Not Shown

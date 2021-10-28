@@ -1,0 +1,482 @@
+
+.anonymous {
+  .node--type-object {
+    // .field--name-field-main-image {
+      margin-top: -54px;
+    // }
+  }
+}
+
+.node--type-object {
+
+  .block-collection-blocks,
+  .block-addtoany-block.block-addtoany {
+    display: inline-block;
+    height: 37px;
+    margin-left: 3px;
+
+    & > a {
+      @include nimbus-reg;
+      font-size: ms(-1);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+    }
+  }
+
+  .block-webform-link-block {
+    margin-left: -2px;
+  }
+
+  .node--view-mode-object-information {
+    clear: both;
+    padding-top: 1em;
+  }
+
+  .node--view-mode-full .layout--onecol:nth-of-type(2) {
+    .layout__region--content {
+      text-align: right;
+    }
+  }
+
+  padding-bottom: 0.88889em;
+  .layout-content {
+    @include grid-span(12, 1);
+  }
+
+  #block-returntothecollection{
+    background: $light-grey;
+    p{
+      max-width: $wide-screen;
+      margin: 0px auto;
+      padding: 0 ms(-1);
+    }
+  }
+
+  .block-collection-grid-link-block {
+    position: absolute;
+    z-index: 1;
+
+    .btn-back {
+      &::before {
+        top: auto;
+      }
+    }
+  }
+
+
+  h1 {
+    @include heading-2;
+  }
+  .loris-img-gallery {
+    display: block;
+    position: relative;
+    text-align: center;
+    background: $light-grey;
+    padding:45px 0px 20px 0px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-height: 960px;
+    overflow: hidden;
+
+    .loris-img-wrapper {
+      max-width: $wide-screen;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .main-image-wrapper {
+      margin-bottom: ms(-2);
+      position: relative;
+      width: 100%;
+      display: inline-block;
+      height: 100%;
+      text-align: center;
+      height: 150px;
+      @include breakpoint (360px) {
+        height: 250px;
+      }
+      @include breakpoint (550px) {
+        height: 350px;
+      }
+      @include breakpoint ($weird-screen) {
+        height: 500px;
+      }
+      img {
+        position: relative;
+        // overflow: hidden;
+        // left: 0;
+        max-height: 100%;
+        text-align: center;
+        margin: 0 auto;
+        top: 50%;
+        transform: translateY(-50%)
+      }
+    }
+    .thumb-image-wrapper {
+      width: 100%;
+      display: block;
+      position: relative;
+      text-align: center;
+      margin: 0 auto;
+      padding-left: 1%;
+      @include breakpoint ($small-screen) {
+        width: 90%;
+      }
+      @include breakpoint ($narrow-screen) {
+        width: 100%;
+      }
+      .thumbnail-image {
+        display: inline-block;
+      //  width: 70px;
+        background: $grey-bg;
+        margin-bottom: 2%;
+        margin-right: 1%;
+        transition: opacity .3s ease-out;
+        &:focus, &:active, &:hover {
+          opacity: .75 !important;
+        }
+        @include breakpoint (550px) {
+        //  width: 80px;
+        }
+        @include breakpoint ($weird-screen) {
+        //  width: 95px;
+        }
+      }
+
+      img {
+        display: inline-block;
+        cursor: pointer;
+        // width: 16%;
+        vertical-align: bottom;
+        width: auto;
+        max-height: 46px;
+        opacity: .5;
+        max-width: none;
+        transition: opacity .3s ease-out;
+        @include breakpoint (550px) {
+          max-height: 53px;
+        }
+         @include breakpoint ($weird-screen) {
+          max-height: 63px;
+        }
+      }
+    }
+    .load-more-custom {
+      display: inline-block;
+      @include btn-red;
+      text-decoration: none;
+      text-align: center;
+      &:before {
+        content: '\f055';
+        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+  .field--name-field-artist-maker-reference {
+    h2{
+      font-family: $font-set-2;
+      font-size: ms();
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  h3.accordion-item.ui-state-active {
+    &:after {
+      content: '\e15b';
+      font-family: 'Material Icons';
+      font-size: 24px;
+      float: right;
+      padding-right: 10px;
+      font-weight: normal;
+    }
+  }
+  h3.accordion-item {
+    overflow: hidden;
+    &:after {
+      content: '\e145';
+      font-family: 'Material Icons';
+      font-size: 24px;
+      float: right;
+      padding-right: 10px;
+      font-weight: normal;
+    }
+  }
+  .field--name-field-mirador-main-formatter {
+    margin-bottom: ms(3);
+  }
+  .field-group-accordion-wrapper {
+    margin-top: ms(6);
+    display: block;
+    position: relative;
+    .field__item {
+      margin-bottom: ms();
+      @include nimbus-reg;
+    }
+  }
+  .field-group-accordion-active {
+    border-top: 1px solid $neutral-grey;
+    margin-bottom: 0;
+    padding: ms(-1) 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: ms(3);
+    font-weight: $normal;
+    font-family: $font-set-1;
+    letter-spacing: 0.05em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .field-group-format-wrapper {
+    display: none;
+  }
+  .label-above-inline .field__label, .field--label-above .field__label {
+    margin-bottom: .75em;
+    font-family: $font-set-2;
+    &:after {
+      content: ":";
+    }
+  }
+  .field--label-inline {
+    margin-bottom: 0;
+    overflow: auto;
+    display: block;
+    letter-spacing: 0.05em;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    line-height:1.6em;
+    .field__label {
+      text-transform: uppercase;
+      @include float-span(12);
+      margin-right: 0;
+      margin-bottom: 0;
+      position: relative;
+      line-height: 1.6em;
+      display: inline-block;
+      font-family: $font-set-2;
+      font-weight: 600;
+      font-size: ms(0);
+      -webkit-font-smoothing: antialiased;
+      @include breakpoint ($small-screen) {
+        @include float-span(5);
+        margin-right: 0;
+      }
+
+      @include breakpoint ($standard-screen) {
+        @include float-span(3);
+        margin-right: 0;
+      }
+    }
+    .field__item {
+      font-family: $font-set-2;
+      font-weight: 100;
+      font-size: ms(0);
+      overflow: hidden;
+      margin-right: 0;
+      line-height: 1.6em;
+      position: relative;
+    //  top: 2px;
+      color: $almostblack;
+      a{
+        color: $red;
+      }
+    }
+    .field__items {
+      @include float-span(12);
+      display: inline-block;
+      margin-right: 0;
+      line-height: ms(0);
+      top: 1px;
+      overflow: hidden;
+      font-family: $font-set-2;
+      color: $almostblack;
+      @include breakpoint ($small-screen) {
+        @include float-span(7);
+        margin-right: 0;
+      }
+      @include breakpoint ($standard-screen) {
+        @include float-span(9);
+        margin-right: 0;
+      }
+    }
+  }
+
+
+// Gallery arrows
+.navigation-wrapper {
+  .arrow-next, .arrow-prev {
+    position: absolute;
+    display: inline-block;
+    z-index: 9;
+    top: 55px;
+    color: $black;
+    opacity: .75;
+    transition: opacity .3s ease-out;
+    // padding: 8px;
+    // background: $white;
+    @include breakpoint (360px) {
+      top: 100px;
+    }
+    @include breakpoint (550px) {
+      top: 150px;
+    }
+    @include breakpoint ($weird-screen) {
+      top: 200px;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: .9;
+    }
+    span.fa {
+      font-size: 30px;
+      line-height: 1.5;
+    }
+  }
+ .arrow-next {
+   display:none;
+   @include breakpoint ($small-screen){
+    right: 20px;
+    display: block;
+   }
+   @include breakpoint ($wide-screen){
+    right: 30px;
+   }
+    float: right;
+  }
+  .arrow-prev {
+   display:none;
+   @include breakpoint ($small-screen){
+    left: 20px;
+    display: block;
+   }
+   @include breakpoint ($wide-screen){
+    left: 30px;
+   }
+}
+}
+
+.active-thumb-image {
+  opacity: 1 !important;
+}
+
+.credit-line {
+  font-family: $font-set-2;
+  line-height: ms(3);
+  padding-top: 5px;
+  font-size: ms(-2);
+  font-weight: 300;
+}
+
+.webform-link{
+  @include btn-flat;
+  padding: 7px 12px 3px 13px;
+  position: relative;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+//related works
+
+.field--name-field-related-works{
+  clear: both;
+  .field__label {
+    text-transform: uppercase;
+    @include float-span(12);
+    margin-right: 0;
+    margin-bottom: 0;
+    position: relative;
+    display: inline-block;
+    font-family: $font-set-2;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    font-size: ms(0);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6em;
+  }
+
+}
+.field--name-field-related-works > .field__items{
+
+   padding-top: 40px;
+   .card-details-wrapper {
+    padding: 0 ms(-1);
+    display: block;
+    width: 100%;
+    .title-wrapper {
+    @include card-title;
+    font-size: ms(3);
+    line-height: ms();
+    margin-top: 5px;
+  }
+  }
+  .card-artist, .card-object, .object-type, .field-date {
+  @include grey-info;
+  @include breakpoint ($small-screen) {
+  font-size: ms(-1);
+  }
+    a{
+    font-weight: 300;
+    color: $red;
+    }
+  }
+
+   .card-artist, .field-date{
+     padding: 5px 0px 0px 0px;
+   }
+}
+
+.field--name-field-related-works > .field__items > .field__item {
+  .node--type-object {;
+    padding-bottom: 10px;
+  }
+    border: 1px solid $neutral-grey;
+    min-height: 200px;
+    @include float-span(6);
+    &:nth-child(2n) {
+      @include float-span(6, last);
+    }
+
+    @include breakpoint ($small-screen){
+     @include float-span(3);
+     &:nth-child(2n){
+      @include float-span(3);
+     }
+     &:nth-child(4n) {
+     @include float-span(3, last);
+     }
+     &:nth-child(5n) {
+     clear: both;
+     }
+    }
+
+    @include breakpoint ($standard-screen){
+    @include float-span(2);
+    &:nth-child(2n){
+      @include float-span(2);
+    }
+    &:nth-child(4n){
+      @include float-span(2);
+    }
+    &:nth-child(5n) {
+     @include float-span(2);
+     }
+    &:nth-child(6n) {
+    @include float-span(2, last);
+    }
+    &:nth-child(6n+1) {
+    clear: both;
+    }
+    }
+  }
+

@@ -1,0 +1,29 @@
+uuid: c405489c-8bfd-4553-af32-25d107258e84
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events_search
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: exposedformevents_search_whats_on_card
+theme: de_theme
+region: sidebar_first
+weight: -22
+provider: null
+plugin: 'views_exposed_filter_block:events_search-whats_on_card'
+settings:
+  id: 'views_exposed_filter_block:events_search-whats_on_card'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /events/browse
+    negate: false
+    context_mapping: {  }

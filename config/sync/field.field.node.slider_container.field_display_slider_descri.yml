@@ -1,0 +1,23 @@
+uuid: cfab8e27-4cb8-424c-b107-fb1a92e1cc37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_slider_descri
+    - node.type.slider_container
+id: node.slider_container.field_display_slider_descri
+field_name: field_display_slider_descri
+entity_type: node
+bundle: slider_container
+label: 'Hide Slider Description'
+description: 'Check to toggle description of this slider container display.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

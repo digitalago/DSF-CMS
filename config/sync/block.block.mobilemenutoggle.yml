@@ -1,0 +1,26 @@
+uuid: 5330891e-1bbf-4f44-9a45-72732c9222eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu
+    - system
+  theme:
+    - de_theme
+id: mobilemenutoggle
+theme: de_theme
+region: branding
+weight: -34
+provider: null
+plugin: mobile_menu_toggle
+settings:
+  id: mobile_menu_toggle
+  label: 'Mobile menu toggle'
+  provider: menu
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/ago\r\n/gallery/*"
+    negate: true
+    context_mapping: {  }

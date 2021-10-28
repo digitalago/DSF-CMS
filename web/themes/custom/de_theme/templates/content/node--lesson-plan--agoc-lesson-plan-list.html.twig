@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * List view for lesson plans
+ */
+#}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    node.id ? 'node-id-' ~ node.id,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article id ="{{ node.label|clean_id }}" {{ attributes.addClass(classes) }}>
+
+
+<div class="lesson-plan-left">
+<a href="{{ url }}" rel="bookmark">
+  {{ content.field_agoc_image }}
+</a>
+</div>
+<div class="lesson-plan-right">
+
+      <h3{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">
+        {{ label }}</a>
+      </h3>
+      <div class="lesson-plan-grade">
+      {{ content.field_grade }}
+      </div>
+      <div class="lesson-plan-description">
+      {{ content.field_agoc_intro_text }}
+      </div>
+      <div class="lesson-plan-downloads">
+      <div class="lp-read-more">
+      <a class="btn-red" href="{{ url }}" rel="bookmark">Read More</a>
+      </div>
+       {% if content.field_pdf %}
+      {{ content.field_pdf }}
+      {% endif %}
+      {% if content.field_attachments %}
+      {{ content.field_attachments }}
+      {% endif %}
+      </div>
+</div>
+
+      {{ content|without('body', 'field_agoc_image','field_grade', 'field_attachments', 'field_pdf', 'field_agoc_intro_text' ) }}
+
+</article>

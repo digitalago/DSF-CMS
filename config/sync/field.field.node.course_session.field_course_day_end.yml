@@ -1,0 +1,21 @@
+uuid: 04aec3f1-3cf6-497d-89d2-574213734280
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_day_end
+    - node.type.course_session
+  module:
+    - datetime
+id: node.course_session.field_course_day_end
+field_name: field_course_day_end
+entity_type: node
+bundle: course_session
+label: 'Course Day End'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

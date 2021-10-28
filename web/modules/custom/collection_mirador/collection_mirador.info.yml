@@ -1,0 +1,5 @@
+name: Collection Mirador
+type: module
+description: 'Mirador formatters and integration'
+package: Custom
+core: 8.x

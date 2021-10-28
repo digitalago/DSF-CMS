@@ -1,0 +1,21 @@
+uuid: a7c4ac83-33ee-4fa5-8cf0-75b5dafe54fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_image_credit
+    - media.type.image
+  module:
+    - text
+id: media.image.field_image_credit
+field_name: field_image_credit
+entity_type: media
+bundle: image
+label: 'Image Credit'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

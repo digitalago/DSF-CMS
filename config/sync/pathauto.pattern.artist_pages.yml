@@ -1,0 +1,22 @@
+uuid: 3efc11b2-361f-4a30-9e16-b3a463a9352a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: artist_pages
+label: 'Artist Pages'
+type: 'canonical_entities:node'
+pattern: '/artists/[node:title]'
+selection_criteria:
+  d1335831-86d3-47cb-a8dc-2a3bc568b583:
+    id: node_type
+    bundles:
+      artist_maker: artist_maker
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d1335831-86d3-47cb-a8dc-2a3bc568b583
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,28 @@
+uuid: 884e8821-6b04-4b10-b6b8-226b0c4f299c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_banner
+    - node.type.page
+    - node.type.slider_container
+id: node.page.field_hero_banner
+field_name: field_hero_banner
+entity_type: node
+bundle: page
+label: 'Hero Banner'
+description: 'Search and select a Slider Container for the Hero Banner, excluding the Front page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      slider_container: slider_container
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

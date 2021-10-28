@@ -1,0 +1,19 @@
+uuid: e5f9e4b2-d32a-4cb4-9300-95cb837a3d85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_value_member
+    - node.type.event
+id: node.event.field_additional_value_member
+field_name: field_additional_value_member
+entity_type: node
+bundle: event
+label: 'Additional Value $/% (Member)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,35 @@
+uuid: 9893ecab-930d-4cfc-80d0-6d6b59eca7ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.accordion.field_details
+    - field.field.node.accordion.field_title
+    - node.type.accordion
+  module:
+    - text
+    - user
+id: node.accordion.default
+targetEntityType: node
+bundle: accordion
+mode: default
+content:
+  field_details:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  addtoany: true
+  links: true
+  search_api_excerpt: true

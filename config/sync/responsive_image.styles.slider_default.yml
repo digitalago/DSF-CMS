@@ -1,0 +1,24 @@
+uuid: e4063b56-b1cb-4187-81ac-f3e778993b1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.slider_default
+    - image.style.slider_default_mobile
+  theme:
+    - de_theme
+id: slider_default
+label: 'Slider default'
+image_style_mappings:
+  -
+    breakpoint_id: de_theme.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: slider_default
+  -
+    breakpoint_id: de_theme.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: slider_default_mobile
+breakpoint_group: de_theme
+fallback_image_style: slider_default

@@ -1,0 +1,10 @@
+uuid: 6b746b1a-2ae9-42a1-ba39-ff27d424fd90
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.entity_reference
+label: 'Entity Reference'
+targetEntityType: block_content
+cache: true

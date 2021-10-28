@@ -1,0 +1,23 @@
+uuid: 4812c7ba-cad8-48f7-ba6f-334fc32ca471
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_on_front
+    - node.type.slider_container
+id: node.slider_container.field_display_on_front
+field_name: field_display_on_front
+entity_type: node
+bundle: slider_container
+label: 'Display on Front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,25 @@
+uuid: 5390837b-03e8-424d-9bf0-17c444d712eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.free_crop_region
+  module:
+    - crop
+name: super_card_image
+label: 'Super Card Image'
+effects:
+  8fe16896-deac-47df-a0ad-7155ad0d070b:
+    uuid: 8fe16896-deac-47df-a0ad-7155ad0d070b
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: free_crop_region
+  49fb61e5-a9cf-41d4-9e1c-d2588c5736e1:
+    uuid: 49fb61e5-a9cf-41d4-9e1c-d2588c5736e1
+    id: image_scale
+    weight: 2
+    data:
+      width: 1200
+      height: 1200
+      upscale: false

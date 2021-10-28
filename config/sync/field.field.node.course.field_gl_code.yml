@@ -1,0 +1,21 @@
+uuid: 1f3ba5c3-683e-41fd-b6a6-7ff893aadacd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gl_code
+    - node.type.course
+  module:
+    - options
+id: node.course.field_gl_code
+field_name: field_gl_code
+entity_type: node
+bundle: course
+label: 'General Ledger Code'
+description: 'Also known as budget code.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

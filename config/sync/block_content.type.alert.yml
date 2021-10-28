@@ -1,0 +1,8 @@
+uuid: 9246fb0e-c716-4de4-b28c-2e22e54d9fbb
+langcode: en
+status: true
+dependencies: {  }
+id: alert
+label: Alert
+revision: 0
+description: ''

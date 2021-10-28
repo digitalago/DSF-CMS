@@ -1,0 +1,8 @@
+uuid: 90668ba9-658d-4308-934d-5c3b574e6fe5
+langcode: en
+status: true
+dependencies: {  }
+name: Year
+vid: year
+description: 'For filtering by year.'
+weight: 0

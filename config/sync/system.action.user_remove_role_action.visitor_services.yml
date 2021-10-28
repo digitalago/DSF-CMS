@@ -1,0 +1,14 @@
+uuid: c39f75af-b40e-47e2-a9a4-4bd790832dd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.visitor_services
+  module:
+    - user
+id: user_remove_role_action.visitor_services
+label: 'Remove the Visitor Services Access role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: visitor_services

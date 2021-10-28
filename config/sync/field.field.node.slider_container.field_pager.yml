@@ -1,0 +1,23 @@
+uuid: b45f98f4-8761-4832-8f0e-253f74ff1f18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pager
+    - node.type.slider_container
+  module:
+    - options
+id: node.slider_container.field_pager
+field_name: field_pager
+entity_type: node
+bundle: slider_container
+label: Pager
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: show_bullets
+default_value_callback: ''
+settings: {  }
+field_type: list_string

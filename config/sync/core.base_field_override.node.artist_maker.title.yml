@@ -1,0 +1,18 @@
+uuid: 031de717-93aa-45b5-a51a-a16584783512
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.artist_maker
+id: node.artist_maker.title
+field_name: title
+entity_type: node
+bundle: artist_maker
+label: 'Display Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,33 @@
+uuid: ac3d047d-d154-4c9f-ae65-dffbaa6c0037
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_gl_code
+field_name: field_gl_code
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 001-056-063
+      label: '001-056-063 (Children’s Studio)'
+    -
+      value: 001-056-064
+      label: '001-056-064 (Adult Studio)'
+    -
+      value: 001-056-065
+      label: '001-056-065 (Summer Art Camp)'
+    -
+      value: 001-056-066
+      label: '001-056-066 (Advanced Studio ages 14-18)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

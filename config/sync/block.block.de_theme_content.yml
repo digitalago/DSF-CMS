@@ -1,0 +1,22 @@
+uuid: 1322ef90-e7d9-4d02-8c8f-65f458c229a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - de_theme
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: de_theme_content
+theme: de_theme
+region: content
+weight: -22
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

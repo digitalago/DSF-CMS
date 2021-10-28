@@ -1,0 +1,20 @@
+uuid: 7866dcba-6820-4621-9ce1-bc45575a3a1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - general_search
+  theme:
+    - de_theme
+id: general_search_trigger_block
+theme: de_theme
+region: branding
+weight: -31
+provider: null
+plugin: general_search_block
+settings:
+  id: general_search_block
+  label: 'General Search Trigger Block'
+  provider: general_search
+  label_display: '0'
+visibility: {  }

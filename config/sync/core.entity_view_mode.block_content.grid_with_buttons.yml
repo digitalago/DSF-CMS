@@ -1,0 +1,10 @@
+uuid: 1241bc88-e798-4ff5-b534-27d9e95a1873
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.grid_with_buttons
+label: 'Grid with buttons'
+targetEntityType: block_content
+cache: true

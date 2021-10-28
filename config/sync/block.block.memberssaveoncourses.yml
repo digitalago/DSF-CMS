@@ -1,0 +1,31 @@
+uuid: aba11443-5633-4dd4-bec2-1c6e944f3ec2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5c1cad70-e444-47d8-807d-9ac2492de388'
+  module:
+    - block_content
+    - system
+  theme:
+    - de_theme
+id: memberssaveoncourses
+theme: de_theme
+region: sidebar_first
+weight: -28
+provider: null
+plugin: 'block_content:5c1cad70-e444-47d8-807d-9ac2492de388'
+settings:
+  id: 'block_content:5c1cad70-e444-47d8-807d-9ac2492de388'
+  label: 'Members Save on courses'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /learn/courses
+    negate: false
+    context_mapping: {  }

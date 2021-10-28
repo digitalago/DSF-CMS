@@ -1,0 +1,467 @@
+// +++++++ Accordion CT and block theming
+.block-inline-blockaccordion-container, .accordion-container-block {
+	h3 {
+		margin-bottom: 0;
+	}
+}
+.field--name-field-accordion {
+	margin-bottom: 3.125em;
+}
+
+.node--type-accordion {
+	h2,
+	.node__meta {
+		display: none;
+	}
+
+	.node__content.accordion-open {
+		.field--name-field-title {
+			&:after {
+				font-family: 'Material Icons';
+				content: '\e15b' !important;
+			}
+		}
+	}
+
+	.node__content {
+		border-bottom: 1px solid $neutral-grey;
+		padding: 15px 0;
+
+		.field--name-field-title  {
+			@include nimbus-bold-reg;
+			font-size: ms(0);
+			max-width: 96%;
+			cursor: pointer;
+			text-transform: uppercase;
+
+			&:after {
+				content: '\e145';
+				font-family: 'Material Icons';
+				position: absolute;
+				right: 0;
+				font-size: 24px;
+				line-height: 1;
+				font-weight: normal;
+			}
+		}
+
+		.field--name-field-details {
+			display: none;
+			padding-top: 5px;
+			background: $light-grey;
+			padding: ms(0);
+			margin-top: 1em;
+
+			h4 {
+				//font-size: 1em;
+				//margin-bottom: 0;
+			}
+		}
+	}
+}
+
+// for js
+.accordion-minus:after {
+	font-family: 'Material Icons';
+	content: '\e15b' !important;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.accordion-plus:after {
+	font-family: 'Material Icons';
+	content: '\e145' !important;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+//expand collapse
+
+.sub-accordions-wrapper.collapse-on-load {
+	.node--type-faq {
+		.node__content {
+			display: none;
+		}
+	}
+}
+
+.accordion-expand-all-toggle, .expand-all-object {
+	@include nimbus-reg;
+	position: relative;
+	padding-top: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-bottom: 1px solid $almostblack;
+	padding-bottom: 2px;
+	font-size: ms(-2);
+	letter-spacing: 0.05em;
+	float: right;
+	@include clearfix;
+	&:hover, &:focus{
+		color: $red;
+		border-bottom: 1px solid $red;
+	}
+	&:before{
+		content: '\e145';
+		font-family: 'Material Icons';
+		position: relative;
+		top: 2px;
+		text-decoration: none;
+		text-transform: uppercase;
+		//border-bottom: 1px solid $almostblack;
+		padding-bottom: 2px;
+		font-size: ms(-2);
+		letter-spacing: 0.05em;
+		float: left;
+		&:hover,
+		&:focus {
+				color: $red;
+				border-bottom: 1px solid $red;
+		}
+	 // &:before {
+	//      content: '\e145';
+	 //     font-family: 'Material Icons';
+	//      position: relative;
+	//      top: 1px;
+	//      font-size: 12px;
+	//      line-height: 1;
+	//      font-weight: normal;
+		}
+}
+
+.accordion-expand-all-toggle.collapse,
+.expand-all-object.expanded {
+		&:before {
+				content: '\e15b';
+				font-family: 'Material Icons';
+				position: relative;
+				top: 1px;
+				font-size: 12px;
+				line-height: 1;
+				font-weight: normal;
+		}
+}
+
+
+
+
+
+// .field-content{
+.sub-accordions-wrapper.accordion-full-container-width {
+		position: relative;
+		max-width: $wide-screen;
+		margin: 0 auto;
+		padding: 0 ms(2);
+		@include clearfix;
+		@include breakpoint($medium-screen) {
+				padding: 0 ms(2);
+		}
+		@include breakpoint ($wide-screen) {
+				padding: 0 ms(-1);
+		}
+}
+
+.sub-accordions-wrapper.accordion-full-page-width {
+		position: relative;
+		max-width: 100%;
+		margin: 0;
+		padding: 0 ms(2);
+		@include clearfix;
+		@include breakpoint($medium-screen) {
+				padding: 0 ms(2);
+		}
+		@include breakpoint ($wide-screen) {
+				padding: 0 ms(-1);
+		}
+}
+
+
+.embedded-entity{
+		.sub-accordions-wrapper.accordion-full-container-width {
+				position: relative;
+				max-width: $wide-screen;
+				margin: 0 auto;
+				padding: 0;
+				@include clearfix;
+				@include breakpoint($medium-screen) {
+						padding: 0 ms(2);
+				}
+				@include breakpoint ($wide-screen) {
+						padding: 0 ms(0);
+				}
+		}
+
+		.sub-accordions-wrapper.accordion-full-page-width {
+				position: relative;
+				max-width: 100%;
+				margin: 0;
+				padding: 0 ms(2);
+				@include clearfix;
+				@include breakpoint($medium-screen) {
+						padding: 0 ms(2);
+				}
+				@include breakpoint ($wide-screen) {
+						padding: 0 ms(-1);
+				}
+		}
+}
+
+// }
+
+.block-accordion-closed {
+	h2 {
+		position: relative;
+		cursor: pointer;
+
+		&:after {
+				content: '\e145';
+				font-family: 'Material Icons';
+				position: absolute;
+				right: 5px;
+				top: 50%;
+				transform: translateY(-50%);
+				font-size: 31px;
+				line-height: 1;
+				font-weight: normal;
+		}
+	}
+}
+
+.block-accordion{
+	h2 {
+		position: relative;
+		cursor: pointer;
+
+		&:after {
+				content: '\e15b';
+				font-family: 'Material Icons';
+				position: absolute;
+				right: 5px;
+				top: 50%;
+				transform: translateY(-50%);
+				font-size: 31px;
+				line-height: 1;
+				font-weight: normal;
+		}
+	}
+}
+
+.block-accordion-closed {
+// 	h2 {
+// 		&:after {
+// 			content: '\e15b';
+// 		}
+// 	}
+
+// 	h2.accordion-minus {
+// 		&:after {
+// 			content: '\e145';
+// 		}
+// 	}
+
+	.sub-accordions-wrapper {
+		display: none;
+	}
+}
+
+.block-sub-accordion-closed {
+// 	h3 {
+// 		&:after {
+// 			content: '\e15b';
+// 		}
+// 	}
+
+// 	h3.accordion-minus {
+// 		&:after {
+// 			content: '\e145';
+// 		}
+// 	}
+
+	.node__content {
+		display: none;
+	}
+}
+
+.sub-accordions-wrapper {
+	padding-bottom: 40px;
+
+		.field--name-field-faqs {
+			.field__item:not(.field--name-body) {
+				border-bottom: 1px solid $almostblack;
+			}
+		}
+
+  .node--type-faq > * h3,
+  .node--type-faq > * h4 {
+    padding-top: 15px;
+
+    &:after {
+      content: ''!important;
+    }
+  }
+
+  article.node--type-accordion .node__content,
+  article.node--type-faq .node__content {
+    & > h4,
+    & > * h4 {
+      @include heading-3;
+      //font-size: ms(5)!important;
+      //font-family: $font-set-1;
+      font-weight: $normal;
+    }
+  }
+
+  .node--type-faq > h3,
+  .node--type-faq > h4 {
+			padding-top: 15px;
+			margin-bottom: 0px;
+			padding-bottom: 15px;
+			position: relative;
+			cursor: pointer;
+
+			&:after {
+				content: '';
+				font-family: 'Material Icons';
+				position: absolute;
+				right: 5px;
+				top: 19px;
+				font-size: 26px;
+				line-height: 1;
+				font-weight: normal;
+			}
+		}
+
+	.node__content {
+		background: $light-grey;
+		padding: ms(0);
+		margin-bottom: 15px;
+	}
+}
+
+.block-faq-accordion, .block-accordion {
+	.sub-accordions-wrapper {
+    h3 {
+      &:after {
+        content: '\e15b';
+      }
+    }
+	}
+}
+
+.block-accordion-sub-accordions-closed, .block-sub-accordion-closed {
+	.sub-accordions-wrapper {
+
+			h3 {
+				&:after {
+					content: '\e145'
+				}
+			}
+	}
+}
+
+.block-background-black.make-accordion {
+		.agoc-block-title {
+				h2 {
+						padding-top: 0px;
+						margin-bottom: 0px;
+						padding-bottom: 15px;
+						&:after {
+								content: '\e145';
+								font-family: 'Material Icons';
+								position: absolute;
+								right: 5px;
+								top: 10px;
+								font-size: 31px;
+								line-height: 1;
+								font-weight: normal;
+						}
+				}
+		}
+}
+
+.sub-accordions-wrapper .sub-accordion {
+		border-top: 1px solid $almostblack;
+		border-bottom: 1px solid $almostblack;
+		// h2 {
+		// 		padding-top: 15px;
+		// 		margin-bottom: 0px;
+		// 		padding-bottom: 15px;
+		// 		&:after {
+		// 				content: '\e145';
+		// 				font-family: 'Material Icons';
+		// 				position: absolute;
+		// 				right: 5px;
+		// 				top: 22px;
+		// 				font-size: 31px;
+		// 				line-height: 1;
+		// 				font-weight: normal;
+		// 		}
+		// }
+}
+
+.accordion-content-wrapper {
+		.field--name-field-content {
+				background: $light-grey;
+				padding: ms(0);
+				padding-top:ms(0) !important;
+				margin-top:ms(0);
+		}
+}
+
+.block-accordion-sub-accordions-closed {
+	border-top: 1px solid $almostblack;
+	border-bottom: 1px solid $almostblack;
+	margin-bottom: 40px;
+
+	.faq-set-title {
+		padding-top: 15px;
+		margin-bottom: 0px;
+		padding-bottom: 15px;
+	}
+}
+
+  @each $name, $color in $colours {
+	.#{$name}-background {
+		position: relative;
+		z-index: 1;
+		@if $name == black {
+			color: $white;
+		}
+		@if $name == red {
+			h2 {
+				color: white;
+			}
+		}
+		background: $color;
+
+		&.accordion-full-width-seamless, &.accordion-full-width {
+			&:before {
+				background-color: $color;
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 50%;
+				margin-left: -50vw;
+				width: 100vw;
+				z-index: -1;
+				background-size: cover;
+			}
+
+			&:after {
+				background-color: $color;
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 50%;
+				margin-left: -50vw;
+				width: 100vw;
+				z-index: -1;
+				background-size: cover;
+			}
+		}
+	}
+}

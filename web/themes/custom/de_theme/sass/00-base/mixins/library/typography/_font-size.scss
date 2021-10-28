@@ -1,0 +1,11 @@
+// This mixin sets the font size in rem's with a px fallback.
+
+// Usage
+// body {
+  // @include font-size(16);
+// }
+
+@mixin font-size($sizeValue: 12 ){
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.125 * $sizeValue) + rem;
+}

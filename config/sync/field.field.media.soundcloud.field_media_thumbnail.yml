@@ -1,0 +1,28 @@
+uuid: 5afed35c-ea3e-4495-97c3-6c29f883fd69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_thumbnail
+    - media.type.image
+    - media.type.soundcloud
+id: media.soundcloud.field_media_thumbnail
+field_name: field_media_thumbnail
+entity_type: media
+bundle: soundcloud
+label: 'Media Thumbnail'
+description: 'Use this to override the default.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

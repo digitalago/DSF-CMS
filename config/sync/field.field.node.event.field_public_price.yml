@@ -1,0 +1,23 @@
+uuid: 0b0cfd8b-7045-44e9-8a24-6b241a6e5de3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_price
+    - node.type.event
+id: node.event.field_public_price
+field_name: field_public_price
+entity_type: node
+bundle: event
+label: 'Public Price'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,17 @@
+uuid: b4af3eae-f8fd-4ce0-83df-b852b35c81c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.banner_crop_region
+  module:
+    - crop
+name: banner_crop
+label: Banner-crop
+effects:
+  9179eafd-e65d-487e-b549-f047f0afced6:
+    uuid: 9179eafd-e65d-487e-b549-f047f0afced6
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: banner_crop_region

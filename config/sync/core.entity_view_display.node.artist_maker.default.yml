@@ -1,0 +1,124 @@
+uuid: a044552f-8489-4100-91d1-071134cdf2ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.artist_maker.body
+    - field.field.node.artist_maker.field_alpha_sort
+    - field.field.node.artist_maker.field_alternate_names
+    - field.field.node.artist_maker.field_birth_place
+    - field.field.node.artist_maker.field_death_place
+    - field.field.node.artist_maker.field_first_letter_index
+    - field.field.node.artist_maker.field_first_name
+    - field.field.node.artist_maker.field_last_name
+    - field.field.node.artist_maker.field_nationality
+    - field.field.node.artist_maker.field_object_id
+    - field.field.node.artist_maker.field_prefix
+    - field.field.node.artist_maker.field_suffix
+    - node.type.artist_maker
+  module:
+    - text
+    - user
+id: node.artist_maker.default
+targetEntityType: node
+bundle: artist_maker
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_alpha_sort:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_alternate_names:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_birth_place:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_death_place:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_first_letter_index:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_first_name:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_name:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_nationality:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_object_id:
+    weight: 110
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_prefix:
+    weight: 111
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_suffix:
+    weight: 112
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

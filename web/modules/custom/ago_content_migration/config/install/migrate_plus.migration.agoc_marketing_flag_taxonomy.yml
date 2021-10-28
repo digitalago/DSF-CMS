@@ -1,0 +1,35 @@
+id: agoc_marketing_flag_taxonomy
+label: AGOC Marketing Flag Taxonomy
+migration_group: ago
+source:
+  plugin: custom_taxonomy_term
+  key: migrate
+  entity_type: taxonomy_term
+  bundle: agoc_marketing_flag
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: marketing_flag
+process:
+  name: name
+  langcode: langcode
+  weight: weight
+  status: status
+  'description/value': description__value
+  'description/format':
+    -
+      plugin: static_map
+      source: description/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: 'full_html'
+  created: created
+  changed: changed
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

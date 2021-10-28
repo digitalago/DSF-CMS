@@ -1,0 +1,25 @@
+uuid: 845d26d7-c96a-43d7-a73c-ebeaab01e7c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.free_crop_region
+  module:
+    - crop
+name: image_large
+label: 'Image: Large'
+effects:
+  1301efbc-d778-45c9-9a7e-3938c1958265:
+    uuid: 1301efbc-d778-45c9-9a7e-3938c1958265
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: free_crop_region
+  5bf4f8f1-1c22-46ef-9be6-0d22b12537c9:
+    uuid: 5bf4f8f1-1c22-46ef-9be6-0d22b12537c9
+    id: image_scale
+    weight: 2
+    data:
+      width: 1200
+      height: 1200
+      upscale: true

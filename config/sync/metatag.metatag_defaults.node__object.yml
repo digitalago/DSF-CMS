@@ -1,0 +1,9 @@
+uuid: f2ae3f53-52dc-493b-8579-8f1f7c4cf6b4
+langcode: en
+status: true
+dependencies: {  }
+id: node__object
+label: 'Content: Object'
+tags:
+  description: 'AGO’s collection of close to 95,000 works ranges from cutting-edge contemporary art to European masterpieces; from the vast collection by the Group of Seven to works by established and emerging Indigenous Canadian artists.'
+  abstract: 'AGO’s collection of close to 95,000 works ranges from cutting-edge contemporary art to European masterpieces; from the vast collection by the Group of Seven to works by established and emerging Indigenous Canadian artists.'

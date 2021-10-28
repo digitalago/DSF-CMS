@@ -1,0 +1,31 @@
+uuid: 23917236-3383-43cc-a0be-357bb9b7423c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:168bdf65-e770-4ceb-8c00-0c5fb35ab499'
+  module:
+    - block_content
+    - system
+  theme:
+    - de_theme
+id: homepagehowtogetheremobile
+theme: de_theme
+region: dags_top
+weight: -37
+provider: null
+plugin: 'block_content:168bdf65-e770-4ceb-8c00-0c5fb35ab499'
+settings:
+  id: 'block_content:168bdf65-e770-4ceb-8c00-0c5fb35ab499'
+  label: 'Homepage How to get here - Mobile'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

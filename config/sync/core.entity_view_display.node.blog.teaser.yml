@@ -1,0 +1,58 @@
+uuid: 87d8b3a8-d430-43f9-87d8-07a463854862
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blog.body
+    - field.field.node.blog.field_alert
+    - field.field.node.blog.field_blog_category
+    - field.field.node.blog.field_image_style
+    - field.field.node.blog.field_main_image
+    - field.field.node.blog.field_media
+    - field.field.node.blog.field_meta_tags
+    - field.field.node.blog.field_placement_date
+    - field.field.node.blog.field_placement_tag
+    - field.field.node.blog.field_post_includes_media
+    - field.field.node.blog.field_tagline
+    - field.field.node.blog.field_tags
+    - field.field.node.blog.field_year_filter
+    - node.type.blog
+  module:
+    - text
+    - user
+id: node.blog.teaser
+targetEntityType: node
+bundle: blog
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_alert: true
+  field_blog_category: true
+  field_image_style: true
+  field_main_image: true
+  field_media: true
+  field_meta_tags: true
+  field_placement_date: true
+  field_placement_tag: true
+  field_post_includes_media: true
+  field_publication_date: true
+  field_sponsors: true
+  field_tagline: true
+  field_tags: true
+  field_year_filter: true
+  search_api_excerpt: true

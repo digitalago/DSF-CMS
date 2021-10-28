@@ -1,0 +1,23 @@
+uuid: 804b8381-228a-4833-9f28-307090028ac3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_style
+    - node.type.blog
+  module:
+    - options
+id: node.blog.field_image_style
+field_name: field_image_style
+entity_type: node
+bundle: blog
+label: 'Image Style'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

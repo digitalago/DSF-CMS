@@ -1,0 +1,71 @@
+.path-media {
+    #block-returntothemediacentre{
+    background: $light-grey;
+    p{
+      max-width: $wide-screen;
+      margin: 0px auto;
+      padding: 0 ms(-1);
+    }
+   
+
+  }
+
+ .block-views-blockagoc-media-centre-media-embed-block{
+    width: 100%;
+    display: block;
+    position: relative;
+    text-align: center;
+    background: $light-grey;
+    padding:10px 0px 20px 0px;
+    .views-field-field-soundcloud-url, .views-field-field-media-video-embed-field{
+      max-width: $wide-screen;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+.category-tag{
+    @include category-label;
+}
+
+.media-duration{
+    @include nimbus-bold-reg;
+    color: $almostblack;
+    font-size: ms(0);
+    padding: ms() 0;
+}
+
+.media-description{
+    @include nimbus-reg;
+    color: $almostblack;
+    font-size: ms(0);
+    padding: 0;
+}
+
+.media-subjects{
+    .field--label-inline{
+   
+    .field__label{
+        width: auto;
+        float: none;
+        text-transform: none;
+        @include nimbus-bold-reg;
+        color: $almostblack;
+        font-size: ms(0);
+        width: auto;
+    }
+    }
+
+    .field__items{
+        .field__item{
+        @include nimbus-reg;
+        font-size: ms(0);
+        }
+    }
+}
+
+.media-ago-soundcloud, .media-ago-video{
+    padding-bottom: 30px;
+}
+
+}

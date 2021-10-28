@@ -1,0 +1,47 @@
+/* 30-components/layout/_index.scss */
+// contains the design structure styles, including
+// responsive design implementation
+
+.layout-container{
+  position: relative;
+  max-width:  $wide-screen;
+  // max-width:  $wxga-screen;
+  margin:  0 auto;
+  padding:  0 ms(2);
+  @include clearfix;
+  //@include breakpoint($narrow-screen $weird-screen-max) {
+ //   padding: 0 6.38298%;
+ // }
+  @include breakpoint($medium-screen) {
+    padding:  0 ms(2);
+  }
+  @include breakpoint ($wide-screen) {
+    padding:  0 ms(-1);
+  }
+}
+
+.body.admin-toolbar {
+
+  padding-top: 0 !important;
+}
+
+.mm-page {
+  padding-top: 0 !important;
+}
+
+/*
+* Layout Builder Table Drag Handle Size Fix
+*/
+a.tabledrag-handle .handle {
+  height: 22px;
+  width: 22px;
+}
+
+
+/*  @main layout regions
+========================================================================== */
+
+@import 'header';
+@import 'content';
+@import 'footer';
+@import 'middle';

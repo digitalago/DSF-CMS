@@ -1,0 +1,31 @@
+uuid: 16a4e4d0-c2b3-4f6b-bb2b-2bc45f394531
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.event_container
+    - field.field.block_content.event_container.field_event
+id: block_content.event_container.default
+targetEntityType: block_content
+bundle: event_container
+mode: default
+content:
+  field_event:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

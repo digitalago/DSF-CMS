@@ -1,0 +1,29 @@
+uuid: 0a922b99-548c-46bb-a4fa-c8ec6041e6f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.object_name
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: objectname
+theme: de_theme
+region: sidebar_first
+weight: -27
+provider: null
+plugin: 'facet_block:object_name'
+settings:
+  id: 'facet_block:object_name'
+  label: 'Object Name'
+  provider: facets
+  label_display: '0'
+  block_id: objectname
+visibility:
+  request_path:
+    id: request_path
+    pages: /collection/browse
+    negate: false
+    context_mapping: {  }

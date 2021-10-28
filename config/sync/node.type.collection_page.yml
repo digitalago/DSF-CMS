@@ -1,0 +1,31 @@
+uuid: f73be3d1-8271-4a69-a9c2-7cc1b85502aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: publish
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: true
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: true
+name: 'Collection Page'
+type: collection_page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

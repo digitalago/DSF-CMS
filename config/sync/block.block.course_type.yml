@@ -1,0 +1,29 @@
+uuid: aa25b677-dd6c-4233-8f80-a883aab4c968
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.course_type
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: course_type
+theme: de_theme
+region: sidebar_first
+weight: -33
+provider: null
+plugin: 'facet_block:course_type'
+settings:
+  id: 'facet_block:course_type'
+  label: 'Course Type'
+  provider: facets
+  label_display: '0'
+  block_id: course_type
+visibility:
+  request_path:
+    id: request_path
+    pages: /learn/courses
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,23 @@
+uuid: 87fe7b86-4315-4536-bf47-3e0fb8f61bd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide_container_place
+    - node.type.slider_container
+  module:
+    - options
+id: node.slider_container.field_slide_container_place
+field_name: field_slide_container_place
+entity_type: node
+bundle: slider_container
+label: 'Slide Container Placement'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: content-slider
+default_value_callback: ''
+settings: {  }
+field_type: list_string

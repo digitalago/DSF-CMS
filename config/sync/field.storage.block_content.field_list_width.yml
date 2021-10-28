@@ -1,0 +1,27 @@
+uuid: 9e4f5e5b-4cd8-45a6-ab83-d680c95eaae5
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_list_width
+field_name: field_list_width
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: full_width
+      label: 'Full Width'
+    -
+      value: full_width_seamless
+      label: 'Full Width Seamless'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

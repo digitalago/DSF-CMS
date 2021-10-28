@@ -1,0 +1,21 @@
+uuid: f3e51f79-f802-44e6-828e-677fda19cc3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.people_list
+    - field.storage.block_content.field_layout
+  module:
+    - options
+id: block_content.people_list.field_layout
+field_name: field_layout
+entity_type: block_content
+bundle: people_list
+label: Layout
+description: 'Applicable when the List Type selected is People List Small.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

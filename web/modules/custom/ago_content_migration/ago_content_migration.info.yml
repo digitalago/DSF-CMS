@@ -1,0 +1,9 @@
+name: AGO Content Migration
+type: module
+description: Migrate content from previous AGO site.
+core: 8.x
+package: Custom
+dependencies:
+  - drupal:migrate
+  - migrate_plus:migrate_plus
+  - migrate_drupal_d8:migrate_drupal_d8

@@ -1,0 +1,190 @@
+/* 10-drupal/search/_default-search.scss */
+
+.path-search {
+  .layout-content {
+    padding: 0 ms(2);
+    margin: 0 auto;
+    @include breakpoint ($narrow-screen) {
+      padding: 0 6.38298%;
+    }
+    @include breakpoint ($medium-screen) {
+      padding: 0 ms(2);
+    }
+    @include breakpoint ($wide-screen) {
+      max-width: $wide-screen;
+      padding: 0 ms(-1);
+    }
+  }
+  main#main {
+    h1 {
+      margin-top: ms(-4);
+    }
+    input {
+      box-sizing: border-box;
+    }
+  }
+
+  .search-page-form {
+    @include clearfix;
+    label {
+      clear: both;
+      display: block;
+    }
+    input.form-search {
+      padding: ms(-2) ms();
+      width: 100%;
+      border: 1px solid black;
+      @include breakpoint ($small-screen) {
+        width: 250px;
+      }
+      @include breakpoint ($narrow-screen) {
+        width: 350px;
+      }
+      @include breakpoint ($medium-screen) {
+        width: 550px;
+      }
+    }
+    .form-submit {
+      margin-left: 0;
+      margin-top: ms();
+      @include breakpoint ($small-screen) {
+        margin-left: ms(-1);
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+    a#edit-help-link {
+      font-size: ms(1);
+      margin: ms(-1) 0;
+      display: block;
+      color: $red;
+    }
+    .search-advanced {
+      margin: ms() 0;
+      summary {
+        padding: 0 ms();
+        &:before {
+          display: none;
+        }
+      }
+      a.details-title {
+        font-size: ms(2);
+        text-decoration: none;
+        vertical-align: middle;
+        padding: ms(-4) 0;
+        display: inline-block;
+        &:hover, &:active, &:focus {
+          text-decoration: underline;
+        }
+      }
+      .details-wrapper {
+
+        // width: 96%;
+        // display: inline-block;
+        .action .form-submit {
+          margin: 0;
+        }
+        fieldset.form-wrapper {
+          padding: ms();
+          legend {
+            text-align: center;
+            span.fieldset-legend {
+              font-size: ms(2);
+              font-weight: $normal;
+              margin-bottom: ms();
+              display: block;
+              color: $black;
+              &:hover, &:active, &:focus {
+                cursor: pointer;
+              }
+            }
+          }
+          .fieldset-wrapper {
+            // display: inline-block;
+            label {
+              display: inline-block;
+              &:before {
+                // top: 3px;
+                width: 10px;
+                height: 10px;
+                @include breakpoint (max-width $narrow-screen) {
+                  margin: 0;
+                }
+              }
+            }
+            // input[type=checkbox]:checked ~ label:before {
+            //   font-size: 15px;
+            // }
+            label:checked ~ label:before {
+              font-size: 15px;
+            }
+
+            span.fieldset-legend {
+              display: inline-block;
+              color: $black;
+            }
+            .form-type-checkbox {
+              float: left;
+              display: inline-block;
+
+              margin-right: 1%;
+              width: 100%;
+              @include breakpoint (500px) {
+                width: 49%;
+              }
+              @include breakpoint ($medium-screen) {
+                width: 32%;
+              }
+              @include breakpoint ($standard-screen) {
+                width: 24%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  h2 {
+    margin-top: ms();
+  }
+  .item-list {
+    ol.search-results.node_search-results {
+      padding-left: 0;
+      li {
+        padding: ms(1);
+        list-style-type: none;
+        list-style: none;
+        margin: 0;
+        &:nth-child(2n) {
+          padding: ms(1);
+          background-color: darken($light-grey, 5%);
+        }
+        h3 a {
+
+        }
+      }
+    }
+  }
+}
+
+.search-expend {
+  &:after {
+    content: '+' !important;
+    font-size: 25px;
+    font-weight: $ultra-bold;
+    float: right;
+    display: inline-block;
+    padding-left: 5px;
+  }
+}
+
+.search-close {
+  &:after {
+    content: '–';
+    font-size: 25px;
+    font-weight: $ultra-bold;
+    float: right;
+    display: inline-block;
+    padding-left: 5px;
+  }
+}

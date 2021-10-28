@@ -1,0 +1,10 @@
+uuid: 1dec92ef-2de0-4a09-9492-2396511d840d
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.accordion
+label: Accordion
+targetEntityType: block_content
+cache: true

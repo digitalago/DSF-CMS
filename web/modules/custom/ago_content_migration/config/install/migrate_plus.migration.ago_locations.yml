@@ -1,0 +1,65 @@
+id: ago_locations
+label: AGO Locations
+migration_group: ago
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: node
+  bundle: ago_locations
+destination:
+  plugin: entity:node
+  default_bundle: location
+process:
+  title: title
+  created: created
+  changed: changed
+  'body/value': 'body/0/value'
+  'body/summary': 'body/0/summary'
+  'body/format':
+    -
+      plugin: static_map
+      source: body/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: 'full_html'
+  status: status
+  field_location_image:
+    -
+      plugin: sub_process
+      source: field_location_image
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: image_media
+  'field_location_address/value': 'field_location_address/0/value'
+  'field_location_address/format':
+    -
+      plugin: static_map
+      source: field_location_address/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: 'basic_html'
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+migration_dependencies:
+  required:
+    - user
+  optional: {  }
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

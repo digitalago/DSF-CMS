@@ -1,0 +1,14 @@
+uuid: e1253aaa-7d01-45f2-97ff-01947e9dc1ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.host_event_access
+  module:
+    - user
+id: user_remove_role_action.host_event_access
+label: 'Remove the Host Event Access role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: host_event_access

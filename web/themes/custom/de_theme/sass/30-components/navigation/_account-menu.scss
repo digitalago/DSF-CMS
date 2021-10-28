@@ -1,0 +1,25 @@
+/* 30-components/navigation/_account-menu.scss */
+
+#block-de-theme-account-menu {
+  .menu {
+    float: right;
+    .menu-item {
+      float: left;
+      display: block;
+      margin-left: ms();
+      a {
+        @include btn;
+        @include btn-black;
+        margin-bottom: 0;
+        margin-right: 0;
+      }
+      a.login-btn {
+        @include arrow-right-small;
+        line-height: 1.5;
+        @include breakpoint ($narrow-screen) {
+          line-height: 1.25;
+        }
+      }
+    }
+  }
+}

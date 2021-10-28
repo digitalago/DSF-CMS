@@ -1,0 +1,42 @@
+uuid: 9e022cb7-061d-4ff8-8d74-4ddb8faf7f8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_layout_type
+field_name: field_layout_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: grid-2-columns
+      label: '2 Columns'
+    -
+      value: grid-3-columns
+      label: '3 Columns'
+    -
+      value: grid-4-columns
+      label: '4 Columns'
+    -
+      value: grid-6-columns
+      label: '6 Columns'
+    -
+      value: grid-list
+      label: 'List (3 columns)'
+    -
+      value: grid-list-small
+      label: 'List (4 columns)'
+    -
+      value: grid-4-seamless
+      label: 'Images Only Seamless (4 columns)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

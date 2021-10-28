@@ -1,0 +1,94 @@
+uuid: 38b87b05-63c3-42fc-8904-44485e1d3567
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.course_session.body
+    - field.field.node.course_session.field_cancelled
+    - field.field.node.course_session.field_course_day_end
+    - field.field.node.course_session.field_course_day_start
+    - field.field.node.course_session.field_day_of_the_week
+    - field.field.node.course_session.field_duration_in_weeks
+    - field.field.node.course_session.field_end_time
+    - field.field.node.course_session.field_location_reference
+    - field.field.node.course_session.field_on_sale
+    - field.field.node.course_session.field_seasons
+    - field.field.node.course_session.field_sold_out
+    - field.field.node.course_session.field_start_time
+    - field.field.node.course_session.field_ticket_link
+    - node.type.course_session
+  module:
+    - datetime
+    - link
+    - options
+    - text
+    - user
+id: node.course_session.teaser
+targetEntityType: node
+bundle: course_session
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_course_day_end:
+    type: datetime_custom
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: 'Y-m-d\TH:i:s'
+    third_party_settings: {  }
+  field_course_day_start:
+    type: datetime_custom
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: 'Y-m-d\TH:i:s'
+    third_party_settings: {  }
+  field_end_time:
+    type: list_default
+    weight: 4
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_start_time:
+    type: list_default
+    weight: 3
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_ticket_link:
+    type: link
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_cancelled: true
+  field_day_of_the_week: true
+  field_duration_in_weeks: true
+  field_location_reference: true
+  field_on_sale: true
+  field_seasons: true
+  field_sold_out: true
+  links: true
+  search_api_excerpt: true

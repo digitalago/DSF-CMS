@@ -1,0 +1,35 @@
+uuid: 3e36e192-e3b0-4853-bbb9-075c429733b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alert
+    - field.field.block_content.alert.body
+    - field.field.block_content.alert.field_hide_on_desktop
+    - field.field.block_content.alert.field_hide_on_mobile
+    - field.field.block_content.alert.field_display_on_front
+    - field.field.block_content.alert.field_display_site_wide
+    - field.field.block_content.alert.field_style_options
+    - field.field.block_content.alert.field_type
+  module:
+    - text
+id: block_content.alert.default
+targetEntityType: block_content
+bundle: alert
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_display_on_front: true
+  field_display_site_wide: true
+  field_hide_on_desktop: true
+  field_hide_on_mobile: true
+  field_style_options: true
+  field_type: true
+  search_api_excerpt: true

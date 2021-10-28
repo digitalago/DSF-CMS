@@ -1,0 +1,29 @@
+uuid: 67920d3f-362a-4540-bfbc-28b1009ad7c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_object_type
+    - node.type.object
+    - taxonomy.vocabulary.object_type
+id: node.object.field_object_type
+field_name: field_object_type
+entity_type: node
+bundle: object
+label: 'Object Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      object_type: object_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

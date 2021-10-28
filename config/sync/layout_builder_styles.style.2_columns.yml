@@ -1,0 +1,12 @@
+uuid: 29369294-0c02-425e-b077-3556b46c334c
+langcode: en
+status: true
+dependencies: {  }
+id: 2_columns
+label: '2 Columns'
+classes: two-columns
+type: component
+weight: 0
+block_restrictions:
+  - 'inline_block:card_container'
+layout_restrictions: {  }

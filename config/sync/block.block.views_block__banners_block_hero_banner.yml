@@ -1,0 +1,39 @@
+uuid: 3fcc9fc5-01e0-4f51-921d-3ed06c947ed9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.banners
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - de_theme
+id: views_block__banners_block_hero_banner
+theme: de_theme
+region: dags_top
+weight: -40
+provider: null
+plugin: 'views_block:banners-block_hero_banner'
+settings:
+  id: 'views_block:banners-block_hero_banner'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: '1'
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

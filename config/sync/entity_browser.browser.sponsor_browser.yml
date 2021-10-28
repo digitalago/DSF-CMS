@@ -1,0 +1,42 @@
+uuid: b1adb443-c6e9-47c8-b2f9-995b2b2e58b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.content_browsers
+  module:
+    - entity_browser_entity_form
+    - views
+name: sponsor_browser
+label: 'Sponsor Browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  a813c98c-5839-4edf-a5e9-8c32a6b1c1a7:
+    settings:
+      view: content_browsers
+      view_display: sponsor_browser
+      submit_text: 'Select Sponsors'
+      auto_select: false
+    uuid: a813c98c-5839-4edf-a5e9-8c32a6b1c1a7
+    weight: 1
+    label: 'Select Sponsors'
+    id: view
+  44c70752-4c8d-461e-a63c-efa29aaffaf4:
+    settings:
+      entity_type: node
+      bundle: sponsor
+      form_mode: default
+      submit_text: 'Save Sponsor'
+    uuid: 44c70752-4c8d-461e-a63c-efa29aaffaf4
+    weight: 2
+    label: 'New Sponsor'
+    id: entity_form

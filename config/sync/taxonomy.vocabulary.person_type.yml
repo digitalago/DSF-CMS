@@ -1,0 +1,8 @@
+uuid: 4353f851-9cde-4081-bdbb-ebbcc3053293
+langcode: en
+status: true
+dependencies: {  }
+name: 'Person Type'
+vid: person_type
+description: 'Describes general characteristics of Persons on the site.'
+weight: 0

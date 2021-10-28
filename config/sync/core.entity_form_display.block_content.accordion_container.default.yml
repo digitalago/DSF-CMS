@@ -1,0 +1,42 @@
+uuid: fa98ca40-cd93-4c80-b5a2-502542293b3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_container
+    - field.field.block_content.accordion_container.field_accordion
+    - field.field.block_content.accordion_container.field_description
+  module:
+    - text
+id: block_content.accordion_container.default
+targetEntityType: block_content
+bundle: accordion_container
+mode: default
+content:
+  field_accordion:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

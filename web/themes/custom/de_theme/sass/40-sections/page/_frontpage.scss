@@ -1,0 +1,775 @@
+// frontpage
+
+  .block-insta, .block-views-blockdags-top-reference-dags-bottom {
+    h2 {
+      border-bottom: none;
+    }
+  }
+
+  .view-what-s-on-ago {
+    padding-top: 0px;
+  }
+
+  .node--type-agoc-sponsor-section{
+    .sponsor-section-title{
+      h2{
+        margin-bottom: 0;
+      }
+    }
+    max-width: $wide-screen;
+    margin: 0px auto;
+    padding: 20px ms(2);
+    @include breakpoint($medium-screen) {
+    padding:  20px ms(2);
+    }
+    @include breakpoint ($wide-screen) {
+      padding:  20px ms(-1);
+    }
+
+  }
+
+  .homepage-tickets {
+    padding-top: 25px;
+    .tickets-btn{
+      @include btn-red;
+      @include btn-big;
+      margin-bottom: 10px 0px;
+    }
+  }
+
+
+  #block-museumhourshomepageblock{
+    padding-bottom: 40px;
+    position: relative;
+    h2 {
+      text-transform: uppercase;
+      padding-bottom: 7px;
+      border-bottom: 1px solid $neutral-grey;
+      a{
+        text-decoration: none;
+        display: inline-flex;
+        width: 100%;
+        @include breakpoint ($weird-screen){
+          width: 85%;
+        }
+
+      }
+      i {
+        position: absolute;
+        right: 0;
+        font-size: 36px;
+        @include breakpoint ($standard-screen-max){
+        font-size: 42px;
+        }
+      }
+
+      }
+  }
+
+  #block-messagewrapperblockfront{
+    p {margin-bottom:0;}
+    h2 {
+      text-transform: uppercase;
+      padding-bottom: 7px;
+      border-bottom: 1px solid $neutral-grey;
+      a{
+        text-decoration: none;
+      }
+      i {
+        position: absolute;
+        right: 0;
+        font-size: 36px;
+        @include breakpoint ($standard-screen-max){
+        font-size: 42px;
+        }
+      }
+
+      }
+    /*padding-bottom: 30px;*/
+    .more-link{
+      padding-top: 0;
+      padding-bottom:0 !important;
+      display:none; /*remove for now*/
+      a{
+      color: $red;
+      border-bottom: 1px solid $red;
+      text-decoration: none;
+      font-weight: 300;
+      &:hover {
+      border-bottom: 1px solid transparent;
+      }
+      &:after{
+      content: '\e5c8';
+      display: inline-block;
+      padding-left: 5px;
+      font-family: 'Material Icons';
+
+      }
+    }
+  }
+  }
+
+  #block-galleryhoursonhomepage { /* new hours block */
+    padding-bottom: 3em;
+
+    h2 {
+      padding-bottom: 7px;
+      margin-bottom: 0.55493em;
+      border-bottom: 1px solid $contrastgrey;
+    }
+
+    table {
+      border: 0;
+
+      th {
+        border-bottom: 0;
+        font-weight: $bold;
+        padding-bottom: 8px;
+        padding-top: 0;
+        padding-right: 0;
+        padding-left: 0;
+        font-family: $font-set-2;
+        line-height: 1.6em;
+      }
+
+      td {
+        padding-bottom: 8px;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        font-weight: $light;
+      }
+
+      th,
+      td {
+
+        font-size: 0.88889em;
+        text-transform: uppercase;
+      }
+    }
+
+    a {
+      color: $red;
+      border-bottom: 1px solid $red;
+      text-decoration: none;
+      padding-bottom: 2px;
+      font-weight: 300;
+      text-align: right;
+
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
+
+      &::after {
+        content: '\e315';
+        display: inline-block;
+        padding-left: 5px;
+        font-family: 'Material Icons';
+        vertical-align: sub;
+        margin-right: -3px;
+      }
+    }
+
+    .agoc-hours-title {
+      h3 {
+        display:none
+      }
+
+    }
+    .more-link {
+      padding-top:0 !important;
+    }
+
+
+    .field--name-field-agoc-notes {
+      h2 {
+        font-size:1.8em;
+        text-transform:uppercase;
+      }
+    }
+  }
+
+  .path-frontpage {
+    .block-insta {
+      padding: 5em 0 !important;
+      background-color: $black !important;
+      color: $white !important;
+
+      h2 {
+        color: $white !important;
+      }
+
+      em {
+        &::before {
+          color: $white !important;
+        }
+      }
+    }
+  }
+
+#block-views-block-blogs-block-featured-homepage {
+  .views-row {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2.02729em;
+
+    @include breakpoint ($small-screen) {
+      flex-direction: row;
+    }
+
+    h3 {
+      margin-top: 0.30795em;
+      margin-bottom: 0.49327em;
+
+      a{
+        text-decoration: none;
+      }
+    }
+
+    .views-field-field-main-image {
+      width: 100%;
+      height: auto;
+      position: relative;
+
+      @include breakpoint ($small-screen) {
+        margin-right: 2.12766%;
+        flex: 0 1 40%;
+        max-width: 40%;
+        height: 220px;
+        background-color: $light-grey;
+      }
+
+      @include breakpoint($weird-screen) {
+        height: 250px;
+      }
+
+      @include breakpoint($standard-screen) {
+        height: 230px;
+      }
+
+      img {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+      }
+    }
+
+    .views-field-nothing {
+      width: 100%;
+      margin-right: 0 !important;
+      float: none !important;
+      clear: none !important;
+
+      @include breakpoint ($small-screen) {
+        flex: 0 1 60%;
+        max-width: calc(60% - 2.12766%);
+      }
+
+      .body-wrapper {
+        margin-bottom: 0.49327em;
+        font-size: 1.26562em;
+        line-height: 1.125em;
+        color: $contrastgrey;
+        font-family: $font-set-2;
+        font-weight: $normal;
+      }
+
+      .datetime {
+        display: block;
+        margin-top: 0.49327em;
+        font-family: $font-set-2;
+        font-size: 0.88889em;
+        font-weight: $normal;
+        letter-spacing: 0;
+      }
+
+      .btn-readmore {
+        a {
+          @include btn;
+          @include btn-red;
+          padding: 10px 15px 10px 15px;
+          text-transform: none;
+          font-size: 1em;
+          font-family: $font-set-2;
+          margin-top: 0.79012em;
+          margin-bottom: 0;
+          font-weight: $normal;
+        }
+      }
+    }
+  }
+}
+
+#block-views-block-what-s-on-ago-whats-on-today,
+#block-views-block-what-s-on-ago-whats-on,
+#block-views-block-whats-on-whats-on-events-homepage {
+  @include clearfix;
+
+  h2 {
+    text-transform: uppercase;
+    padding-bottom: 7px;
+    border-bottom: 1px solid $neutral-grey;
+
+    a{
+      text-decoration: none;
+    }
+
+    i {
+      position: absolute;
+      right: 0;
+      font-size: 36px;
+      @include breakpoint ($standard-screen-max){
+      font-size: 42px;
+      }
+    }
+  }
+
+  .ago-list-view {
+    // @include clearfix;
+    border-bottom: none;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint ($small-screen) {
+      flex-direction: row;
+    }
+
+    .views-field-field-main-image {
+      width: 100%;
+      @include breakpoint ($small-screen) {
+        margin-right: 2.12766%;
+        flex: 0 1 30%;
+        max-width: 30%;
+      }
+    }
+
+    .views-field-nothing {
+      width: 100%;
+      margin-right: 0 !important;
+      float: none !important;
+      clear: none !important;
+
+      @include breakpoint ($small-screen) {
+        flex: 0 1 70%;
+        max-width: calc(70% - 2.12766%);
+      }
+
+      .category-tag {
+        @include category-label;
+      }
+
+      .views-field-title {
+        margin-top: 3px;
+        margin-bottom: 3px;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .date-time-info{
+        font-family: $font-set-2;
+        font-weight: $normal;
+        font-size: 1.125em;
+        padding-bottom: 11px;
+        color: $almostblack;
+      }
+
+      p {
+        word-break: break-all;
+      }
+    }
+  }
+}
+
+#block-ago-insider-header-homepage {
+  .field--name-body {
+    p {
+      font-family: $font-set-4;
+      font-size: 1.42383em;
+      line-height: 1.2em;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid $neutral-grey;
+    }
+  }
+}
+
+#block-views-block-what-s-on-ago-whats-on-events-homepage{
+  h2{ text-transform: uppercase;
+    padding-bottom: 7px;
+    border-bottom: 1px solid $neutral-grey;
+  }
+  .date-time-info{
+    @include nimbus-reg;
+    color: $almostblack;
+    font-size: ms(1);
+    padding-bottom: 11px;
+  }
+  .flag{
+    margin-top: 14px;
+    @include breakpoint($narrow-screen){
+      margin-top: 0px;
+    }
+  }
+  p{
+    line-height:1.3em;
+  }
+
+}
+
+#block-views-block-what-s-next-block-1{
+  @include clearfix;
+  display: none;
+  @include breakpoint ($standard-screen){
+    display: block;
+  }
+}
+
+#block-views-block-what-s-next-block-1-2{
+  @include clearfix;
+  display: block;
+  @include breakpoint ($standard-screen){
+    display: none;
+  }
+}
+
+.sidebar{
+  .node--type-ago-slider-container{
+    margin-top: 15px;
+  }
+}
+
+//}
+
+//blogfeed
+
+.block-agorssfeed{
+  @include clearfix;
+}
+
+.blog-post{
+  padding-bottom: 40px;
+    p{
+      line-height: 1.3em;
+    }
+  }
+
+
+.read-more{
+    color: $red;
+    border-bottom: 1px solid $red;
+    text-decoration: none;
+    padding-top: ms(1);
+    font-family: $font-set-2;
+    font-size: ms(0);
+    font-weight: 300;
+  &:hover {
+    border-bottom: 1px solid transparent;
+  }
+  &:after{
+    content: '\e5c8';
+    display: inline-block;
+    padding-left: 5px;
+    font-family: 'Material Icons';
+  }
+  }
+
+.read-blog{
+    color: $red;
+    border-bottom: 1px solid $red;
+    text-decoration: none;
+    padding-top: 0;
+    font-family: $font-set-2;
+    font-size: ms(0);
+    float: right;
+    &:hover {
+    border-bottom: 1px solid transparent;
+    }
+    &:after{
+    content: '\e5c8';
+    display: inline-block;
+    padding-left: 5px;
+    font-family: 'Material Icons';
+    }
+}
+
+.field--name-field-slider-items {
+  transition: opacity .3s;
+}
+
+.field--name-field-slider-items .slick-current img{
+  display: block;
+}
+
+
+//homepage slider
+
+.field--name-field-slider-items {
+  // padding-top: 1em;
+
+  .slick-slide {
+    .field--name-field-managed-image {
+      position: relative;
+    //   height: 244px;
+    //
+    // @include breakpoint ($small-screen) {
+    //   height: 340px;
+    // }
+    //
+    // @include breakpoint ($weird-screen) {
+    //   height: 340px;
+    // }
+    //
+    // @include breakpoint ($standard-screen) {
+    //   height: 480px;
+    // }
+    //
+    // @include breakpoint ($wide-screen) {
+    //   height: 550px;
+    // }
+
+    img{
+      // width:auto;
+      max-width: 100%;
+      max-height: 100%;
+      vertical-align: middle;
+      // max-height:244px;
+      //
+      // @include breakpoint ($small-screen) {
+      //   max-height: 340px;
+      // }
+      //
+      // @include breakpoint ($weird-screen) {
+      //   max-height: 340px;
+      // }
+      //
+      // @include breakpoint ($standard-screen) {
+      //   max-height: 480px;
+      // }
+      //
+      // @include breakpoint ($wide-screen) {
+      //   max-height: 550px;
+      // }
+
+      @include breakpoint (max-width $small-screen) {
+        // position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+        // width:auto;
+        margin: auto;
+      }
+    }
+  }
+}
+
+
+.slick-dots{
+  li{
+    button{
+      text-align: center;
+      color: $almostblack;
+      font-size: 10px;
+      width:22px;
+      height: 21px;
+      @include nimbus-bold-reg;
+      overflow: visible;
+       &:before{
+         content: '\f111';
+         display: inline-block;
+        padding-left: 0px;
+        font-family: "Font Awesome 5 Free";
+        color: $almostblack;
+        font-weight: 300;
+        font-size: 23px;
+       }
+
+    }
+  }
+}
+
+
+//side slider
+
+.region--sidebar-first {
+  padding-bottom: 2.500em;
+}
+
+.region--sidebar-first,
+.region--middle-sidebar {
+  .side-slider {
+    .field--name-field-managed-image  {
+      height: 200px;
+
+      @include breakpoint ($weird-screen-max) {
+       height: 251px;
+      }
+    }
+  }
+}
+
+.side-slider {
+  padding-bottom: 10px;
+  .side-slider-content {
+    .side-slider-title {
+      @include heading-3;
+      margin-bottom: 0;
+      padding-top: 10px;
+      padding-bottom: 7px;
+    }
+    .slide-date-time-description {
+      @include nimbus-reg;
+      color: $almostblack;
+      font-size: ms(1);
+      padding-bottom: 3px;
+    }
+    .field--name-field-cta-link {
+      a {
+        @include nimbus-reg;
+        color: $red;
+        border-bottom: 1px solid $red;
+        text-decoration: none;
+      }
+    }
+  }
+  .field--name-field-managed-image {
+    position: relative;
+    background: $light-grey;
+   // max-height: 270px;
+    @include float-span(6);
+    height: 200px;
+    @include breakpoint ($small-screen) {
+      @include float-span(12);
+      height: 380px;
+      margin-bottom: 10px;
+    }
+    @include breakpoint ($weird-screen-max) {
+     height: 251px;
+    }
+    @include breakpoint (max-width $small-screen) {
+      text-align: center;
+    }
+    img {
+      // remove this after confirm image style from ago
+      //width: 100%;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-height: 100%;
+    }
+  }
+}
+
+
+ .slider-nav-controls {
+   display: inline-block;
+   margin: 0 auto;
+   position: relative;
+   float: right;
+   left: -10px;
+  }
+
+
+.slick-next, .slick-prev{
+  position: absolute;
+  top: 48%;
+ // transform: none;
+ // -webkit-transform: none;
+//  top: 99%;
+ // vertical-align: baseline;
+//  z-index: 1000;
+}
+
+.slick-dots{
+  position: relative;
+  //margin: 0.4em 4em;
+  bottom: 0;
+  width: auto;
+  top: -2px;
+}
+
+.slick-next{
+  &:before{
+  content: '\e409';
+  display: inline-block;
+  margin-left: -5px;
+  font-family: 'Material Icons';
+  opacity: 1;
+}
+}
+
+
+.slick-prev{
+  &:before{
+  content: '\e314';
+  display: inline-block;
+  padding-left: 5px;
+  font-family: 'Material Icons';
+  opacity: 1;
+
+}
+}
+
+.node .slick-prev, .node .slick-next{
+  height: 36px;
+  width: 36px;
+  &:before{
+    font-size: 36px;
+    color: $almostblack;
+  }
+}
+
+.node .slick-prev{
+  left: -25px;
+}
+.node .slick-next{
+  right: -25px;
+}
+
+.slick-dotted.slick-slider{
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  transition: all 0.5s ease;
+}
+
+
+.node--type-ago-slider-item {
+  visibility: hidden;
+}
+
+.slick-initialized {
+  .node--type-ago-slider-item {
+    visibility: visible !important;
+  }
+}
+
+// Hide internal notes on Gallery Hours for anonymous users.
+.user-logged-in {
+  .show-authenticated {
+    display: block;
+    span {
+      font-size: ms(4);
+      margin-bottom: ms(-1.5);
+      display: block;
+      font-weight: 300;
+    }
+  }
+}
+
+.show-authenticated {
+  display: none;
+}

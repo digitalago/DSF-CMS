@@ -1,0 +1,5 @@
+name: 'Accordions'
+type: module
+description: 'Custom functionality for accordions'
+core: 8.x
+package: Custom

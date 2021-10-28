@@ -1,0 +1,23 @@
+uuid: 09860670-2bb4-4291-80a1-261fbd7c41ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.object_container
+    - field.field.block_content.object_container.field_object
+id: block_content.object_container.default
+targetEntityType: block_content
+bundle: object_container
+mode: default
+content:
+  field_object:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: object_card_view
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,30 @@
+uuid: 03363d7f-f812-4ae9-9d52-63ff1a01064e
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_container_background
+field_name: field_container_background
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: grey
+      label: Grey
+    -
+      value: light-grey
+      label: 'Light Grey'
+    -
+      value: dark
+      label: 'Dark Theme'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

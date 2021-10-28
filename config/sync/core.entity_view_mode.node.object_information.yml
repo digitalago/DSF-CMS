@@ -1,0 +1,10 @@
+uuid: bb818a71-10f8-47c3-a159-4f81b4ac2191
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.object_information
+label: 'Object Information'
+targetEntityType: node
+cache: true

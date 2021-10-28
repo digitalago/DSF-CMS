@@ -1,0 +1,19 @@
+uuid: fb8c1d38-bb1e-4356-a88a-d14adcf9bc0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_object_rights_type
+    - node.type.object
+id: node.object.field_object_rights_type
+field_name: field_object_rights_type
+entity_type: node
+bundle: object
+label: 'Object Rights Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

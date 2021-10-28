@@ -1,0 +1,15 @@
+uuid: 3e143f62-c106-430f-9b4d-f2f6ae710d6e
+langcode: en
+status: true
+dependencies: {  }
+name: inline_image
+label: 'Inline Image'
+effects:
+  42bb64ee-59ac-45e2-b9aa-82548ef9edd2:
+    uuid: 42bb64ee-59ac-45e2-b9aa-82548ef9edd2
+    id: image_scale
+    weight: 1
+    data:
+      width: 938
+      height: null
+      upscale: true

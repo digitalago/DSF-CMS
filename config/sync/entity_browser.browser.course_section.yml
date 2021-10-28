@@ -1,0 +1,29 @@
+uuid: 42b3ba0a-ea55-4ca4-a8d1-d88bc84a79a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_browser_entity_form
+name: course_section
+label: 'Course Section'
+display: modal
+display_configuration:
+  width: '1245'
+  height: ''
+  link_text: 'Add Session'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  c056b6b3-8dbf-44e0-ba3c-9df145784d5d:
+    settings:
+      entity_type: node
+      bundle: course_session
+      form_mode: default
+      submit_text: 'Save Session'
+    uuid: c056b6b3-8dbf-44e0-ba3c-9df145784d5d
+    weight: 1
+    label: 'New Session'
+    id: entity_form

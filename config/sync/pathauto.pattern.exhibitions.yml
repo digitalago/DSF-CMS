@@ -1,0 +1,22 @@
+uuid: 9e28abba-7597-4ef6-945d-2daa414f91d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: exhibitions
+label: Exhibitions
+type: 'canonical_entities:node'
+pattern: '/exhibitions/[node:title]'
+selection_criteria:
+  0658bf8d-8509-42a1-a1da-a752479c6910:
+    id: node_type
+    bundles:
+      exhibition: exhibition
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0658bf8d-8509-42a1-a1da-a752479c6910
+selection_logic: and
+weight: -5
+relationships: {  }

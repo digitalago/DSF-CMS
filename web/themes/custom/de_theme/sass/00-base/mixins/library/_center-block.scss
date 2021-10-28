@@ -1,0 +1,6 @@
+// requires width or max-width to be set
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

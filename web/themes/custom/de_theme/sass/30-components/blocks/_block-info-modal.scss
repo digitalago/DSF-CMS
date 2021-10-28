@@ -1,0 +1,145 @@
+/* Block info modal */
+/* .content-modal created for the media modal window */
+
+
+.block-info-modal {
+  display: none;
+}
+
+
+#cboxOverlay{
+  opacity: 0.3 !important;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .content-modal {
+    opacity: 0.3 !important;
+
+  }
+}
+
+
+#cboxContent{
+  #cboxClose{
+    z-index: 9999999;
+    position: absolute;
+    top: 10px;
+    background: $white;
+    @include breakpoint($narrow-screen){
+      top: 10px;
+    }
+    right: 0px;
+    -webkit-appearance: none;
+    border-radius: 0px;
+    margin: 0 15px;
+    &:hover {
+      background: $almostblack;
+    }  
+  } 
+}
+
+#cboxLoadedContent{
+  border: none;
+  //overflow:auto !important; 
+ 
+}
+
+.block-filters-pop-up-wrapper{
+  -webkit-overflow-scrolling: touch !important;
+  .collection-modal-filterset-title{
+    //position: absolute;
+   // @include breakpoint($wide-screen){
+    position: absolute;
+   // }
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid $contrastgrey;
+    z-index: 999999;
+    width: 100%;
+    background: $white;
+    display: block;
+    h2{
+      margin-bottom: 0;
+      padding: 15px 0px 10px 30px;
+    }
+  }
+  width: 80vw;
+  height: 80vh;
+//  @include breakpoint($wide-screen){
+//  width: 80vw;
+//  height: 80vh;
+ // }
+    #filters-pop-up-form{
+      padding: 50px 30px 30px 12px;
+      @include breakpoint($standard-screen){
+      padding: 70px 30px 30px 30px;
+      }
+    }
+  
+    
+    .webform-options-display-one-column{
+     
+      
+      column-width: auto;
+    }
+#edit-options{
+    column-count: 1;
+    @include breakpoint($standard-screen){
+    column-count: 2;
+    }
+  
+   
+    @include breakpoint($wide-screen){ 
+   column-count: 3;
+   }
+   // -webkit-column-gap: 2.5rem;
+  //  -moz-column-gap: 2.5rem;
+  //  column-gap: 2.5rem;
+  //  -webkit-column-width: 15.625rem;
+ //   -moz-column-width: 15.625rem;
+ //   column-width: 15.625rem;
+    .form-item{
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      display: inline-flex;
+      width: 100%;
+      label{
+        @include nimbus-reg;
+       // display: inline-block;
+       width: 100%;
+        &:hover{
+          color: $red;
+        }
+        
+        //padding-bottom: 3px;
+        &:before{
+          top: -1px;
+          &:hover{
+            color: $almostblack;
+          }
+        }
+      }
+    }
+    
+  }
+}
+
+.modal-media-container {
+  -webkit-overflow-scrolling: touch !important;
+  overflow-y: scroll;
+  width: 92vw;
+  height: 60vh;
+  padding:60px ms(-2) ms(1) ms(-2);
+  
+  
+
+    @include breakpoint($standard-screen){
+      width: 80vw;
+      max-width:1280px;
+      height:auto;
+      max-height: 90vh;
+      padding:60px ms(2) ms(2) ms(2);
+    }
+}

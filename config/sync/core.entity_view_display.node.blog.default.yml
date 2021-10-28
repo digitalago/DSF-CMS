@@ -1,0 +1,85 @@
+uuid: 9240a1af-8456-49e1-a3ea-44533d4a78cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blog.body
+    - field.field.node.blog.field_alert
+    - field.field.node.blog.field_blog_category
+    - field.field.node.blog.field_image_style
+    - field.field.node.blog.field_main_image
+    - field.field.node.blog.field_media
+    - field.field.node.blog.field_meta_tags
+    - field.field.node.blog.field_placement_date
+    - field.field.node.blog.field_placement_tag
+    - field.field.node.blog.field_post_includes_media
+    - field.field.node.blog.field_tagline
+    - field.field.node.blog.field_tags
+    - field.field.node.blog.field_year_filter
+    - node.type.blog
+  module:
+    - text
+    - user
+id: node.blog.default
+targetEntityType: node
+bundle: blog
+mode: default
+content:
+  addtoany:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_blog_category:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_main_image:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: image_and_caption_large
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_media:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: referenced_entity
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_tagline:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_alert: true
+  field_image_style: true
+  field_meta_tags: true
+  field_placement_date: true
+  field_placement_tag: true
+  field_post_includes_media: true
+  field_publication_date: true
+  field_sponsors: true
+  field_tags: true
+  field_year_filter: true
+  links: true
+  search_api_excerpt: true

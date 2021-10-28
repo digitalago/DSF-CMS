@@ -1,0 +1,29 @@
+uuid: a454d948-c0af-425a-8466-46a65c2cf6fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.course_section_content_course_audience
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: course_section_content_course_audience
+theme: de_theme
+region: sidebar_first
+weight: -34
+provider: null
+plugin: 'facet_block:course_section_content_course_audience'
+settings:
+  id: 'facet_block:course_section_content_course_audience'
+  label: 'Course Section » Content » Course Audience'
+  provider: facets
+  label_display: '0'
+  block_id: course_section_content_course_audience
+visibility:
+  request_path:
+    id: request_path
+    pages: /learn/courses
+    negate: false
+    context_mapping: {  }

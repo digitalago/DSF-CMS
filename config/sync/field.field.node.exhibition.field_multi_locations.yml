@@ -1,0 +1,28 @@
+uuid: 5e784a26-b613-40fa-b6ac-0e436d4531d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_multi_locations
+    - node.type.exhibition
+    - node.type.location
+id: node.exhibition.field_multi_locations
+field_name: field_multi_locations
+entity_type: node
+bundle: exhibition
+label: 'Multi Locations'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

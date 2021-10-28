@@ -1,0 +1,143 @@
+// ********************
+//  ELEMENTAL MIXINS
+// ********************
+
+
+//type styles
+
+@mixin nimbus-bold-reg{
+  font-family: $font-set-2;
+  font-weight: $bold;
+
+}
+
+@mixin nimbus-reg{
+  font-family: $font-set-2;
+  font-weight: $normal;
+}
+
+@mixin nimbus-novus{
+  font-family: $font-set-4;
+  font-weight: $normal;
+}
+
+@mixin nimbus-bold-novus{
+  font-family: $font-set-4;
+  font-weight: $bold;
+}
+
+@mixin knockout-28{
+  font-family: $font-set-1;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin knockout-48{
+  font-family: $font-set-3;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin heading-1{
+  @include knockout-48;
+  font-size: ms(9);
+  line-height: ms(-1);
+  -webkit-font-smoothing: antialiased;
+    a {
+      color: $almostblack;
+    }
+  line-height: ms(-1);
+  @include breakpoint($narrow-screen) {
+    font-size: ms(11);
+    margin-bottom: 0;
+  }
+}
+
+@mixin heading-2{
+  @include knockout-28;
+  font-size: ms(7);
+  margin-bottom: ms(-5);
+  line-height: ms(1);
+  font-weight: $normal;
+  -webkit-font-smoothing: antialiased;
+  a{
+    color: $almostblack;
+    text-decoration: underline;
+  }
+  @include breakpoint($standard-screen-max) {
+    font-size: ms(7);
+  }
+}
+
+@mixin heading-3{
+  font-size: ms(5);
+  margin-bottom: ms(-2);
+  line-height: ms(1);
+  font-family: $font-set-1;
+  -webkit-font-smoothing: antialiased;
+  @include breakpoint($narrow-screen) {
+    font-size: ms(5);
+  }
+}
+
+@mixin filter-label{
+  @include knockout-28;
+  font-size: ms(3);
+  text-transform: uppercase;
+  margin-bottom: ms(-3);
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin card-title {
+    display: block;
+    font-family: $font-set-1;
+    color: $almostblack;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin grey-info {
+  @include nimbus-bold-reg;
+  color: $contrastgrey;
+}
+
+@mixin category-label{
+    display: block;
+    font-family: $font-set-2;
+    text-transform: uppercase;
+    font-size: ms(0);
+    -webkit-font-smoothing: subpixel-antialiased;
+    letter-spacing: 1px;
+    a {
+      text-decoration: none;
+      padding: ms(-3) 0;
+    }
+}
+
+@mixin price {
+  width: 170px;
+  clear: both;
+  font-size: ms(1);
+  @include nimbus-bold-reg;
+  text-transform: none;
+  margin-bottom: 0;
+}
+
+
+@mixin credit{
+ 
+  p{line-height: ms(3);
+    padding-top: 5px;
+    font-size: ms(-2);
+  }
+  a{color: $almostblack;
+  }
+}
+
+@mixin antialiased{
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin subpixel-antialiased{
+  -webkit-font-smoothing: subpixel-antialiased;
+}

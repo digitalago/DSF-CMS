@@ -1,0 +1,8 @@
+uuid: adf137b8-0975-4735-8012-c0d4df02e33b
+langcode: en
+status: true
+dependencies: {  }
+id: people_list
+label: 'People List'
+revision: 0
+description: ''

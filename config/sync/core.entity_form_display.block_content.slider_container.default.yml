@@ -1,0 +1,31 @@
+uuid: 1b34eef6-a997-4a71-a8d1-800985bdd503
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.slider_container
+    - field.field.block_content.slider_container.field_slider_container
+id: block_content.slider_container.default
+targetEntityType: block_content
+bundle: slider_container
+mode: default
+content:
+  field_slider_container:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

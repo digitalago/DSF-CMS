@@ -1,0 +1,29 @@
+uuid: b4e8a4fa-f1d9-4ae0-aafd-3cc11b579e86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category_slider
+    - node.type.slider_item
+    - taxonomy.vocabulary.slider_category
+id: node.slider_item.field_category_slider
+field_name: field_category_slider
+entity_type: node
+bundle: slider_item
+label: Category
+description: 'Adds a category above the title on the homepage slider'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      slider_category: slider_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

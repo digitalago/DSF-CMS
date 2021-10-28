@@ -1,0 +1,69 @@
+/* patterns//material-design-icons/_material-icons.scss */
+// http://google.github.io/material-design-icons/#sizing
+// if you need to use images for browser compatibility, you can find
+// instructions on how to download them on github
+// http://google.github.io/material-design-icons/#icon-images-for-the-web
+
+// Rules for sizing the icon.
+@mixin md-18{
+  font-size: 18px;
+}
+
+@mixin md-24{
+  font-size: 24px;
+}
+
+@mixin md-36{
+  font-size: 36px;
+}
+
+@mixin md-48{
+  font-size: 48px;
+}
+
+// Rules for using icons as black on a light background.
+@mixin md-dark{
+ color: rgba(0, 0, 0, 0.54);
+}
+
+@mixin md-dark-inactive{
+  color: rgba(0, 0, 0, 0.26);
+}
+
+// Rules for using icons as white on a dark background.
+@mixin md-light{
+  color: rgba(255, 255, 255, 1);
+}
+
+@mixin md-light-inactive{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+@mixin material-icons{
+  color: rgba(0, 0, 0, 0.54);
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: bottom;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

@@ -1,0 +1,19 @@
+uuid: 985899e0-c74e-47c3-bdfa-70ba627fed0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_custom_script
+field_name: field_custom_script
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

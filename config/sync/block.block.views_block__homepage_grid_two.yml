@@ -1,0 +1,30 @@
+uuid: 017ed797-9518-486e-9b62-a446ac82f0f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.homepage
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: views_block__homepage_grid_two
+theme: de_theme
+region: dags_top
+weight: -34
+provider: null
+plugin: 'views_block:homepage-block_homepage_grid_two'
+settings:
+  id: 'views_block:homepage-block_homepage_grid_two'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: '1'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

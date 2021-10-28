@@ -1,0 +1,37 @@
+uuid: a38b47f6-4de4-4f77-b0f9-76f7b37c7958
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.interrupter
+    - field.field.block_content.interrupter.field_link
+    - field.field.block_content.interrupter.field_text
+  module:
+    - link
+id: block_content.interrupter.default
+targetEntityType: block_content
+bundle: interrupter
+mode: default
+content:
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_text:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

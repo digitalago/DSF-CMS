@@ -1,0 +1,31 @@
+uuid: 8065821f-c918-4041-bae8-752a05972e2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.whats_on
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: views_block__whats_on_whats_on_events_homepage
+theme: de_theme
+region: content
+weight: -19
+provider: null
+plugin: 'views_block:whats_on-whats_on_events_homepage'
+settings:
+  id: 'views_block:whats_on-whats_on_events_homepage'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  exposed: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

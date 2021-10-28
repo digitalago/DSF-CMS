@@ -1,0 +1,48 @@
+<?php
+/**
+ * @file
+ * Contains hooks for Collection Blocks Module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function collection_blocks_theme() {
+  return [
+    'zoom_tool_block' => [
+      'variables' => [],
+    ],
+    'webform_link_block' => [
+      'variables' => [],
+    ],
+    'collection_grid_link_block' => [
+      'variables' => [],
+    ],
+    'return_to_collection_link_block' => [
+      'variables' => [],
+    ],
+    'view_list_grid_block' => [
+      'variables' => [],
+    ],
+    'compare_objects_block' => [
+      'variables' => [],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function collection_blocks_preprocess_block(&$variables) {
+  if (isset($variables['elements']['#id'])) {
+    $block_id = $variables['elements']['#id'];
+    $facet_blocks = ['objectname', 'timeperiod', 'artists', 'category', 'compareobjectsblock'];
+    if (in_array($block_id, $facet_blocks)) {
+      $variables['#attached']['library'][] = 'collection_blocks/facet_accordion';
+      $variables['#attached']['library'][] = 'collection_blocks/facet_modal';
+    }
+    if ($block_id = 'return_to_collection_link_block') {
+      $variables['#attached']['library'][] = 'collection_blocks/return_to_collection';
+    }
+  }
+}

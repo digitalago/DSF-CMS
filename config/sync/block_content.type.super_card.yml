@@ -1,0 +1,8 @@
+uuid: 08dac9a7-3f84-43b6-95dc-f4f385f98ac1
+langcode: en
+status: true
+dependencies: {  }
+id: super_card
+label: 'Super Card'
+revision: 0
+description: ''

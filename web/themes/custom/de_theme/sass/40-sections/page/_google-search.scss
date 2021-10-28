@@ -1,0 +1,82 @@
+/* sections/page/_google-search.scss */
+// contains node specific styles to basic page
+
+
+.path-search-results{
+
+}
+
+.gsc-control-cse{
+	padding: 0em !important;
+}
+
+
+
+.gsc-result-info {
+	@include nimbus-bold-reg;
+	color: $almostblack;
+	padding: 0 0 10px 0 !important;
+    font-size: ms(1);
+}
+
+.gsc-above-wrapper-area{
+	border-bottom: 1px solid $neutral-grey;
+}
+
+.gsc-above-wrapper-area-container{
+   margin: 10px 0px 0px 0px;
+   .gsc-result-info-container{
+	padding: 0 0 0 0 !important;
+}
+}
+
+.gsc-resultsHeader{display: none;}
+
+.gcsc-branding{
+	display: none !important;
+}
+
+.gs-title {
+  @include nimbus-reg;
+  color: $red !important;
+  font-size: ms(2) !important;
+}
+
+.gsc-result .gs-title{
+	height: 1.6em !important;
+}
+
+.gsc-result .gs-title b{
+  @include nimbus-reg;
+  color: $red !important;
+  font-size: ms(2) !important;
+}
+
+
+.gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl{
+	@include nimbus-reg;
+	color: $neutral-grey !important;
+	font-size: ms(0);
+}
+
+.gs-result .gs-snippet{
+	@include nimbus-reg;
+	color: $almostblack;
+	font-size: ms(1);
+}
+
+.gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top{
+	padding-left: 0px !important;
+}
+
+.gsc-thumbnail{
+	padding: ms(1) 0;
+	
+}
+
+.gsc-results {
+	padding-top: 10px;
+	.gsc-cursor-box{
+	margin: 10px 0px !important;
+	}
+}

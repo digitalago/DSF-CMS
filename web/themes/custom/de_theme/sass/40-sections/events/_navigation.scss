@@ -1,0 +1,119 @@
+// ----------
+// Navigation locator bar
+// ----------
+
+.locator-nav {
+  display:none;
+  @include breakpoint ($standard-screen){
+    display: block;
+  }
+  .layout-container {
+    height: 0;
+    transition: all .3s;
+    padding-bottom: 0;
+    @include breakpoint ($standard-screen) {
+      height: auto;
+      display: block;
+      margin-top: -2px;
+    }
+  }
+  .layout-container.expanded {
+    height: auto;
+    transition: all .3s;
+    padding-bottom: ms(3);
+  }
+  .menu-toggle-anchor {
+    display: block;
+    font-family: $font-set-1;
+    font-weight: $bold;
+    // font-size: ms(1.2);
+    font-size: 1.5625em;
+    color: #fff;
+    // padding: ms(1) * .5 6.38298%;
+    padding: 0.625em 6.38298%;
+    cursor: pointer;
+    text-transform: uppercase;
+    span {
+      // padding-right: ms(1) * .5;
+      padding-right: 0.625em;
+    }
+    @include breakpoint ($medium-screen) {
+      // padding: ms(1) * .5 1.5625rem;
+      padding: 0.625em 1.5625rem;
+    }
+    @include breakpoint ($standard-screen) {
+      display: none;
+    }
+  }
+  .nav-bar {
+    background: $almostblack;
+    margin-bottom: ms(2);
+
+    ul, li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      font-family: $font-set-1;
+      font-size: ms(1);
+      margin: 0 (-(ms(2)));
+      // padding: ms(-1)*.5 0;
+      padding: 0.4em 0;
+      text-align: left;
+      @include breakpoint ($small-screen) {
+        text-align: center;
+      }
+      @include breakpoint ($standard-screen) {
+        text-align: left;
+      }
+    }
+
+    li {
+      display: block;
+      @include breakpoint ($small-screen) {
+        display: inline-block;
+      }
+      // padding: ms(-1)*.5 ms(2);
+      padding: 0.4em 1.5625em;
+    }
+
+    a {
+      color: $white;
+      display: block;
+      font-family: $font-set-1;
+      text-decoration: none;
+      text-transform: uppercase;
+      position: relative;
+      letter-spacing: 1px;
+      &:hover {
+        text-decoration: underline;
+      }
+      @include breakpoint ($small-screen) {
+        &:after {
+          transition: all .5s;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 0%;
+          content: '.';
+          color: transparent;
+          background: white;
+          height: 1px;
+        }
+        &:focus:after {
+          width: 100%;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

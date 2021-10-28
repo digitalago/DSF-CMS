@@ -1,0 +1,31 @@
+uuid: 15d21615-5ca0-4513-9518-6a5d24988b5b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bfab2b78-1591-4eb3-83b2-db4cdaaff3af'
+  module:
+    - block_content
+    - system
+  theme:
+    - de_theme
+id: museumhourshomepageblock
+theme: de_theme
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'block_content:bfab2b78-1591-4eb3-83b2-db4cdaaff3af'
+settings:
+  id: 'block_content:bfab2b78-1591-4eb3-83b2-db4cdaaff3af'
+  label: 'Museum Hours - Home Page block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

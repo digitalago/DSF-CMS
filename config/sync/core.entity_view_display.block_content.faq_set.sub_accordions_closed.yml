@@ -1,0 +1,34 @@
+uuid: 397d6c60-37b6-4116-a2f7-03af84618b3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.faq_set
+    - core.entity_view_mode.block_content.sub_accordions_closed
+    - field.field.block_content.faq_set.field_background_colour
+    - field.field.block_content.faq_set.field_faqs
+    - field.field.block_content.faq_set.field_list_width
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: block_content.faq_set.sub_accordions_closed
+targetEntityType: block_content
+bundle: faq_set
+mode: sub_accordions_closed
+content:
+  field_faqs:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  field_background_colour: true
+  field_list_width: true
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: 3f5064b7-2e9c-4053-a1f3-dc88d531218c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_provenance
+field_name: field_provenance
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: 8be0c250-e4af-4336-9346-d48f3c401ae1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_global_collection_ref
+    - node.type.collection_page
+    - taxonomy.vocabulary.global_collection
+id: node.collection_page.field_global_collection_ref
+field_name: field_global_collection_ref
+entity_type: node
+bundle: collection_page
+label: Collection
+description: 'Reference to the collection browse page identifier.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      global_collection: global_collection
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

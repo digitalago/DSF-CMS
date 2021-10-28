@@ -1,0 +1,19 @@
+uuid: 904105a2-2c4a-4291-8b87-6a5616bb746d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_published_reference
+field_name: field_published_reference
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,30 @@
+uuid: 56366c50-75dd-4196-96c4-2c3c5881694c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: publish
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: Event
+type: event
+description: 'Used for all event pages.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

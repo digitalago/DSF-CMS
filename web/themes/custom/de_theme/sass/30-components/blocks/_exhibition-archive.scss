@@ -1,0 +1,79 @@
+#views-exposed-form-ago-exhibitions-block-3{
+    width:auto;
+    min-width: 50px;
+    @include breakpoint ($small-screen) {
+    float: right;
+    }
+      .form-item{ 
+        
+        select{
+          height: 45px;
+          margin-top: 10px;
+          clear: both;
+          display: block;
+          width: 100%;
+          float: right;
+          margin-right: 0;
+          background-size: 9%;
+          margin: 10px 0;
+          border: none;
+          padding: 16px 10px 12px 10px;
+          background-color: $light-grey;
+          background-size: 7%;
+          @include breakpoint ($small-screen) {
+            background-size: 4%;
+          }
+          @include breakpoint ($medium-screen) {
+            background-size: 12%;
+          }
+          @include breakpoint ($narrow-screen) {
+          
+            background-size: 15%;
+          }
+        }
+      }
+      .form--inline .form-actions{
+        clear: none;
+        float: left;
+        @include breakpoint ($small-screen){
+          top: 22px;
+          position: relative;
+          padding:15px 0px;
+          .form-submit{
+            padding: 13px;
+            float: left;
+           
+          }
+        }
+      
+      }
+  .form-item{
+    width: 100%;
+    @include breakpoint ($small-screen) {
+      width: auto;
+    }
+  
+  
+  .form--inline{
+      .form-actions{
+        top: 37px;
+        float: left;
+        
+        clear: none;
+        position: relative;
+        
+        
+  
+      
+      @include breakpoint ($medium-screen){
+        top: 34px;
+      }
+      }
+    }
+  
+      .form-text{
+        display: block;
+      }
+    }
+  
+  }

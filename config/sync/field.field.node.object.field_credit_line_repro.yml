@@ -1,0 +1,19 @@
+uuid: 0099af15-5188-4d09-a315-ecb9eb8916d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_credit_line_repro
+    - node.type.object
+id: node.object.field_credit_line_repro
+field_name: field_credit_line_repro
+entity_type: node
+bundle: object
+label: 'Credit Line Repro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,49 @@
+uuid: afe896a8-8f75-46ad-84aa-a0cb5f6fb8dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.inline_form_default
+    - field.field.node.faq.body
+    - node.type.faq
+  module:
+    - text
+id: node.faq.inline_form_default
+targetEntityType: node
+bundle: faq
+mode: inline_form_default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  publish_on: true
+  sticky: true
+  uid: true
+  unpublish_on: true
+  url_redirects: true

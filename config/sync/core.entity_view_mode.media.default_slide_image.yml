@@ -1,0 +1,10 @@
+uuid: c953df12-f52f-41fb-97f2-b9ced0138e96
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.default_slide_image
+label: 'Default slide image'
+targetEntityType: media
+cache: true

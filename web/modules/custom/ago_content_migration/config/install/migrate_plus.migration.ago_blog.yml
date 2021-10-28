@@ -1,0 +1,127 @@
+id: ago_blog
+label: AGO Blog Nodes
+migration_group: ago
+source:
+  plugin: d8_entity
+  key: migrate
+  entity_type: node
+  bundle: ago_blog
+destination:
+  plugin: entity:node
+  default_bundle: blog
+process:
+  title: title
+  created: created
+  changed: changed
+  'body/value': 'body/0/value'
+  'body/summary': 'body/0/summary'
+  'body/format':
+    -
+      plugin: static_map
+      source: body/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: 'full_html'
+  status: status
+  field_blog_category:
+    -
+      plugin: sub_process
+      source: field_ago_blog_category
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: blog_categories_taxonomy
+  field_year_filter:
+    -
+      plugin: sub_process
+      source: field_agoc_year_filter
+      process:
+        target_id:
+          plugin: static_map
+          source: target_id
+          map:
+            3647: 807
+            3506: 808
+            3380: 809
+            3381: 810
+            3382: 811
+            3383: 812
+            3384: 813
+            3385: 814
+            3386: 815
+            3387: 816
+            3484: 817
+            3485: 818
+            3629: 819
+          default_value: null
+  field_image_style: field_image_style
+  field_press_release_date: field_agoc_press_release_date
+  field_post_includes_media: field_post_includes_media
+  field_main_image:
+    -
+      plugin: sub_process
+      source: field_agoc_image
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: image_media
+  'field_alert/value': 'field_alert/0/value'
+  'field_alert/format':
+    -
+      plugin: static_map
+      source: field_alert/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: 'full_html'
+  'field_tagline/value': 'field_tagline/0/value'
+  'field_tagline/format':
+    -
+      plugin: static_map
+      source: field_tagline/0/format
+      map:
+        basic_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+        umlimited_html: unlimited_html
+        restricted_html: restricted_html
+        ago_content_editor: content_editor
+      default_value: 'full_html'
+  field_tags:
+    -
+      plugin: sub_process
+      source: field_tags
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: target_id
+          migration: blog_tags_taxonomy
+  uid:
+    -
+      plugin: migration_lookup
+      migration: user
+      source: uid
+migration_dependencies:
+  required:
+    - user
+    - file
+    - image_media
+    - image_tags_taxonomy
+    - blog_categories_taxonomy
+    - blog_tags_taxonomy
+  optional: {  }
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration

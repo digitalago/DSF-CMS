@@ -1,0 +1,14 @@
+events:
+  version: VERSION
+  js:
+    js/events.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+events_switcher:
+  version: VERSION
+  js:
+    js/events_switcher.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

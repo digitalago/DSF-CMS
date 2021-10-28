@@ -1,0 +1,32 @@
+uuid: 3ba2f6a1-a5d9-463f-b0fd-9197ac957053
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_container
+    - media.type.image
+    - media.type.soundcloud
+    - media.type.video
+    - node.type.event
+id: node.event.field_media_container
+field_name: field_media_container
+entity_type: node
+bundle: event
+label: Media
+description: 'Put related media into this container. It can act as a playlist or general grouping for different kinds of attached media.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      soundcloud: soundcloud
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

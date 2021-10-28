@@ -1,0 +1,21 @@
+uuid: 3caa6a72-3843-4ebf-864e-c3dff075812d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.people_list
+    - field.storage.block_content.field_image_shape
+  module:
+    - options
+id: block_content.people_list.field_image_shape
+field_name: field_image_shape
+entity_type: block_content
+bundle: people_list
+label: 'Image Shape'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,29 @@
+uuid: 6fff1bce-038b-4b18-8dbc-c699725b6f1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_subjects
+    - media.type.soundcloud
+    - taxonomy.vocabulary.tags
+id: media.soundcloud.field_subjects
+field_name: field_subjects
+entity_type: media
+bundle: soundcloud
+label: Subjects
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,50 @@
+uuid: 6d741095-a4b6-4613-8a40-78279ce482f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.object_card_view
+    - field.field.node.object_container.body
+    - field.field.node.object_container.field_layout_type
+    - field.field.node.object_container.field_layout_width
+    - field.field.node.object_container.field_object
+    - node.type.object_container
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.object_container.object_card_view
+targetEntityType: node
+bundle: object_container
+mode: object_card_view
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_object:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: object_card_view
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_layout_type: true
+  field_layout_width: true
+  search_api_excerpt: true

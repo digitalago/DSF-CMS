@@ -1,0 +1,57 @@
+// @modular scale ==============================================
+
+// http://thesassway.com/projects/modular-scale
+// https://github.com/modularscale/modularscale-sass
+// http://www.modularscale.com/
+
+// $ms-base: 1em 1.25em;
+// $ms-ratio: $golden;
+
+$ms-base: 1em;
+$ms-ratio: 1.125;
+
+// $ms-range: 1 29em, 1.618 62em;
+
+// $ms-fluid: false;
+// $ms-range:
+//   1.2 $narrow-screen,
+//   1.3 38em,
+//   1.4 48em,
+//   1.5 56em,
+//   1.6 62em;
+
+$class-slug: ms;
+
+// http://www.modularscale.com/?1&em&1.25&sass&text
+// http://pxtoem.com/
+// use two links above to caculate ms number
+// common number like ms() = 1em, ms(1) = 1.25em, ms(-1) = 0.8em, ms(-2) = .64em
+// you can use em, rem, px if you want, de_theme use ms to set default value
+
+//CHART and usages
+
+//ms(20)  168.721px  10.545em  10.545em @ 16  *hero
+
+//ms(16)  105.332px  6.583em   6.583em @ 16
+//ms(15)  93.628px   5.852em   5.852em @ 16   *ex title
+//ms(14)  83.225px   5.202em   5.202em @ 16
+//ms(13)  73.978px   4.624em   4.624em @ 16
+//ms(12)  65.758px   4.11em    4.11em @ 16	  
+//ms(11)  58.452px   3.653em   3.653em @ 16   *h1
+//ms(10)  51.957px   3.247em   3.247em @ 16	
+//ms(9)   46.184px   2.887em   2.887em @ 16   
+//ms(8)   41.053px   2.566em   2.566em @ 16
+//ms(7)   36.491px   2.281em   2.281em @ 16   *h2
+//ms(6)   32.437px   2.027em   2.027em @ 16
+//ms(5)   28.833px   1.802em   1.802em @ 16   *h3
+//ms(4)   25.629px   1.602em   1.602em @ 16
+//ms(3)   22.781px   1.424em   1.424em @ 16   *
+//ms(2)   20.25px    1.266em   1.266em @ 16
+//ms(1)   18px       1.125em   1.125em @ 16
+//ms(0)   16px       1em       1em @ 16       *body text
+//ms(-1)  14.222px   0.889em   0.889em @ 16   *credits
+//ms(-2)  12.642px   0.79em    0.79em @ 16 
+//ms(-3)  11.237px   0.702em   0.702em @ 16
+//ms(-4)  9.989px    0.624em   0.624em @ 16
+//ms(-5)  8.879px    0.555em   0.555em @ 16
+//ms(-6)  7.892px    0.493em   0.493em @ 16

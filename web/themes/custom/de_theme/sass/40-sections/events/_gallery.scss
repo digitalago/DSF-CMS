@@ -1,0 +1,52 @@
+// ----------
+// Gallery
+// ----------
+
+.event-gallery, .events-gallery, .photo-gallery {
+  background: #212121;
+  color: #fff;
+  padding: ms(2)*2 0 ms(2)*4;
+
+  @media all and (min-width: 767px) {
+    padding: ms(1)*4 0;
+  }
+
+  .layout-container {
+    > h3 {
+      margin-bottom: ms(1);
+    }
+  }
+}
+
+.gallery-grid {
+  text-align: center;
+
+  &, li {
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+    width: 50%;
+
+    @media all and (min-width: 767px) {
+      width: 25%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.grid-image {
+  font-size: 1rem;
+
+  a, img {
+    display: block;
+  }
+}
+
+@import 'photo-collection';

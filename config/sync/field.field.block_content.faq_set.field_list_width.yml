@@ -1,0 +1,21 @@
+uuid: 28167f78-ae5f-41dd-b63b-320e0efe8712
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.faq_set
+    - field.storage.block_content.field_list_width
+  module:
+    - options
+id: block_content.faq_set.field_list_width
+field_name: field_list_width
+entity_type: block_content
+bundle: faq_set
+label: Width
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

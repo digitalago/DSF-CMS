@@ -1,0 +1,32 @@
+// ----------
+// Dags component
+// ----------
+
+.node--type-dags-component-builder {
+  .layout-container {
+    > h3 {
+      &, p {
+        font-family: $font-set-1;
+      }
+
+      font-size: ms(5);
+      text-transform: uppercase;
+    }
+
+    p {
+      color: #454545;
+    }
+  }
+}
+
+.admin-link {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  border: 1px solid #000;
+  background: #fff;
+
+  a {
+    display: inline-block;
+  }
+}

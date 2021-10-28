@@ -1,0 +1,27 @@
+uuid: 264c9ae8-342c-4d4a-9306-0b264fd5dfa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.instagram.field_media_instagram
+    - media.type.instagram
+id: media.instagram.default
+targetEntityType: media
+bundle: instagram
+mode: default
+content:
+  field_media_instagram:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  name: true
+  path: true
+  status: true
+  uid: true

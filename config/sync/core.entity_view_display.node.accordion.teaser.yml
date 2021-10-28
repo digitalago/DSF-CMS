@@ -1,0 +1,26 @@
+uuid: 5a47c40e-e691-4f13-b0e8-a4694cbaeff1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.accordion.field_details
+    - field.field.node.accordion.field_title
+    - node.type.accordion
+  module:
+    - user
+id: node.accordion.teaser
+targetEntityType: node
+bundle: accordion
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_details: true
+  field_title: true
+  search_api_excerpt: true

@@ -1,0 +1,38 @@
+uuid: bc27c51f-61ca-46b0-b0b7-b98e14e03e68
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.press_release.body
+    - field.field.node.press_release.field_main_image
+    - field.field.node.press_release.field_press_release_date
+    - field.field.node.press_release.field_year_filter
+    - node.type.press_release
+  module:
+    - text
+    - user
+id: node.press_release.teaser
+targetEntityType: node
+bundle: press_release
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_main_image: true
+  field_press_release_date: true
+  field_year_filter: true
+  search_api_excerpt: true

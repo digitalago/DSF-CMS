@@ -1,0 +1,21 @@
+uuid: bebe9e4d-ba55-4c6b-a2a8-5dbddd5e37c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.people_list
+    - field.storage.block_content.field_item_divider
+  module:
+    - options
+id: block_content.people_list.field_item_divider
+field_name: field_item_divider
+entity_type: block_content
+bundle: people_list
+label: 'Item Divider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

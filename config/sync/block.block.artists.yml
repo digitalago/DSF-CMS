@@ -1,0 +1,29 @@
+uuid: 99116d2c-28d4-4f1e-b452-11dae3ad669e
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.artist_maker
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: artists
+theme: de_theme
+region: sidebar_first
+weight: -25
+provider: null
+plugin: 'facet_block:artist_maker'
+settings:
+  id: 'facet_block:artist_maker'
+  label: Artists
+  provider: facets
+  label_display: '0'
+  block_id: artists
+visibility:
+  request_path:
+    id: request_path
+    pages: /collection/browse
+    negate: false
+    context_mapping: {  }

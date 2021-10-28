@@ -1,0 +1,31 @@
+uuid: a47b1f9e-6c4a-480f-885f-eb06d7d9e84b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:923ebb3b-817f-4298-9fbb-f3de23b98316'
+  module:
+    - block_content
+    - system
+  theme:
+    - de_theme
+id: whatsondescription
+theme: de_theme
+region: content_prefix
+weight: -26
+provider: null
+plugin: 'block_content:923ebb3b-817f-4298-9fbb-f3de23b98316'
+settings:
+  id: 'block_content:923ebb3b-817f-4298-9fbb-f3de23b98316'
+  label: 'What''s On Description'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /events/browse
+    negate: false
+    context_mapping: {  }

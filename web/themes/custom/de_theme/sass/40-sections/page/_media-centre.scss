@@ -1,0 +1,91 @@
+  #block-exposedformagoc-media-centrepage-1{
+   
+        .form-item{
+            display: inline-block;
+            margin: 0;
+            width: calc(100% - 91px);
+            @include breakpoint ($narrow-screen){
+            width: calc(100% - 91px);
+            }
+            @include breakpoint ($standard-screen){
+            width: calc(100% - 102px);
+            }
+            .form-text {
+                padding: 10px 10px 9px 40px;
+                margin: 0;
+                background-image: url(../../img/file_icons/search-black.png);
+                background-repeat: no-repeat;
+                background-size: 18px;
+                background-position: 15px 50%;
+                height: 46px;
+                @include breakpoint ($narrow-screen){
+                height: 49px;
+                }           
+                @include breakpoint ($standard-screen){
+                height: 57px;
+                }
+                position: relative;
+            }
+        }
+        
+    .form--inline{
+        width: calc(100%);
+        @include breakpoint ($narrow-screen){
+        //    width: calc(100% - 214px);
+        }
+        @include breakpoint ($standard-screen){
+        //width: calc(100% - 256px);
+        }
+        .form-actions{
+            clear: none;
+            .form-submit{
+            background-color: #fff;
+            color: #222222;
+            text-transform: uppercase;
+            font-family: $font-set-1;
+            @include antialiased;
+            letter-spacing: 1px;
+            text-decoration: none;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            display: inline-block;
+            margin-right: 0;
+            vertical-align: top;
+            @include btn-big;
+            width: auto;
+            display: inline-block;
+            @include breakpoint ($narrow-screen){
+            width: auto;
+            display: inline-block;
+            }
+            @include breakpoint ($standard-screen){
+                @include btn-really-big;
+            }
+            }
+        }
+    
+        .form-search{
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            display: inline-block;
+            position: relative;
+            font-family: $font-set-2;
+            font-weight: 300;
+            font-size: 1em;
+            border: 1px solid #222222;
+            vertical-align: top;
+            height: 28px;
+            width: 92%;
+            padding: 9px 10px 7px 15px;
+            @include breakpoint ($narrow-screen){
+                padding: 10px 10px 9px 15px;
+                width: 100%;
+            }
+            @include breakpoint ($standard-screen){
+                padding: 16px 10px 11px 15px;
+            }
+            }
+        }
+
+      
+  }

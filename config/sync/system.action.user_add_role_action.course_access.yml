@@ -1,0 +1,14 @@
+uuid: 06f86281-de3e-49ec-8876-5c341f8a540f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.course_access
+  module:
+    - user
+id: user_add_role_action.course_access
+label: 'Add the Courses Access role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: course_access

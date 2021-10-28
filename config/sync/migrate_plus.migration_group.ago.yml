@@ -1,0 +1,13 @@
+uuid: c49788db-c516-4b03-9450-aa51598e349d
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ago_content_migration
+id: ago
+label: AGO
+description: 'Migration from previous AGP site.'
+source_type: 'Drupal 8'
+module: null
+shared_configuration: null

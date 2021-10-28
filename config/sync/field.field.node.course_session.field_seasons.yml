@@ -1,0 +1,21 @@
+uuid: 4e54dfc9-3619-48ab-91b6-d8b08fbda127
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seasons
+    - node.type.course_session
+  module:
+    - options
+id: node.course_session.field_seasons
+field_name: field_seasons
+entity_type: node
+bundle: course_session
+label: Seasons
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

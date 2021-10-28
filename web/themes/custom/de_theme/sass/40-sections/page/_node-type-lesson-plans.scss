@@ -1,0 +1,64 @@
+/*Style for pages belongs to lesson plan*/
+
+.node__content {
+    position: relative;
+    clear: both;
+}
+
+.node--type-lesson-plan.node--view-mode-full {
+  .field--name-field-image {
+    width: 70%;
+    margin: ms(1) auto;
+    img {
+      width: 100%;
+    }
+  }
+  .field--name-field-grade {
+    @include nimbus-bold-reg;
+    color: $contrastgrey;
+    font-size: ms(2);
+    padding: 10px 0;
+  }
+ //.field--name-field-pdf {
+   // display: inline-block;
+    //float: left;
+  //}
+  //.field--type-file {
+  //  margin: ms() 0;
+  //}
+  .figure-box {
+    display: block;
+    float: none;
+    margin: ms(1) auto;
+    width: 100%;
+    @include breakpoint ($small-screen) {
+      width: 65%;
+    }
+  }
+  .field--type-file{
+    padding: 20px;
+    background: $light-grey;
+    margin: 20px 0px;
+      .file {
+       a {
+         font-size: ms(1);
+        }
+      }
+    .field__label{
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+  
+}
+
+.view-empty {
+ // display: inline-block;
+  position: relative;
+  font-size: ms(1);
+  font-family: $font-set-2;
+}
+
+
+
+

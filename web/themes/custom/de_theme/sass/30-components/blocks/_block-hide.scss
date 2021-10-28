@@ -1,0 +1,28 @@
+// +++ hide block for desktop and/or mobile
+
+.block-basic {
+    // === Hide at breakpoints
+    &.hide-mobile {
+      position: absolute;
+      top: -9999px;
+      // left: -9999px;
+      @include breakpoint($weird-screen) {
+        position: relative;
+        // position: fixed;
+        top: 0;
+        // left: 0;
+      }
+    }
+
+    &.hide-desktop {
+      @include breakpoint($weird-screen) {
+        position: absolute;
+        top: -9999px;
+        // left: -9999px;
+      }
+    }
+
+    &.hide-both {
+      display: none;
+    }
+}

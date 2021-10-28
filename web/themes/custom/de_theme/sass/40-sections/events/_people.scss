@@ -1,0 +1,227 @@
+// ----------
+// People
+// ----------
+.partners-section{
+  padding: ms(2) 0;
+  @include breakpoint ($narrow-screen) {
+    padding: ms(5) 0;
+  }
+}
+
+.people-list {
+  margin-bottom: ms() !important;
+}
+.team-section {
+  & > .layout-container:last-child {
+    border-bottom: 1px solid $contrastgrey;
+  }
+}
+.people-component, .team-section {
+  // padding: ms(2)*2 0 ms(2)*3;
+  padding: ms(2) 0;
+  @include breakpoint ($narrow-screen) {
+    padding: ms(2) 0 0;
+  }
+
+  .copy {
+    > h3 {
+      font-family: $font-set-1;
+      font-size: ms(4);
+      margin: 2em 0 1em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.people-featured, .people-list {
+  &, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    p{
+      line-height: 1.6em;
+    }
+  }
+
+  .image-frame {
+    height: 0;
+    display: inline-block;
+    // padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+
+    .field--type-image {
+      // border-radius: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      display: inline-block;
+      z-index: 1;
+      text-align: center;
+    }
+
+    img {
+      border-radius: 50%;
+    //   display: block;
+    //   height: 100%;
+    //   left: -18%;
+    //   max-width: none;
+    //   position: relative;
+    //   top: 0;
+    //   width: auto;
+    //   z-index: 0;
+    }
+  }
+}
+
+.people-featured {
+  li {
+    // display: flex;
+    // display: -ms-flexbox;
+  }
+
+  .main-image {
+    // max-width: 355px;
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+
+  .copy {
+    // max-width: 355*1.5px;
+
+    width: 100%;
+    @include breakpoint ($weird-screen) {
+      width: 70%;
+      float: left;
+    }
+    @include breakpoint ($standard-screen) {
+      width: 80%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    li {
+      // justify-content: space-between;
+      margin-bottom: ms(2);
+      float: left;
+    }
+
+    .main-image {
+      padding: 0 30px 0 0;
+      width: 30%;
+      float: left;
+      display: block;
+      position: relative;
+      border-radius: 100%;
+      @include breakpoint ($standard-screen) {
+        width: 20%;
+      }
+    }
+
+    .copy {
+      // max-width: 984px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    li {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .main-image {
+      margin: ms(2) 0;
+    }
+
+    h4, h5 {
+      text-align: center;
+    }
+  }
+
+  .name {
+    h4 {
+      font-size: ms(1);
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .role {
+    h5 {
+      font-family: $font-set-2;
+      font-size: ms(0);
+      font-weight: 300;
+      margin: 0 0 1em;
+      color: $contrastgrey;
+    }
+  }
+
+  .summary {
+    &, p {
+      color: $neutral-grey;
+      color: #454545;
+    }
+  }
+}
+
+.people-list {
+  // display: flex;
+  // flex-wrap: wrap;
+  width: 100%;
+  float: left;
+
+  li {
+    padding: 0 9px;
+    margin-bottom: ms(2);
+    text-align: center;
+    float: left;
+    width: 50%;
+    @include breakpoint ($small-screen) {
+      width: 33.33333%;
+    }
+    @include breakpoint ($medium-screen) {
+      width: 16.6666%;
+    }
+    // @media screen and (min-width: 510px) {
+    //   width: (100%/3);
+    // }
+
+    // @media screen and (min-width: 680px) {
+    //   width: (100%/3);
+    // }
+
+    // @media screen and (min-width: 850px) {
+    //   width: (100%/6);
+    // }
+  }
+
+  .main-image {
+    margin-bottom: ms(2);
+  }
+
+  .person-name {
+    h4 {
+      line-height: normal;
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .role {
+    h5 {
+      font-family: $font-set-2;
+      font-size: ms(0);
+      font-weight: 300;
+      margin: 0 0 1em;
+      color: $contrastgrey;
+    }
+  }
+
+  .summary {
+    &, p {
+      color: $neutral-grey;
+    }
+  }
+}

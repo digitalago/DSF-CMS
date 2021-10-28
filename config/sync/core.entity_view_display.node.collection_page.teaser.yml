@@ -1,0 +1,56 @@
+uuid: 9f053f66-b4d5-4da9-ab83-5758f1979928
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.collection_page.body
+    - field.field.node.collection_page.field_custom_script
+    - field.field.node.collection_page.field_global_collection_ref
+    - field.field.node.collection_page.field_hide_title
+    - field.field.node.collection_page.field_internal_notes
+    - field.field.node.collection_page.field_main_image
+    - field.field.node.collection_page.field_meta_tags
+    - field.field.node.collection_page.field_multi_locations
+    - field.field.node.collection_page.field_placement_date
+    - field.field.node.collection_page.field_placement_tag
+    - field.field.node.collection_page.field_tagline
+    - field.field.node.collection_page.field_tags
+    - field.field.node.collection_page.layout_builder__layout
+    - node.type.collection_page
+  module:
+    - text
+    - user
+id: node.collection_page.teaser
+targetEntityType: node
+bundle: collection_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_custom_script: true
+  field_global_collection_ref: true
+  field_hide_title: true
+  field_internal_notes: true
+  field_main_image: true
+  field_meta_tags: true
+  field_multi_locations: true
+  field_placement_date: true
+  field_placement_tag: true
+  field_tagline: true
+  field_tags: true
+  layout_builder__layout: true
+  search_api_excerpt: true

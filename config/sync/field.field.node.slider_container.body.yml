@@ -1,0 +1,23 @@
+uuid: 469b65aa-63e3-4501-afb0-a89a0988de17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.slider_container
+  module:
+    - text
+id: node.slider_container.body
+field_name: body
+entity_type: node
+bundle: slider_container
+label: 'Slider description'
+description: 'Description text appears under the slider.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

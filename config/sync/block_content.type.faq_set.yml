@@ -1,0 +1,8 @@
+uuid: 11cf7981-ec83-45e4-b4c2-cca7d7f4f6e9
+langcode: en
+status: true
+dependencies: {  }
+id: faq_set
+label: 'FAQ Set'
+revision: 0
+description: 'Container for FAQ content items.'

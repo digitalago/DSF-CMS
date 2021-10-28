@@ -1,0 +1,29 @@
+uuid: d87efade-d1ed-4c3b-8e52-19656abb0bda
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.course_section_content_day_of_the_week
+  module:
+    - facets
+    - system
+  theme:
+    - de_theme
+id: course_section_content_day_of_the_week
+theme: de_theme
+region: sidebar_first
+weight: -32
+provider: null
+plugin: 'facet_block:course_section_content_day_of_the_week'
+settings:
+  id: 'facet_block:course_section_content_day_of_the_week'
+  label: 'Course Section » Content » Day of the Week'
+  provider: facets
+  label_display: '0'
+  block_id: course_section_content_day_of_the_week
+visibility:
+  request_path:
+    id: request_path
+    pages: /learn/courses
+    negate: false
+    context_mapping: {  }

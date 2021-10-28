@@ -1,0 +1,151 @@
+uuid: 5efef9b1-d27f-4bfd-a67a-6ecc3d39e93c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.slider_container.body
+    - field.field.node.slider_container.field_arrows
+    - field.field.node.slider_container.field_autoplay
+    - field.field.node.slider_container.field_display_image_credits
+    - field.field.node.slider_container.field_display_location
+    - field.field.node.slider_container.field_display_on_front
+    - field.field.node.slider_container.field_display_slide_date_ti
+    - field.field.node.slider_container.field_display_slide_descrip
+    - field.field.node.slider_container.field_display_slide_titles
+    - field.field.node.slider_container.field_display_slider_descri
+    - field.field.node.slider_container.field_display_title
+    - field.field.node.slider_container.field_image
+    - field.field.node.slider_container.field_pager
+    - field.field.node.slider_container.field_show_title
+    - field.field.node.slider_container.field_slide_container_class
+    - field.field.node.slider_container.field_slide_container_place
+    - field.field.node.slider_container.field_slide_timer
+    - field.field.node.slider_container.field_slider_background_col
+    - field.field.node.slider_container.field_slider_items
+    - field.field.node.slider_container.field_slider_transitions
+    - field.field.node.slider_container.field_slider_type
+    - field.field.node.slider_container.field_slider_width
+    - node.type.slider_container
+  module:
+    - options
+    - text
+    - user
+id: node.slider_container.default
+targetEntityType: node
+bundle: slider_container
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_display_image_credits:
+    weight: 11
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_display_slide_date_ti:
+    weight: 5
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_display_slide_descrip:
+    type: boolean
+    weight: 7
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_display_slide_titles:
+    weight: 8
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_display_slider_descri:
+    weight: 6
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_display_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_slide_container_place:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_slider_background_col:
+    weight: 10
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_slider_items:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: slider
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_slider_width:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_arrows: true
+  field_autoplay: true
+  field_display_location: true
+  field_display_on_front: true
+  field_image: true
+  field_pager: true
+  field_show_title: true
+  field_slide_container_class: true
+  field_slide_timer: true
+  field_slider_transitions: true
+  field_slider_type: true
+  search_api_excerpt: true

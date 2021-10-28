@@ -1,0 +1,23 @@
+uuid: f37d9501-abbd-4496-90ee-5170117abb0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.super_card
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.super_card.body
+field_name: body
+entity_type: block_content
+bundle: super_card
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

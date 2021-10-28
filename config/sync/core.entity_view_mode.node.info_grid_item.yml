@@ -1,0 +1,10 @@
+uuid: e57007cb-4014-4ab4-b2a0-86600eecce1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.info_grid_item
+label: 'Info Grid Item'
+targetEntityType: node
+cache: true

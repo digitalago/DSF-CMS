@@ -1,0 +1,21 @@
+uuid: 11456ffb-714a-4f8b-ae44-e3fa68a18fa4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alert
+    - field.storage.block_content.field_style_options
+  module:
+    - options
+id: block_content.alert.field_style_options
+field_name: field_style_options
+entity_type: block_content
+bundle: alert
+label: 'Style Options'
+description: 'Select the style of alert messsage'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

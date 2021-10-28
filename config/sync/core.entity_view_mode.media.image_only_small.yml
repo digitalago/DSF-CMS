@@ -1,0 +1,10 @@
+uuid: 22b1e07b-936d-42ee-9e0f-865e87a6e7c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_only_small
+label: 'Image Only: Small'
+targetEntityType: media
+cache: true

@@ -1,0 +1,29 @@
+uuid: 63d27aba-4dda-4a78-99fc-3a79f87b3693
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.course_search
+  module:
+    - system
+    - views
+  theme:
+    - de_theme
+id: exposedformcourse_searchcourses_grid
+theme: de_theme
+region: sidebar_first
+weight: -35
+provider: null
+plugin: 'views_exposed_filter_block:course_search-courses_grid'
+settings:
+  id: 'views_exposed_filter_block:course_search-courses_grid'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: 'Find Courses or Workshops'
+visibility:
+  request_path:
+    id: request_path
+    pages: /learn/courses
+    negate: false
+    context_mapping: {  }

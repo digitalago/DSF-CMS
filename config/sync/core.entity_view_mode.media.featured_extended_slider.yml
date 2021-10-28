@@ -1,0 +1,10 @@
+uuid: fab1a21e-1aae-4cf5-afb9-e9a239ab0b6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.featured_extended_slider
+label: 'Featured Extended Slider'
+targetEntityType: media
+cache: true

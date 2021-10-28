@@ -1,0 +1,17 @@
+uuid: b7a85ac7-1452-49e8-9b24-fca4357ad588
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.ago_card
+    - image.style.ago_card_325
+id: ago_card
+label: 'AGO Card'
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: ago_card_325
+breakpoint_group: responsive_image
+fallback_image_style: ago_card

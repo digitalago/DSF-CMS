@@ -1,0 +1,39 @@
+/* dags person styling-- replace? */
+
+.node--type-dags-person {
+  h1{
+    margin-bottom: ms(-9);
+  }
+  #content {
+    padding-bottom: 40px;
+    @include breakpoint($narrow-screen) {
+      @include grid-span(10, 2);
+      }
+    @include grid-span(12);
+    .person-left {
+      clear:both;
+      @include breakpoint($narrow-screen) {
+      @include grid-span(4, 1);
+      padding-bottom: 20px;
+      }
+      @include grid-span(12, 1);
+      float: none;
+    }
+    }
+    .person-right {
+      @include breakpoint($narrow-screen) {
+        float: right;
+        @include grid-span(8, 5);
+      }
+      @include grid-span(12, 1);
+      float: none;
+      img {
+        width: 100%;
+      }
+      .person-title{
+        @include category-label;
+        padding: 10px 0px 20px 0px;
+      }
+    }
+    
+}

@@ -1,0 +1,33 @@
+/* AGO Publications styling */
+
+
+.node--type-ago-publication{
+display: block;
+padding-bottom: ms(2);
+.pub-left{
+  @include grid-span(12);
+  @include breakpoint($narrow-screen) {
+  @include grid-span(6, 1);
+  }
+  padding-bottom: ms(0);  
+}
+
+.pub-right{
+  padding-bottom: ms(3);
+  h4{
+    padding-top:ms(-1) !important;
+  }
+  .field__item{
+  @include nimbus-reg;
+  }
+  .pub-year{ 
+    padding: ms(0) 0 0 0;
+    font-size: ms(3)
+  }
+  @include grid-span(12);
+  @include breakpoint($narrow-screen) {
+  @include grid-span(6, 7);
+  }
+}
+
+}
